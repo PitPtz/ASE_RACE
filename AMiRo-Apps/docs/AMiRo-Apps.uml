@@ -1,0 +1,62 @@
+/'
+AMiRo-Apps is a collection of applications and configurations for the
+Autonomous Mini Robot (AMiRo) platform.
+Copyright (C) 2018..2022  Thomas Schöpping et al.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU (Lesser) General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU (Lesser) General Public License for more details.
+
+You should have received a copy of the GNU (Lesser) General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+'/
+
+@startuml
+skinparam componentStyle uml2
+
+'-------------------------------------------------------------------------------
+' AMiRo-OS
+'-------------------------------------------------------------------------------
+
+!include ../os/AMiRo-OS/docs/AMiRo-OS.uml
+
+'-------------------------------------------------------------------------------
+' µRT
+'-------------------------------------------------------------------------------
+
+!include ../middleware/uRT/docs/componentdiagrams/µRT.uml
+
+'-------------------------------------------------------------------------------
+' AMiRo-Apps
+'-------------------------------------------------------------------------------
+
+node "AMiRo-Apps" as AMiRoApps_node {
+	AMiRoOS -- urt_osal.h
+
+	component "Message Types" as AMiRoApps_MessageTypes
+
+	component "Apps" as AMiRoApps_Apps
+	AMiRoApps_Apps .down.> AMiRoApps_MessageTypes
+	AMiRoApps_Apps ..( amiroos.h
+	AMiRoApps_Apps ..( urt.h
+	AMiRoApps_Apps ..( urt.hpp
+	AMiRoApps_Apps ..( urt_osal.h
+	AMiRoApps_Apps ..( alldh
+	AMiRoApps_Apps ..( cmsis.h
+	AMiRoApps_Apps ..( ch.h
+	AMiRoApps_Apps ..( hal.h
+
+	component "Configurations" as AMiRoApps_Configurations
+	AMiRoApps_Configurations .down.> AMiRoApps_Apps
+	AMiRoApps_Configurations -- osconf.h
+	AMiRoApps_Configurations -- urtconf.h
+}
+
+@enduml
+

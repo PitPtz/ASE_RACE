@@ -1,0 +1,104 @@
+ARM GAS  /tmp/ccXWFFjg.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 2
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"chmemcore.c"
+  12              		.section	.gnu.lto_.profile.bbb2dcdf081af2ba,"e",%progbits
+  13 0000 789CE360 		.ascii	"x\234\343``\004B \000\000\000]\000\013"
+  13      60044220 
+  13      0000005D 
+  13      000B
+  14              		.text
+  15              		.section	.gnu.lto_.icf.bbb2dcdf081af2ba,"e",%progbits
+  16 0000 789CE360 		.ascii	"x\234\343``d`b@\006\000\000\316\000\014"
+  16      60646062 
+  16      40060000 
+  16      CE000C
+  17              		.text
+  18              		.section	.gnu.lto_.jmpfuncs.bbb2dcdf081af2ba,"e",%progbits
+  19 0000 789CE360 		.ascii	"x\234\343``d`b@\006\000\000\316\000\014"
+  19      60646062 
+  19      40060000 
+  19      CE000C
+  20              		.text
+  21              		.section	.gnu.lto_.inline.bbb2dcdf081af2ba,"e",%progbits
+  22 0000 789CE360 		.ascii	"x\234\343``d`b@\006\000\000\316\000\014"
+  22      60646062 
+  22      40060000 
+  22      CE000C
+  23              		.text
+  24              		.section	.gnu.lto_.pureconst.bbb2dcdf081af2ba,"e",%progbits
+  25 0000 789CE360 		.ascii	"x\234\343``\004B \000\000\000]\000\013"
+  25      60044220 
+  25      0000005D 
+  25      000B
+  26              		.text
+  27              		.section	.gnu.lto_.symbol_nodes.bbb2dcdf081af2ba,"e",%progbits
+  28 0000 789CE360 		.ascii	"x\234\343``d`b\000\001\000\000n\000\014"
+  28      60646062 
+  28      00010000 
+  28      6E000C
+  29              		.text
+  30              		.section	.gnu.lto_.refs.bbb2dcdf081af2ba,"e",%progbits
+  31 0000 789CE360 		.ascii	"x\234\343``\004B \000\000\000]\000\013"
+  31      60044220 
+  31      0000005D 
+  31      000B
+  32              		.text
+  33              		.section	.gnu.lto_.decls.bbb2dcdf081af2ba,"e",%progbits
+  34 0000 789CE360 		.ascii	"x\234\343``d\000\001\020\251\002\304\377\201\000\304"
+  34      60640001 
+  34      10A902C4 
+ARM GAS  /tmp/ccXWFFjg.s 			page 2
+
+
+  34      FF8100C4 
+  35 0010 BEC84000 		.ascii	"\276\310@\000\000\000\3015\004\375"
+  35      0000C135 
+  35      04FD
+  36              		.text
+  37              		.section	.gnu.lto_.symtab.bbb2dcdf081af2ba,"e",%progbits
+  38              		.text
+  39              		.section	.gnu.lto_.opts,"e",%progbits
+  40 0000 272D666E 		.ascii	"'-fno-openmp' '-fno-openacc' '-fno-pie' '-mcpu=cort"
+  40      6F2D6F70 
+  40      656E6D70 
+  40      2720272D 
+  40      666E6F2D 
+  41 0033 65782D6D 		.ascii	"ex-m3' '-mthumb' '-mfloat-abi=soft' '-march=armv7-m"
+  41      33272027 
+  41      2D6D7468 
+  41      756D6227 
+  41      20272D6D 
+  42 0066 2720272D 		.ascii	"' '-O2' '-fstack-usage' '-ffunction-sections' '-fda"
+  42      4F322720 
+  42      272D6673 
+  42      7461636B 
+  42      2D757361 
+  43 0099 74612D73 		.ascii	"ta-sections' '-fno-common' '-flto' '-fshort-enums'\000"
+  43      65637469 
+  43      6F6E7327 
+  43      20272D66 
+  43      6E6F2D63 
+  44              		.text
+  45              		.comm	__gnu_lto_v1,1,1
+  46              		.comm	__gnu_lto_slim,1,1
+  47              		.ident	"GCC: (GNU Arm Embedded Toolchain 9-2020-q2-update) 9.3.1 20200408 (release)"
+ARM GAS  /tmp/ccXWFFjg.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 chmemcore.c
+                            *COM*:0000000000000001 __gnu_lto_v1
+                            *COM*:0000000000000001 __gnu_lto_slim
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1292px" preserveAspectRatio="none" style="width:6854px;height:1292px;" version="1.1" viewBox="0 0 6854 1292" width="6854px" zoomAndPan="magnify"><defs><filter height="300%" id="f8wq9urmbix1k" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="39" x="3401" y="16.708">µRT</text><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="225" x="3308" y="37.6611">Publish-Subscribe System</text><!--MD5=[88851b7b27e529b39ff5d3ce6ae79142]
+cluster message--><rect fill="#FFFFFF" filter="url(#f8wq9urmbix1k)" height="352" style="stroke:#000000;stroke-width:1.5;" width="456" x="1704" y="928.9063"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="71" x="1896.5" y="943.9014">message</text><!--MD5=[16a3bbbe805f94d6e6ce317c08ab945e]
+cluster subscriber--><rect fill="#FFFFFF" filter="url(#f8wq9urmbix1k)" height="1064" style="stroke:#000000;stroke-width:1.5;" width="4658" x="2184" y="48.9063"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="85" x="4470.5" y="63.9014">subscriber</text><!--MD5=[b670aff74dcd70614cd77e904c147ee0]
+cluster publisher--><rect fill="#FFFFFF" filter="url(#f8wq9urmbix1k)" height="474" style="stroke:#000000;stroke-width:1.5;" width="1038" x="7" y="632.4063"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="74" x="489" y="647.4014">publisher</text><!--MD5=[b09bc397a6b8ccbb4af6250106e4fac5]
+cluster topic--><rect fill="#FFFFFF" filter="url(#f8wq9urmbix1k)" height="563.5" style="stroke:#000000;stroke-width:1.5;" width="611" x="1069" y="578.9063"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="39" x="1355" y="593.9014">topic</text><!--MD5=[de50bfe28a3d019820bce13f2569e7ff]
+class urt_message_profilingdata_t--><rect codeLine="38" fill="#FEFECE" filter="url(#f8wq9urmbix1k)" height="73.6094" id="urt_message_profilingdata_t" style="stroke:#A80036;stroke-width:1.5;" width="219" x="1754.5" y="1190.9063"/><ellipse cx="1774" cy="1206.9063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1773.4844,1207.4688 Q1771.625,1206.7656 1770.9688,1206 Q1770.3281,1205.2188 1770.3281,1203.9063 Q1770.3281,1202.2188 1771.4063,1201.25 Q1772.4844,1200.2813 1774.3594,1200.2813 Q1775.2188,1200.2813 1776.0625,1200.4844 Q1776.9219,1200.6719 1777.7656,1201.0625 L1777.7656,1203.4531 Q1776.9844,1202.8906 1776.1563,1202.6094 Q1775.3438,1202.3125 1774.5469,1202.3125 Q1773.6719,1202.3125 1773.1875,1202.6719 Q1772.7188,1203.0313 1772.7188,1203.6875 Q1772.7188,1204.2031 1773.0625,1204.5469 Q1773.4063,1204.875 1774.5,1205.2813 L1775.5625,1205.6875 Q1777.0469,1206.2344 1777.75,1207.1406 Q1778.4688,1208.0469 1778.4688,1209.4219 Q1778.4688,1211.2969 1777.3594,1212.2188 Q1776.25,1213.1406 1774,1213.1406 Q1773.0781,1213.1406 1772.1563,1212.9219 Q1771.2344,1212.7031 1770.375,1212.2813 L1770.375,1209.75 Q1771.3438,1210.4375 1772.2656,1210.7813 Q1773.1875,1211.125 1774.0781,1211.125 Q1774.9844,1211.125 1775.4844,1210.7188 Q1775.9844,1210.2969 1775.9844,1209.5625 Q1775.9844,1209 1775.6406,1208.5938 Q1775.3125,1208.1719 1774.6875,1207.9219 L1773.4844,1207.4688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="177" x="1789" y="1211.0605">urt_message_profilingdata_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1755.5" x2="1972.5" y1="1222.9063" y2="1222.9063"/><ellipse cx="1765.5" cy="1233.9063" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="193" x="1774.5" y="1237.1167">utilizations : urt_profilingcounter_t</text><ellipse cx="1765.5" cy="1246.7109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="156" x="1774.5" y="1249.9214">numConsumersLeft : size_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1755.5" x2="1972.5" y1="1256.5156" y2="1256.5156"/><!--MD5=[2bfe13baf8e775cf043ca2e3760c6967]
+class urt_messageid_t--><rect codeLine="33" fill="#FEFECE" filter="url(#f8wq9urmbix1k)" height="60.8047" id="urt_messageid_t" style="stroke:#A80036;stroke-width:1.5;" width="135" x="2008.5" y="1197.4063"/><ellipse cx="2023.5" cy="1213.4063" fill="#00CFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2024.3438,1220.1563 L2021.8906,1220.1563 L2021.8906,1209.9063 L2018.75,1209.9063 L2018.75,1207.7656 L2027.4844,1207.7656 L2027.4844,1209.9063 L2024.3438,1209.9063 L2024.3438,1220.1563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="103" x="2037.5" y="1217.5605">urt_messageid_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2009.5" x2="2142.5" y1="1229.4063" y2="1229.4063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="2014.5" y="1243.6167">uint64_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2009.5" x2="2142.5" y1="1250.2109" y2="1250.2109"/><!--MD5=[e602aa6d45f270ad04f88c9ca5352b33]
+class urt_message_t--><rect codeLine="38" fill="#FEFECE" filter="url(#f8wq9urmbix1k)" height="167.2422" id="urt_message_t" style="stroke:#A80036;stroke-width:1.5;" width="406" x="1720" y="963.9063"/><ellipse cx="1872.75" cy="979.9063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1872.2344,980.4688 Q1870.375,979.7656 1869.7188,979 Q1869.0781,978.2188 1869.0781,976.9063 Q1869.0781,975.2188 1870.1563,974.25 Q1871.2344,973.2813 1873.1094,973.2813 Q1873.9688,973.2813 1874.8125,973.4844 Q1875.6719,973.6719 1876.5156,974.0625 L1876.5156,976.4531 Q1875.7344,975.8906 1874.9063,975.6094 Q1874.0938,975.3125 1873.2969,975.3125 Q1872.4219,975.3125 1871.9375,975.6719 Q1871.4688,976.0313 1871.4688,976.6875 Q1871.4688,977.2031 1871.8125,977.5469 Q1872.1563,977.875 1873.25,978.2813 L1874.3125,978.6875 Q1875.7969,979.2344 1876.5,980.1406 Q1877.2188,981.0469 1877.2188,982.4219 Q1877.2188,984.2969 1876.1094,985.2188 Q1875,986.1406 1872.75,986.1406 Q1871.8281,986.1406 1870.9063,985.9219 Q1869.9844,985.7031 1869.125,985.2813 L1869.125,982.75 Q1870.0938,983.4375 1871.0156,983.7813 Q1871.9375,984.125 1872.8281,984.125 Q1873.7344,984.125 1874.2344,983.7188 Q1874.7344,983.2969 1874.7344,982.5625 Q1874.7344,982 1874.3906,981.5938 Q1874.0625,981.1719 1873.4375,980.9219 L1872.2344,980.4688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="92" x="1893.25" y="984.0605">urt_message_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1721" x2="2125" y1="995.9063" y2="995.9063"/><ellipse cx="1731" cy="1006.9063" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="127" x="1740" y="1010.1167">next : urt_message_t*</text><ellipse cx="1731" cy="1019.7109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="117" x="1740" y="1022.9214">id : urt_messageid_t</text><ellipse cx="1731" cy="1032.5156" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="111" x="1740" y="1035.7261">time : urt_osTime_t</text><ellipse cx="1731" cy="1045.3203" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="85" x="1740" y="1048.5308">payload : void*</text><ellipse cx="1731" cy="1058.125" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="66" x="1740" y="1061.3354">size : size_t</text><ellipse cx="1731" cy="1070.9297" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="173" x="1740" y="1074.1401">numHrtConsumersLeft : size_t</text><ellipse cx="1731" cy="1100.5391" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="220" x="1740" y="1103.7495">profiling : urt_message_profilingdata_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1721" x2="1814.5" y1="1087.1367" y2="1087.1367"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="168" x="1814.5" y="1090.4448">URT_CFG_PUBSUB_PROFILING</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="1986.5" y="1090.4448">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="2031.5" x2="2125" y1="1087.1367" y2="1087.1367"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1721" x2="2125" y1="1110.3438" y2="1110.3438"/><ellipse cx="1731" cy="1121.3438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="380" x="1740" y="1124.5542">urtMessageInit (message : urt_message_t*, payload : void*) : void</text><!--MD5=[a61deb8065e3f630b9ffdd88e0a797f3]
+class urt_basesubscriber_profilingdata_t--><rect codeLine="38" fill="#FEFECE" filter="url(#f8wq9urmbix1k)" height="99.2188" id="urt_basesubscriber_profilingdata_t" style="stroke:#A80036;stroke-width:1.5;" width="292" x="2562" y="997.9063"/><ellipse cx="2596.35" cy="1013.9063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2595.8344,1014.4688 Q2593.975,1013.7656 2593.3188,1013 Q2592.6781,1012.2188 2592.6781,1010.9063 Q2592.6781,1009.2188 2593.7563,1008.25 Q2594.8344,1007.2813 2596.7094,1007.2813 Q2597.5688,1007.2813 2598.4125,1007.4844 Q2599.2719,1007.6719 2600.1156,1008.0625 L2600.1156,1010.4531 Q2599.3344,1009.8906 2598.5063,1009.6094 Q2597.6938,1009.3125 2596.8969,1009.3125 Q2596.0219,1009.3125 2595.5375,1009.6719 Q2595.0688,1010.0313 2595.0688,1010.6875 Q2595.0688,1011.2031 2595.4125,1011.5469 Q2595.7563,1011.875 2596.85,1012.2813 L2597.9125,1012.6875 Q2599.3969,1013.2344 2600.1,1014.1406 Q2600.8188,1015.0469 2600.8188,1016.4219 Q2600.8188,1018.2969 2599.7094,1019.2188 Q2598.6,1020.1406 2596.35,1020.1406 Q2595.4281,1020.1406 2594.5063,1019.9219 Q2593.5844,1019.7031 2592.725,1019.2813 L2592.725,1016.75 Q2593.6938,1017.4375 2594.6156,1017.7813 Q2595.5375,1018.125 2596.4281,1018.125 Q2597.3344,1018.125 2597.8344,1017.7188 Q2598.3344,1017.2969 2598.3344,1016.5625 Q2598.3344,1016 2597.9906,1015.5938 Q2597.6625,1015.1719 2597.0375,1014.9219 L2595.8344,1014.4688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="217" x="2614.65" y="1018.0605">urt_basesubscriber_profilingdata_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2563" x2="2853" y1="1029.9063" y2="1029.9063"/><ellipse cx="2573" cy="1040.9063" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="138" x="2582" y="1044.1167">minLatency : urt_delay_t</text><ellipse cx="2573" cy="1053.7109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="141" x="2582" y="1056.9214">maxLatency : urt_delay_t</text><ellipse cx="2573" cy="1066.5156" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="136" x="2582" y="1069.7261">sumLatencies : uint64_t</text><ellipse cx="2573" cy="1079.3203" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="266" x="2582" y="1082.5308">numMessagesReceived : urt_profilingcounter_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2563" x2="2853" y1="1089.125" y2="1089.125"/><!--MD5=[34b61da515c276baadfd1c1ec694c2f9]
+class urt_basesubscriber_VMT--><rect codeLine="38" fill="#FEFECE" filter="url(#f8wq9urmbix1k)" height="73.6094" id="urt_basesubscriber_VMT" style="stroke:#A80036;stroke-width:1.5;" width="753" x="2889.5" y="1010.4063"/><ellipse cx="3185.75" cy="1026.4063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M3185.2344,1026.9688 Q3183.375,1026.2656 3182.7188,1025.5 Q3182.0781,1024.7188 3182.0781,1023.4063 Q3182.0781,1021.7188 3183.1563,1020.75 Q3184.2344,1019.7813 3186.1094,1019.7813 Q3186.9688,1019.7813 3187.8125,1019.9844 Q3188.6719,1020.1719 3189.5156,1020.5625 L3189.5156,1022.9531 Q3188.7344,1022.3906 3187.9063,1022.1094 Q3187.0938,1021.8125 3186.2969,1021.8125 Q3185.4219,1021.8125 3184.9375,1022.1719 Q3184.4688,1022.5313 3184.4688,1023.1875 Q3184.4688,1023.7031 3184.8125,1024.0469 Q3185.1563,1024.375 3186.25,1024.7813 L3187.3125,1025.1875 Q3188.7969,1025.7344 3189.5,1026.6406 Q3190.2188,1027.5469 3190.2188,1028.9219 Q3190.2188,1030.7969 3189.1094,1031.7188 Q3188,1032.6406 3185.75,1032.6406 Q3184.8281,1032.6406 3183.9063,1032.4219 Q3182.9844,1032.2031 3182.125,1031.7813 L3182.125,1029.25 Q3183.0938,1029.9375 3184.0156,1030.2813 Q3184.9375,1030.625 3185.8281,1030.625 Q3186.7344,1030.625 3187.2344,1030.2188 Q3187.7344,1029.7969 3187.7344,1029.0625 Q3187.7344,1028.5 3187.3906,1028.0938 Q3187.0625,1027.6719 3186.4375,1027.4219 L3185.2344,1026.9688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="152" x="3206.25" y="1030.5605">urt_basesubscriber_VMT</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2890.5" x2="3641.5" y1="1042.4063" y2="1042.4063"/><ellipse cx="2900.5" cy="1053.4063" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="717" x="2909.5" y="1056.6167">fetchNext : urt_status_t(*)(instance : void*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*)</text><ellipse cx="2900.5" cy="1066.2109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="727" x="2909.5" y="1069.4214">fetchLatest : urt_status_t(*)(instance : void*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*)</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2890.5" x2="3641.5" y1="1076.0156" y2="1076.0156"/><!--MD5=[50a042e24f957794dab9ba3ea8701c50]
+class urt_basesubscriber_t--><rect codeLine="38" fill="#FEFECE" filter="url(#f8wq9urmbix1k)" height="192.8516" id="urt_basesubscriber_t" style="stroke:#A80036;stroke-width:1.5;" width="934" x="2572" y="662.4063"/><ellipse cx="2968.75" cy="678.4063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2968.2344,678.9688 Q2966.375,678.2656 2965.7188,677.5 Q2965.0781,676.7188 2965.0781,675.4063 Q2965.0781,673.7188 2966.1563,672.75 Q2967.2344,671.7813 2969.1094,671.7813 Q2969.9688,671.7813 2970.8125,671.9844 Q2971.6719,672.1719 2972.5156,672.5625 L2972.5156,674.9531 Q2971.7344,674.3906 2970.9063,674.1094 Q2970.0938,673.8125 2969.2969,673.8125 Q2968.4219,673.8125 2967.9375,674.1719 Q2967.4688,674.5313 2967.4688,675.1875 Q2967.4688,675.7031 2967.8125,676.0469 Q2968.1563,676.375 2969.25,676.7813 L2970.3125,677.1875 Q2971.7969,677.7344 2972.5,678.6406 Q2973.2188,679.5469 2973.2188,680.9219 Q2973.2188,682.7969 2972.1094,683.7188 Q2971,684.6406 2968.75,684.6406 Q2967.8281,684.6406 2966.9063,684.4219 Q2965.9844,684.2031 2965.125,683.7813 L2965.125,681.25 Q2966.0938,681.9375 2967.0156,682.2813 Q2967.9375,682.625 2968.8281,682.625 Q2969.7344,682.625 2970.2344,682.2188 Q2970.7344,681.7969 2970.7344,681.0625 Q2970.7344,680.5 2970.3906,680.0938 Q2970.0625,679.6719 2969.4375,679.4219 L2968.2344,678.9688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="132" x="2989.25" y="682.5605">urt_basesubscriber_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2573" x2="3505" y1="694.4063" y2="694.4063"/><ellipse cx="2583" cy="705.4063" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="214" x="2592" y="708.6167">vmt : const urt_basesubscriber_VMT*</text><ellipse cx="2583" cy="718.2109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="104" x="2592" y="721.4214">topic : urt_topic_t*</text><ellipse cx="2583" cy="731.0156" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="198" x="2592" y="734.2261">evtListener : urt_osEventListener_t</text><ellipse cx="2583" cy="743.8203" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="175" x="2592" y="747.0308">lastMessage : urt_message_t*</text><ellipse cx="2583" cy="756.625" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="190" x="2592" y="759.8354">lastMessageID : urt_messageid_t</text><ellipse cx="2583" cy="786.2344" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="256" x="2592" y="789.4448">profiling : urt_basesubscriber_profilingdata_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="2573" x2="2930.5" y1="772.832" y2="772.832"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="168" x="2930.5" y="776.1401">URT_CFG_PUBSUB_PROFILING</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="3102.5" y="776.1401">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="3147.5" x2="3505" y1="772.832" y2="772.832"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2573" x2="3505" y1="796.0391" y2="796.0391"/><ellipse cx="2583" cy="807.0391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="471" x="2592" y="810.2495">urtSubscriberGetRtClass (subscriber : const urt_basesubscriber_t*) : urt_rtclass_t</text><ellipse cx="2583" cy="819.8438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="898" x="2592" y="823.0542">urtSubscriberFetchNext (subscriber : urt_basesubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t</text><ellipse cx="2583" cy="832.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="908" x="2592" y="835.8589">urtSubscriberFetchLatest (subscriber : urt_basesubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t</text><ellipse cx="2583" cy="845.4531" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="441" x="2592" y="848.6636">urtSubscriberUnsubscribe (subscriber : urt_basesubscriber_t*) : urt_status_t</text><!--MD5=[9ff46073dd541e50679ef35e851c67d6]
+class urt_nrtsubscriber_t--><rect codeLine="38" fill="#FEFECE" filter="url(#f8wq9urmbix1k)" height="112.0234" id="urt_nrtsubscriber_t" style="stroke:#A80036;stroke-width:1.5;" width="939" x="3516.5" y="348.9063"/><ellipse cx="3922.25" cy="364.9063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M3921.7344,365.4688 Q3919.875,364.7656 3919.2188,364 Q3918.5781,363.2188 3918.5781,361.9063 Q3918.5781,360.2188 3919.6563,359.25 Q3920.7344,358.2813 3922.6094,358.2813 Q3923.4688,358.2813 3924.3125,358.4844 Q3925.1719,358.6719 3926.0156,359.0625 L3926.0156,361.4531 Q3925.2344,360.8906 3924.4063,360.6094 Q3923.5938,360.3125 3922.7969,360.3125 Q3921.9219,360.3125 3921.4375,360.6719 Q3920.9688,361.0313 3920.9688,361.6875 Q3920.9688,362.2031 3921.3125,362.5469 Q3921.6563,362.875 3922.75,363.2813 L3923.8125,363.6875 Q3925.2969,364.2344 3926,365.1406 Q3926.7188,366.0469 3926.7188,367.4219 Q3926.7188,369.2969 3925.6094,370.2188 Q3924.5,371.1406 3922.25,371.1406 Q3921.3281,371.1406 3920.4063,370.9219 Q3919.4844,370.7031 3918.625,370.2813 L3918.625,367.75 Q3919.5938,368.4375 3920.5156,368.7813 Q3921.4375,369.125 3922.3281,369.125 Q3923.2344,369.125 3923.7344,368.7188 Q3924.2344,368.2969 3924.2344,367.5625 Q3924.2344,367 3923.8906,366.5938 Q3923.5625,366.1719 3922.9375,365.9219 L3921.7344,365.4688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="119" x="3942.75" y="369.0605">urt_nrtsubscriber_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="3517.5" x2="4454.5" y1="380.9063" y2="380.9063"/><line style="stroke:#A80036;stroke-width:1.5;" x1="3517.5" x2="4454.5" y1="388.9063" y2="388.9063"/><ellipse cx="3527.5" cy="399.9063" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="347" x="3536.5" y="403.1167">urtNrtSubscriberInit (subscriber : urt_nrtsubscriber_t*) : void</text><ellipse cx="3527.5" cy="412.7109" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="856" x="3536.5" y="415.9214">urtNrtSubscriberSubscribe (subscriber : urt_nrtsubscriber_t*, topic : urt_topic_t*, mask : urt_osEventMask_t, flags : urt_osEventFlags_t) : urt_status_t</text><ellipse cx="3527.5" cy="425.5156" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="903" x="3536.5" y="428.7261">urtNrtSubscriberFetchNext (subscriber : urt_nrtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t</text><ellipse cx="3527.5" cy="438.3203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="913" x="3536.5" y="441.5308">urtNrtSubscriberFetchLatest (subscriber : urt_nrtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t</text><ellipse cx="3527.5" cy="451.125" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="446" x="3536.5" y="454.3354">urtNrtSubscriberUnsubscribe (subscriber : urt_nrtsubscriber_t*) : urt_status_t</text><!--MD5=[5c7929572d87ccc448d875bea5da0fb1]
+class urt_srtsubscriber_t--><rect codeLine="38" fill="#FEFECE" filter="url(#f8wq9urmbix1k)" height="150.4375" id="urt_srtsubscriber_t" style="stroke:#A80036;stroke-width:1.5;" width="1185" x="4490.5" y="329.9063"/><ellipse cx="5019.75" cy="345.9063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M5019.2344,346.4688 Q5017.375,345.7656 5016.7188,345 Q5016.0781,344.2188 5016.0781,342.9063 Q5016.0781,341.2188 5017.1563,340.25 Q5018.2344,339.2813 5020.1094,339.2813 Q5020.9688,339.2813 5021.8125,339.4844 Q5022.6719,339.6719 5023.5156,340.0625 L5023.5156,342.4531 Q5022.7344,341.8906 5021.9063,341.6094 Q5021.0938,341.3125 5020.2969,341.3125 Q5019.4219,341.3125 5018.9375,341.6719 Q5018.4688,342.0313 5018.4688,342.6875 Q5018.4688,343.2031 5018.8125,343.5469 Q5019.1563,343.875 5020.25,344.2813 L5021.3125,344.6875 Q5022.7969,345.2344 5023.5,346.1406 Q5024.2188,347.0469 5024.2188,348.4219 Q5024.2188,350.2969 5023.1094,351.2188 Q5022,352.1406 5019.75,352.1406 Q5018.8281,352.1406 5017.9063,351.9219 Q5016.9844,351.7031 5016.125,351.2813 L5016.125,348.75 Q5017.0938,349.4375 5018.0156,349.7813 Q5018.9375,350.125 5019.8281,350.125 Q5020.7344,350.125 5021.2344,349.7188 Q5021.7344,349.2969 5021.7344,348.5625 Q5021.7344,348 5021.3906,347.5938 Q5021.0625,347.1719 5020.4375,346.9219 L5019.2344,346.4688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="118" x="5040.25" y="350.0605">urt_srtsubscriber_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="4491.5" x2="5674.5" y1="361.9063" y2="361.9063"/><ellipse cx="4501.5" cy="372.9063" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="189" x="4510.5" y="376.1167">usefulnesscb : urt_usefulness_f*</text><ellipse cx="4501.5" cy="385.7109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="98" x="4510.5" y="388.9214">cbparams : void*</text><line style="stroke:#A80036;stroke-width:1.5;" x1="4491.5" x2="5674.5" y1="395.5156" y2="395.5156"/><ellipse cx="4501.5" cy="406.5156" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="347" x="4510.5" y="409.7261">urtSrtSubscriberInit (subscriber : urt_srtsubscriber_t*) : void</text><ellipse cx="4501.5" cy="419.3203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="1159" x="4510.5" y="422.5308">urtSrtSubscriberSubscribe (subscriber : urt_srtsubscriber_t*, topic : urt_topic_t*, mask : urt_osEventMask_t, flags : urt_osEventFlags_t, usefulnesscb : urt_usefulness_f*, cbparams : void*) : urt_status_t</text><ellipse cx="4501.5" cy="432.125" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="903" x="4510.5" y="435.3354">urtSrtSubscriberFetchNext (subscriber : urt_srtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t</text><ellipse cx="4501.5" cy="444.9297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="913" x="4510.5" y="448.1401">urtSrtSubscriberFetchLatest (subscriber : urt_srtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t</text><ellipse cx="4501.5" cy="457.7344" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="570" x="4510.5" y="460.9448">urtSrtSubscriberCalculateUsefulness (subscriber : urt_srtsubscriber_t*, latency : urt_delay_t) : float</text><ellipse cx="4501.5" cy="470.5391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="446" x="4510.5" y="473.7495">urtSrtSubscriberUnsubscribe (subscriber : urt_srtsubscriber_t*) : urt_status_t</text><!--MD5=[17838fb05fe219fd399839979ec8a4a4]
+class urt_frtsubscriber_t--><rect codeLine="38" fill="#FEFECE" filter="url(#f8wq9urmbix1k)" height="209.6563" id="urt_frtsubscriber_t" style="stroke:#A80036;stroke-width:1.5;" width="1115" x="5710.5" y="299.9063"/><ellipse cx="6206.25" cy="315.9063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M6205.7344,316.4688 Q6203.875,315.7656 6203.2188,315 Q6202.5781,314.2188 6202.5781,312.9063 Q6202.5781,311.2188 6203.6563,310.25 Q6204.7344,309.2813 6206.6094,309.2813 Q6207.4688,309.2813 6208.3125,309.4844 Q6209.1719,309.6719 6210.0156,310.0625 L6210.0156,312.4531 Q6209.2344,311.8906 6208.4063,311.6094 Q6207.5938,311.3125 6206.7969,311.3125 Q6205.9219,311.3125 6205.4375,311.6719 Q6204.9688,312.0313 6204.9688,312.6875 Q6204.9688,313.2031 6205.3125,313.5469 Q6205.6563,313.875 6206.75,314.2813 L6207.8125,314.6875 Q6209.2969,315.2344 6210,316.1406 Q6210.7188,317.0469 6210.7188,318.4219 Q6210.7188,320.2969 6209.6094,321.2188 Q6208.5,322.1406 6206.25,322.1406 Q6205.3281,322.1406 6204.4063,321.9219 Q6203.4844,321.7031 6202.625,321.2813 L6202.625,318.75 Q6203.5938,319.4375 6204.5156,319.7813 Q6205.4375,320.125 6206.3281,320.125 Q6207.2344,320.125 6207.7344,319.7188 Q6208.2344,319.2969 6208.2344,318.5625 Q6208.2344,318 6207.8906,317.5938 Q6207.5625,317.1719 6206.9375,316.9219 L6205.7344,316.4688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="115" x="6226.75" y="320.0605">urt_frtsubscriber_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="5711.5" x2="6824.5" y1="331.9063" y2="331.9063"/><ellipse cx="5721.5" cy="359.7109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="157" x="5730.5" y="362.9214">deadlineOffset : urt_delay_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="5711.5" x2="6128" y1="346.3086" y2="346.3086"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="231" x="6128" y="349.6167">URT_CFG_PUBSUB_QOS_DEADLINECHECKS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="6363" y="349.6167">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="6408" x2="6824.5" y1="346.3086" y2="346.3086"/><ellipse cx="5721.5" cy="389.3203" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="124" x="5730.5" y="392.5308">maxJitter : urt_delay_t</text><ellipse cx="5721.5" cy="402.125" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="138" x="5730.5" y="405.3354">minLatency : urt_delay_t</text><ellipse cx="5721.5" cy="414.9297" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="141" x="5730.5" y="418.1401">maxLatency : urt_delay_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="5711.5" x2="6135" y1="375.918" y2="375.918"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="217" x="6135" y="379.2261">URT_CFG_PUBSUB_QOS_JITTERCHECKS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="6356" y="379.2261">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="6401" x2="6824.5" y1="375.918" y2="375.918"/><line style="stroke:#A80036;stroke-width:1.5;" x1="5711.5" x2="6824.5" y1="424.7344" y2="424.7344"/><ellipse cx="5721.5" cy="435.7344" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="342" x="5730.5" y="438.9448">urtFrtSubscriberInit (subscriber : urt_frtsubscriber_t*) : void</text><ellipse cx="5721.5" cy="448.5391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="1089" x="5730.5" y="451.7495">urtFrtSubscriberSubscribe (subscriber : urt_frtsubscriber_t*, topic : urt_topic_t*, mask : urt_osEventMask_t, flags : urt_osEventFlags_t, deadline : urt_delay_t, jitter : urt_delay_t) : urt_status_t</text><ellipse cx="5721.5" cy="461.3438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="898" x="5730.5" y="464.5542">urtFrtSubscriberFetchNext (subscriber : urt_frtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t</text><ellipse cx="5721.5" cy="474.1484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="908" x="5730.5" y="477.3589">urtFrtSubscriberFetchLatest (subscriber : urt_frtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t</text><ellipse cx="5721.5" cy="486.9531" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="540" x="5730.5" y="490.1636">urtFrtSubscriberCalculateValidity (subscriber : urt_frtsubscriber_t*, latency : urt_delay_t) : bool</text><ellipse cx="5721.5" cy="499.7578" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="441" x="5730.5" y="502.9683">urtFrtSubscriberUnsubscribe (subscriber : urt_frtsubscriber_t*) : urt_status_t</text><!--MD5=[104dc879e5721421b987fcc467bc3a1d]
+class urt_hrtsubscriber_t--><rect codeLine="38" fill="#FEFECE" filter="url(#f8wq9urmbix1k)" height="298.4844" id="urt_hrtsubscriber_t" style="stroke:#A80036;stroke-width:1.5;" width="1225" x="2200.5" y="255.9063"/><ellipse cx="2749.25" cy="271.9063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2748.7344,272.4688 Q2746.875,271.7656 2746.2188,271 Q2745.5781,270.2188 2745.5781,268.9063 Q2745.5781,267.2188 2746.6563,266.25 Q2747.7344,265.2813 2749.6094,265.2813 Q2750.4688,265.2813 2751.3125,265.4844 Q2752.1719,265.6719 2753.0156,266.0625 L2753.0156,268.4531 Q2752.2344,267.8906 2751.4063,267.6094 Q2750.5938,267.3125 2749.7969,267.3125 Q2748.9219,267.3125 2748.4375,267.6719 Q2747.9688,268.0313 2747.9688,268.6875 Q2747.9688,269.2031 2748.3125,269.5469 Q2748.6563,269.875 2749.75,270.2813 L2750.8125,270.6875 Q2752.2969,271.2344 2753,272.1406 Q2753.7188,273.0469 2753.7188,274.4219 Q2753.7188,276.2969 2752.6094,277.2188 Q2751.5,278.1406 2749.25,278.1406 Q2748.3281,278.1406 2747.4063,277.9219 Q2746.4844,277.7031 2745.625,277.2813 L2745.625,274.75 Q2746.5938,275.4375 2747.5156,275.7813 Q2748.4375,276.125 2749.3281,276.125 Q2750.2344,276.125 2750.7344,275.7188 Q2751.2344,275.2969 2751.2344,274.5625 Q2751.2344,274 2750.8906,273.5938 Q2750.5625,273.1719 2749.9375,272.9219 L2748.7344,272.4688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="119" x="2769.75" y="276.0605">urt_hrtsubscriber_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2201.5" x2="3424.5" y1="287.9063" y2="287.9063"/><ellipse cx="2211.5" cy="315.7109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="151" x="2220.5" y="318.9214">next : urt_hrtsubscriber_t*</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="2201.5" x2="2412" y1="302.3086" y2="302.3086"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="231" x="2412" y="305.6167">URT_CFG_PUBSUB_QOS_DEADLINECHECKS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="57" x="2647" y="305.6167">== true ||</text><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="217" x="2708" y="305.6167">URT_CFG_PUBSUB_QOS_JITTERCHECKS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="57" x="2929" y="305.6167">== true ||</text><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="175" x="2990" y="305.6167">URT_CFG_PUBSUB_RATECHECKS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="3169" y="305.6167">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="3214" x2="3424.5" y1="302.3086" y2="302.3086"/><ellipse cx="2211.5" cy="345.3203" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="145" x="2220.5" y="348.5308">qosTimer : urt_osTimer_t</text><ellipse cx="2211.5" cy="358.125" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="208" x="2220.5" y="361.3354">qosTimerMessage : urt_message_t*</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="2201.5" x2="2532" y1="331.918" y2="331.918"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="231" x="2532" y="335.2261">URT_CFG_PUBSUB_QOS_DEADLINECHECKS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="57" x="2767" y="335.2261">== true ||</text><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="217" x="2828" y="335.2261">URT_CFG_PUBSUB_QOS_JITTERCHECKS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="3049" y="335.2261">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="3094" x2="3424.5" y1="331.918" y2="331.918"/><ellipse cx="2211.5" cy="387.7344" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="157" x="2220.5" y="390.9448">deadlineOffset : urt_delay_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="2201.5" x2="2673" y1="374.332" y2="374.332"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="231" x="2673" y="377.6401">URT_CFG_PUBSUB_QOS_DEADLINECHECKS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="2908" y="377.6401">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="2953" x2="3424.5" y1="374.332" y2="374.332"/><ellipse cx="2211.5" cy="417.3438" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="124" x="2220.5" y="420.5542">maxJitter : urt_delay_t</text><ellipse cx="2211.5" cy="430.1484" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="138" x="2220.5" y="433.3589">minLatency : urt_delay_t</text><ellipse cx="2211.5" cy="442.9531" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="141" x="2220.5" y="446.1636">maxLatency : urt_delay_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="2201.5" x2="2680" y1="403.9414" y2="403.9414"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="217" x="2680" y="407.2495">URT_CFG_PUBSUB_QOS_JITTERCHECKS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="2901" y="407.2495">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="2946" x2="3424.5" y1="403.9414" y2="403.9414"/><ellipse cx="2211.5" cy="472.5625" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="150" x="2220.5" y="475.7729">expectedRate : urt_delay_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="2201.5" x2="2687" y1="459.1602" y2="459.1602"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="203" x="2687" y="462.4683">URT_CFG_PUBSUB_QOS_RATECHECKS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="2894" y="462.4683">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="2939" x2="3424.5" y1="459.1602" y2="459.1602"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2201.5" x2="3424.5" y1="482.3672" y2="482.3672"/><ellipse cx="2211.5" cy="493.3672" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="347" x="2220.5" y="496.5776">urtHrtSubscriberInit (subscriber : urt_hrtsubscriber_t*) : void</text><ellipse cx="2211.5" cy="506.1719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="1199" x="2220.5" y="509.3823">urtHrtSubscriberSubscribe (subscriber : urt_hrtsubscriber_t*, topic : urt_topic_t*, mask : urt_osEventMask_t, flags : urt_osEventFlags_t, deadline : urt_delay_t, rate : urt_delay_t, jitter : urt_delay_t) : urt_status_t</text><ellipse cx="2211.5" cy="518.9766" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="903" x="2220.5" y="522.187">urtHrtSubscriberFetchNext (subscriber : urt_hrtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t</text><ellipse cx="2211.5" cy="531.7813" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="913" x="2220.5" y="534.9917">urtHrtSubscriberFetchLatest (subscriber : urt_hrtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t</text><ellipse cx="2211.5" cy="544.5859" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="446" x="2220.5" y="547.7964">urtHrtSubscriberUnsubscribe (subscriber : urt_hrtsubscriber_t*) : urt_status_t</text><!--MD5=[ab7cf431813e3be5d474948fd959cdbf]
+class urt_subscriber_t--><rect codeLine="43" fill="#FEFECE" filter="url(#f8wq9urmbix1k)" height="112.0234" id="urt_subscriber_t" style="stroke:#A80036;stroke-width:1.5;" width="187" x="3892.5" y="83.9063"/><ellipse cx="3931.8" cy="99.9063" fill="#7FCF7F" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M3927.675,101.8281 L3927.675,94.0156 L3930.1281,94.0156 L3930.1281,102.4531 Q3930.1281,103.375 3930.5969,103.9063 Q3931.0813,104.4375 3931.9094,104.4375 Q3932.7531,104.4375 3933.2219,103.9063 Q3933.6906,103.375 3933.6906,102.4531 L3933.6906,94.0156 L3936.1438,94.0156 L3936.1438,101.8281 Q3936.1438,104.3594 3935.1438,105.5 Q3934.1438,106.6406 3931.9094,106.6406 Q3929.6906,106.6406 3928.675,105.5 Q3927.675,104.3594 3927.675,101.8281 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="101" x="3951.2" y="104.0605">urt_subscriber_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="3893.5" x2="4078.5" y1="115.9063" y2="115.9063"/><ellipse cx="3903.5" cy="126.9063" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="161" x="3912.5" y="130.1167">base : urt_basesubscriber_t</text><ellipse cx="3903.5" cy="139.7109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="137" x="3912.5" y="142.9214">nrt : urt_nrtsubscriber_t</text><ellipse cx="3903.5" cy="152.5156" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="137" x="3912.5" y="155.7261">srt : urt_srtsubscriber_t</text><ellipse cx="3903.5" cy="165.3203" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="131" x="3912.5" y="168.5308">frt : urt_frtsubscriber_t</text><ellipse cx="3903.5" cy="178.125" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="137" x="3912.5" y="181.3354">hrt : urt_hrtsubscriber_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="3893.5" x2="4078.5" y1="187.9297" y2="187.9297"/><!--MD5=[58b8387a1f0520ba590bd8ddae9ae1bf]
+class urt_publisher_profilingdata_t--><rect codeLine="38" fill="#FEFECE" filter="url(#f8wq9urmbix1k)" height="73.6094" id="urt_publisher_profilingdata_t" style="stroke:#A80036;stroke-width:1.5;" width="251" x="261.5" y="1010.4063"/><ellipse cx="294.95" cy="1026.4063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M294.4344,1026.9688 Q292.575,1026.2656 291.9188,1025.5 Q291.2781,1024.7188 291.2781,1023.4063 Q291.2781,1021.7188 292.3563,1020.75 Q293.4344,1019.7813 295.3094,1019.7813 Q296.1688,1019.7813 297.0125,1019.9844 Q297.8719,1020.1719 298.7156,1020.5625 L298.7156,1022.9531 Q297.9344,1022.3906 297.1063,1022.1094 Q296.2938,1021.8125 295.4969,1021.8125 Q294.6219,1021.8125 294.1375,1022.1719 Q293.6688,1022.5313 293.6688,1023.1875 Q293.6688,1023.7031 294.0125,1024.0469 Q294.3563,1024.375 295.45,1024.7813 L296.5125,1025.1875 Q297.9969,1025.7344 298.7,1026.6406 Q299.4188,1027.5469 299.4188,1028.9219 Q299.4188,1030.7969 298.3094,1031.7188 Q297.2,1032.6406 294.95,1032.6406 Q294.0281,1032.6406 293.1063,1032.4219 Q292.1844,1032.2031 291.325,1031.7813 L291.325,1029.25 Q292.2938,1029.9375 293.2156,1030.2813 Q294.1375,1030.625 295.0281,1030.625 Q295.9344,1030.625 296.4344,1030.2188 Q296.9344,1029.7969 296.9344,1029.0625 Q296.9344,1028.5 296.5906,1028.0938 Q296.2625,1027.6719 295.6375,1027.4219 L294.4344,1026.9688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="178" x="313.05" y="1030.5605">urt_publisher_profilingdata_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="262.5" x2="511.5" y1="1042.4063" y2="1042.4063"/><ellipse cx="272.5" cy="1053.4063" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="225" x="281.5" y="1056.6167">publishAttempts : urt_profilingcounter_t</text><ellipse cx="272.5" cy="1066.2109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="200" x="281.5" y="1069.4214">publishFails : urt_profilingcounter_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="262.5" x2="511.5" y1="1076.0156" y2="1076.0156"/><!--MD5=[4029478ccb7e25c1bfc75236d6e5a0b8]
+class urt_publisher_publishpolicy_t--><rect codeLine="28" fill="#FEFECE" filter="url(#f8wq9urmbix1k)" height="86.4141" id="urt_publisher_publishpolicy_t" style="stroke:#A80036;stroke-width:1.5;" width="233" x="547.5" y="1004.4063"/><ellipse cx="572.4" cy="1020.4063" fill="#FF7F3F" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M576.5094,1026.4063 L568.7906,1026.4063 L568.7906,1014.0156 L576.5094,1014.0156 L576.5094,1016.1719 L571.2438,1016.1719 L571.2438,1018.8438 L576.0094,1018.8438 L576.0094,1021 L571.2438,1021 L571.2438,1024.25 L576.5094,1024.25 L576.5094,1026.4063 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="179" x="588.6" y="1024.5605">urt_publisher_publishpolicy_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="548.5" x2="779.5" y1="1036.4063" y2="1036.4063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="179" x="553.5" y="1050.6167">URT_PUBLISHER_PUBLISH_LAZY</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="221" x="553.5" y="1063.4214">URT_PUBLISHER_PUBLISH_DETERMINED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="215" x="553.5" y="1076.2261">URT_PUBLISHER_PUBLISH_ENFORCING</text><line style="stroke:#A80036;stroke-width:1.5;" x1="548.5" x2="779.5" y1="1082.8203" y2="1082.8203"/><!--MD5=[2ac85a9c1cceb8bb0c9045edc105e6e3]
+class urt_publisher_t--><rect codeLine="38" fill="#FEFECE" filter="url(#f8wq9urmbix1k)" height="183.2422" id="urt_publisher_t" style="stroke:#A80036;stroke-width:1.5;" width="1005" x="23.5" y="667.4063"/><ellipse cx="475.25" cy="683.4063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M474.7344,683.9688 Q472.875,683.2656 472.2188,682.5 Q471.5781,681.7188 471.5781,680.4063 Q471.5781,678.7188 472.6563,677.75 Q473.7344,676.7813 475.6094,676.7813 Q476.4688,676.7813 477.3125,676.9844 Q478.1719,677.1719 479.0156,677.5625 L479.0156,679.9531 Q478.2344,679.3906 477.4063,679.1094 Q476.5938,678.8125 475.7969,678.8125 Q474.9219,678.8125 474.4375,679.1719 Q473.9688,679.5313 473.9688,680.1875 Q473.9688,680.7031 474.3125,681.0469 Q474.6563,681.375 475.75,681.7813 L476.8125,682.1875 Q478.2969,682.7344 479,683.6406 Q479.7188,684.5469 479.7188,685.9219 Q479.7188,687.7969 478.6094,688.7188 Q477.5,689.6406 475.25,689.6406 Q474.3281,689.6406 473.4063,689.4219 Q472.4844,689.2031 471.625,688.7813 L471.625,686.25 Q472.5938,686.9375 473.5156,687.2813 Q474.4375,687.625 475.3281,687.625 Q476.2344,687.625 476.7344,687.2188 Q477.2344,686.7969 477.2344,686.0625 Q477.2344,685.5 476.8906,685.0938 Q476.5625,684.6719 475.9375,684.4219 L474.7344,683.9688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="93" x="495.75" y="687.5605">urt_publisher_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="24.5" x2="1027.5" y1="699.4063" y2="699.4063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="289" x="29.5" y="713.6167">URT_PUBSUB_PUBLISHER_PUBLISH_TIMEOUT : bool</text><line style="stroke:#A80036;stroke-width:1.5;" x1="24.5" x2="1027.5" y1="720.2109" y2="720.2109"/><ellipse cx="34.5" cy="731.2109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="104" x="43.5" y="734.4214">topic : urt_topic_t*</text><ellipse cx="34.5" cy="760.8203" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="220" x="43.5" y="764.0308">profiling : urt_publisher_profilingdata_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="24.5" x2="417.5" y1="747.418" y2="747.418"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="168" x="417.5" y="750.7261">URT_CFG_PUBSUB_PROFILING</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="589.5" y="750.7261">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="634.5" x2="1027.5" y1="747.418" y2="747.418"/><line style="stroke:#A80036;stroke-width:1.5;" x1="24.5" x2="1027.5" y1="770.625" y2="770.625"/><ellipse cx="34.5" cy="781.625" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="401" x="43.5" y="784.8354">urtPublisherInit (publisher : urt_publisher_t*, topic : urt_topic_t*) : void</text><ellipse cx="34.5" cy="811.2344" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="854" x="43.5" y="814.4448">urtPublisherPublish (publisher : urt_publisher_t*, payload : void*, bytes : size_t, t : urt_osTime_t*, policy : urt_publisher_publishpolicy_t) : urt_status_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="24.5" x2="373" y1="797.832" y2="797.832"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="252" x="373" y="801.1401">URT_PUBSUB_PUBLISHER_PUBLISH_TIMEOUT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="50" x="629" y="801.1401">== false</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="679" x2="1027.5" y1="797.832" y2="797.832"/><ellipse cx="34.5" cy="840.8438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="979" x="43.5" y="844.0542">urtPublisherPublish (publisher : urt_publisher_t*, payload : void*, bytes : size_t, t : urt_osTime_t*, policy : urt_publisher_publishpolicy_t, timeout : urt_delay_t) : urt_status_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="24.5" x2="375.5" y1="827.4414" y2="827.4414"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="252" x="375.5" y="830.7495">URT_PUBSUB_PUBLISHER_PUBLISH_TIMEOUT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="631.5" y="830.7495">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="676.5" x2="1027.5" y1="827.4414" y2="827.4414"/><!--MD5=[f74a9d60831b0b72d07efd4fa20a717a]
+class urt_topic_profilingdata_t--><rect codeLine="38" fill="#FEFECE" filter="url(#f8wq9urmbix1k)" height="86.4141" id="urt_topic_profilingdata_t" style="stroke:#A80036;stroke-width:1.5;" width="299" x="1085.5" y="1004.4063"/><ellipse cx="1155.25" cy="1020.4063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1154.7344,1020.9688 Q1152.875,1020.2656 1152.2188,1019.5 Q1151.5781,1018.7188 1151.5781,1017.4063 Q1151.5781,1015.7188 1152.6563,1014.75 Q1153.7344,1013.7813 1155.6094,1013.7813 Q1156.4688,1013.7813 1157.3125,1013.9844 Q1158.1719,1014.1719 1159.0156,1014.5625 L1159.0156,1016.9531 Q1158.2344,1016.3906 1157.4063,1016.1094 Q1156.5938,1015.8125 1155.7969,1015.8125 Q1154.9219,1015.8125 1154.4375,1016.1719 Q1153.9688,1016.5313 1153.9688,1017.1875 Q1153.9688,1017.7031 1154.3125,1018.0469 Q1154.6563,1018.375 1155.75,1018.7813 L1156.8125,1019.1875 Q1158.2969,1019.7344 1159,1020.6406 Q1159.7188,1021.5469 1159.7188,1022.9219 Q1159.7188,1024.7969 1158.6094,1025.7188 Q1157.5,1026.6406 1155.25,1026.6406 Q1154.3281,1026.6406 1153.4063,1026.4219 Q1152.4844,1026.2031 1151.625,1025.7813 L1151.625,1023.25 Q1152.5938,1023.9375 1153.5156,1024.2813 Q1154.4375,1024.625 1155.3281,1024.625 Q1156.2344,1024.625 1156.7344,1024.2188 Q1157.2344,1023.7969 1157.2344,1023.0625 Q1157.2344,1022.5 1156.8906,1022.0938 Q1156.5625,1021.6719 1155.9375,1021.4219 L1154.7344,1020.9688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="151" x="1175.75" y="1024.5605">urt_topic_profilingdata_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1086.5" x2="1383.5" y1="1036.4063" y2="1036.4063"/><ellipse cx="1096.5" cy="1047.4063" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="271" x="1105.5" y="1050.6167">numMessagesPublished : urt_profilingcounter_t</text><ellipse cx="1096.5" cy="1060.2109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="273" x="1105.5" y="1063.4214">numMessagesDiscarded : urt_profilingcounter_t</text><ellipse cx="1096.5" cy="1073.0156" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="138" x="1105.5" y="1076.2261">numSubscribers : size_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1086.5" x2="1383.5" y1="1082.8203" y2="1082.8203"/><!--MD5=[a55671f9c3a4eb2d749fd774fc81a82b]
+class urt_topicid_t--><rect codeLine="33" fill="#FEFECE" filter="url(#f8wq9urmbix1k)" height="158.4375" id="urt_topicid_t" style="stroke:#A80036;stroke-width:1.5;" width="244" x="1420" y="968.4063"/><ellipse cx="1499.25" cy="984.4063" fill="#00CFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1500.0938,991.1563 L1497.6406,991.1563 L1497.6406,980.9063 L1494.5,980.9063 L1494.5,978.7656 L1503.2344,978.7656 L1503.2344,980.9063 L1500.0938,980.9063 L1500.0938,991.1563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="77" x="1519.75" y="988.5605">urt_topicid_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1421" x2="1663" y1="1000.4063" y2="1000.4063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="34" x="1426" y="1031.4214">uin8_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1421" x2="1427.5" y1="1014.8086" y2="1014.8086"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="196" x="1427.5" y="1018.1167">URT_CFG_PUBSUB_TOPICID_WIDTH</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="29" x="1627.5" y="1018.1167">== 8</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1656.5" x2="1663" y1="1014.8086" y2="1014.8086"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="1426" y="1061.0308">uint16_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1421" x2="1424" y1="1044.418" y2="1044.418"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="196" x="1424" y="1047.7261">URT_CFG_PUBSUB_TOPICID_WIDTH</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="36" x="1624" y="1047.7261">== 16</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1660" x2="1663" y1="1044.418" y2="1044.418"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="1426" y="1090.6401">uint32_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1421" x2="1424" y1="1074.0273" y2="1074.0273"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="196" x="1424" y="1077.3354">URT_CFG_PUBSUB_TOPICID_WIDTH</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="36" x="1624" y="1077.3354">== 32</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1660" x2="1663" y1="1074.0273" y2="1074.0273"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="1426" y="1120.2495">uint64_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1421" x2="1424" y1="1103.6367" y2="1103.6367"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="196" x="1424" y="1106.9448">URT_CFG_PUBSUB_TOPICID_WIDTH</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="36" x="1624" y="1106.9448">== 64</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1660" x2="1663" y1="1103.6367" y2="1103.6367"/><!--MD5=[a1b1e66ec52c209a9fa2dab315cd7630]
+class urt_topic_t--><rect codeLine="38" fill="#FEFECE" filter="url(#f8wq9urmbix1k)" height="290.4844" id="urt_topic_t" style="stroke:#A80036;stroke-width:1.5;" width="556" x="1090" y="613.9063"/><ellipse cx="1330.75" cy="629.9063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1330.2344,630.4688 Q1328.375,629.7656 1327.7188,629 Q1327.0781,628.2188 1327.0781,626.9063 Q1327.0781,625.2188 1328.1563,624.25 Q1329.2344,623.2813 1331.1094,623.2813 Q1331.9688,623.2813 1332.8125,623.4844 Q1333.6719,623.6719 1334.5156,624.0625 L1334.5156,626.4531 Q1333.7344,625.8906 1332.9063,625.6094 Q1332.0938,625.3125 1331.2969,625.3125 Q1330.4219,625.3125 1329.9375,625.6719 Q1329.4688,626.0313 1329.4688,626.6875 Q1329.4688,627.2031 1329.8125,627.5469 Q1330.1563,627.875 1331.25,628.2813 L1332.3125,628.6875 Q1333.7969,629.2344 1334.5,630.1406 Q1335.2188,631.0469 1335.2188,632.4219 Q1335.2188,634.2969 1334.1094,635.2188 Q1333,636.1406 1330.75,636.1406 Q1329.8281,636.1406 1328.9063,635.9219 Q1327.9844,635.7031 1327.125,635.2813 L1327.125,632.75 Q1328.0938,633.4375 1329.0156,633.7813 Q1329.9375,634.125 1330.8281,634.125 Q1331.7344,634.125 1332.2344,633.7188 Q1332.7344,633.2969 1332.7344,632.5625 Q1332.7344,632 1332.3906,631.5938 Q1332.0625,631.1719 1331.4375,630.9219 L1330.2344,630.4688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="66" x="1351.25" y="634.0605">urt_topic_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1091" x2="1645" y1="645.9063" y2="645.9063"/><ellipse cx="1101" cy="656.9063" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="101" x="1110" y="660.1167">next : urt_topic_t*</text><ellipse cx="1101" cy="669.7109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="91" x="1110" y="672.9214">id : urt_topicid_t</text><ellipse cx="1101" cy="682.5156" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="113" x="1110" y="685.7261">lock : urt_osMutex_t</text><ellipse cx="1101" cy="695.3203" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="186" x="1110" y="698.5308">evtSource : urt_osEventSource_t</text><ellipse cx="1101" cy="708.125" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="155" x="1110" y="711.3354">numHrtSubscribers : size_t</text><ellipse cx="1101" cy="720.9297" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="173" x="1110" y="724.1401">hrtReleased : urt_osCondvar_t</text><ellipse cx="1101" cy="733.7344" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="209" x="1110" y="736.9448">mandatoryMessage : urt_message_t</text><ellipse cx="1101" cy="746.5391" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="186" x="1110" y="749.7495">latestMessage : urt_message_t*</text><ellipse cx="1101" cy="776.1484" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="212" x="1110" y="779.3589">hrtSubscribers : urt_hrtsubscriber_t*</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1091" x2="1094" y1="762.7461" y2="762.7461"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="231" x="1094" y="766.0542">URT_CFG_PUBSUB_QOS_DEADLINECHECKS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="57" x="1329" y="766.0542">== true ||</text><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="203" x="1390" y="766.0542">URT_CFG_PUBSUB_QOS_RATECHECKS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="1597" y="766.0542">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1642" x2="1645" y1="762.7461" y2="762.7461"/><ellipse cx="1101" cy="805.7578" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="200" x="1110" y="808.9683">latestInformation : urt_message_t*</text><ellipse cx="1101" cy="818.5625" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="145" x="1110" y="821.7729">qosTimer : urt_osTimer_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1091" x2="1242" y1="792.3555" y2="792.3555"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="203" x="1242" y="795.6636">URT_CFG_PUBSUB_QOS_RATECHECKS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="1449" y="795.6636">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1494" x2="1645" y1="792.3555" y2="792.3555"/><ellipse cx="1101" cy="848.1719" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="194" x="1110" y="851.3823">profiling : urt_topic_profilingdata_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1091" x2="1259.5" y1="834.7695" y2="834.7695"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="168" x="1259.5" y="838.0776">URT_CFG_PUBSUB_PROFILING</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="1431.5" y="838.0776">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1476.5" x2="1645" y1="834.7695" y2="834.7695"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1091" x2="1645" y1="857.9766" y2="857.9766"/><ellipse cx="1101" cy="868.9766" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="451" x="1110" y="872.187">urtTopicInit (topic : urt_topic_t*, id : urt_topicid_t, payload : void*) : urt_status_t</text><ellipse cx="1101" cy="881.7813" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="492" x="1110" y="884.9917">urtTopicAddMessages (topic : urt_topic_t*, messages : urt_message_t*) : urt_status_t</text><ellipse cx="1101" cy="894.5859" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="264" x="1110" y="897.7964">urtTopicBufferSize (topic : urt_topic_t*) : size_t</text><!--MD5=[536025241394544a90bc53fb552f3a08]
+reverse link urt_message_t to urt_message_t--><path codeLine="339" d="M2138.92,1023.5763 C2152.69,1029.1663 2161,1037.1063 2161,1047.4063 C2161,1060.5863 2147.38,1069.9063 2126.13,1075.3663 " fill="none" id="urt_message_t-backto-urt_message_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="2126.13,1019.4463,2130.6084,1025.0981,2137.548,1023.138,2133.0696,1017.4861,2126.13,1019.4463" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="2133.7894" y="1073.1665">0,1</text><!--MD5=[e68ca2392abcf4666d0c4731374f0692]
+reverse link urt_message_t to urt_messageid_t--><path codeLine="340" d="M2002.49,1141.1463 C2019.99,1161.5563 2037.27,1181.7263 2050.68,1197.3663 " fill="none" id="urt_message_t-backto-urt_messageid_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1993.9,1131.1263,1994.766,1138.2852,2001.7073,1140.2392,2000.8413,1133.0803,1993.9,1131.1263" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="2036.2663" y="1186.1478">1</text><!--MD5=[2bbce82031b896a3c3599d3a8bb1354d]
+reverse link urt_message_t to urt_message_profilingdata_t--><path codeLine="341" d="M1891.43,1143.9263 C1885.9,1160.6463 1880.47,1177.0663 1875.92,1190.8363 " fill="none" id="urt_message_t-backto-urt_message_profilingdata_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1895.66,1131.1263,1889.9771,1135.5653,1891.889,1142.5183,1897.5719,1138.0793,1895.66,1131.1263" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="1856.274" y="1179.7338">0,1</text><!--MD5=[24ba761b7e248006dde51433c2c82e98]
+reverse link urt_basesubscriber_t to urt_basesubscriber_VMT--><path codeLine="343" d="M3123.12,866.0763 C3163.26,916.7362 3208.66,974.0363 3237.3,1010.1863 " fill="none" id="urt_basesubscriber_t-backto-urt_basesubscriber_VMT" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="3114.9,855.7063,3115.4914,862.8931,3122.3528,865.1113,3121.7614,857.9245,3114.9,855.7063" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="3223.4753" y="999.334">1</text><!--MD5=[77e698404946b868b87e7a9ad237d7ee]
+reverse link urt_basesubscriber_t to urt_topic_t--><path codeLine="344" d="M2558.69,758.9063 C2254.54,758.9063 1950.38,758.9063 1646.23,758.9063 " fill="none" id="urt_basesubscriber_t-backto-urt_topic_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="2571.8,758.9063,2565.8,754.9063,2559.8,758.9063,2565.8,762.9063,2571.8,758.9063" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="1653.8861" y="755.7693">0,1</text><!--MD5=[aa8990705afdbad14c7f998fe04b6f05]
+reverse link urt_basesubscriber_t to urt_message_t--><path codeLine="345" d="M2558.97,844.8963 C2385.96,876.5763 2223.36,907.9862 2184,920.9063 C2148.65,932.5063 2111.93,947.8963 2077.58,963.8963 " fill="none" id="urt_basesubscriber_t-backto-urt_message_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="2571.98,842.5263,2565.3573,839.6732,2560.1765,844.6891,2566.7992,847.5422,2571.98,842.5263" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="2070.4567" y="952.8527">0,1</text><!--MD5=[ba7c8b9c426f009aa449c9f13dd6dff6]
+reverse link urt_basesubscriber_t to urt_messageid_t--><path codeLine="346" d="M2692.67,859.8863 C2642.28,878.1263 2591.69,898.5463 2545,920.9063 C2373.79,1002.8863 2190.92,1137.8163 2113.77,1197.2363 " fill="none" id="urt_basesubscriber_t-backto-urt_messageid_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2705.12,855.4163,2698.1219,853.6766,2693.8245,859.4673,2700.8226,861.207,2705.12,855.4163" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="2112.7351" y="1186.4644">1</text><!--MD5=[9f65c1c938e0de3a7651ad4f0a102f30]
+reverse link urt_basesubscriber_t to urt_basesubscriber_profilingdata_t--><path codeLine="347" d="M2918.23,864.4463 C2865.55,910.0363 2806.35,961.2763 2764.22,997.7462 " fill="none" id="urt_basesubscriber_t-backto-urt_basesubscriber_profilingdata_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2928.32,855.7063,2921.1659,856.6115,2919.25,863.5634,2926.404,862.6582,2928.32,855.7063" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="2750.7197" y="986.769">0,1</text><!--MD5=[0585cd4928de92ce6927d9c389eadd29]
+link urt_nrtsubscriber_t to urt_basesubscriber_t--><path codeLine="349" d="M3837.77,461.0063 C3698.26,512.8563 3485.85,591.8163 3315.13,655.2663 " fill="none" id="urt_nrtsubscriber_t-to-urt_basesubscriber_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="3317.56,661.8363,3296.38,662.2363,3312.69,648.7063,3317.56,661.8363" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[6d81edfa5aa102b898ad487ae19b49f9]
+link urt_srtsubscriber_t to urt_basesubscriber_t--><path codeLine="351" d="M4802.57,479.9662 C4699.42,505.6063 4581.36,533.1063 4473,553.9063 C4159.63,614.0663 3804.6,664.7063 3526.2,700.4863 " fill="none" id="urt_srtsubscriber_t-to-urt_basesubscriber_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="3527.01,707.4363,3506.29,703.0363,3525.24,693.5563,3527.01,707.4363" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[f626d284cba98e1d5d5fe914b1fa4188]
+link urt_frtsubscriber_t to urt_basesubscriber_t--><path codeLine="353" d="M5903.49,509.9562 C5834.06,526.8563 5761.64,542.5263 5693,553.9063 C4942.96,678.2763 4060.84,727.0463 3526.17,746.0163 " fill="none" id="urt_frtsubscriber_t-to-urt_basesubscriber_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="3526.35,753.0163,3506.11,746.7163,3525.86,739.0263,3526.35,753.0163" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[1ea71f2b33e56ab0ac5545988c1af396]
+link urt_hrtsubscriber_t to urt_basesubscriber_t--><path codeLine="355" d="M2908.03,553.9063 C2927.61,584.4163 2947.94,616.0763 2966.56,645.0863 " fill="none" id="urt_hrtsubscriber_t-to-urt_basesubscriber_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="2972.7,641.6963,2977.62,662.3063,2960.92,649.2563,2972.7,641.6963" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ea2ec5c5272e65289dabade75a749f58]
+reverse link urt_hrtsubscriber_t to urt_hrtsubscriber_t--><path codeLine="356" d="M3437.87,381.5063 C3452.4,388.0662 3460.5,395.8663 3460.5,404.9063 C3460.5,416.2463 3447.75,425.6463 3425.53,433.0862 " fill="none" id="urt_hrtsubscriber_t-backto-urt_hrtsubscriber_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="3425.53,376.7263,3429.6793,382.624,3436.7192,381.0622,3432.57,375.1645,3425.53,376.7263" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="3434.2843" y="430.4415">0,1</text><!--MD5=[202fc96d338eb2f9ee8c55f45e138106]
+reverse link urt_hrtsubscriber_t to urt_message_t--><path codeLine="357" d="M2568.79,561.3963 C2564.15,564.5763 2559.54,567.7463 2555,570.9063 C2365.11,702.7763 2151.61,866.8763 2027.7,963.7663 " fill="none" id="urt_hrtsubscriber_t-backto-urt_message_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="2579.71,553.9563,2572.4993,554.0331,2569.7969,560.7187,2577.0076,560.6418,2579.71,553.9563" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="2016.1342" y="952.7111">0,1</text><!--MD5=[c98f556942a3f9dfbd15fa504143caf3]
+link urt_subscriber_t to urt_basesubscriber_t--><path codeLine="359" d="M3892.32,150.4262 C3765.97,165.2863 3550.73,198.4362 3499,255.9063 C3409.68,355.1463 3538.98,445.5263 3461,553.9063 C3432.48,593.5463 3394.14,625.8063 3352.16,651.9763 " fill="none" id="urt_subscriber_t-to-urt_basesubscriber_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="3355.7,658.0163,3334.94,662.2663,3348.52,645.9963,3355.7,658.0163" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0e2de7102b25185a9d9f7ee6e903621d]
+reverse link urt_subscriber_t to urt_nrtsubscriber_t--><path codeLine="360" d="M3986,209.1163 C3986,252.5863 3986,308.1863 3986,348.8463 " fill="none" id="urt_subscriber_t-backto-urt_nrtsubscriber_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="3986,196.0363,3982,202.0363,3986,208.0363,3990,202.0363,3986,196.0363" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="3964.7188" y="337.7765">0,1</text><!--MD5=[b3ef1a256ea27ebaf8233da18609dcfb]
+reverse link urt_subscriber_t to urt_srtsubscriber_t--><path codeLine="361" d="M4092.53,165.8663 C4191.22,189.0363 4342.08,224.5663 4473,255.9063 C4572.75,279.7863 4681.62,306.1163 4779.41,329.8563 " fill="none" id="urt_subscriber_t-backto-urt_srtsubscriber_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="4079.86,162.8863,4084.787,168.1517,4091.5424,165.6288,4086.6154,160.3634,4079.86,162.8863" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="4728.541" y="318.7821">0,1</text><!--MD5=[3b7ac6a38fdff8f8bfd605b7bc6c5d31]
+reverse link urt_subscriber_t to urt_frtsubscriber_t--><path codeLine="362" d="M4092.94,141.2762 C4362.98,143.6962 5093.52,159.4163 5693,255.9063 C5762.46,267.0863 5835.75,282.8262 5905.89,299.8963 " fill="none" id="urt_subscriber_t-backto-urt_frtsubscriber_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="4079.66,141.1663,4085.6291,145.2123,4091.6596,141.2586,4085.6906,137.2125,4079.66,141.1663" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="5858.5632" y="288.7182">0,1</text><!--MD5=[5b8274a89695500d21c20fdbffc3964d]
+reverse link urt_subscriber_t to urt_hrtsubscriber_t--><path codeLine="363" d="M3879.77,164.5763 C3775.63,187.7963 3612.38,224.2162 3471,255.9063 C3456.15,259.2362 3441.11,262.6063 3425.93,266.0062 " fill="none" id="urt_subscriber_t-backto-urt_hrtsubscriber_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="3892.48,161.7462,3885.7539,159.1463,3880.767,164.355,3887.4931,166.955,3892.48,161.7462" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="3432.7433" y="261.47">0,1</text><!--MD5=[54fcf25ad8c5f1d36e678e42d5bfd4cc]
+reverse link urt_publisher_t to urt_topic_t--><path codeLine="365" d="M1042.15,758.9063 C1058.02,758.9063 1073.89,758.9063 1089.76,758.9063 " fill="none" id="urt_publisher_t-backto-urt_topic_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="1028.82,758.9063,1034.82,762.9063,1040.82,758.9063,1034.82,754.9063,1028.82,758.9063" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="1074.263" y="755.7693">1</text><!--MD5=[4b1baf1dff807ad5c55b40c98372f543]
+reverse link urt_publisher_t to urt_publisher_profilingdata_t--><path codeLine="366" d="M476.25,862.4563 C451.23,914.0163 422.49,973.2563 404.53,1010.2663 " fill="none" id="urt_publisher_t-backto-urt_publisher_profilingdata_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="482.02,850.5563,475.8034,854.2106,476.7857,861.3545,483.0023,857.7001,482.02,850.5563" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="385.8713" y="999.4283">0,1</text><!--MD5=[52fbf16ee2dad9799eed6e62b7b67b58]
+link urt_publisher_t to urt_publisher_publishpolicy_t--><path codeLine="367" d="M569.66,850.5563 C593.49,900.0263 622,959.2063 641.39,999.4663 " fill="none" id="urt_publisher_t-to-urt_publisher_publishpolicy_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="643.71,1004.2863,643.4266,994.4415,641.5487,999.7775,636.2126,997.8996,643.71,1004.2863" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[5025b4c4053b8e7c7ca8a657f09f21c0]
+link urt_publisher_t to urt_message_t--><path codeLine="368" d="M817.57,850.4862 C898.24,871.8963 986.35,891.9663 1069,903.9063 C1203.43,923.3363 1548.47,887.0063 1680,920.9063 C1715.28,929.9962 1751.24,944.9163 1784.3,961.3463 " fill="none" id="urt_publisher_t-to-urt_message_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1789.16,963.7863,1782.9087,956.1756,1784.6907,961.5445,1779.3219,963.3265,1789.16,963.7863" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[6b2afc1defaa6ed5a86f99c07f8466dd]
+reverse link urt_topic_t to urt_topic_t--><path codeLine="370" d="M1657.71,723.8963 C1672.36,732.5763 1681,744.2563 1681,758.9063 C1681,777.1163 1667.65,790.7262 1646.02,799.7163 " fill="none" id="urt_topic_t-backto-urt_topic_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="1646.02,718.0963,1649.6192,724.3449,1656.7715,723.4258,1653.1723,717.1772,1646.02,718.0963" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="1653.6705" y="797.6633">0,1</text><!--MD5=[3f75a4ca5db56e37c381a718c71f2950]
+reverse link urt_topic_t to urt_topicid_t--><path codeLine="371" d="M1462.28,915.1463 C1473.44,933.5263 1484.44,951.6363 1494.54,968.2663 " fill="none" id="urt_topic_t-backto-urt_topicid_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1455.51,903.9962,1455.2023,911.2008,1461.7343,914.2558,1462.042,907.0513,1455.51,903.9962" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="1481.796" y="957.332">1</text><!--MD5=[ed3fb6de0913094c41bd74c175d366df]
+reverse link urt_topic_t to urt_hrtsubscriber_t--><path codeLine="372" d="M1658.73,687.0863 C1815.87,648.8063 2016.05,600.0463 2205.42,553.9063 " fill="none" id="urt_topic_t-backto-urt_hrtsubscriber_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="1646.06,690.1763,1652.8353,692.645,1657.7201,687.3404,1650.9448,684.8716,1646.06,690.1763" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="2172.8754" y="569.1485">0,1</text><!--MD5=[0b5167e958c0ed93ffc0c98ce399b54d]
+reverse link urt_topic_t to urt_message_t--><path codeLine="373" d="M1657.88,909.4862 C1665.33,913.3363 1672.71,917.1463 1680,920.9063 C1706.9,934.7963 1735.47,949.5463 1763.21,963.8663 " fill="none" id="urt_topic_t-backto-urt_message_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1646.13,903.4263,1649.6212,909.7359,1656.7882,908.94,1653.2971,902.6304,1646.13,903.4263" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="1740.6225" y="952.82">1</text><!--MD5=[afaf49a2e11ca0e01f17a699cbcbb771]
+reverse link urt_topic_t to urt_topic_profilingdata_t--><path codeLine="374" d="M1295.54,916.0063 C1280.44,948.5263 1265.75,980.1563 1254.63,1004.1263 " fill="none" id="urt_topic_t-backto-urt_topic_profilingdata_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1301.11,903.9962,1294.9517,907.7479,1296.0462,914.8755,1302.2045,911.1238,1301.11,903.9962" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="1236.1046" y="993.3959">0,1</text><!--MD5=[508536238a023621bf2aa7549b4bd4a7]
+@startuml
+
+title **µRT**\nPublish-Subscribe System
+
+!include ./procedures.iuml
+
+/'### ENTITIES ###############################################################'/
+
+!startsub ENTITIES
+
+$group("message") {
+  /' Message profiling data. '/
+  $structure("urt_message_profilingdata_t") {
+      'Counter how often a message has been used to publish data.
+    + {field} utilizations : urt_profilingcounter_t
+      'Counter of overall subscribers that did not consume the message yet.
+    + {field} numConsumersLeft : size_t
+  }
+
+  /' Type to uniquely identify messages. '/
+  $type("urt_messageid_t") {
+    uint64_t
+  }
+
+  /' Message type. '/
+  $structure("urt_message_t") {
+      'Pointer to the next message in a list.
+    + {field} next : urt_message_t*
+      'Identifier to identify messages.
+    + {field} id : urt_messageid_t
+      'Origin time of the information passed.
+    + {field} time : urt_osTime_t
+      'Pointer to some arbitrary (reusable) payload object.
+    + {field} payload : void*
+      'Size of the payload in bytes.
+    + {field} size : size_t
+      'Counter of HRT subscribers that did not consume the message yet.
+    + {field} numHrtConsumersLeft : size_t
+    .. ""URT_CFG_PUBSUB_PROFILING"" == true ..
+      'Profiling data.
+    + {field} profiling : urt_message_profilingdata_t
+    __
+      'Initializes a urt_message_t object.
+    + {method} urtMessageInit (message : urt_message_t*, payload : void*) : void
+  }
+} /' message '/
+
+$group("subscriber") {
+  /' Base subscriber profiling data. '/
+  $structure("urt_basesubscriber_profilingdata_t") {
+      'Minimum latency ever detected.
+    + {field} minLatency : urt_delay_t
+      'Maximum latency ever detected.
+    + {field} maxLatency : urt_delay_t
+      'Sum of all latencies.
+    + {field} sumLatencies : uint64_t
+      'Number of messages received.
+    + {field} numMessagesReceived : urt_profilingcounter_t
+  }
+  
+  /' Subscriber virtual method table. '/
+  $structure("urt_basesubscriber_VMT") {
+      'Pointer to the ""fetchNext()"" method.
+    + {field} fetchNext : urt_status_t(*)(instance : void*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*)
+      'Pointer to the ""fetchLatest()"" method.
+    + {field} fetchLatest : urt_status_t(*)(instance : void*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*)
+  }
+
+  /' Base subscriber type. '/
+  $structure("urt_basesubscriber_t") {
+      'Pointer to the virtual method table.
+    + {field} vmt : const urt_basesubscriber_VMT*
+      'Pointer to the topic, this subscriber subscribed to.
+    + {field} topic : urt_topic_t*
+      'Event listener to notify the node about new messages.
+    + {field} evtListener : urt_osEventListener_t
+      'Pointer to the message consumed most recently.
+    + {field} lastMessage : urt_message_t*
+      'Copy of the identifier of the last message read.
+    + {field} lastMessageID : urt_messageid_t
+    .. ""URT_CFG_PUBSUB_PROFILING"" == true ..
+      'Profiling data.
+    + {field} profiling : urt_basesubscriber_profilingdata_t
+    __
+      'Retrieve the real-time class of a subscriber.
+    + {method} urtSubscriberGetRtClass (subscriber : const urt_basesubscriber_t*) : urt_rtclass_t
+      'Fetch the next pending message.
+    + {method} urtSubscriberFetchNext (subscriber : urt_basesubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+      'Fetch the latest pending message.
+    + {method} urtSubscriberFetchLatest (subscriber : urt_basesubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+      'Unsubscribe from a topic.
+    + {method} urtSubscriberUnsubscribe (subscriber : urt_basesubscriber_t*) : urt_status_t
+  }
+
+  /' NRT subscriber type. '/
+  $structure("urt_nrtsubscriber_t") {
+      'Initializes a urt_nrtsubscriber_t object.
+    + {method} urtNrtSubscriberInit (subscriber : urt_nrtsubscriber_t*) : void
+      'Tries to subscribe to a topic.
+    + {method} urtNrtSubscriberSubscribe (subscriber : urt_nrtsubscriber_t*, topic : urt_topic_t*, mask : urt_osEventMask_t, flags : urt_osEventFlags_t) : urt_status_t
+      'Fetches the next message in the buffer, copies the payload and optionally returns payload size, origin time and/or latency.
+    + {method} urtNrtSubscriberFetchNext (subscriber : urt_nrtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+      'Fetches the latest message, copies the payload and optionally returns payload size, origin time and/or latency.
+    + {method} urtNrtSubscriberFetchLatest (subscriber : urt_nrtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+      'Unsubscribes from a topic.
+    + {method} urtNrtSubscriberUnsubscribe (subscriber : urt_nrtsubscriber_t*) : urt_status_t
+  }
+
+  /' SRT subscriber type. '/
+  $structure("urt_srtsubscriber_t") {
+      'Callback to calculate usefulness of a message
+    + {field} usefulnesscb : urt_usefulness_f*
+      'Optional parameters for the usefulness callback function.
+    + {field} cbparams : void*
+    __
+      'Initializes a urt_srtsubscriber_t object.
+    + {method} urtSrtSubscriberInit (subscriber : urt_srtsubscriber_t*) : void
+      'Tries to subscribe to a topic and sets all parameters.
+    + {method} urtSrtSubscriberSubscribe (subscriber : urt_srtsubscriber_t*, topic : urt_topic_t*, mask : urt_osEventMask_t, flags : urt_osEventFlags_t, usefulnesscb : urt_usefulness_f*, cbparams : void*) : urt_status_t
+      'Fetches the next message in the buffer, copies the payload and optionally returns payload size, origin time and/or latency.
+    + {method} urtSrtSubscriberFetchNext (subscriber : urt_srtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+      'Fetches the latest message, copies the payload and optionally returns payload size, origin time and/or latency.
+    + {method} urtSrtSubscriberFetchLatest (subscriber : urt_srtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+      'Calculates the usefulness of a message after the specified delay.
+    + {method} urtSrtSubscriberCalculateUsefulness (subscriber : urt_srtsubscriber_t*, latency : urt_delay_t) : float
+      'Unsubscribes from a topic.
+    + {method} urtSrtSubscriberUnsubscribe (subscriber : urt_srtsubscriber_t*) : urt_status_t
+  }
+
+  /' FRT subscriber type. '/
+  $structure("urt_frtsubscriber_t") {
+    .. ""URT_CFG_PUBSUB_QOS_DEADLINECHECKS"" == true ..
+      'Maximum temporal offset between creation and consumption of messages.
+    + {field} deadlineOffset : urt_delay_t
+    .. ""URT_CFG_PUBSUB_QOS_JITTERCHECKS"" == true ..
+      'Maximum expected jitter.
+    + {field} maxJitter : urt_delay_t
+      'Minimum latency ever detected (to calculate jitter).
+    + {field} minLatency : urt_delay_t
+      'Maximum latency ever detected (to calculate jitter).
+    + {field} maxLatency : urt_delay_t
+    __
+      'Initializes a urt_frtsubscriber_t object.
+    + {method} urtFrtSubscriberInit (subscriber : urt_frtsubscriber_t*) : void
+      'Tries to subscribe to a topic and sets all parameters.
+    + {method} urtFrtSubscriberSubscribe (subscriber : urt_frtsubscriber_t*, topic : urt_topic_t*, mask : urt_osEventMask_t, flags : urt_osEventFlags_t, deadline : urt_delay_t, jitter : urt_delay_t) : urt_status_t
+      'Fetches the next message in the buffer, copies the payload and optionally returns payload size, origin time and/or latency.
+    + {method} urtFrtSubscriberFetchNext (subscriber : urt_frtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+      'Fetches the latest message, copies the payload and optionally returns payload size, origin time and/or latency.
+    + {method} urtFrtSubscriberFetchLatest (subscriber : urt_frtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+      'Checks whether a message is valid after the specified delay.
+    + {method} urtFrtSubscriberCalculateValidity (subscriber : urt_frtsubscriber_t*, latency : urt_delay_t) : bool
+      'Unsubscribes from a topic.
+    + {method} urtFrtSubscriberUnsubscribe (subscriber : urt_frtsubscriber_t*) : urt_status_t
+  }
+
+  /' HRT subscriber type. '/
+  $structure("urt_hrtsubscriber_t") {
+    .. ""URT_CFG_PUBSUB_QOS_DEADLINECHECKS"" == true || ""URT_CFG_PUBSUB_QOS_JITTERCHECKS"" == true || ""URT_CFG_PUBSUB_RATECHECKS"" == true ..
+      'Pointer to the next HRT subscriber in a list.
+    + {field} next : urt_hrtsubscriber_t*
+    .. ""URT_CFG_PUBSUB_QOS_DEADLINECHECKS"" == true || ""URT_CFG_PUBSUB_QOS_JITTERCHECKS"" == true ..
+      'QoS timer to detect latency or jitter violations.
+    + {field} qosTimer : urt_osTimer_t
+      'Pointer to the message, which defined the currently set timer.
+    + {field} qosTimerMessage : urt_message_t*
+    .. ""URT_CFG_PUBSUB_QOS_DEADLINECHECKS"" == true ..
+      'Maximum temporal offset between creation and consumption of messages.
+    + {field} deadlineOffset : urt_delay_t
+    .. ""URT_CFG_PUBSUB_QOS_JITTERCHECKS"" == true ..
+      'Maximum expected jitter.
+    + {field} maxJitter : urt_delay_t
+      'Minimum latency ever detected (to calculate jitter).
+    + {field} minLatency : urt_delay_t
+      'Maximum latency ever detected (to calculate jitter).
+    + {field} maxLatency : urt_delay_t
+    .. ""URT_CFG_PUBSUB_QOS_RATECHECKS"" == true ..
+      'Expected rate at which data is published.
+    + {field} expectedRate : urt_delay_t
+    __
+      'Initializes a urt_hrtsubscriber_t object.
+    + {method} urtHrtSubscriberInit (subscriber : urt_hrtsubscriber_t*) : void
+      'Tries to subscribe to a topic and sets all parameters.
+    + {method} urtHrtSubscriberSubscribe (subscriber : urt_hrtsubscriber_t*, topic : urt_topic_t*, mask : urt_osEventMask_t, flags : urt_osEventFlags_t, deadline : urt_delay_t, rate : urt_delay_t, jitter : urt_delay_t) : urt_status_t
+      'Fetches the next message in the buffer, copies the payload and optionally returns payload size, origin time and/or latency.
+    + {method} urtHrtSubscriberFetchNext (subscriber : urt_hrtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+      'Fetches the latest message, copies the payload and optionally returns payload size, origin time and/or latency.
+    + {method} urtHrtSubscriberFetchLatest (subscriber : urt_hrtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+      'Unsubscribes from a topic.
+    + {method} urtHrtSubscriberUnsubscribe (subscriber : urt_hrtsubscriber_t*) : urt_status_t
+  }
+  
+  /' General subscriber type. '/
+  $union("urt_subscriber_t") {
+      'Base subscriber view.
+    + {field} base : urt_basesubscriber_t
+      'NRT subscriber view.
+    + {field} nrt : urt_nrtsubscriber_t
+      'SRT subscriber view.
+    + {field} srt : urt_srtsubscriber_t
+      'FRT subscriber view.
+    + {field} frt : urt_frtsubscriber_t
+      'HRT subscriber view.
+    + {field} hrt : urt_hrtsubscriber_t
+  }
+} /'subscriber'/
+
+$group("publisher") {
+  /' Publisher profiling data. '/
+  $structure("urt_publisher_profilingdata_t") {
+      'Counter of attempts to publish a message.
+    + {field} publishAttempts : urt_profilingcounter_t
+      'Counter of failed attempts to publish a message.
+    + {field} publishFails : urt_profilingcounter_t
+  }
+
+  /' Policies for publishing messages. '/
+  $enumeration("urt_publisher_publishpolicy_t") {
+      'Abort if a locked mutex or a blocking HRT subscriber is detected.
+    URT_PUBLISHER_PUBLISH_LAZY
+      'Abort only if a blocking HRT subscriber is detected.
+    URT_PUBLISHER_PUBLISH_DETERMINED
+      'Always publish, even if it takes a while.
+    URT_PUBLISHER_PUBLISH_ENFORCING
+  }
+
+  /' Publisher type. '/
+  $structure("urt_publisher_t") {
+    'Flag, whether the publish() method supports timeout.
+    URT_PUBSUB_PUBLISHER_PUBLISH_TIMEOUT : bool
+    __
+      'Pointer to the topic for publishing.
+    + {field} topic : urt_topic_t*
+    .. ""URT_CFG_PUBSUB_PROFILING"" == true ..
+      'Profiling data.
+    + {field} profiling : urt_publisher_profilingdata_t
+    __
+      'Initializes a urt_publisher_t object.
+    + {method} urtPublisherInit (publisher : urt_publisher_t*, topic : urt_topic_t*) : void
+    .. ""URT_PUBSUB_PUBLISHER_PUBLISH_TIMEOUT"" == false ..
+      'Publishes a message via the associated topic.
+    + {method} urtPublisherPublish (publisher : urt_publisher_t*, payload : void*, bytes : size_t, t : urt_osTime_t*, policy : urt_publisher_publishpolicy_t) : urt_status_t
+    .. ""URT_PUBSUB_PUBLISHER_PUBLISH_TIMEOUT"" == true ..
+      'Publishes a message via the associated topic with timeout.
+    + {method} urtPublisherPublish (publisher : urt_publisher_t*, payload : void*, bytes : size_t, t : urt_osTime_t*, policy : urt_publisher_publishpolicy_t, timeout : urt_delay_t) : urt_status_t
+  }
+} /' publisher '/
+
+$group("topic") {
+  /' Topic profiling data. '/
+  $structure("urt_topic_profilingdata_t") {
+      'Counter of overall published messages.
+    + {field} numMessagesPublished : urt_profilingcounter_t
+      'Counter how often non-HRT subscribers did not fetch a message before it was reused.
+    + {field} numMessagesDiscarded : urt_profilingcounter_t
+      'Number of overall subscribers.
+    + {field} numSubscribers : size_t
+  }
+
+  /' Topic ID type. '/
+  $type("urt_topicid_t") {
+    .. ""URT_CFG_PUBSUB_TOPICID_WIDTH"" == 8 ..
+    uin8_t
+    .. ""URT_CFG_PUBSUB_TOPICID_WIDTH"" == 16 ..
+    uint16_t
+    .. ""URT_CFG_PUBSUB_TOPICID_WIDTH"" == 32 ..
+    uint32_t
+    .. ""URT_CFG_PUBSUB_TOPICID_WIDTH"" == 64 ..
+    uint64_t
+  }
+
+  /' Topic type. '/
+  $structure("urt_topic_t") {
+      'Pointer to the next topic in a list.
+    + {field} next : urt_topic_t*
+      'Identifier of the topic.
+    + {field} id : urt_topicid_t
+      'Mutex lock for exclusive access.
+    + {field} lock : urt_osMutex_t
+      'Event source to inform all subscribers when a new message is published.
+    + {field} evtSource : urt_osEventSource_t
+      'Number of HRT subscribers.
+    + {field} numHrtSubscribers : size_t
+      'Condition variable to inform waiting publishers when a blocked message becomes available.
+    + {field} hrtReleased : urt_osCondvar_t
+      'Mandatory message, each Topic holds.
+    + {field} mandatoryMessage : urt_message_t
+      'Pointer to the message published most recently.
+    + {field} latestMessage : urt_message_t*
+    .. ""URT_CFG_PUBSUB_QOS_DEADLINECHECKS"" == true || ""URT_CFG_PUBSUB_QOS_RATECHECKS"" == true ..
+      'List of HRT subscribers, orderd by their expected rate (most critical first).
+    + {field} hrtSubscribers : urt_hrtsubscriber_t*
+    .. ""URT_CFG_PUBSUB_QOS_RATECHECKS"" == true ..
+      'Pointer to the message holding the most recent information.
+    + {field} latestInformation : urt_message_t*
+      'Timer to check for missed rates.
+    + {field} qosTimer : urt_osTimer_t
+    .. ""URT_CFG_PUBSUB_PROFILING"" == true ..
+      'Profiling data.
+    + {field} profiling : urt_topic_profilingdata_t
+    __
+      'Initializes an urt_topic_t object.
+    + {method} urtTopicInit (topic : urt_topic_t*, id : urt_topicid_t, payload : void*) : urt_status_t
+      'Add messages to the circular buffer.
+    + {method} urtTopicAddMessages (topic : urt_topic_t*, messages : urt_message_t*) : urt_status_t
+      'Retrieve size of the message buffer.
+    + {method} urtTopicBufferSize (topic : urt_topic_t*) : size_t
+  }
+} /' topic '/
+
+!endsub
+
+/'### DEPENDENCIES & LAYOUT ##################################################'/
+
+!startsub DEPENDENCIES
+
+urt_message_t o- "0,1" urt_message_t
+urt_message_t *- - "1" urt_messageid_t
+urt_message_t *- -"0,1" urt_message_profilingdata_t
+
+urt_basesubscriber_t o- -"1" urt_basesubscriber_VMT
+urt_basesubscriber_t o- -"0,1" urt_topic_t
+urt_basesubscriber_t o- -"0,1" urt_message_t
+urt_basesubscriber_t *- -"1" urt_messageid_t
+urt_basesubscriber_t *- -"0,1" urt_basesubscriber_profilingdata_t
+
+urt_nrtsubscriber_t - -|> urt_basesubscriber_t
+
+urt_srtsubscriber_t - -|> urt_basesubscriber_t
+
+urt_frtsubscriber_t - -|> urt_basesubscriber_t
+
+urt_hrtsubscriber_t - -|> urt_basesubscriber_t
+urt_hrtsubscriber_t o- "0,1" urt_hrtsubscriber_t
+urt_hrtsubscriber_t o- "0,1" urt_message_t
+
+urt_subscriber_t - -|> urt_basesubscriber_t
+urt_subscriber_t *- -"0,1" urt_nrtsubscriber_t
+urt_subscriber_t *- -"0,1" urt_srtsubscriber_t
+urt_subscriber_t *- -"0,1" urt_frtsubscriber_t
+urt_subscriber_t *- -"0,1" urt_hrtsubscriber_t
+
+urt_publisher_t o- "1" urt_topic_t
+urt_publisher_t *- -"0,1" urt_publisher_profilingdata_t
+urt_publisher_t ..> urt_publisher_publishpolicy_t
+urt_publisher_t ..> urt_message_t
+
+urt_topic_t o- "0,1" urt_topic_t
+urt_topic_t *- - "1" urt_topicid_t
+urt_topic_t o- "0,1" urt_hrtsubscriber_t
+urt_topic_t *- -"1" urt_message_t
+urt_topic_t *- -"0,1" urt_topic_profilingdata_t
+
+!endsub
+
+/'### OUTRO ##################################################################'/
+
+@enduml
+
+@startuml
+
+title **µRT**\nPublish-Subscribe System
+
+
+
+
+
+
+
+
+
+
+
+
+  package "message" <<Rectangle>> {
+    class urt_message_profilingdata_t <<S,BFAFFF>> {
+    + {field} utilizations : urt_profilingcounter_t
+    + {field} numConsumersLeft : size_t
+  }
+
+    class urt_messageid_t <<T,00CFFF>> {
+    uint64_t
+  }
+
+    class urt_message_t <<S,BFAFFF>> {
+    + {field} next : urt_message_t*
+    + {field} id : urt_messageid_t
+    + {field} time : urt_osTime_t
+    + {field} payload : void*
+    + {field} size : size_t
+    + {field} numHrtConsumersLeft : size_t
+    .. ""URT_CFG_PUBSUB_PROFILING"" == true ..
+    + {field} profiling : urt_message_profilingdata_t
+    __
+    + {method} urtMessageInit (message : urt_message_t*, payload : void*) : void
+  }
+} 
+
+  package "subscriber" <<Rectangle>> {
+    class urt_basesubscriber_profilingdata_t <<S,BFAFFF>> {
+    + {field} minLatency : urt_delay_t
+    + {field} maxLatency : urt_delay_t
+    + {field} sumLatencies : uint64_t
+    + {field} numMessagesReceived : urt_profilingcounter_t
+  }
+  
+    class urt_basesubscriber_VMT <<S,BFAFFF>> {
+    + {field} fetchNext : urt_status_t(*)(instance : void*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*)
+    + {field} fetchLatest : urt_status_t(*)(instance : void*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*)
+  }
+
+    class urt_basesubscriber_t <<S,BFAFFF>> {
+    + {field} vmt : const urt_basesubscriber_VMT*
+    + {field} topic : urt_topic_t*
+    + {field} evtListener : urt_osEventListener_t
+    + {field} lastMessage : urt_message_t*
+    + {field} lastMessageID : urt_messageid_t
+    .. ""URT_CFG_PUBSUB_PROFILING"" == true ..
+    + {field} profiling : urt_basesubscriber_profilingdata_t
+    __
+    + {method} urtSubscriberGetRtClass (subscriber : const urt_basesubscriber_t*) : urt_rtclass_t
+    + {method} urtSubscriberFetchNext (subscriber : urt_basesubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+    + {method} urtSubscriberFetchLatest (subscriber : urt_basesubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+    + {method} urtSubscriberUnsubscribe (subscriber : urt_basesubscriber_t*) : urt_status_t
+  }
+
+    class urt_nrtsubscriber_t <<S,BFAFFF>> {
+    + {method} urtNrtSubscriberInit (subscriber : urt_nrtsubscriber_t*) : void
+    + {method} urtNrtSubscriberSubscribe (subscriber : urt_nrtsubscriber_t*, topic : urt_topic_t*, mask : urt_osEventMask_t, flags : urt_osEventFlags_t) : urt_status_t
+    + {method} urtNrtSubscriberFetchNext (subscriber : urt_nrtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+    + {method} urtNrtSubscriberFetchLatest (subscriber : urt_nrtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+    + {method} urtNrtSubscriberUnsubscribe (subscriber : urt_nrtsubscriber_t*) : urt_status_t
+  }
+
+    class urt_srtsubscriber_t <<S,BFAFFF>> {
+    + {field} usefulnesscb : urt_usefulness_f*
+    + {field} cbparams : void*
+    __
+    + {method} urtSrtSubscriberInit (subscriber : urt_srtsubscriber_t*) : void
+    + {method} urtSrtSubscriberSubscribe (subscriber : urt_srtsubscriber_t*, topic : urt_topic_t*, mask : urt_osEventMask_t, flags : urt_osEventFlags_t, usefulnesscb : urt_usefulness_f*, cbparams : void*) : urt_status_t
+    + {method} urtSrtSubscriberFetchNext (subscriber : urt_srtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+    + {method} urtSrtSubscriberFetchLatest (subscriber : urt_srtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+    + {method} urtSrtSubscriberCalculateUsefulness (subscriber : urt_srtsubscriber_t*, latency : urt_delay_t) : float
+    + {method} urtSrtSubscriberUnsubscribe (subscriber : urt_srtsubscriber_t*) : urt_status_t
+  }
+
+    class urt_frtsubscriber_t <<S,BFAFFF>> {
+    .. ""URT_CFG_PUBSUB_QOS_DEADLINECHECKS"" == true ..
+    + {field} deadlineOffset : urt_delay_t
+    .. ""URT_CFG_PUBSUB_QOS_JITTERCHECKS"" == true ..
+    + {field} maxJitter : urt_delay_t
+    + {field} minLatency : urt_delay_t
+    + {field} maxLatency : urt_delay_t
+    __
+    + {method} urtFrtSubscriberInit (subscriber : urt_frtsubscriber_t*) : void
+    + {method} urtFrtSubscriberSubscribe (subscriber : urt_frtsubscriber_t*, topic : urt_topic_t*, mask : urt_osEventMask_t, flags : urt_osEventFlags_t, deadline : urt_delay_t, jitter : urt_delay_t) : urt_status_t
+    + {method} urtFrtSubscriberFetchNext (subscriber : urt_frtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+    + {method} urtFrtSubscriberFetchLatest (subscriber : urt_frtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+    + {method} urtFrtSubscriberCalculateValidity (subscriber : urt_frtsubscriber_t*, latency : urt_delay_t) : bool
+    + {method} urtFrtSubscriberUnsubscribe (subscriber : urt_frtsubscriber_t*) : urt_status_t
+  }
+
+    class urt_hrtsubscriber_t <<S,BFAFFF>> {
+    .. ""URT_CFG_PUBSUB_QOS_DEADLINECHECKS"" == true || ""URT_CFG_PUBSUB_QOS_JITTERCHECKS"" == true || ""URT_CFG_PUBSUB_RATECHECKS"" == true ..
+    + {field} next : urt_hrtsubscriber_t*
+    .. ""URT_CFG_PUBSUB_QOS_DEADLINECHECKS"" == true || ""URT_CFG_PUBSUB_QOS_JITTERCHECKS"" == true ..
+    + {field} qosTimer : urt_osTimer_t
+    + {field} qosTimerMessage : urt_message_t*
+    .. ""URT_CFG_PUBSUB_QOS_DEADLINECHECKS"" == true ..
+    + {field} deadlineOffset : urt_delay_t
+    .. ""URT_CFG_PUBSUB_QOS_JITTERCHECKS"" == true ..
+    + {field} maxJitter : urt_delay_t
+    + {field} minLatency : urt_delay_t
+    + {field} maxLatency : urt_delay_t
+    .. ""URT_CFG_PUBSUB_QOS_RATECHECKS"" == true ..
+    + {field} expectedRate : urt_delay_t
+    __
+    + {method} urtHrtSubscriberInit (subscriber : urt_hrtsubscriber_t*) : void
+    + {method} urtHrtSubscriberSubscribe (subscriber : urt_hrtsubscriber_t*, topic : urt_topic_t*, mask : urt_osEventMask_t, flags : urt_osEventFlags_t, deadline : urt_delay_t, rate : urt_delay_t, jitter : urt_delay_t) : urt_status_t
+    + {method} urtHrtSubscriberFetchNext (subscriber : urt_hrtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+    + {method} urtHrtSubscriberFetchLatest (subscriber : urt_hrtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+    + {method} urtHrtSubscriberUnsubscribe (subscriber : urt_hrtsubscriber_t*) : urt_status_t
+  }
+  
+    class urt_subscriber_t <<U,7FCF7F>> {
+    + {field} base : urt_basesubscriber_t
+    + {field} nrt : urt_nrtsubscriber_t
+    + {field} srt : urt_srtsubscriber_t
+    + {field} frt : urt_frtsubscriber_t
+    + {field} hrt : urt_hrtsubscriber_t
+  }
+} 
+
+  package "publisher" <<Rectangle>> {
+    class urt_publisher_profilingdata_t <<S,BFAFFF>> {
+    + {field} publishAttempts : urt_profilingcounter_t
+    + {field} publishFails : urt_profilingcounter_t
+  }
+
+    class urt_publisher_publishpolicy_t <<E,FF7F3F>> {
+    URT_PUBLISHER_PUBLISH_LAZY
+    URT_PUBLISHER_PUBLISH_DETERMINED
+    URT_PUBLISHER_PUBLISH_ENFORCING
+  }
+
+    class urt_publisher_t <<S,BFAFFF>> {
+    URT_PUBSUB_PUBLISHER_PUBLISH_TIMEOUT : bool
+    __
+    + {field} topic : urt_topic_t*
+    .. ""URT_CFG_PUBSUB_PROFILING"" == true ..
+    + {field} profiling : urt_publisher_profilingdata_t
+    __
+    + {method} urtPublisherInit (publisher : urt_publisher_t*, topic : urt_topic_t*) : void
+    .. ""URT_PUBSUB_PUBLISHER_PUBLISH_TIMEOUT"" == false ..
+    + {method} urtPublisherPublish (publisher : urt_publisher_t*, payload : void*, bytes : size_t, t : urt_osTime_t*, policy : urt_publisher_publishpolicy_t) : urt_status_t
+    .. ""URT_PUBSUB_PUBLISHER_PUBLISH_TIMEOUT"" == true ..
+    + {method} urtPublisherPublish (publisher : urt_publisher_t*, payload : void*, bytes : size_t, t : urt_osTime_t*, policy : urt_publisher_publishpolicy_t, timeout : urt_delay_t) : urt_status_t
+  }
+} 
+
+  package "topic" <<Rectangle>> {
+    class urt_topic_profilingdata_t <<S,BFAFFF>> {
+    + {field} numMessagesPublished : urt_profilingcounter_t
+    + {field} numMessagesDiscarded : urt_profilingcounter_t
+    + {field} numSubscribers : size_t
+  }
+
+    class urt_topicid_t <<T,00CFFF>> {
+    .. ""URT_CFG_PUBSUB_TOPICID_WIDTH"" == 8 ..
+    uin8_t
+    .. ""URT_CFG_PUBSUB_TOPICID_WIDTH"" == 16 ..
+    uint16_t
+    .. ""URT_CFG_PUBSUB_TOPICID_WIDTH"" == 32 ..
+    uint32_t
+    .. ""URT_CFG_PUBSUB_TOPICID_WIDTH"" == 64 ..
+    uint64_t
+  }
+
+    class urt_topic_t <<S,BFAFFF>> {
+    + {field} next : urt_topic_t*
+    + {field} id : urt_topicid_t
+    + {field} lock : urt_osMutex_t
+    + {field} evtSource : urt_osEventSource_t
+    + {field} numHrtSubscribers : size_t
+    + {field} hrtReleased : urt_osCondvar_t
+    + {field} mandatoryMessage : urt_message_t
+    + {field} latestMessage : urt_message_t*
+    .. ""URT_CFG_PUBSUB_QOS_DEADLINECHECKS"" == true || ""URT_CFG_PUBSUB_QOS_RATECHECKS"" == true ..
+    + {field} hrtSubscribers : urt_hrtsubscriber_t*
+    .. ""URT_CFG_PUBSUB_QOS_RATECHECKS"" == true ..
+    + {field} latestInformation : urt_message_t*
+    + {field} qosTimer : urt_osTimer_t
+    .. ""URT_CFG_PUBSUB_PROFILING"" == true ..
+    + {field} profiling : urt_topic_profilingdata_t
+    __
+    + {method} urtTopicInit (topic : urt_topic_t*, id : urt_topicid_t, payload : void*) : urt_status_t
+    + {method} urtTopicAddMessages (topic : urt_topic_t*, messages : urt_message_t*) : urt_status_t
+    + {method} urtTopicBufferSize (topic : urt_topic_t*) : size_t
+  }
+} 
+
+
+
+
+urt_message_t o- "0,1" urt_message_t
+urt_message_t *- - "1" urt_messageid_t
+urt_message_t *- -"0,1" urt_message_profilingdata_t
+
+urt_basesubscriber_t o- -"1" urt_basesubscriber_VMT
+urt_basesubscriber_t o- -"0,1" urt_topic_t
+urt_basesubscriber_t o- -"0,1" urt_message_t
+urt_basesubscriber_t *- -"1" urt_messageid_t
+urt_basesubscriber_t *- -"0,1" urt_basesubscriber_profilingdata_t
+
+urt_nrtsubscriber_t - -|> urt_basesubscriber_t
+
+urt_srtsubscriber_t - -|> urt_basesubscriber_t
+
+urt_frtsubscriber_t - -|> urt_basesubscriber_t
+
+urt_hrtsubscriber_t - -|> urt_basesubscriber_t
+urt_hrtsubscriber_t o- "0,1" urt_hrtsubscriber_t
+urt_hrtsubscriber_t o- "0,1" urt_message_t
+
+urt_subscriber_t - -|> urt_basesubscriber_t
+urt_subscriber_t *- -"0,1" urt_nrtsubscriber_t
+urt_subscriber_t *- -"0,1" urt_srtsubscriber_t
+urt_subscriber_t *- -"0,1" urt_frtsubscriber_t
+urt_subscriber_t *- -"0,1" urt_hrtsubscriber_t
+
+urt_publisher_t o- "1" urt_topic_t
+urt_publisher_t *- -"0,1" urt_publisher_profilingdata_t
+urt_publisher_t ..> urt_publisher_publishpolicy_t
+urt_publisher_t ..> urt_message_t
+
+urt_topic_t o- "0,1" urt_topic_t
+urt_topic_t *- - "1" urt_topicid_t
+urt_topic_t o- "0,1" urt_hrtsubscriber_t
+urt_topic_t *- -"1" urt_message_t
+urt_topic_t *- -"0,1" urt_topic_profilingdata_t
+
+
+
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 11:25:05 CET 2021)
+(LGPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

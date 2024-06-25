@@ -1,0 +1,41 @@
+Modules:
+ESP-WROVER-B -> Hostname: amiro1
+ESP-WROVER-E -> Hostname: amiro2
+ESP32 USBSerial Baudrate: 115200
+
+Programs:
+can_over_tcp2linux_dev: Tested on falalop (needs root for can device). Mirrors CAN traffic on virtual can device. Usable with wireshark.
+client.py: ?
+
+Known Bugs:
+-Hostname doesn't work on all PCs @citec. Workaround: Use ESP32 USBSerial (IP is printed after wlan connect)
+
+ESP-IDF:
+typedef struct {
+    union {
+        struct {
+            //The order of these bits must match deprecated message flags for compatibility reasons
+            uint32_t extd: 1;           /**< Extended Frame Format (29bit ID) */
+            uint32_t rtr: 1;            /**< Message is a Remote Frame */
+            uint32_t ss: 1;             /**< Transmit as a Single Shot Transmission. Unused for received. */
+            uint32_t self: 1;           /**< Transmit as a Self Reception Request. Unused for received. */
+            uint32_t dlc_non_comp: 1;   /**< Message's Data length code is larger than 8. This will break compliance with ISO 11898-1 */
+            uint32_t reserved: 27;      /**< Reserved bits */
+        };
+        //Todo: Deprecate flags
+        uint32_t flags;                 /**< Deprecated: Alternate way to set bits using message flags */
+    };
+    uint32_t identifier;                /**< 11 or 29 bit identifier */
+    uint8_t data_length_code;           /**< Data length code */
+    uint8_t data[TWAI_FRAME_MAX_DLC];    /**< Data bytes (not relevant in RTR frame) */
+} twai_message_t;
+
+sizeof(twai_message_t) = 20
+
+ESP Message -Identifier:
+Board_id (3 Bit), Type (4 Bit) ,Identifier (16 Bit), Counter (6 Bit)
+Example: 
+Identifier = 67109185 (Dezimal), 001 0000 0000000000000101 000001 (Binär) = Board_id 1 (PWM), Type: 0, Identifier: 5, Counter: 1
+
+Type: Topic or Service/Request
+Identifier: Topic ID oder Service/Request-ID

@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1191px" preserveAspectRatio="none" style="width:4333px;height:1191px;" version="1.1" viewBox="0 0 4333 1191" width="4333px" zoomAndPan="magnify"><defs><filter height="300%" id="ff9ztoxctuwxp" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="39" x="2140.5" y="16.708">µRT</text><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="277" x="2021.5" y="37.6611">Remote Procedure Call System</text><!--MD5=[ecaf13b018fb9788c80013f5b3634b61]
+cluster request--><rect fill="#FFFFFF" filter="url(#ff9ztoxctuwxp)" height="1131" style="stroke:#000000;stroke-width:1.5;" width="3094" x="7" y="48.9063"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="62" x="1523" y="63.9014">request</text><!--MD5=[7579d5565d2521d5936cec86ed3dadee]
+cluster service--><rect fill="#FFFFFF" filter="url(#ff9ztoxctuwxp)" height="663" style="stroke:#000000;stroke-width:1.5;" width="1196" x="3125" y="250.4063"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="58" x="3694" y="265.4014">service</text><!--MD5=[2662516945fdb2d91610074dfc6fef93]
+class urt_request_retrievepolicy_t--><rect codeLine="28" fill="#FEFECE" filter="url(#ff9ztoxctuwxp)" height="86.4141" id="urt_request_retrievepolicy_t" style="stroke:#A80036;stroke-width:1.5;" width="228" x="1419" y="775.4063"/><ellipse cx="1444.35" cy="791.4063" fill="#FF7F3F" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1448.4594,797.4063 L1440.7406,797.4063 L1440.7406,785.0156 L1448.4594,785.0156 L1448.4594,787.1719 L1443.1938,787.1719 L1443.1938,789.8438 L1447.9594,789.8438 L1447.9594,792 L1443.1938,792 L1443.1938,795.25 L1448.4594,795.25 L1448.4594,797.4063 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="173" x="1460.65" y="795.5605">urt_request_retrievepolicy_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1420" x2="1646" y1="807.4063" y2="807.4063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="174" x="1425" y="821.6167">URT_REQUEST_RETRIEVE_LAZY</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="216" x="1425" y="834.4214">URT_REQUEST_RETRIEVE_DETERMINED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="210" x="1425" y="847.2261">URT_REQUEST_RETRIEVE_ENFORCING</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1420" x2="1646" y1="853.8203" y2="853.8203"/><!--MD5=[274b4eeafecd49c65a5542ab35804672]
+class urt_baserequest_profilingdata_t--><rect codeLine="38" fill="#FEFECE" filter="url(#ff9ztoxctuwxp)" height="112.0234" id="urt_baserequest_profilingdata_t" style="stroke:#A80036;stroke-width:1.5;" width="232" x="2010" y="1051.9063"/><ellipse cx="2025" cy="1067.9063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2024.4844,1068.4688 Q2022.625,1067.7656 2021.9688,1067 Q2021.3281,1066.2188 2021.3281,1064.9063 Q2021.3281,1063.2188 2022.4063,1062.25 Q2023.4844,1061.2813 2025.3594,1061.2813 Q2026.2188,1061.2813 2027.0625,1061.4844 Q2027.9219,1061.6719 2028.7656,1062.0625 L2028.7656,1064.4531 Q2027.9844,1063.8906 2027.1563,1063.6094 Q2026.3438,1063.3125 2025.5469,1063.3125 Q2024.6719,1063.3125 2024.1875,1063.6719 Q2023.7188,1064.0313 2023.7188,1064.6875 Q2023.7188,1065.2031 2024.0625,1065.5469 Q2024.4063,1065.875 2025.5,1066.2813 L2026.5625,1066.6875 Q2028.0469,1067.2344 2028.75,1068.1406 Q2029.4688,1069.0469 2029.4688,1070.4219 Q2029.4688,1072.2969 2028.3594,1073.2188 Q2027.25,1074.1406 2025,1074.1406 Q2024.0781,1074.1406 2023.1563,1073.9219 Q2022.2344,1073.7031 2021.375,1073.2813 L2021.375,1070.75 Q2022.3438,1071.4375 2023.2656,1071.7813 Q2024.1875,1072.125 2025.0781,1072.125 Q2025.9844,1072.125 2026.4844,1071.7188 Q2026.9844,1071.2969 2026.9844,1070.5625 Q2026.9844,1070 2026.6406,1069.5938 Q2026.3125,1069.1719 2025.6875,1068.9219 L2024.4844,1068.4688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="200" x="2039" y="1072.0605">urt_baserequest_profilingdata_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2011" x2="2241" y1="1083.9063" y2="1083.9063"/><ellipse cx="2021" cy="1094.9063" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="138" x="2030" y="1098.1167">minLatency : urt_delay_t</text><ellipse cx="2021" cy="1107.7109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="141" x="2030" y="1110.9214">maxLatency : urt_delay_t</text><ellipse cx="2021" cy="1120.5156" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="136" x="2030" y="1123.7261">sumLatencies : uint64_t</text><ellipse cx="2021" cy="1133.3203" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="186" x="2030" y="1136.5308">numCalls : urt_profilingcounter_t</text><ellipse cx="2021" cy="1146.125" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="184" x="2030" y="1149.3354">numFails : urt_profilingcounter_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2011" x2="2241" y1="1155.9297" y2="1155.9297"/><!--MD5=[6296c525d2c4204bcfa8d70317640ca3]
+class urt_baserequest_VMT--><rect codeLine="38" fill="#FEFECE" filter="url(#ff9ztoxctuwxp)" height="73.6094" id="urt_baserequest_VMT" style="stroke:#A80036;stroke-width:1.5;" width="766" x="2277" y="1070.9063"/><ellipse cx="2588.25" cy="1086.9063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2587.7344,1087.4688 Q2585.875,1086.7656 2585.2188,1086 Q2584.5781,1085.2188 2584.5781,1083.9063 Q2584.5781,1082.2188 2585.6563,1081.25 Q2586.7344,1080.2813 2588.6094,1080.2813 Q2589.4688,1080.2813 2590.3125,1080.4844 Q2591.1719,1080.6719 2592.0156,1081.0625 L2592.0156,1083.4531 Q2591.2344,1082.8906 2590.4063,1082.6094 Q2589.5938,1082.3125 2588.7969,1082.3125 Q2587.9219,1082.3125 2587.4375,1082.6719 Q2586.9688,1083.0313 2586.9688,1083.6875 Q2586.9688,1084.2031 2587.3125,1084.5469 Q2587.6563,1084.875 2588.75,1085.2813 L2589.8125,1085.6875 Q2591.2969,1086.2344 2592,1087.1406 Q2592.7188,1088.0469 2592.7188,1089.4219 Q2592.7188,1091.2969 2591.6094,1092.2188 Q2590.5,1093.1406 2588.25,1093.1406 Q2587.3281,1093.1406 2586.4063,1092.9219 Q2585.4844,1092.7031 2584.625,1092.2813 L2584.625,1089.75 Q2585.5938,1090.4375 2586.5156,1090.7813 Q2587.4375,1091.125 2588.3281,1091.125 Q2589.2344,1091.125 2589.7344,1090.7188 Q2590.2344,1090.2969 2590.2344,1089.5625 Q2590.2344,1089 2589.8906,1088.5938 Q2589.5625,1088.1719 2588.9375,1087.9219 L2587.7344,1087.4688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="135" x="2608.75" y="1091.0605">urt_baserequest_VMT</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2278" x2="3042" y1="1102.9063" y2="1102.9063"/><ellipse cx="2288" cy="1113.9063" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="740" x="2297" y="1117.1167">submit : urt_status_t(*)(instance : void*, service : urt_service_t*, bytes : size_t, mask : urt_osEventMask_t, deadline : urt_delay_t)</text><ellipse cx="2288" cy="1126.7109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="656" x="2297" y="1129.9214">retrieve : urt_status_t(*)(instance : void*, policy : urt_request_retrievepolicy_t, bytes : size_t*, latency : urt_delay_t)</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2278" x2="3042" y1="1136.5156" y2="1136.5156"/><!--MD5=[7294e1cfaeb111bef046bc5d07a96458]
+class urt_baserequest_t--><rect codeLine="38" fill="#FEFECE" filter="url(#ff9ztoxctuwxp)" height="346.5078" id="urt_baserequest_t" style="stroke:#A80036;stroke-width:1.5;" width="896" x="2171" y="644.9063"/><ellipse cx="2557.25" cy="660.9063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2556.7344,661.4688 Q2554.875,660.7656 2554.2188,660 Q2553.5781,659.2188 2553.5781,657.9063 Q2553.5781,656.2188 2554.6563,655.25 Q2555.7344,654.2813 2557.6094,654.2813 Q2558.4688,654.2813 2559.3125,654.4844 Q2560.1719,654.6719 2561.0156,655.0625 L2561.0156,657.4531 Q2560.2344,656.8906 2559.4063,656.6094 Q2558.5938,656.3125 2557.7969,656.3125 Q2556.9219,656.3125 2556.4375,656.6719 Q2555.9688,657.0313 2555.9688,657.6875 Q2555.9688,658.2031 2556.3125,658.5469 Q2556.6563,658.875 2557.75,659.2813 L2558.8125,659.6875 Q2560.2969,660.2344 2561,661.1406 Q2561.7188,662.0469 2561.7188,663.4219 Q2561.7188,665.2969 2560.6094,666.2188 Q2559.5,667.1406 2557.25,667.1406 Q2556.3281,667.1406 2555.4063,666.9219 Q2554.4844,666.7031 2553.625,666.2813 L2553.625,663.75 Q2554.5938,664.4375 2555.5156,664.7813 Q2556.4375,665.125 2557.3281,665.125 Q2558.2344,665.125 2558.7344,664.7188 Q2559.2344,664.2969 2559.2344,663.5625 Q2559.2344,663 2558.8906,662.5938 Q2558.5625,662.1719 2557.9375,661.9219 L2556.7344,661.4688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="115" x="2577.75" y="665.0605">urt_baserequest_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2172" x2="3066" y1="676.9063" y2="676.9063"/><ellipse cx="2182" cy="687.9063" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="197" x="2191" y="691.1167">vmt : const urt_baserequest_VMT*</text><ellipse cx="2182" cy="700.7109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="147" x="2191" y="703.9214">prev : urt_baserequest_t*</text><ellipse cx="2182" cy="713.5156" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="146" x="2191" y="716.7261">next : urt_baserequest_t*</text><ellipse cx="2182" cy="726.3203" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="113" x="2191" y="729.5308">lock : urt_osMutex_t</text><ellipse cx="2182" cy="739.125" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="132" x="2191" y="742.3354">service : urt_service_t*</text><ellipse cx="2182" cy="751.9297" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="180" x="2191" y="755.1401">submissionTime : urt_osTime_t</text><ellipse cx="2182" cy="764.7344" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="207" x="2191" y="767.9448">notification.thread : urt_osThread_t*</text><ellipse cx="2182" cy="777.5391" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="215" x="2191" y="780.7495">notification.mask : urt_osEventMask_t</text><ellipse cx="2182" cy="790.3438" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="85" x="2191" y="793.5542">payload : void*</text><ellipse cx="2182" cy="803.1484" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="66" x="2191" y="806.3589">size : size_t</text><ellipse cx="2182" cy="832.7578" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="239" x="2191" y="835.9683">profiling : urt_baserequest_profilingdata_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="2172" x2="2521" y1="819.3555" y2="819.3555"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="147" x="2521" y="822.6636">URT_CFG_RPC_PROFILING</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="2672" y="822.6636">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="2717" x2="3066" y1="819.3555" y2="819.3555"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2172" x2="3066" y1="842.5625" y2="842.5625"/><ellipse cx="2182" cy="853.5625" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="421" x="2191" y="856.7729">urtRequestGetRtClass (request : const urt_baserequest_t*) : urt_rtclass_t</text><ellipse cx="2182" cy="866.3672" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="362" x="2191" y="869.5776">urtRequestAcquire (request : urt_baserequest_t*) : urt_status_t</text><ellipse cx="2182" cy="879.1719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="380" x="2191" y="882.3823">urtRequestTryAcquire (request : urt_baserequest_t*) : urt_status_t</text><ellipse cx="2182" cy="891.9766" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="870" x="2191" y="895.187">urtRequestSubmit (request : urt_baserequest_t*, service : urt_service_t*, bytes : size_t, mask : urt_osEventMask_t, deadline : urt_delay_t) : urt_status_t</text><ellipse cx="2182" cy="904.7813" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="331" x="2191" y="907.9917">urtRequestIsPending (request : urt_baserequest_t*) : bool</text><ellipse cx="2182" cy="917.5859" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="789" x="2191" y="920.7964">urtRequestRetrieve(request : urt_baserequest_t*, policy : urt_request_retrievepolicy_t, bytes : size_t*, latency : urt_delay_t*) : urt_status_t</text><ellipse cx="2182" cy="930.3906" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="365" x="2191" y="933.6011">urtRequestRelease (request : urt_baserequest_t*) : urt_status_t</text><ellipse cx="2182" cy="943.1953" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="345" x="2191" y="946.4058">urtRequestGetPayload (request : urt_baserequest_t*) : void*</text><ellipse cx="2182" cy="956" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="371" x="2191" y="959.2104">urtRequestGetPayloadSize (request : urt_baserequest_t*) : size_t</text><ellipse cx="2182" cy="968.8047" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="443" x="2191" y="972.0151">urtRequestGetSubmissionTime(request : urt_baserequest_t*) : urt_osTime_t*</text><ellipse cx="2182" cy="981.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="390" x="2191" y="984.8198">urtRequestGetAge (request : const urt_baserequest_t*) : urt_delay_t</text><!--MD5=[65269c71e9a2a076bc4014c9b128c9e6]
+class urt_nrtrequest_t--><rect codeLine="38" fill="#FEFECE" filter="url(#ff9ztoxctuwxp)" height="214.4609" id="urt_nrtrequest_t" style="stroke:#A80036;stroke-width:1.5;" width="731" x="1550.5" y="313.4063"/><ellipse cx="1860.75" cy="329.4063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1860.2344,329.9688 Q1858.375,329.2656 1857.7188,328.5 Q1857.0781,327.7188 1857.0781,326.4063 Q1857.0781,324.7188 1858.1563,323.75 Q1859.2344,322.7813 1861.1094,322.7813 Q1861.9688,322.7813 1862.8125,322.9844 Q1863.6719,323.1719 1864.5156,323.5625 L1864.5156,325.9531 Q1863.7344,325.3906 1862.9063,325.1094 Q1862.0938,324.8125 1861.2969,324.8125 Q1860.4219,324.8125 1859.9375,325.1719 Q1859.4688,325.5313 1859.4688,326.1875 Q1859.4688,326.7031 1859.8125,327.0469 Q1860.1563,327.375 1861.25,327.7813 L1862.3125,328.1875 Q1863.7969,328.7344 1864.5,329.6406 Q1865.2188,330.5469 1865.2188,331.9219 Q1865.2188,333.7969 1864.1094,334.7188 Q1863,335.6406 1860.75,335.6406 Q1859.8281,335.6406 1858.9063,335.4219 Q1857.9844,335.2031 1857.125,334.7813 L1857.125,332.25 Q1858.0938,332.9375 1859.0156,333.2813 Q1859.9375,333.625 1860.8281,333.625 Q1861.7344,333.625 1862.2344,333.2188 Q1862.7344,332.7969 1862.7344,332.0625 Q1862.7344,331.5 1862.3906,331.0938 Q1862.0625,330.6719 1861.4375,330.4219 L1860.2344,329.9688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="102" x="1881.25" y="333.5605">urt_nrtrequest_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1551.5" x2="2280.5" y1="345.4063" y2="345.4063"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1551.5" x2="2280.5" y1="353.4063" y2="353.4063"/><ellipse cx="1561.5" cy="364.4063" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="297" x="1570.5" y="367.6167">urtNrtRequestInit (request : urt_nrtrequest_t*) : void</text><ellipse cx="1561.5" cy="377.2109" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="367" x="1570.5" y="380.4214">urtNrtRequestAcquire (request : urt_nrtrequest_t*) : urt_status_t</text><ellipse cx="1561.5" cy="390.0156" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="385" x="1570.5" y="393.2261">urtNrtRequestTryAcquire (request : urt_nrtrequest_t*) : urt_status_t</text><ellipse cx="1561.5" cy="402.8203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="505" x="1570.5" y="406.0308">urtNrtRequestSubmit (request : urt_nrtrequest_t*, service : urt_service_t*) : urt_status_t</text><ellipse cx="1561.5" cy="415.625" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="336" x="1570.5" y="418.8354">urtNrtRequestIsPending (request : urt_nrtrequest_t*) : bool</text><ellipse cx="1561.5" cy="428.4297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="705" x="1570.5" y="431.6401">urtNrtRequestRetrieve(request : urt_nrtrequest_t*, policy : urt_request_retrievepolicy_t, latency : urt_delay_t*) : urt_status_t</text><ellipse cx="1561.5" cy="441.2344" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="370" x="1570.5" y="444.4448">urtNrtRequestRelease (request : urt_nrtrequest_t*) : urt_status_t</text><ellipse cx="1561.5" cy="454.0391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="350" x="1570.5" y="457.2495">urtNrtRequestGetPayload (request : urt_nrtrequest_t*) : void*</text><ellipse cx="1561.5" cy="466.8438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="376" x="1570.5" y="470.0542">urtNrtRequestGetPayloadSize (request : urt_nrtrequest_t*) : size_t</text><ellipse cx="1561.5" cy="479.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="448" x="1570.5" y="482.8589">urtNrtRequestGetSubmissionTime(request : urt_nrtrequest_t*) : urt_osTime_t*</text><ellipse cx="1561.5" cy="492.4531" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="395" x="1570.5" y="495.6636">urtNrtRequestGetAge (request : const urt_nrtrequest_t*) : urt_delay_t</text><ellipse cx="1561.5" cy="505.2578" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="370" x="1570.5" y="508.4683">urtNrtRequestRelease (request : urt_nrtrequest_t*) : urt_status_t</text><ellipse cx="1561.5" cy="518.0625" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="336" x="1570.5" y="521.2729">urtNrtRequestIsPending (request : urt_nrtrequest_t*) : bool</text><!--MD5=[e9d515ad43a4cecec056dd09bc14a3c2]
+class urt_srtrequest_t--><rect codeLine="38" fill="#FEFECE" filter="url(#ff9ztoxctuwxp)" height="227.2656" id="urt_srtrequest_t" style="stroke:#A80036;stroke-width:1.5;" width="731" x="2316.5" y="306.9063"/><ellipse cx="2627.25" cy="322.9063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2626.7344,323.4688 Q2624.875,322.7656 2624.2188,322 Q2623.5781,321.2188 2623.5781,319.9063 Q2623.5781,318.2188 2624.6563,317.25 Q2625.7344,316.2813 2627.6094,316.2813 Q2628.4688,316.2813 2629.3125,316.4844 Q2630.1719,316.6719 2631.0156,317.0625 L2631.0156,319.4531 Q2630.2344,318.8906 2629.4063,318.6094 Q2628.5938,318.3125 2627.7969,318.3125 Q2626.9219,318.3125 2626.4375,318.6719 Q2625.9688,319.0313 2625.9688,319.6875 Q2625.9688,320.2031 2626.3125,320.5469 Q2626.6563,320.875 2627.75,321.2813 L2628.8125,321.6875 Q2630.2969,322.2344 2631,323.1406 Q2631.7188,324.0469 2631.7188,325.4219 Q2631.7188,327.2969 2630.6094,328.2188 Q2629.5,329.1406 2627.25,329.1406 Q2626.3281,329.1406 2625.4063,328.9219 Q2624.4844,328.7031 2623.625,328.2813 L2623.625,325.75 Q2624.5938,326.4375 2625.5156,326.7813 Q2626.4375,327.125 2627.3281,327.125 Q2628.2344,327.125 2628.7344,326.7188 Q2629.2344,326.2969 2629.2344,325.5625 Q2629.2344,325 2628.8906,324.5938 Q2628.5625,324.1719 2627.9375,323.9219 L2626.7344,323.4688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="101" x="2647.75" y="327.0605">urt_srtrequest_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2317.5" x2="3046.5" y1="338.9063" y2="338.9063"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2317.5" x2="3046.5" y1="346.9063" y2="346.9063"/><ellipse cx="2327.5" cy="357.9063" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="297" x="2336.5" y="361.1167">urtSrtRequestInit (request : urt_srtrequest_t*) : void</text><ellipse cx="2327.5" cy="370.7109" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="367" x="2336.5" y="373.9214">urtSrtRequestAcquire (request : urt_srtrequest_t*) : urt_status_t</text><ellipse cx="2327.5" cy="383.5156" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="385" x="2336.5" y="386.7261">urtSrtRequestTryAcquire (request : urt_srtrequest_t*) : urt_status_t</text><ellipse cx="2327.5" cy="396.3203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="505" x="2336.5" y="399.5308">urtSrtRequestSubmit (request : urt_srtrequest_t*, service : urt_service_t*) : urt_status_t</text><ellipse cx="2327.5" cy="409.125" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="336" x="2336.5" y="412.3354">urtSrtRequestIsPending (request : urt_srtrequest_t*) : bool</text><ellipse cx="2327.5" cy="421.9297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="705" x="2336.5" y="425.1401">urtSrtRequestRetrieve(request : urt_srtrequest_t*, policy : urt_request_retrievepolicy_t, latency : urt_delay_t*) : t_urt_status</text><ellipse cx="2327.5" cy="434.7344" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="370" x="2336.5" y="437.9448">urtSrtRequestRelease (request : urt_srtrequest_t*) : urt_status_t</text><ellipse cx="2327.5" cy="447.5391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="350" x="2336.5" y="450.7495">urtSrtRequestGetPayload (request : urt_srtrequest_t*) : void*</text><ellipse cx="2327.5" cy="460.3438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="376" x="2336.5" y="463.5542">urtSrtRequestGetPayloadSize (request : urt_srtrequest_t*) : size_t</text><ellipse cx="2327.5" cy="473.1484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="448" x="2336.5" y="476.3589">urtSrtRequestGetSubmissionTime(request : urt_srtrequest_t*) : urt_osTime_t*</text><ellipse cx="2327.5" cy="485.9531" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="395" x="2336.5" y="489.1636">urtSrtRequestGetAge (request : const urt_srtrequest_t*) : urt_delay_t</text><ellipse cx="2327.5" cy="498.7578" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="370" x="2336.5" y="501.9683">urtSrtRequestRelease (request : urt_srtrequest_t*) : urt_status_t</text><ellipse cx="2327.5" cy="511.5625" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="336" x="2336.5" y="514.7729">urtSrtRequestIsPending (request : urt_srtrequest_t*) : bool</text><ellipse cx="2327.5" cy="524.3672" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="649" x="2336.5" y="527.5776">urtSrtCalculateUsefulness (request : urt_srtrequest_t*, usefulnesscb : urt_usefulness_f, cbparams : void*) : float</text><!--MD5=[240977dbca9212fa5365c87da90aa051]
+class urt_frtrequest_t--><rect codeLine="38" fill="#FEFECE" filter="url(#ff9ztoxctuwxp)" height="312.0938" id="urt_frtrequest_t" style="stroke:#A80036;stroke-width:1.5;" width="726" x="23" y="264.4063"/><ellipse cx="332.75" cy="280.4063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M332.2344,280.9688 Q330.375,280.2656 329.7188,279.5 Q329.0781,278.7188 329.0781,277.4063 Q329.0781,275.7188 330.1563,274.75 Q331.2344,273.7813 333.1094,273.7813 Q333.9688,273.7813 334.8125,273.9844 Q335.6719,274.1719 336.5156,274.5625 L336.5156,276.9531 Q335.7344,276.3906 334.9063,276.1094 Q334.0938,275.8125 333.2969,275.8125 Q332.4219,275.8125 331.9375,276.1719 Q331.4688,276.5313 331.4688,277.1875 Q331.4688,277.7031 331.8125,278.0469 Q332.1563,278.375 333.25,278.7813 L334.3125,279.1875 Q335.7969,279.7344 336.5,280.6406 Q337.2188,281.5469 337.2188,282.9219 Q337.2188,284.7969 336.1094,285.7188 Q335,286.6406 332.75,286.6406 Q331.8281,286.6406 330.9063,286.4219 Q329.9844,286.2031 329.125,285.7813 L329.125,283.25 Q330.0938,283.9375 331.0156,284.2813 Q331.9375,284.625 332.8281,284.625 Q333.7344,284.625 334.2344,284.2188 Q334.7344,283.7969 334.7344,283.0625 Q334.7344,282.5 334.3906,282.0938 Q334.0625,281.6719 333.4375,281.4219 L332.2344,280.9688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="98" x="353.25" y="284.5605">urt_frtrequest_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="24" x2="748" y1="296.4063" y2="296.4063"/><ellipse cx="34" cy="324.2109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="157" x="43" y="327.4214">deadlineOffset : urt_delay_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="24" x2="256.5" y1="310.8086" y2="310.8086"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="210" x="256.5" y="314.1167">URT_CFG_RPC_QOS_DEADLINECHECKS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="470.5" y="314.1167">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="515.5" x2="748" y1="310.8086" y2="310.8086"/><ellipse cx="34" cy="353.8203" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="124" x="43" y="357.0308">maxJitter : urt_delay_t</text><ellipse cx="34" cy="366.625" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="138" x="43" y="369.8354">minLatency : urt_delay_t</text><ellipse cx="34" cy="379.4297" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="141" x="43" y="382.6401">maxLatency : urt_delay_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="24" x2="263.5" y1="340.418" y2="340.418"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="196" x="263.5" y="343.7261">URT_CFG_RPC_QOS_JITTERCHECKS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="463.5" y="343.7261">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="508.5" x2="748" y1="340.418" y2="340.418"/><line style="stroke:#A80036;stroke-width:1.5;" x1="24" x2="748" y1="389.2344" y2="389.2344"/><ellipse cx="34" cy="400.2344" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="292" x="43" y="403.4448">urtFrtRequestInit (request : urt_frtrequest_t*) : void</text><ellipse cx="34" cy="413.0391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="362" x="43" y="416.2495">urtFrtRequestAcquire (request : urt_frtrequest_t*) : urt_status_t</text><ellipse cx="34" cy="425.8438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="380" x="43" y="429.0542">urtFrtRequestTryAcquire (request : urt_frtrequest_t*) : urt_status_t</text><ellipse cx="34" cy="438.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="630" x="43" y="441.8589">urtFrtRequestSubmit (request : urt_frtrequest_t*, service : urt_service_t*, deadline : urt_delay_t) : urt_status_t</text><ellipse cx="34" cy="451.4531" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="331" x="43" y="454.6636">urtFrtRequestIsPending (request : urt_frtrequest_t*) : bool</text><ellipse cx="34" cy="464.2578" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="700" x="43" y="467.4683">urtFrtRequestRetrieve(request : urt_frtrequest_t*, policy : urt_request_retrievepolicy_t, latency : urt_delay_t*) : urt_status_t</text><ellipse cx="34" cy="477.0625" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="365" x="43" y="480.2729">urtFrtRequestRelease (request : urt_frtrequest_t*) : urt_status_t</text><ellipse cx="34" cy="489.8672" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="345" x="43" y="493.0776">urtFrtRequestGetPayload (request : urt_frtrequest_t*) : void*</text><ellipse cx="34" cy="502.6719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="371" x="43" y="505.8823">urtFrtRequestGetPayloadSize (request : urt_frtrequest_t*) : size_t</text><ellipse cx="34" cy="515.4766" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="443" x="43" y="518.687">urtFrtRequestGetSubmissionTime(request : urt_frtrequest_t*) : urt_osTime_t*</text><ellipse cx="34" cy="528.2813" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="390" x="43" y="531.4917">urtFrtRequestGetAge (request : const urt_frtrequest_t*) : urt_delay_t</text><ellipse cx="34" cy="541.0859" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="365" x="43" y="544.2964">urtFrtRequestRelease (request : urt_frtrequest_t*) : urt_status_t</text><ellipse cx="34" cy="553.8906" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="331" x="43" y="557.1011">urtFrtRequestIsPending (request : urt_frtrequest_t*) : bool</text><ellipse cx="34" cy="566.6953" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="316" x="43" y="569.9058">urtFrtCalculateValidity (request : urt_frtrequest_t) : bool</text><!--MD5=[2b0c3d572fefe037473ca776bdd2f803]
+class urt_hrtrequest_t--><rect codeLine="38" fill="#FEFECE" filter="url(#ff9ztoxctuwxp)" height="328.8984" id="urt_hrtrequest_t" style="stroke:#A80036;stroke-width:1.5;" width="731" x="784.5" y="255.9063"/><ellipse cx="1094.75" cy="271.9063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1094.2344,272.4688 Q1092.375,271.7656 1091.7188,271 Q1091.0781,270.2188 1091.0781,268.9063 Q1091.0781,267.2188 1092.1563,266.25 Q1093.2344,265.2813 1095.1094,265.2813 Q1095.9688,265.2813 1096.8125,265.4844 Q1097.6719,265.6719 1098.5156,266.0625 L1098.5156,268.4531 Q1097.7344,267.8906 1096.9063,267.6094 Q1096.0938,267.3125 1095.2969,267.3125 Q1094.4219,267.3125 1093.9375,267.6719 Q1093.4688,268.0313 1093.4688,268.6875 Q1093.4688,269.2031 1093.8125,269.5469 Q1094.1563,269.875 1095.25,270.2813 L1096.3125,270.6875 Q1097.7969,271.2344 1098.5,272.1406 Q1099.2188,273.0469 1099.2188,274.4219 Q1099.2188,276.2969 1098.1094,277.2188 Q1097,278.1406 1094.75,278.1406 Q1093.8281,278.1406 1092.9063,277.9219 Q1091.9844,277.7031 1091.125,277.2813 L1091.125,274.75 Q1092.0938,275.4375 1093.0156,275.7813 Q1093.9375,276.125 1094.8281,276.125 Q1095.7344,276.125 1096.2344,275.7188 Q1096.7344,275.2969 1096.7344,274.5625 Q1096.7344,274 1096.3906,273.5938 Q1096.0625,273.1719 1095.4375,272.9219 L1094.2344,272.4688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="102" x="1115.25" y="276.0605">urt_hrtrequest_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="785.5" x2="1514.5" y1="287.9063" y2="287.9063"/><ellipse cx="795.5" cy="315.7109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="157" x="804.5" y="318.9214">deadlineOffset : urt_delay_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="785.5" x2="1020.5" y1="302.3086" y2="302.3086"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="210" x="1020.5" y="305.6167">URT_CFG_RPC_QOS_DEADLINECHECKS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="1234.5" y="305.6167">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1279.5" x2="1514.5" y1="302.3086" y2="302.3086"/><ellipse cx="795.5" cy="345.3203" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="124" x="804.5" y="348.5308">maxJitter : urt_delay_t</text><ellipse cx="795.5" cy="358.125" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="138" x="804.5" y="361.3354">minLatency : urt_delay_t</text><ellipse cx="795.5" cy="370.9297" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="141" x="804.5" y="374.1401">maxLatency : urt_delay_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="785.5" x2="1027.5" y1="331.918" y2="331.918"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="196" x="1027.5" y="335.2261">URT_CFG_RPC_QOS_JITTERCHECKS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="1227.5" y="335.2261">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1272.5" x2="1514.5" y1="331.918" y2="331.918"/><ellipse cx="795.5" cy="400.5391" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="145" x="804.5" y="403.7495">qosTimer : urt_osTimer_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="785.5" x2="890" y1="387.1367" y2="387.1367"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="210" x="890" y="390.4448">URT_CFG_RPC_QOS_DEADLINECHECKS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="57" x="1104" y="390.4448">== true ||</text><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="196" x="1165" y="390.4448">URT_CFG_RPC_QOS_JITTERCHECKS</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="1365" y="390.4448">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="1410" x2="1514.5" y1="387.1367" y2="387.1367"/><line style="stroke:#A80036;stroke-width:1.5;" x1="785.5" x2="1514.5" y1="410.3438" y2="410.3438"/><ellipse cx="795.5" cy="421.3438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="297" x="804.5" y="424.5542">urtHrtRequestInit (request : urt_hrtrequest_t*) : void</text><ellipse cx="795.5" cy="434.1484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="367" x="804.5" y="437.3589">urtHrtRequestAcquire (request : urt_hrtrequest_t*) : urt_status_t</text><ellipse cx="795.5" cy="446.9531" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="385" x="804.5" y="450.1636">urtHrtRequestTryAcquire (request : urt_hrtrequest_t*) : urt_status_t</text><ellipse cx="795.5" cy="459.7578" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="635" x="804.5" y="462.9683">urtHrtRequestSubmit (request : urt_hrtrequest_t*, service : urt_service_t*, deadline : urt_delay_t) : urt_status_t</text><ellipse cx="795.5" cy="472.5625" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="336" x="804.5" y="475.7729">urtHrtRequestIsPending (request : urt_hrtrequest_t*) : bool</text><ellipse cx="795.5" cy="485.3672" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="705" x="804.5" y="488.5776">urtHrtRequestRetrieve(request : urt_hrtrequest_t*, policy : urt_request_retrievepolicy_t, latency : urt_delay_t*) : urt_status_t</text><ellipse cx="795.5" cy="498.1719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="370" x="804.5" y="501.3823">urtHrtRequestRelease (request : urt_hrtrequest_t*) : urt_status_t</text><ellipse cx="795.5" cy="510.9766" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="350" x="804.5" y="514.187">urtHrtRequestGetPayload (request : urt_hrtrequest_t*) : void*</text><ellipse cx="795.5" cy="523.7813" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="376" x="804.5" y="526.9917">urtHrtRequestGetPayloadSize (request : urt_hrtrequest_t*) : size_t</text><ellipse cx="795.5" cy="536.5859" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="448" x="804.5" y="539.7964">urtHrtRequestGetSubmissionTime(request : urt_hrtrequest_t*) : urt_osTime_t*</text><ellipse cx="795.5" cy="549.3906" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="395" x="804.5" y="552.6011">urtHrtRequestGetAge (request : const urt_hrtrequest_t*) : urt_delay_t</text><ellipse cx="795.5" cy="562.1953" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="370" x="804.5" y="565.4058">urtHrtRequestReleas e(request : urt_hrtrequest_t*) : urt_status_t</text><ellipse cx="795.5" cy="575" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="336" x="804.5" y="578.2104">urtHrtRequestIsPending (request : urt_hrtrequest_t*) : bool</text><!--MD5=[b018738ba7ba3e9c8335a6f93c3b34ea]
+class urt_request_t--><rect codeLine="43" fill="#FEFECE" filter="url(#ff9ztoxctuwxp)" height="112.0234" id="urt_request_t" style="stroke:#A80036;stroke-width:1.5;" width="170" x="1831" y="83.9063"/><ellipse cx="1870.3" cy="99.9063" fill="#7FCF7F" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1866.175,101.8281 L1866.175,94.0156 L1868.6281,94.0156 L1868.6281,102.4531 Q1868.6281,103.375 1869.0969,103.9063 Q1869.5813,104.4375 1870.4094,104.4375 Q1871.2531,104.4375 1871.7219,103.9063 Q1872.1906,103.375 1872.1906,102.4531 L1872.1906,94.0156 L1874.6438,94.0156 L1874.6438,101.8281 Q1874.6438,104.3594 1873.6438,105.5 Q1872.6438,106.6406 1870.4094,106.6406 Q1868.1906,106.6406 1867.175,105.5 Q1866.175,104.3594 1866.175,101.8281 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="84" x="1889.7" y="104.0605">urt_request_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1832" x2="2000" y1="115.9063" y2="115.9063"/><ellipse cx="1842" cy="126.9063" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="144" x="1851" y="130.1167">base : urt_baserequest_t</text><ellipse cx="1842" cy="139.7109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120" x="1851" y="142.9214">nrt : urt_nrtrequest_t</text><ellipse cx="1842" cy="152.5156" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120" x="1851" y="155.7261">srt : urt_srtrequest_t</text><ellipse cx="1842" cy="165.3203" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="114" x="1851" y="168.5308">frt : urt_frtrequest_t</text><ellipse cx="1842" cy="178.125" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="120" x="1851" y="181.3354">hrt : urt_hrtrequest_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1832" x2="2000" y1="187.9297" y2="187.9297"/><!--MD5=[f9abd336ab9ddb7e38cc40f3bb58c7f8]
+class urt_service_profilingdata_t--><rect codeLine="38" fill="#FEFECE" filter="url(#ff9ztoxctuwxp)" height="73.6094" id="urt_service_profilingdata_t" style="stroke:#A80036;stroke-width:1.5;" width="269" x="4035.5" y="781.4063"/><ellipse cx="4083.75" cy="797.4063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M4083.2344,797.9688 Q4081.375,797.2656 4080.7188,796.5 Q4080.0781,795.7188 4080.0781,794.4063 Q4080.0781,792.7188 4081.1563,791.75 Q4082.2344,790.7813 4084.1094,790.7813 Q4084.9688,790.7813 4085.8125,790.9844 Q4086.6719,791.1719 4087.5156,791.5625 L4087.5156,793.9531 Q4086.7344,793.3906 4085.9063,793.1094 Q4085.0938,792.8125 4084.2969,792.8125 Q4083.4219,792.8125 4082.9375,793.1719 Q4082.4688,793.5313 4082.4688,794.1875 Q4082.4688,794.7031 4082.8125,795.0469 Q4083.1563,795.375 4084.25,795.7813 L4085.3125,796.1875 Q4086.7969,796.7344 4087.5,797.6406 Q4088.2188,798.5469 4088.2188,799.9219 Q4088.2188,801.7969 4087.1094,802.7188 Q4086,803.6406 4083.75,803.6406 Q4082.8281,803.6406 4081.9063,803.4219 Q4080.9844,803.2031 4080.125,802.7813 L4080.125,800.25 Q4081.0938,800.9375 4082.0156,801.2813 Q4082.9375,801.625 4083.8281,801.625 Q4084.7344,801.625 4085.2344,801.2188 Q4085.7344,800.7969 4085.7344,800.0625 Q4085.7344,799.5 4085.3906,799.0938 Q4085.0625,798.6719 4084.4375,798.4219 L4083.2344,797.9688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="164" x="4104.25" y="801.5605">urt_service_profilingdata_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="4036.5" x2="4303.5" y1="813.4063" y2="813.4063"/><ellipse cx="4046.5" cy="824.4063" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="186" x="4055.5" y="827.6167">numCalls : urt_profilingcounter_t</text><ellipse cx="4046.5" cy="837.2109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="243" x="4055.5" y="840.4214">numOwnershipLost : urt_profilingcounter_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="4036.5" x2="4303.5" y1="847.0156" y2="847.0156"/><!--MD5=[4d8326c7af3a397210cbde406c7c860c]
+class urt_serviceid_t--><rect codeLine="33" fill="#FEFECE" filter="url(#ff9ztoxctuwxp)" height="158.4375" id="urt_serviceid_t" style="stroke:#A80036;stroke-width:1.5;" width="237" x="3141.5" y="739.4063"/><ellipse cx="3210.75" cy="755.4063" fill="#00CFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M3211.5938,762.1563 L3209.1406,762.1563 L3209.1406,751.9063 L3206,751.9063 L3206,749.7656 L3214.7344,749.7656 L3214.7344,751.9063 L3211.5938,751.9063 L3211.5938,762.1563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="90" x="3231.25" y="759.5605">urt_serviceid_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="3142.5" x2="3377.5" y1="771.4063" y2="771.4063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="34" x="3147.5" y="802.4214">uin8_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="3142.5" x2="3149" y1="785.8086" y2="785.8086"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="189" x="3149" y="789.1167">URT_CFG_RPC_SERVICEID_WIDTH</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="29" x="3342" y="789.1167">== 8</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="3371" x2="3377.5" y1="785.8086" y2="785.8086"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="3147.5" y="832.0308">uint16_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="3142.5" x2="3145.5" y1="815.418" y2="815.418"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="189" x="3145.5" y="818.7261">URT_CFG_RPC_SERVICEID_WIDTH</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="36" x="3338.5" y="818.7261">== 16</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="3374.5" x2="3377.5" y1="815.418" y2="815.418"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="3147.5" y="861.6401">uint32_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="3142.5" x2="3145.5" y1="845.0273" y2="845.0273"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="189" x="3145.5" y="848.3354">URT_CFG_RPC_SERVICEID_WIDTH</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="36" x="3338.5" y="848.3354">== 32</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="3374.5" x2="3377.5" y1="845.0273" y2="845.0273"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="3147.5" y="891.2495">uint64_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="3142.5" x2="3145.5" y1="874.6367" y2="874.6367"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="189" x="3145.5" y="877.9448">URT_CFG_RPC_SERVICEID_WIDTH</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="36" x="3338.5" y="877.9448">== 64</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="3374.5" x2="3377.5" y1="874.6367" y2="874.6367"/><!--MD5=[df09811551aced27b77a58d0d101b1bd]
+class urt_service_dispatched_t--><rect codeLine="38" fill="#FEFECE" filter="url(#ff9ztoxctuwxp)" height="124.8281" id="urt_service_dispatched_t" style="stroke:#A80036;stroke-width:1.5;" width="587" x="3413.5" y="755.9063"/><ellipse cx="3625.25" cy="771.9063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M3624.7344,772.4688 Q3622.875,771.7656 3622.2188,771 Q3621.5781,770.2188 3621.5781,768.9063 Q3621.5781,767.2188 3622.6563,766.25 Q3623.7344,765.2813 3625.6094,765.2813 Q3626.4688,765.2813 3627.3125,765.4844 Q3628.1719,765.6719 3629.0156,766.0625 L3629.0156,768.4531 Q3628.2344,767.8906 3627.4063,767.6094 Q3626.5938,767.3125 3625.7969,767.3125 Q3624.9219,767.3125 3624.4375,767.6719 Q3623.9688,768.0313 3623.9688,768.6875 Q3623.9688,769.2031 3624.3125,769.5469 Q3624.6563,769.875 3625.75,770.2813 L3626.8125,770.6875 Q3628.2969,771.2344 3629,772.1406 Q3629.7188,773.0469 3629.7188,774.4219 Q3629.7188,776.2969 3628.6094,777.2188 Q3627.5,778.1406 3625.25,778.1406 Q3624.3281,778.1406 3623.4063,777.9219 Q3622.4844,777.7031 3621.625,777.2813 L3621.625,774.75 Q3622.5938,775.4375 3623.5156,775.7813 Q3624.4375,776.125 3625.3281,776.125 Q3626.2344,776.125 3626.7344,775.7188 Q3627.2344,775.2969 3627.2344,774.5625 Q3627.2344,774 3626.8906,773.5938 Q3626.5625,773.1719 3625.9375,772.9219 L3624.7344,772.4688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="155" x="3645.75" y="776.0605">urt_service_dispatched_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="3414.5" x2="3999.5" y1="787.9063" y2="787.9063"/><ellipse cx="3424.5" cy="798.9063" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="201" x="3433.5" y="802.1167">request : urt_baserequest_t* const</text><ellipse cx="3424.5" cy="811.7109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="215" x="3433.5" y="814.9214">submissionTime : const urt_osTime_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="3414.5" x2="3999.5" y1="821.5156" y2="821.5156"/><ellipse cx="3424.5" cy="832.5156" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="427" x="3433.5" y="835.7261">urtServiceDispatchedIsValid (dispatched : urt_service_dispatched_t*) : bool</text><ellipse cx="3424.5" cy="845.3203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="459" x="3433.5" y="848.5308">urtServiceDispatchedGetPayload (dispatched : urt_service_dispatched_t*) : void*</text><ellipse cx="3424.5" cy="858.125" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="561" x="3433.5" y="861.3354">urtServiceDispatchedGetSubmissionTime (dispatched : urt_service_dispatched_t*) : urt_osTime_t*</text><ellipse cx="3424.5" cy="870.9297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="440" x="3433.5" y="874.1401">urtServiceDispatchedNoreturn (dispatched : urt_service_dispatched_t*) : bool</text><!--MD5=[e60e0f8379a14e7a4a292c65add9d735]
+class urt_service_t--><rect codeLine="38" fill="#FEFECE" filter="url(#ff9ztoxctuwxp)" height="269.6797" id="urt_service_t" style="stroke:#A80036;stroke-width:1.5;" width="823" x="3141.5" y="285.4063"/><ellipse cx="3509.25" cy="301.4063" fill="#BFAFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M3508.7344,301.9688 Q3506.875,301.2656 3506.2188,300.5 Q3505.5781,299.7188 3505.5781,298.4063 Q3505.5781,296.7188 3506.6563,295.75 Q3507.7344,294.7813 3509.6094,294.7813 Q3510.4688,294.7813 3511.3125,294.9844 Q3512.1719,295.1719 3513.0156,295.5625 L3513.0156,297.9531 Q3512.2344,297.3906 3511.4063,297.1094 Q3510.5938,296.8125 3509.7969,296.8125 Q3508.9219,296.8125 3508.4375,297.1719 Q3507.9688,297.5313 3507.9688,298.1875 Q3507.9688,298.7031 3508.3125,299.0469 Q3508.6563,299.375 3509.75,299.7813 L3510.8125,300.1875 Q3512.2969,300.7344 3513,301.6406 Q3513.7188,302.5469 3513.7188,303.9219 Q3513.7188,305.7969 3512.6094,306.7188 Q3511.5,307.6406 3509.25,307.6406 Q3508.3281,307.6406 3507.4063,307.4219 Q3506.4844,307.2031 3505.625,306.7813 L3505.625,304.25 Q3506.5938,304.9375 3507.5156,305.2813 Q3508.4375,305.625 3509.3281,305.625 Q3510.2344,305.625 3510.7344,305.2188 Q3511.2344,304.7969 3511.2344,304.0625 Q3511.2344,303.5 3510.8906,303.0938 Q3510.5625,302.6719 3509.9375,302.4219 L3508.7344,301.9688 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="79" x="3529.75" y="305.5605">urt_service_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="3142.5" x2="3963.5" y1="317.4063" y2="317.4063"/><ellipse cx="3152.5" cy="328.4063" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="115" x="3161.5" y="331.6167">next : urt_service_t*</text><ellipse cx="3152.5" cy="341.2109" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="105" x="3161.5" y="344.4214">id : urt_serviceid_t</text><ellipse cx="3152.5" cy="354.0156" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="113" x="3161.5" y="357.2261">lock : urt_osMutex_t</text><ellipse cx="3152.5" cy="366.8203" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="188" x="3161.5" y="370.0308">queue.front : urt_baserequest_t*</text><ellipse cx="3152.5" cy="379.625" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="192" x="3161.5" y="382.8354">queue.hrtBack : urt_hrtrequest_t*</text><ellipse cx="3152.5" cy="392.4297" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="208" x="3161.5" y="395.6401">queue.fsrtBack : urt_baserequest_t*</text><ellipse cx="3152.5" cy="405.2344" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="187" x="3161.5" y="408.4448">queue.back : urt_baserequest_t*</text><ellipse cx="3152.5" cy="418.0391" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="207" x="3161.5" y="421.2495">notification.thread : urt_osThread_t*</text><ellipse cx="3152.5" cy="430.8438" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="219" x="3161.5" y="434.0542">notofication.maks : urt_osEventMask_t</text><ellipse cx="3152.5" cy="460.4531" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="208" x="3161.5" y="463.6636">profiling : urt_service_profilingdata_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="3142.5" x2="3455" y1="447.0508" y2="447.0508"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="147" x="3455" y="450.3589">URT_CFG_RPC_PROFILING</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="3606" y="450.3589">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="3651" x2="3963.5" y1="447.0508" y2="447.0508"/><line style="stroke:#A80036;stroke-width:1.5;" x1="3142.5" x2="3963.5" y1="470.2578" y2="470.2578"/><ellipse cx="3152.5" cy="481.2578" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="718" x="3161.5" y="484.4683">urtServiceInit (service : urt_service_t*, id : urt_serviceid_t, thread : urt_osThread_t*, mask : urt_osEventMask_t) : urt_status_t</text><ellipse cx="3152.5" cy="494.0625" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="797" x="3161.5" y="497.2729">urtServiceDispatch (service : urt_service_t*, dispatched : urt_service_dispatched_t*, payload : void*, bytes : size_t*, noreturn : bool*) : bool</text><ellipse cx="3152.5" cy="506.8672" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="589" x="3161.5" y="510.0776">urtServiceAcquireRequest (service* urt_serviceid_t*, request : urt_service_dispatched_t*) : urt_status_t</text><ellipse cx="3152.5" cy="519.6719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="607" x="3161.5" y="522.8823">urtServiceTryAcquireRequest (service* urt_serviceid_t*, request : urt_service_dispatched_t*) : urt_status_t</text><ellipse cx="3152.5" cy="532.4766" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="365" x="3161.5" y="535.687">urtServiceRespond (request : urt_baserequest_t*) : urt_status_t</text><ellipse cx="3152.5" cy="545.2813" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="543" x="3161.5" y="548.4917">urtServiceQueueLength(service : urt_service_t*, hrt : size_t*, fsrt : size_t*, nrt : size_t*) : size_t</text><!--MD5=[4363ce58645188f0c28a9a590e086c61]
+reverse link urt_baserequest_t to urt_baserequest_VMT--><path codeLine="363" d="M2645.49,1005.1863 C2649.04,1030.0363 2652.32,1053.0462 2654.86,1070.8763 " fill="none" id="urt_baserequest_t-backto-urt_baserequest_VMT" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="2643.62,992.0363,2640.5108,998.5426,2645.3207,1003.9151,2648.43,997.4088,2643.62,992.0363" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="2645.1748" y="1059.7812">1</text><!--MD5=[ed8977051960dfa72b850fe399f41716]
+reverse link urt_baserequest_t to urt_baserequest_t--><path codeLine="364" d="M3079.38,789.4463 C3093.81,797.2663 3102,806.9163 3102,818.4063 C3102,832.8163 3089.09,844.3463 3067.16,852.9962 " fill="none" id="urt_baserequest_t-backto-urt_baserequest_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="3067.16,783.8163,3070.9391,789.9578,3078.0617,788.8316,3074.2826,782.69,3067.16,783.8163" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="3075.1378" y="850.5341">0,1,2</text><!--MD5=[426f0ba47802c5735a37a0acd494a192]
+reverse link urt_baserequest_t to urt_service_t--><path codeLine="365" d="M3051.4,639.7763 C3118.38,611.4463 3186.31,582.5663 3249.64,555.4763 " fill="none" id="urt_baserequest_t-backto-urt_service_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="3039.35,644.8663,3046.435,646.209,3050.3994,640.1854,3043.3144,638.8427,3039.35,644.8663" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="3212.5031" y="575.3523">0,1</text><!--MD5=[09de7ef26922535bfe0682cb358ee29c]
+reverse link urt_service_t to urt_baserequest_t--><path codeLine="388" d="M3212.6,560.5463 C3147.84,587.7963 3079.56,616.6763 3013.29,644.8663 " fill="none" id="urt_service_t-backto-urt_baserequest_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="3224.65,555.4763,3217.5683,554.1162,3213.5891,560.13,3220.6708,561.4901,3224.65,555.4763" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="2998.4313" y="633.7439">0,2,3</text><!--MD5=[552462c87295542affece685f4dcd672]
+reverse link urt_baserequest_t to urt_baserequest_profilingdata_t--><path codeLine="366" d="M2311.35,998.8163 C2278.66,1017.8863 2247.5,1036.0563 2220.37,1051.8763 " fill="none" id="urt_baserequest_t-backto-urt_baserequest_profilingdata_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2322.97,992.0363,2315.772,991.6009,2312.6018,998.0778,2319.7997,998.5131,2322.97,992.0363" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="2211.1799" y="1040.8104">0,1</text><!--MD5=[dc2d1805b45628aba9d654613b3d05f9]
+link urt_nrtrequest_t to urt_baserequest_t--><path codeLine="368" d="M2104.39,527.5263 C2163.19,560.6463 2229.82,598.1863 2295.17,634.9863 " fill="none" id="urt_nrtrequest_t-to-urt_baserequest_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="2298.66,628.9263,2312.65,644.8363,2291.79,641.1163,2298.66,628.9263" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[87cd1c2e56025b6505ee29a91a17fa3c]
+link urt_nrtrequest_t to urt_request_retrievepolicy_t--><path codeLine="369" d="M1813.36,527.5263 C1736.39,607.1063 1634.81,712.1363 1577.44,771.4563 " fill="none" id="urt_nrtrequest_t-to-urt_request_retrievepolicy_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1573.73,775.2963,1582.8639,771.6123,1577.2078,771.7039,1577.1162,766.0478,1573.73,775.2963" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[f9755d42ba41539dee622699d8be3a22]
+link urt_srtrequest_t to urt_baserequest_t--><path codeLine="371" d="M2664.07,534.0863 C2659.56,562.4463 2654.59,593.6963 2649.65,624.7663 " fill="none" id="urt_srtrequest_t-to-urt_baserequest_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="2656.55,625.9463,2646.49,644.5963,2642.72,623.7463,2656.55,625.9463" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d5ef3a2f4940e37d34d9b48fc0a5cd0d]
+link urt_srtrequest_t to urt_request_retrievepolicy_t--><path codeLine="372" d="M2429.12,533.9363 C2386.02,551.7963 2341.46,569.4463 2299,584.9063 C2073.56,666.9663 1803.85,744.0763 1652.09,785.5963 " fill="none" id="urt_srtrequest_t-to-urt_request_retrievepolicy_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1647.18,786.9363,1656.9146,788.4321,1652.0045,785.6231,1654.8135,780.713,1647.18,786.9363" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[bfc5f4e50344156edda6a5cfcff14fef]
+link urt_frtrequest_t to urt_baserequest_t--><path codeLine="374" d="M734.79,576.4263 C745.57,579.4963 756.33,582.3363 767,584.9063 C1155.91,678.4463 1268.01,595.9063 1665,644.9063 C1824.09,664.5463 1996.85,693.4463 2151.08,721.9962 " fill="none" id="urt_frtrequest_t-to-urt_baserequest_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="2152.39,715.1163,2170.77,725.6563,2149.83,728.8863,2152.39,715.1163" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[e270285fb1e4d3233329a273109607a2]
+link urt_frtrequest_t to urt_request_retrievepolicy_t--><path codeLine="375" d="M744.26,576.4663 C751.89,579.3463 759.48,582.1563 767,584.9063 C992.36,667.1763 1262.1,744.2163 1413.89,785.6663 " fill="none" id="urt_frtrequest_t-to-urt_request_retrievepolicy_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1418.79,787.0063,1411.1565,780.783,1413.9655,785.6931,1409.0554,788.5021,1418.79,787.0063" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[7c5d2ea3f0b69f804ad9b60a9539ac96]
+link urt_hrtrequest_t to urt_baserequest_t--><path codeLine="377" d="M1515.6,579.2563 C1521.42,581.1863 1527.23,583.0763 1533,584.9063 C1732.23,648.1063 1957.46,699.4762 2150.95,737.6963 " fill="none" id="urt_hrtrequest_t-to-urt_baserequest_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="2152.49,730.8663,2170.77,741.5863,2149.8,744.6063,2152.49,730.8663" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b7738288525fe2f0af2d39ad6733b91b]
+link urt_hrtrequest_t to urt_request_retrievepolicy_t--><path codeLine="378" d="M1308.27,585.0463 C1373.56,652.5563 1444.18,725.5663 1488.48,771.3763 " fill="none" id="urt_hrtrequest_t-to-urt_request_retrievepolicy_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1492.15,775.1763,1488.7448,765.9348,1488.6648,771.5911,1483.0085,771.5111,1492.15,775.1763" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[e968e5d246764886e90802dabb0220f6]
+link urt_request_t to urt_baserequest_t--><path codeLine="380" d="M2001.15,141.9562 C2255.01,145.9562 2993.46,164.2662 3065,242.4063 C3116.4,298.5463 3104.47,519.8263 3065,584.9063 C3055.27,600.9463 3044.04,615.9263 3031.62,629.9163 " fill="none" id="urt_request_t-to-urt_baserequest_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="3036.5,634.9563,3017.69,644.7163,3026.3,625.3563,3036.5,634.9563" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[3bd80739d4b0aef480d7ea86e8a7f4d7]
+reverse link urt_request_t to urt_nrtrequest_t--><path codeLine="381" d="M1916,208.9262 C1916,240.2763 1916,278.2062 1916,313.1863 " fill="none" id="urt_request_t-backto-urt_nrtrequest_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1916,195.9262,1912,201.9262,1916,207.9262,1920,201.9262,1916,195.9262" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="1895.2969" y="302.1754">0,1</text><!--MD5=[edd714a84567129533b2782be8d3cf56]
+reverse link urt_request_t to urt_srtrequest_t--><path codeLine="382" d="M2014.09,161.9362 C2092.33,179.8963 2204.14,208.2062 2299,242.4063 C2350.6,261.0063 2404.77,283.8663 2455.61,306.9063 " fill="none" id="urt_request_t-backto-urt_srtrequest_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="2001.35,159.0363,2006.312,164.2687,2013.0504,161.7008,2008.0884,156.4684,2001.35,159.0363" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="2419.7275" y="295.839">0,1</text><!--MD5=[1a38fd52b556c9e0838a4515caa09d49]
+reverse link urt_request_t to urt_frtrequest_t--><path codeLine="383" d="M1817.52,145.2262 C1576.89,156.4962 964.33,189.5963 767,242.4063 C744.01,248.5562 720.7,256.0163 697.51,264.3463 " fill="none" id="urt_request_t-backto-urt_frtrequest_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1830.77,144.6163,1824.5918,140.8974,1818.7828,145.1701,1824.961,148.8889,1830.77,144.6163" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="692.1144" y="253.4917">0,1</text><!--MD5=[1aaa8d146a1d4284619083ef52496563]
+reverse link urt_request_t to urt_hrtrequest_t--><path codeLine="384" d="M1817.91,161.9362 C1739.67,179.8963 1627.86,208.2062 1533,242.4063 C1521.11,246.6962 1509.09,251.2062 1497,255.8863 " fill="none" id="urt_request_t-backto-urt_hrtrequest_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="1830.65,159.0363,1823.9116,156.4684,1818.9496,161.7008,1825.688,164.2687,1830.65,159.0363" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="1493.3234" y="244.6266">0,1</text><!--MD5=[05f2c35569573d3273c65d3342945557]
+reverse link urt_service_t to urt_service_t--><path codeLine="386" d="M3976.8,391.2563 C3991.24,399.0363 3999.5,408.7463 3999.5,420.4063 C3999.5,435.0363 3986.5,446.6063 3964.57,455.1263 " fill="none" id="urt_service_t-backto-urt_service_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="3964.57,385.6863,3968.3731,391.813,3975.4912,390.6588,3971.6881,384.5321,3964.57,385.6863" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="3973.1331" y="452.7507">0,1</text><!--MD5=[85137379eadac9ac066ccd1aa3005a20]
+reverse link urt_service_t to urt_serviceid_t--><path codeLine="387" d="M3446.06,565.9463 C3402.72,624.5163 3354.39,689.8363 3317.85,739.2163 " fill="none" id="urt_service_t-backto-urt_serviceid_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="3453.8,555.4763,3447.017,557.924,3446.6677,565.1266,3453.4506,562.6789,3453.8,555.4763" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="3314.8143" y="728.2774">1</text><!--MD5=[bcf13f9307d05af3b11663d6e8155fbe]
+reverse link urt_service_t to urt_hrtrequest_t--><path codeLine="389" d="M3276.73,280.1962 C3214.67,254.9163 3148.04,232.4063 3083.5,219.1563 C3000.07,202.0263 1633.37,199.5063 1550.5,219.1563 C1513.3,227.9763 1475.64,240.8262 1439.05,255.8262 " fill="none" id="urt_service_t-backto-urt_hrtrequest_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="3289.08,285.2863,3285.0531,279.3042,3277.9825,280.7206,3282.0094,286.7026,3289.08,285.2863" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="1431.6945" y="245.1011">0,1</text><!--MD5=[9a463288e9fec1a6522d5036a912abe6]
+reverse link urt_service_t to urt_service_profilingdata_t--><path codeLine="390" d="M3887.2,561.7363 C3932.9,586.6563 3977.85,614.4963 4018,644.9063 C4069.86,684.1863 4117.3,743.3863 4144.93,781.2063 " fill="none" id="urt_service_t-backto-urt_service_profilingdata_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="3875.57,555.4563,3878.9522,561.825,3886.1318,561.1525,3882.7497,554.7838,3875.57,555.4563" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="4118.6832" y="770.3576">0,1</text><!--MD5=[dbb124c1474fd321ed05729c456a4219]
+link urt_service_t to urt_service_dispatched_t--><path codeLine="391" d="M3605.14,555.4763 C3630.76,621.3563 3660.5,697.8263 3681.2,751.0663 " fill="none" id="urt_service_t-to-urt_service_dispatched_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="3683.05,755.8263,3683.5102,745.9881,3681.235,751.1673,3676.0559,748.8921,3683.05,755.8263" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[c4fd5fa085617e4baa7139b41e0efa3c]
+reverse link urt_service_dispatched_t to urt_baserequest_t--><path codeLine="393" d="M3622.57,747.6263 C3559.7,699.7863 3469.38,640.7763 3378.5,614.9063 C3244.42,576.7363 3096.44,601.4063 2967,644.8563 " fill="none" id="urt_service_dispatched_t-backto-urt_baserequest_t" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="3633.2,755.8163,3630.8854,748.9867,3623.691,748.4965,3626.0056,755.3261,3633.2,755.8163" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="2962.3156" y="633.7335">0,1</text><!--MD5=[e6b7d02e5b57fe1feb762a4dfd41d54c]
+@startuml
+
+title **µRT**\nRemote Procedure Call System
+
+!include ./procedures.iuml
+
+/'### ENTITIES ###############################################################'/
+
+!startsub ENTITIES
+
+$group("request") {
+  /' Retrieve policy enumeration. '/
+  $enumeration("urt_request_retrievepolicy_t") {
+      'Abort retrieval if a locked mutex or a bad owner is detected.
+    URT_REQUEST_RETRIEVE_LAZY
+      'Abort retrieval if a bad owner is detected.
+    URT_REQUEST_RETRIEVE_DETERMINED
+      'Always retrieve, even if this cancels the request.
+    URT_REQUEST_RETRIEVE_ENFORCING
+  }
+
+  /' Base request profiling data. '/
+  $structure("urt_baserequest_profilingdata_t") {
+      'Minumum latency ever detected.
+    + {field} minLatency : urt_delay_t
+      'Maximum latency ever detected.
+    + {field} maxLatency : urt_delay_t
+      'Sum of all latencies.
+    + {field} sumLatencies : uint64_t
+      'Number of calls emitted.
+    + {field} numCalls : urt_profilingcounter_t
+      'Number of calls that were not processed successfully.
+    + {field} numFails : urt_profilingcounter_t
+  }
+
+  /' Request virtual method table. '/
+  $structure("urt_baserequest_VMT") {
+      'Pointer to the ""submit()"" method.
+    + {field} submit : urt_status_t(*)(instance : void*, service : urt_service_t*, bytes : size_t, mask : urt_osEventMask_t, deadline : urt_delay_t)
+      'Pointer to the ""retrieve()"" method.
+    + {field} retrieve : urt_status_t(*)(instance : void*, policy : urt_request_retrievepolicy_t, bytes : size_t*, latency : urt_delay_t)
+  }
+
+  /' Base request structure type. '/
+  $structure("urt_baserequest_t") {
+      'Pointer to the virtual method table.
+    + {field} vmt : const urt_baserequest_VMT*
+      'Pointer to the previous request in a queue.
+    + {field} prev : urt_baserequest_t*
+      'Pointer to the next request in a queue.
+    + {field} next : urt_baserequest_t*
+      'Lock for exclusive access.
+    + {field} lock : urt_osMutex_t
+      'Pointer to the owning service.
+    + {field} service : urt_service_t*
+      'Time when the request was submitted.
+    + {field} submissionTime : urt_osTime_t
+      'Submitting thread to be notified by the service.
+    + {field} notification.thread : urt_osThread_t*
+      'Event mask to set on notification.
+    + {field} notification.mask : urt_osEventMask_t
+      'Pointer to an optional payload of the service request.
+    + {field} payload : void*
+      'Size of the current payload.
+    + {field} size : size_t
+    .. ""URT_CFG_RPC_PROFILING"" == true ..
+      'Profiling data.
+    + {field} profiling : urt_baserequest_profilingdata_t
+    __
+      'Retrieve the real-time class of a request.
+    + {method} urtRequestGetRtClass (request : const urt_baserequest_t*) : urt_rtclass_t
+      'Acquire a request.
+    + {method} urtRequestAcquire (request : urt_baserequest_t*) : urt_status_t
+      'Try to acquire a request.
+    + {method} urtRequestTryAcquire (request : urt_baserequest_t*) : urt_status_t
+      'Submit a request.
+    + {method} urtRequestSubmit (request : urt_baserequest_t*, service : urt_service_t*, bytes : size_t, mask : urt_osEventMask_t, deadline : urt_delay_t) : urt_status_t
+      'Retrieve whether a request was submitted but not retrieved yet.
+    + {method} urtRequestIsPending (request : urt_baserequest_t*) : bool
+      'Retrieve a request.
+    + {method} urtRequestRetrieve(request : urt_baserequest_t*, policy : urt_request_retrievepolicy_t, bytes : size_t*, latency : urt_delay_t*) : urt_status_t
+      'Release a request.
+    + {method} urtRequestRelease (request : urt_baserequest_t*) : urt_status_t
+      'Retrieve associated payload.
+    + {method} urtRequestGetPayload (request : urt_baserequest_t*) : void*
+      'Retrieve current payload size.
+    + {method} urtRequestGetPayloadSize (request : urt_baserequest_t*) : size_t
+      'Retrieve the submission time of a request.
+    + {method} urtRequestGetSubmissionTime(request : urt_baserequest_t*) : urt_osTime_t*
+      'Retrieve age (since submission).
+    + {method} urtRequestGetAge (request : const urt_baserequest_t*) : urt_delay_t
+  }
+
+  /' NRT request type. '/
+  $structure("urt_nrtrequest_t") {
+      'Initializes a urt_nrtrequest_t object.
+    + {method} urtNrtRequestInit (request : urt_nrtrequest_t*) : void
+      'Acquire and lock an NRT request (blocking).
+    + {method} urtNrtRequestAcquire (request : urt_nrtrequest_t*) : urt_status_t
+      'Try to acquire and lock an NRT request (non blocking).
+    + {method} urtNrtRequestTryAcquire (request : urt_nrtrequest_t*) : urt_status_t
+      'Submit an NRT request to the specified service.
+    + {method} urtNrtRequestSubmit (request : urt_nrtrequest_t*, service : urt_service_t*) : urt_status_t
+      'Retrieve whether an NRT request was submitted but not retrieved yet.
+    + {method} urtNrtRequestIsPending (request : urt_nrtrequest_t*) : bool
+      'Retrieve an NRT request, thereby removing it from the service's request queue if required.
+    + {method} urtNrtRequestRetrieve(request : urt_nrtrequest_t*, policy : urt_request_retrievepolicy_t, latency : urt_delay_t*) : urt_status_t
+      'Release an NRT request.
+    + {method} urtNrtRequestRelease (request : urt_nrtrequest_t*) : urt_status_t
+      'Retrieve associated payload.
+    + {method} urtNrtRequestGetPayload (request : urt_nrtrequest_t*) : void*
+      'Retrieve current payload size.
+    + {method} urtNrtRequestGetPayloadSize (request : urt_nrtrequest_t*) : size_t
+      'Retrieve the submission time of a request.
+    + {method} urtNrtRequestGetSubmissionTime(request : urt_nrtrequest_t*) : urt_osTime_t*
+      'Retrieve age (since submission).
+    + {method} urtNrtRequestGetAge (request : const urt_nrtrequest_t*) : urt_delay_t
+      'Release the request.
+    + {method} urtNrtRequestRelease (request : urt_nrtrequest_t*) : urt_status_t
+      'Retrieve whether athe request was submitted but not retrieved yet.
+    + {method} urtNrtRequestIsPending (request : urt_nrtrequest_t*) : bool
+  }
+
+  /' SRT request type. '/
+  $structure("urt_srtrequest_t") {
+      'Initializes a urt_srtrequest_t object.
+    + {method} urtSrtRequestInit (request : urt_srtrequest_t*) : void
+      'Acquire and lock an SRT request (blocking).
+    + {method} urtSrtRequestAcquire (request : urt_srtrequest_t*) : urt_status_t
+      'Try to acquire and lock an SRT request (non blocking).
+    + {method} urtSrtRequestTryAcquire (request : urt_srtrequest_t*) : urt_status_t
+      'Submit an SRT request to the specified service.
+    + {method} urtSrtRequestSubmit (request : urt_srtrequest_t*, service : urt_service_t*) : urt_status_t
+      'Retrieve whether an SRT request was submitted but not retrieved yet.
+    + {method} urtSrtRequestIsPending (request : urt_srtrequest_t*) : bool
+      'Retrieve an SRT request, thereby removing it from the service's request queue if required.
+    + {method} urtSrtRequestRetrieve(request : urt_srtrequest_t*, policy : urt_request_retrievepolicy_t, latency : urt_delay_t*) : t_urt_status
+      'Release an SRT request.
+    + {method} urtSrtRequestRelease (request : urt_srtrequest_t*) : urt_status_t
+      'Retrieve associated payload.
+    + {method} urtSrtRequestGetPayload (request : urt_srtrequest_t*) : void*
+      'Retrieve current payload size.
+    + {method} urtSrtRequestGetPayloadSize (request : urt_srtrequest_t*) : size_t
+      'Retrieve the submission time of a request.
+    + {method} urtSrtRequestGetSubmissionTime(request : urt_srtrequest_t*) : urt_osTime_t*
+      'Retrieve age (since submission).
+    + {method} urtSrtRequestGetAge (request : const urt_srtrequest_t*) : urt_delay_t
+      'Release the request.
+    + {method} urtSrtRequestRelease (request : urt_srtrequest_t*) : urt_status_t
+      'Retrieve whether athe request was submitted but not retrieved yet.
+    + {method} urtSrtRequestIsPending (request : urt_srtrequest_t*) : bool
+      'Calculate the usefulness on an SRT RPC response.
+    + {method} urtSrtCalculateUsefulness (request : urt_srtrequest_t*, usefulnesscb : urt_usefulness_f, cbparams : void*) : float
+  }
+
+  /' FRT request type. '/
+  $structure("urt_frtrequest_t") {
+    .. ""URT_CFG_RPC_QOS_DEADLINECHECKS"" == true ..
+      'Maximum temporal offset between sending and consuming the FRT request.
+    + {field} deadlineOffset : urt_delay_t
+    .. ""URT_CFG_RPC_QOS_JITTERCHECKS"" == true ..
+      'Maximum expected jitter.
+    + {field} maxJitter : urt_delay_t
+      'Minimum latency ever detected (to calculate jitter).
+    + {field} minLatency : urt_delay_t
+      'Maximum latency ever detected (to calculate jitter).
+    + {field} maxLatency : urt_delay_t
+    __
+      'Initializes a urt_frtrequest_t object.
+    + {method} urtFrtRequestInit (request : urt_frtrequest_t*) : void
+      'Acquire and lock an FRT request (blocking).
+    + {method} urtFrtRequestAcquire (request : urt_frtrequest_t*) : urt_status_t
+      'Try to acquire and lock an FRT request (non blocking).
+    + {method} urtFrtRequestTryAcquire (request : urt_frtrequest_t*) : urt_status_t
+      'Submit an FRT request to the specified service.
+    + {method} urtFrtRequestSubmit (request : urt_frtrequest_t*, service : urt_service_t*, deadline : urt_delay_t) : urt_status_t
+      'Retrieve whether an FRT request was submitted but not retrieved yet.
+    + {method} urtFrtRequestIsPending (request : urt_frtrequest_t*) : bool
+      'Retrieve an FRT request, thereby removing it from the service's request queue if required.
+    + {method} urtFrtRequestRetrieve(request : urt_frtrequest_t*, policy : urt_request_retrievepolicy_t, latency : urt_delay_t*) : urt_status_t
+      'Release an FRT request.
+    + {method} urtFrtRequestRelease (request : urt_frtrequest_t*) : urt_status_t
+      'Retrieve associated payload.
+    + {method} urtFrtRequestGetPayload (request : urt_frtrequest_t*) : void*
+      'Retrieve current payload size.
+    + {method} urtFrtRequestGetPayloadSize (request : urt_frtrequest_t*) : size_t
+      'Retrieve the submission time of a request.
+    + {method} urtFrtRequestGetSubmissionTime(request : urt_frtrequest_t*) : urt_osTime_t*
+      'Retrieve age (since submission).
+    + {method} urtFrtRequestGetAge (request : const urt_frtrequest_t*) : urt_delay_t
+      'Release the request.
+    + {method} urtFrtRequestRelease (request : urt_frtrequest_t*) : urt_status_t
+      'Retrieve whether athe request was submitted but not retrieved yet.
+    + {method} urtFrtRequestIsPending (request : urt_frtrequest_t*) : bool
+      'Calculate the validity on an FRT RPC response.
+    + {method} urtFrtCalculateValidity (request : urt_frtrequest_t) : bool
+  }
+
+  /' HRT request type. '/
+  $structure("urt_hrtrequest_t") {
+    .. ""URT_CFG_RPC_QOS_DEADLINECHECKS"" == true ..
+      'Maximum temporal offset between sending and consuming the HRT request.
+    + {field} deadlineOffset : urt_delay_t
+    .. ""URT_CFG_RPC_QOS_JITTERCHECKS"" == true ..
+      'Maximum expected jitter.
+    + {field} maxJitter : urt_delay_t
+      'Minimum latency ever detected (to calculate jitter).
+    + {field} minLatency : urt_delay_t
+      'Maximum latency ever detected (to calculate jitter).
+    + {field} maxLatency : urt_delay_t
+    .. ""URT_CFG_RPC_QOS_DEADLINECHECKS"" == true || ""URT_CFG_RPC_QOS_JITTERCHECKS"" == true ..
+      'QoS timer to detect missed deadlines and/or jitter.
+    + {field} qosTimer : urt_osTimer_t
+    __
+      'Initializes a urt_hrtrequest_t object.
+    + {method} urtHrtRequestInit (request : urt_hrtrequest_t*) : void
+      'Acquire and lock an HRT request (blocking).
+    + {method} urtHrtRequestAcquire (request : urt_hrtrequest_t*) : urt_status_t
+      'Try to acquire and lock an HRT request (non blocking).
+    + {method} urtHrtRequestTryAcquire (request : urt_hrtrequest_t*) : urt_status_t
+      'Submit an HRT request to the specified service.
+    + {method} urtHrtRequestSubmit (request : urt_hrtrequest_t*, service : urt_service_t*, deadline : urt_delay_t) : urt_status_t
+      'Retrieve whether an HRT request was submitted but not retrieved yet.
+    + {method} urtHrtRequestIsPending (request : urt_hrtrequest_t*) : bool
+      'Retrieve an HRT request, thereby removing it from the service's request queue if required.
+    + {method} urtHrtRequestRetrieve(request : urt_hrtrequest_t*, policy : urt_request_retrievepolicy_t, latency : urt_delay_t*) : urt_status_t
+      'Release the request.
+    + {method} urtHrtRequestRelease (request : urt_hrtrequest_t*) : urt_status_t
+      'Retrieve associated payload.
+    + {method} urtHrtRequestGetPayload (request : urt_hrtrequest_t*) : void*
+      'Retrieve current payload size.
+    + {method} urtHrtRequestGetPayloadSize (request : urt_hrtrequest_t*) : size_t
+      'Retrieve the submission time of a request.
+    + {method} urtHrtRequestGetSubmissionTime(request : urt_hrtrequest_t*) : urt_osTime_t*
+      'Retrieve age (since submission).
+    + {method} urtHrtRequestGetAge (request : const urt_hrtrequest_t*) : urt_delay_t
+      'Release the request.
+    + {method} urtHrtRequestReleas e(request : urt_hrtrequest_t*) : urt_status_t
+      'Retrieve whether athe request was submitted but not retrieved yet.
+    + {method} urtHrtRequestIsPending (request : urt_hrtrequest_t*) : bool
+  }
+  
+  /' General request type. '/
+  $union("urt_request_t") {
+      'Base request view.
+    + {field} base : urt_baserequest_t
+      'NRT request view.
+    + {field} nrt : urt_nrtrequest_t
+      'SRT request view.
+    + {field} srt : urt_srtrequest_t
+      'FRT request view.
+    + {field} frt : urt_frtrequest_t
+      'HRT request view.
+    + {field} hrt : urt_hrtrequest_t
+  }
+}
+
+$group("service") {
+  /' Service profiling data. '/
+  $structure("urt_service_profilingdata_t") {
+      'Number of calls.
+    + {field} numCalls : urt_profilingcounter_t
+      'Number of lost ownerships.
+    + {field} numOwnershipLost : urt_profilingcounter_t
+  }
+
+  /' Service ID type. '/
+  $type("urt_serviceid_t") {
+    .. ""URT_CFG_RPC_SERVICEID_WIDTH"" == 8 ..
+    uin8_t
+    .. ""URT_CFG_RPC_SERVICEID_WIDTH"" == 16 ..
+    uint16_t
+    .. ""URT_CFG_RPC_SERVICEID_WIDTH"" == 32 ..
+    uint32_t
+    .. ""URT_CFG_RPC_SERVICEID_WIDTH"" == 64 ..
+    uint64_t
+  }
+
+  /' Data structure representing dispatched requests. '/
+  $structure("urt_service_dispatched_t") {
+      'Pointer to the dispatched request.
+    + {field} request : urt_baserequest_t* const
+      'Submission time of the dispatched request.
+    + {field} submissionTime : const urt_osTime_t
+    __
+      'Check whether a request has been dispatched.
+    + {method} urtServiceDispatchedIsValid (dispatched : urt_service_dispatched_t*) : bool
+      'Retrieve the pointer to the payload of a dispatched request.
+    + {method} urtServiceDispatchedGetPayload (dispatched : urt_service_dispatched_t*) : void*
+      'Retrieve the submission time of a dispatched request.
+    + {method} urtServiceDispatchedGetSubmissionTime (dispatched : urt_service_dispatched_t*) : urt_osTime_t*
+      'Check whether a dispatched requests expects no return value.
+    + {method} urtServiceDispatchedNoreturn (dispatched : urt_service_dispatched_t*) : bool
+  }
+
+  /' Service structure type. '/
+  $structure("urt_service_t") {
+      'Pointer to the next service in a list.
+    + {field} next : urt_service_t*
+      'Identifier of the service.
+    + {field} id : urt_serviceid_t
+      'Mutex lock for exclusive access.
+    + {field} lock : urt_osMutex_t
+      'Pointer to the first element in a queue of pending requests.
+    + {field} queue.front : urt_baserequest_t*
+      'Pointer to the last HRT request in a queue of pending requests.
+    + {field} queue.hrtBack : urt_hrtrequest_t*
+      'Pointer to the last FRT/SRT request in a queue pf pending requests.
+    + {field} queue.fsrtBack : urt_baserequest_t*
+      'Pointer to the last element in a queue of pending requests.
+    + {field} queue.back : urt_baserequest_t*
+      'Pointer to the thread which provides the service.
+    + {field} notification.thread : urt_osThread_t*
+      'Event mask to set when signaling the servicing thread.
+    + {field} notofication.maks : urt_osEventMask_t
+    .. ""URT_CFG_RPC_PROFILING"" == true ..
+      'Profiling data.
+    + {field} profiling : urt_service_profilingdata_t
+    __
+      'Initializes a urt_service_t object.
+    + {method} urtServiceInit (service : urt_service_t*, id : urt_serviceid_t, thread : urt_osThread_t*, mask : urt_osEventMask_t) : urt_status_t
+      'Dispatch the next pending request.
+    + {method} urtServiceDispatch (service : urt_service_t*, dispatched : urt_service_dispatched_t*, payload : void*, bytes : size_t*, noreturn : bool*) : bool
+      'Acquire and lock the specified request (blocking).
+    + {method} urtServiceAcquireRequest (service* urt_serviceid_t*, request : urt_service_dispatched_t*) : urt_status_t
+      'Acquire and lock the specified request (non blocking).
+    + {method} urtServiceTryAcquireRequest (service* urt_serviceid_t*, request : urt_service_dispatched_t*) : urt_status_t
+      'Respond to a request.
+    + {method} urtServiceRespond (request : urt_baserequest_t*) : urt_status_t
+      'Retrieve the length of the queue of pending requests.
+    + {method} urtServiceQueueLength(service : urt_service_t*, hrt : size_t*, fsrt : size_t*, nrt : size_t*) : size_t
+  }
+} /' service '/
+
+!endsub
+
+/'### DEPENDENCIES & LAYOUT ##################################################'/
+
+!startsub DEPENDENCIES
+
+urt_baserequest_t o- -"1" urt_baserequest_VMT
+urt_baserequest_t o- "0,1,2" urt_baserequest_t
+urt_baserequest_t o- "0,1" urt_service_t
+urt_baserequest_t *- -"0,1" urt_baserequest_profilingdata_t
+
+urt_nrtrequest_t - -|> urt_baserequest_t
+urt_nrtrequest_t ..> urt_request_retrievepolicy_t
+
+urt_srtrequest_t - -|> urt_baserequest_t
+urt_srtrequest_t ..> urt_request_retrievepolicy_t
+
+urt_frtrequest_t - -|> urt_baserequest_t
+urt_frtrequest_t ..> urt_request_retrievepolicy_t
+
+urt_hrtrequest_t - -|> urt_baserequest_t
+urt_hrtrequest_t ..> urt_request_retrievepolicy_t
+
+urt_request_t - -|> urt_baserequest_t
+urt_request_t *- -"0,1" urt_nrtrequest_t
+urt_request_t *- -"0,1" urt_srtrequest_t
+urt_request_t *- -"0,1" urt_frtrequest_t
+urt_request_t *- -"0,1" urt_hrtrequest_t
+
+urt_service_t o- "0,1" urt_service_t
+urt_service_t *- -"1" urt_serviceid_t
+urt_service_t o- "0,2,3" urt_baserequest_t
+urt_service_t o- "0,1" urt_hrtrequest_t
+urt_service_t *- -"0,1" urt_service_profilingdata_t
+urt_service_t ..> urt_service_dispatched_t
+
+urt_service_dispatched_t o- -"0,1" urt_baserequest_t
+
+!endsub
+
+/'### OUTRO ##################################################################'/
+
+@enduml
+
+@startuml
+
+title **µRT**\nRemote Procedure Call System
+
+
+
+
+
+
+
+
+
+
+
+
+  package "request" <<Rectangle>> {
+    class urt_request_retrievepolicy_t <<E,FF7F3F>> {
+    URT_REQUEST_RETRIEVE_LAZY
+    URT_REQUEST_RETRIEVE_DETERMINED
+    URT_REQUEST_RETRIEVE_ENFORCING
+  }
+
+    class urt_baserequest_profilingdata_t <<S,BFAFFF>> {
+    + {field} minLatency : urt_delay_t
+    + {field} maxLatency : urt_delay_t
+    + {field} sumLatencies : uint64_t
+    + {field} numCalls : urt_profilingcounter_t
+    + {field} numFails : urt_profilingcounter_t
+  }
+
+    class urt_baserequest_VMT <<S,BFAFFF>> {
+    + {field} submit : urt_status_t(*)(instance : void*, service : urt_service_t*, bytes : size_t, mask : urt_osEventMask_t, deadline : urt_delay_t)
+    + {field} retrieve : urt_status_t(*)(instance : void*, policy : urt_request_retrievepolicy_t, bytes : size_t*, latency : urt_delay_t)
+  }
+
+    class urt_baserequest_t <<S,BFAFFF>> {
+    + {field} vmt : const urt_baserequest_VMT*
+    + {field} prev : urt_baserequest_t*
+    + {field} next : urt_baserequest_t*
+    + {field} lock : urt_osMutex_t
+    + {field} service : urt_service_t*
+    + {field} submissionTime : urt_osTime_t
+    + {field} notification.thread : urt_osThread_t*
+    + {field} notification.mask : urt_osEventMask_t
+    + {field} payload : void*
+    + {field} size : size_t
+    .. ""URT_CFG_RPC_PROFILING"" == true ..
+    + {field} profiling : urt_baserequest_profilingdata_t
+    __
+    + {method} urtRequestGetRtClass (request : const urt_baserequest_t*) : urt_rtclass_t
+    + {method} urtRequestAcquire (request : urt_baserequest_t*) : urt_status_t
+    + {method} urtRequestTryAcquire (request : urt_baserequest_t*) : urt_status_t
+    + {method} urtRequestSubmit (request : urt_baserequest_t*, service : urt_service_t*, bytes : size_t, mask : urt_osEventMask_t, deadline : urt_delay_t) : urt_status_t
+    + {method} urtRequestIsPending (request : urt_baserequest_t*) : bool
+    + {method} urtRequestRetrieve(request : urt_baserequest_t*, policy : urt_request_retrievepolicy_t, bytes : size_t*, latency : urt_delay_t*) : urt_status_t
+    + {method} urtRequestRelease (request : urt_baserequest_t*) : urt_status_t
+    + {method} urtRequestGetPayload (request : urt_baserequest_t*) : void*
+    + {method} urtRequestGetPayloadSize (request : urt_baserequest_t*) : size_t
+    + {method} urtRequestGetSubmissionTime(request : urt_baserequest_t*) : urt_osTime_t*
+    + {method} urtRequestGetAge (request : const urt_baserequest_t*) : urt_delay_t
+  }
+
+    class urt_nrtrequest_t <<S,BFAFFF>> {
+    + {method} urtNrtRequestInit (request : urt_nrtrequest_t*) : void
+    + {method} urtNrtRequestAcquire (request : urt_nrtrequest_t*) : urt_status_t
+    + {method} urtNrtRequestTryAcquire (request : urt_nrtrequest_t*) : urt_status_t
+    + {method} urtNrtRequestSubmit (request : urt_nrtrequest_t*, service : urt_service_t*) : urt_status_t
+    + {method} urtNrtRequestIsPending (request : urt_nrtrequest_t*) : bool
+    + {method} urtNrtRequestRetrieve(request : urt_nrtrequest_t*, policy : urt_request_retrievepolicy_t, latency : urt_delay_t*) : urt_status_t
+    + {method} urtNrtRequestRelease (request : urt_nrtrequest_t*) : urt_status_t
+    + {method} urtNrtRequestGetPayload (request : urt_nrtrequest_t*) : void*
+    + {method} urtNrtRequestGetPayloadSize (request : urt_nrtrequest_t*) : size_t
+    + {method} urtNrtRequestGetSubmissionTime(request : urt_nrtrequest_t*) : urt_osTime_t*
+    + {method} urtNrtRequestGetAge (request : const urt_nrtrequest_t*) : urt_delay_t
+    + {method} urtNrtRequestRelease (request : urt_nrtrequest_t*) : urt_status_t
+    + {method} urtNrtRequestIsPending (request : urt_nrtrequest_t*) : bool
+  }
+
+    class urt_srtrequest_t <<S,BFAFFF>> {
+    + {method} urtSrtRequestInit (request : urt_srtrequest_t*) : void
+    + {method} urtSrtRequestAcquire (request : urt_srtrequest_t*) : urt_status_t
+    + {method} urtSrtRequestTryAcquire (request : urt_srtrequest_t*) : urt_status_t
+    + {method} urtSrtRequestSubmit (request : urt_srtrequest_t*, service : urt_service_t*) : urt_status_t
+    + {method} urtSrtRequestIsPending (request : urt_srtrequest_t*) : bool
+    + {method} urtSrtRequestRetrieve(request : urt_srtrequest_t*, policy : urt_request_retrievepolicy_t, latency : urt_delay_t*) : t_urt_status
+    + {method} urtSrtRequestRelease (request : urt_srtrequest_t*) : urt_status_t
+    + {method} urtSrtRequestGetPayload (request : urt_srtrequest_t*) : void*
+    + {method} urtSrtRequestGetPayloadSize (request : urt_srtrequest_t*) : size_t
+    + {method} urtSrtRequestGetSubmissionTime(request : urt_srtrequest_t*) : urt_osTime_t*
+    + {method} urtSrtRequestGetAge (request : const urt_srtrequest_t*) : urt_delay_t
+    + {method} urtSrtRequestRelease (request : urt_srtrequest_t*) : urt_status_t
+    + {method} urtSrtRequestIsPending (request : urt_srtrequest_t*) : bool
+    + {method} urtSrtCalculateUsefulness (request : urt_srtrequest_t*, usefulnesscb : urt_usefulness_f, cbparams : void*) : float
+  }
+
+    class urt_frtrequest_t <<S,BFAFFF>> {
+    .. ""URT_CFG_RPC_QOS_DEADLINECHECKS"" == true ..
+    + {field} deadlineOffset : urt_delay_t
+    .. ""URT_CFG_RPC_QOS_JITTERCHECKS"" == true ..
+    + {field} maxJitter : urt_delay_t
+    + {field} minLatency : urt_delay_t
+    + {field} maxLatency : urt_delay_t
+    __
+    + {method} urtFrtRequestInit (request : urt_frtrequest_t*) : void
+    + {method} urtFrtRequestAcquire (request : urt_frtrequest_t*) : urt_status_t
+    + {method} urtFrtRequestTryAcquire (request : urt_frtrequest_t*) : urt_status_t
+    + {method} urtFrtRequestSubmit (request : urt_frtrequest_t*, service : urt_service_t*, deadline : urt_delay_t) : urt_status_t
+    + {method} urtFrtRequestIsPending (request : urt_frtrequest_t*) : bool
+    + {method} urtFrtRequestRetrieve(request : urt_frtrequest_t*, policy : urt_request_retrievepolicy_t, latency : urt_delay_t*) : urt_status_t
+    + {method} urtFrtRequestRelease (request : urt_frtrequest_t*) : urt_status_t
+    + {method} urtFrtRequestGetPayload (request : urt_frtrequest_t*) : void*
+    + {method} urtFrtRequestGetPayloadSize (request : urt_frtrequest_t*) : size_t
+    + {method} urtFrtRequestGetSubmissionTime(request : urt_frtrequest_t*) : urt_osTime_t*
+    + {method} urtFrtRequestGetAge (request : const urt_frtrequest_t*) : urt_delay_t
+    + {method} urtFrtRequestRelease (request : urt_frtrequest_t*) : urt_status_t
+    + {method} urtFrtRequestIsPending (request : urt_frtrequest_t*) : bool
+    + {method} urtFrtCalculateValidity (request : urt_frtrequest_t) : bool
+  }
+
+    class urt_hrtrequest_t <<S,BFAFFF>> {
+    .. ""URT_CFG_RPC_QOS_DEADLINECHECKS"" == true ..
+    + {field} deadlineOffset : urt_delay_t
+    .. ""URT_CFG_RPC_QOS_JITTERCHECKS"" == true ..
+    + {field} maxJitter : urt_delay_t
+    + {field} minLatency : urt_delay_t
+    + {field} maxLatency : urt_delay_t
+    .. ""URT_CFG_RPC_QOS_DEADLINECHECKS"" == true || ""URT_CFG_RPC_QOS_JITTERCHECKS"" == true ..
+    + {field} qosTimer : urt_osTimer_t
+    __
+    + {method} urtHrtRequestInit (request : urt_hrtrequest_t*) : void
+    + {method} urtHrtRequestAcquire (request : urt_hrtrequest_t*) : urt_status_t
+    + {method} urtHrtRequestTryAcquire (request : urt_hrtrequest_t*) : urt_status_t
+    + {method} urtHrtRequestSubmit (request : urt_hrtrequest_t*, service : urt_service_t*, deadline : urt_delay_t) : urt_status_t
+    + {method} urtHrtRequestIsPending (request : urt_hrtrequest_t*) : bool
+    + {method} urtHrtRequestRetrieve(request : urt_hrtrequest_t*, policy : urt_request_retrievepolicy_t, latency : urt_delay_t*) : urt_status_t
+    + {method} urtHrtRequestRelease (request : urt_hrtrequest_t*) : urt_status_t
+    + {method} urtHrtRequestGetPayload (request : urt_hrtrequest_t*) : void*
+    + {method} urtHrtRequestGetPayloadSize (request : urt_hrtrequest_t*) : size_t
+    + {method} urtHrtRequestGetSubmissionTime(request : urt_hrtrequest_t*) : urt_osTime_t*
+    + {method} urtHrtRequestGetAge (request : const urt_hrtrequest_t*) : urt_delay_t
+    + {method} urtHrtRequestReleas e(request : urt_hrtrequest_t*) : urt_status_t
+    + {method} urtHrtRequestIsPending (request : urt_hrtrequest_t*) : bool
+  }
+  
+    class urt_request_t <<U,7FCF7F>> {
+    + {field} base : urt_baserequest_t
+    + {field} nrt : urt_nrtrequest_t
+    + {field} srt : urt_srtrequest_t
+    + {field} frt : urt_frtrequest_t
+    + {field} hrt : urt_hrtrequest_t
+  }
+}
+
+  package "service" <<Rectangle>> {
+    class urt_service_profilingdata_t <<S,BFAFFF>> {
+    + {field} numCalls : urt_profilingcounter_t
+    + {field} numOwnershipLost : urt_profilingcounter_t
+  }
+
+    class urt_serviceid_t <<T,00CFFF>> {
+    .. ""URT_CFG_RPC_SERVICEID_WIDTH"" == 8 ..
+    uin8_t
+    .. ""URT_CFG_RPC_SERVICEID_WIDTH"" == 16 ..
+    uint16_t
+    .. ""URT_CFG_RPC_SERVICEID_WIDTH"" == 32 ..
+    uint32_t
+    .. ""URT_CFG_RPC_SERVICEID_WIDTH"" == 64 ..
+    uint64_t
+  }
+
+    class urt_service_dispatched_t <<S,BFAFFF>> {
+    + {field} request : urt_baserequest_t* const
+    + {field} submissionTime : const urt_osTime_t
+    __
+    + {method} urtServiceDispatchedIsValid (dispatched : urt_service_dispatched_t*) : bool
+    + {method} urtServiceDispatchedGetPayload (dispatched : urt_service_dispatched_t*) : void*
+    + {method} urtServiceDispatchedGetSubmissionTime (dispatched : urt_service_dispatched_t*) : urt_osTime_t*
+    + {method} urtServiceDispatchedNoreturn (dispatched : urt_service_dispatched_t*) : bool
+  }
+
+    class urt_service_t <<S,BFAFFF>> {
+    + {field} next : urt_service_t*
+    + {field} id : urt_serviceid_t
+    + {field} lock : urt_osMutex_t
+    + {field} queue.front : urt_baserequest_t*
+    + {field} queue.hrtBack : urt_hrtrequest_t*
+    + {field} queue.fsrtBack : urt_baserequest_t*
+    + {field} queue.back : urt_baserequest_t*
+    + {field} notification.thread : urt_osThread_t*
+    + {field} notofication.maks : urt_osEventMask_t
+    .. ""URT_CFG_RPC_PROFILING"" == true ..
+    + {field} profiling : urt_service_profilingdata_t
+    __
+    + {method} urtServiceInit (service : urt_service_t*, id : urt_serviceid_t, thread : urt_osThread_t*, mask : urt_osEventMask_t) : urt_status_t
+    + {method} urtServiceDispatch (service : urt_service_t*, dispatched : urt_service_dispatched_t*, payload : void*, bytes : size_t*, noreturn : bool*) : bool
+    + {method} urtServiceAcquireRequest (service* urt_serviceid_t*, request : urt_service_dispatched_t*) : urt_status_t
+    + {method} urtServiceTryAcquireRequest (service* urt_serviceid_t*, request : urt_service_dispatched_t*) : urt_status_t
+    + {method} urtServiceRespond (request : urt_baserequest_t*) : urt_status_t
+    + {method} urtServiceQueueLength(service : urt_service_t*, hrt : size_t*, fsrt : size_t*, nrt : size_t*) : size_t
+  }
+} 
+
+
+
+
+urt_baserequest_t o- -"1" urt_baserequest_VMT
+urt_baserequest_t o- "0,1,2" urt_baserequest_t
+urt_baserequest_t o- "0,1" urt_service_t
+urt_baserequest_t *- -"0,1" urt_baserequest_profilingdata_t
+
+urt_nrtrequest_t - -|> urt_baserequest_t
+urt_nrtrequest_t ..> urt_request_retrievepolicy_t
+
+urt_srtrequest_t - -|> urt_baserequest_t
+urt_srtrequest_t ..> urt_request_retrievepolicy_t
+
+urt_frtrequest_t - -|> urt_baserequest_t
+urt_frtrequest_t ..> urt_request_retrievepolicy_t
+
+urt_hrtrequest_t - -|> urt_baserequest_t
+urt_hrtrequest_t ..> urt_request_retrievepolicy_t
+
+urt_request_t - -|> urt_baserequest_t
+urt_request_t *- -"0,1" urt_nrtrequest_t
+urt_request_t *- -"0,1" urt_srtrequest_t
+urt_request_t *- -"0,1" urt_frtrequest_t
+urt_request_t *- -"0,1" urt_hrtrequest_t
+
+urt_service_t o- "0,1" urt_service_t
+urt_service_t *- -"1" urt_serviceid_t
+urt_service_t o- "0,2,3" urt_baserequest_t
+urt_service_t o- "0,1" urt_hrtrequest_t
+urt_service_t *- -"0,1" urt_service_profilingdata_t
+urt_service_t ..> urt_service_dispatched_t
+
+urt_service_dispatched_t o- -"0,1" urt_baserequest_t
+
+
+
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 11:25:05 CET 2021)
+(LGPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,47 @@
+var group__core__system =
+[
+    [ "aos_system", "structaos__system.html", [
+      [ "events", "structaos__system.html#a1bc3c8cf6c291009a4e6674441338a9b", null ],
+      [ "gpio", "structaos__system.html#afe3746869767f1013764960e92259a4d", null ],
+      [ "iostream", "structaos__system.html#a37cc681afa4f6ecf8a493c7503853fb9", null ],
+      [ "os", "structaos__system.html#a59bf7d0165db1e0152a8d7ec1064d5d5", null ],
+      [ "shell", "structaos__system.html#a0e7cab5859d3c69013a1922e92314260", null ],
+      [ "sssp", "structaos__system.html#ae16ea09e8188da5d66486956a87653ae", null ]
+    ] ],
+    [ "AOS_SYSTEM_EVENTFLAGS_SHUTDOWN", "group__core__system.html#ga21cd034063460f12b197f80708abacae", null ],
+    [ "AOS_SYSTEM_EVENTFLAGS_SHUTDOWN_DEEPSLEEP", "group__core__system.html#ga1f32a51295231e7009dcbd9f2217809c", null ],
+    [ "AOS_SYSTEM_EVENTFLAGS_SHUTDOWN_HIBERNATE", "group__core__system.html#ga6999b87db1d07f7d901e2483e5934858", null ],
+    [ "AOS_SYSTEM_EVENTFLAGS_SHUTDOWN_MASK", "group__core__system.html#gaf6352df16194e4a8e2cb4825c6f96930", null ],
+    [ "AOS_SYSTEM_EVENTFLAGS_SHUTDOWN_RESTART", "group__core__system.html#ga1e586d6d95fe88772d59b0f21ecea7b6", null ],
+    [ "AOS_SYSTEM_EVENTFLAGS_SHUTDOWN_TRANSPORTATION", "group__core__system.html#ga732c55297f81b23348f7217fa7b16d8f", null ],
+    [ "AOS_SYSTEM_TIME_RESOLUTION", "group__core__system.html#gadf22ea7287a01fc52a1ea4aa2e843f4a", null ],
+    [ "aosflush", "group__core__system.html#ga63c362b0d1623d4b5af7ba63677dd721", null ],
+    [ "aosflush_module", "group__core__system.html#ga71936a2d2bcf89f56f30bbd67aea3db5", null ],
+    [ "aosflush_shell", "group__core__system.html#gaa269ae3a122ad694434b037a8ed0af1f", null ],
+    [ "aosprintf", "group__core__system.html#ga9346fd7f205ef9c83d8c6c1fd8c06154", null ],
+    [ "aosprintf_module", "group__core__system.html#gaad4a6040856df0fae1caa94b0e2e53c5", null ],
+    [ "aosprintf_shell", "group__core__system.html#ga97f064fe2882cb343139fb692a7fb65b", null ],
+    [ "aos_shutdown_t", "group__core__system.html#ga87e4aa1ee54b4e3fc933ebb5b3c4cc69", null ],
+    [ "aos_system_t", "group__core__system.html#ga96df62bdc8a0e53a1e1f7163c405b8cc", null ],
+    [ "aos_shutdown", "group__core__system.html#ga1a379433484b809c1a49d4d4dc8df2c3", [
+      [ "AOS_SHUTDOWN_NONE", "group__core__system.html#gga1a379433484b809c1a49d4d4dc8df2c3a8cf458be95a52b5babdd89c6ec4c0c5d", null ],
+      [ "AOS_SHUTDOWN_PASSIVE", "group__core__system.html#gga1a379433484b809c1a49d4d4dc8df2c3a1d316003c5207d1b234c9f6496c14bf4", null ],
+      [ "AOS_SHUTDOWN_ACTIVE", "group__core__system.html#gga1a379433484b809c1a49d4d4dc8df2c3a782cb39b87d4bf7ff100bbbf3ab2a914", null ],
+      [ "AOS_SHUTDOWN_RESTART", "group__core__system.html#gga1a379433484b809c1a49d4d4dc8df2c3ab0b05ba9fd7f5bf832d1cf3a8849dac9", null ],
+      [ "AOS_SHUTDOWN_HIBERNATE", "group__core__system.html#gga1a379433484b809c1a49d4d4dc8df2c3a3c96f587cf1dfe75588abb9797af41e4", null ],
+      [ "AOS_SHUTDOWN_DEEPSLEEP", "group__core__system.html#gga1a379433484b809c1a49d4d4dc8df2c3a297f0ab50a7a2cfe8a8ec1b6c29f7ff4", null ],
+      [ "AOS_SHUTDOWN_TRANSPORTATION", "group__core__system.html#gga1a379433484b809c1a49d4d4dc8df2c3a693337a1f27ff4a4685f0dc7297c3850", null ]
+    ] ],
+    [ "aosSysDeinit", "group__core__system.html#ga560e26d3b2ad2f0d1aab4a2a7bd51ac9", null ],
+    [ "aosSysGetDateTime", "group__core__system.html#ga3dd74ddd730f9506f6d0d4ec4a7c5292", null ],
+    [ "aosSysGetStdGpioCallback", "group__core__system.html#ga76d9188b6cd3a016b401941ac460e989", null ],
+    [ "aosSysGetUptimeX", "group__core__system.html#gaf2b22a2612cc5d75d10102e6d51cf737", null ],
+    [ "aosSysInit", "group__core__system.html#ga6a0e7dab8c3ac20e0ef0ccab9046b368", null ],
+    [ "aosSysSetDateTime", "group__core__system.html#gab6d60547592cca551e2a7b81e55c2483", null ],
+    [ "aosSysShutdownInit", "group__core__system.html#gab2f7b7c3fc1770a330569e5dc13f48cb", null ],
+    [ "aosSysShutdownToBootloader", "group__core__system.html#ga574fa575b1982a9d381d9b6062ed850a", null ],
+    [ "aosSysStart", "group__core__system.html#gaae33d5811802f7552aaf9848d28974c3", null ],
+    [ "aosSysStartUptimeS", "group__core__system.html#ga25800b14e746a1534c2b7dd10481ec65", null ],
+    [ "aosSysStop", "group__core__system.html#ga09b19e58d4153ec06058acf8dcf3dcc8", null ],
+    [ "aos", "group__core__system.html#ga1dead17b67c10ec2e6cb8dbd7bd31d29", null ]
+];

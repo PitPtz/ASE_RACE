@@ -1,0 +1,1028 @@
+
+/home/pit/ASE/AMiRo-Apps/configurations/uRT-Benchmark/modules/NUCLEO-F401RE/build/NUCLEO-F401RE.elf:     file format elf32-littlearm
+/home/pit/ASE/AMiRo-Apps/configurations/uRT-Benchmark/modules/NUCLEO-F401RE/build/NUCLEO-F401RE.elf
+architecture: armv7e-m, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x0800031d
+
+Program Header:
+0x70000001 off    0x00027608 vaddr 0x08017608 paddr 0x08017608 align 2**2
+         filesz 0x00000008 memsz 0x00000008 flags r--
+    LOAD off    0x00010000 vaddr 0x08000000 paddr 0x08000000 align 2**16
+         filesz 0x00017610 memsz 0x00017610 flags r-x
+    LOAD off    0x00030800 vaddr 0x20000800 paddr 0x08017610 align 2**16
+         filesz 0x00000518 memsz 0x00010a18 flags rw-
+    LOAD off    0x00000000 vaddr 0x20000000 paddr 0x20000000 align 2**16
+         filesz 0x00000000 memsz 0x00018000 flags rw-
+private flags = 5000200: [Version5 EABI] [soft-float ABI]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .mstack       00000400  20000000  20000000  00040000  2**0
+                  ALLOC
+  1 .pstack       00000400  20000400  20000400  00040000  2**0
+                  ALLOC
+  2 .vectors      000001e0  08000000  08000000  00010000  2**10
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .text         00012b2c  08000200  08000200  00010200  2**6
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  4 .rodata       000048dc  08012d2c  08012d2c  00022d2c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .ARM.exidx    00000008  08017608  08017608  00027608  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  6 .data         00000518  20000800  08017610  00030800  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+  7 .bss          00010500  20000d18  08017b28  00030d18  2**3
+                  ALLOC
+  8 .ram0_init    00000000  20011218  20011218  00030d18  2**2
+                  CONTENTS
+  9 .ram0         00000000  20011218  20011218  00030d18  2**2
+                  CONTENTS
+ 10 .ram1_init    00000000  00000000  00000000  00030d18  2**2
+                  CONTENTS
+ 11 .ram1         00000000  00000000  00000000  00030d18  2**2
+                  CONTENTS
+ 12 .ram2_init    00000000  00000000  00000000  00030d18  2**2
+                  CONTENTS
+ 13 .ram2         00000000  00000000  00000000  00030d18  2**2
+                  CONTENTS
+ 14 .ram3_init    00000000  00000000  00000000  00030d18  2**2
+                  CONTENTS
+ 15 .ram3         00000000  00000000  00000000  00030d18  2**2
+                  CONTENTS
+ 16 .ram4_init    00000000  00000000  00000000  00030d18  2**2
+                  CONTENTS
+ 17 .ram4         00000000  00000000  00000000  00030d18  2**2
+                  CONTENTS
+ 18 .ram5_init    00000000  00000000  00000000  00030d18  2**2
+                  CONTENTS
+ 19 .ram5         00000000  00000000  00000000  00030d18  2**2
+                  CONTENTS
+ 20 .ram6_init    00000000  00000000  00000000  00030d18  2**2
+                  CONTENTS
+ 21 .ram6         00000000  00000000  00000000  00030d18  2**2
+                  CONTENTS
+ 22 .ram7_init    00000000  00000000  00000000  00030d18  2**2
+                  CONTENTS
+ 23 .ram7         00000000  00000000  00000000  00030d18  2**2
+                  CONTENTS
+ 24 .heap         00006de8  20011218  20011218  00040000  2**0
+                  ALLOC
+ 25 .ARM.attributes 00000033  00000000  00000000  00030d18  2**0
+                  CONTENTS, READONLY
+ 26 .comment      0000004c  00000000  00000000  00030d4b  2**0
+                  CONTENTS, READONLY
+ 27 .debug_frame  0000041c  00000000  00000000  00030d98  2**2
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+SYMBOL TABLE:
+20000000 l    d  .mstack	00000000 .mstack
+20000400 l    d  .pstack	00000000 .pstack
+08000000 l    d  .vectors	00000000 .vectors
+08000200 l    d  .text	00000000 .text
+08012d2c l    d  .rodata	00000000 .rodata
+08017608 l    d  .ARM.exidx	00000000 .ARM.exidx
+20000800 l    d  .data	00000000 .data
+20000d18 l    d  .bss	00000000 .bss
+20011218 l    d  .ram0_init	00000000 .ram0_init
+20011218 l    d  .ram0	00000000 .ram0
+00000000 l    d  .ram1_init	00000000 .ram1_init
+00000000 l    d  .ram1	00000000 .ram1
+00000000 l    d  .ram2_init	00000000 .ram2_init
+00000000 l    d  .ram2	00000000 .ram2
+00000000 l    d  .ram3_init	00000000 .ram3_init
+00000000 l    d  .ram3	00000000 .ram3
+00000000 l    d  .ram4_init	00000000 .ram4_init
+00000000 l    d  .ram4	00000000 .ram4
+00000000 l    d  .ram5_init	00000000 .ram5_init
+00000000 l    d  .ram5	00000000 .ram5
+00000000 l    d  .ram6_init	00000000 .ram6_init
+00000000 l    d  .ram6	00000000 .ram6
+00000000 l    d  .ram7_init	00000000 .ram7_init
+00000000 l    d  .ram7	00000000 .ram7
+20011218 l    d  .heap	00000000 .heap
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    df *ABS*	00000000 /home/pit/ASE/AMiRo-Apps/configurations/uRT-Benchmark/modules/NUCLEO-F401RE/build/obj/vectors.o
+08000322 l       .text	00000000 .stay
+00000000 l    df *ABS*	00000000 /home/pit/ASE/AMiRo-Apps/configurations/uRT-Benchmark/modules/NUCLEO-F401RE/build/obj/crt0_v7m.o
+08000274 l       .text	00000000 msloop
+08000282 l       .text	00000000 psloop
+08000292 l       .text	00000000 dloop
+080002a6 l       .text	00000000 bloop
+080002bc l       .text	00000000 initloop
+080002c8 l       .text	00000000 endinitloop
+080002d0 l       .text	00000000 finiloop
+080002dc l       .text	00000000 endfiniloop
+00000000 l    df *ABS*	00000000 /home/pit/ASE/AMiRo-Apps/configurations/uRT-Benchmark/modules/NUCLEO-F401RE/build/obj/chcoreasm.o
+08000350 l       .text	00000000 .zombies
+00000000 l    df *ABS*	00000000 lib_a-memcpy.o
+00000000 l    df *ABS*	00000000 lib_a-strcmp.o
+00000000 l    df *ABS*	00000000 lib_a-strlen.o
+00000000 l    df *ABS*	00000000 _arm_muldf3.o
+00000000 l    df *ABS*	00000000 _arm_addsubdf3.o
+00000000 l    df *ABS*	00000000 _arm_fixdfsi.o
+00000000 l    df *ABS*	00000000 _arm_truncdfsf2.o
+00000000 l    df *ABS*	00000000 _aeabi_ldivmod.o
+00000000 l    df *ABS*	00000000 _aeabi_uldivmod.o
+00000000 l    df *ABS*	00000000 libgcc2.c
+00000000 l    df *ABS*	00000000 _dvmd_tls.o
+00000000 l    df *ABS*	00000000 
+080012b0 l     F .text	0000001e ubnConfigInit
+080012d0 l     F .text	0000000e _ubnretrievecb
+080012e0 l     F .text	0000000e _ubnfetchcb
+080012f0 l     F .text	0000003a _ubn_fetch
+0800132c l     F .text	00000006 _urtosalTimerCallback
+08001334 l     F .text	00000042 _urt_hrtsubscriber_deadlinejitterrecoverywrapper
+08001378 l     F .text	00000042 _urt_hrtrequest_deadlinejitterrecoverywrapper
+080013bc l     F .text	00000048 _urt_hrtrequest_calculateDeadline
+08001404 l     F .text	00000030 _urt_sfrtrequest_append
+08001434 l     F .text	00000006 _urtbenchmark_usefulnesscb
+0800143c l     F .text	0000003c _aosSysShellcmdMemdumpCallback_BtokiB.constprop.0
+08001478 l     F .text	00000062 _urtbenchmark_printHeading.constprop.0
+080014dc l     F .text	00000110 _urtbenchmark_memory
+080015ec l     F .text	00000004 _urtbenchmark_shellcb_memory
+080015f0 l     F .text	000000b8 _aosSysShellcmdMemdumpCallback_printDump
+080016a8 l     F .text	0000007c _aosSysPrintSystemInfoSeparator
+08001724 l     F .text	0000003a _ubnShutdown
+08001760 l     F .text	0000001a _urt_frtsubscriber_unsubscribe
+0800177c l     F .text	0000001a _urt_srtsubscriber_unsubscribe
+08001798 l     F .text	0000001a _urt_nrtsubscriber_unsubscribe
+080017b4 l     F .text	00000046 _ubn_retrieve
+080017fc l     F .text	00000036 _urt_basesubscriber_subscribe.constprop.0
+08001834 l     F .text	00000030 urtTopicAddMessages
+08001864 l     F .text	0000003c urtCoreGetTopic
+080018a0 l     F .text	0000003e urtServiceAcquireRequest
+080018e0 l     F .text	00000068 _urt_baserequest_detach
+08001948 l     F .text	000000bc urtTopicInit
+08001a04 l     F .text	00000030 _aosSysGpioCallback
+08001a34 l     F .text	0000006a _ubn_submit
+08001aa0 l     F .text	000000b0 _aosSysUptimeCallback
+08001b50 l     F .text	000000ae _ubn_dispatch
+08001c00 l     F .text	0000005c _ubnLoop_rpc_hops
+08001ef0 l     F .text	00000028 _ubndispatchcb_hops
+08001ec0 l     F .text	0000002e _ubnretrievecb_hops
+08001c5c l     F .text	000000a8 _ubnLoop_rpc_scaling
+08003bc8 l     F .text	00000098 _ubndispatchcb
+08001d04 l     F .text	0000005c _ubnLoop_rpc_qos
+08003ad0 l     F .text	000000f8 _ubndispatchcb_qos
+08001d60 l     F .text	0000002e urtEventSourceBroadcast
+08001d90 l     F .text	0000001c urtCoreStopNodes.constprop.0
+08001dac l     F .text	0000007c urtCorePanic
+08001e28 l     F .text	00000036 _urt_hrtsubscriber_initPanicOrRecovery.constprop.0
+08001e60 l     F .text	00000006 _ubn_recoverycb
+08001e68 l     F .text	0000002e urtEventSignal
+08001e98 l     F .text	00000028 urtServiceRespond
+08001f18 l     F .text	00000022 _urt_baserequest_signalServiceAndUnlock
+08001f3c l     F .text	0000001e _urtbenchmark_waitForTermination
+08001f5c l     F .text	00000034 _urtbenchmark_shellcb_checkStress
+08001f90 l     F .text	00000068 _urtbenchmark_shellcb_extractRtClass
+08001ff8 l     F .text	0000008c _urtbenchmark_shellcb_checkXRT
+08002084 l     F .text	0000003c _aosSysShellcmdKerneltestCallback
+080020c0 l     F .text	0000006c _aosSysPrintSystemInfoLine
+0800212c l     F .text	00000068 aosShellAddCommand
+08002704 l     F .text	00000054 _urtbenchmark_triggercb
+08002758 l     F .text	00000118 _aosTimerSetup
+080029d4 l     F .text	00000026 _aosTimerIntermediateCb
+0800299c l     F .text	00000038 _aosTimerTriggerCb
+08002870 l     F .text	0000008c _urtbenchmark_triggercb_rpcqos
+080028fc l     F .text	000000a0 _urtbenchmark_triggercb_pubsubqos
+080029fc l     F .text	000000b0 aosThdSleepUntilS
+08002ae0 l     F .text	00000604 _aosSysShellcmdMemdumpCallback
+080030e4 l     F .text	000000d0 _aosSysShellcmdShutdownCallback
+080031b4 l     F .text	000004a4 _aosSysShellcmdConfigCallback
+0800391c l     F .text	000000a0 urtNodeInit.constprop.0
+080094ac l     F .text	000001f4 _urt_node_main
+08003c60 l     F .text	000004b6 _ubnSetup
+080039bc l     F .text	00000070 ubnInit
+08003a5c l     F .text	00000074 _ubnLoop_node
+080045bc l     F .text	0000003c _ubnLoop_pubsub_hops
+080045f8 l     F .text	00000064 _ubnLoop_pubsub_scaling
+0800465c l     F .text	0000003c _ubnLoop_pubsub_qos
+08003a2c l     F .text	00000030 _ZL11chSysUnlockv
+08004118 l     F .text	00000054 urtTimerReset
+0800416c l     F .text	00000060 urtTimerSet
+080041cc l     F .text	000000d0 _urt_hrtsubscriber_unsubscribe
+0800429c l     F .text	00000058 _urt_hrtsubscriber_raterecoverywrapper
+080042f4 l     F .text	00000260 urtPublisherPublish
+08004554 l     F .text	00000068 _ubn_publish
+08004698 l     F .text	00000024 _ubnfetchcb_hops
+080046bc l     F .text	000000c0 _urt_basesubscriber_fetchLatest
+0800477c l     F .text	0000007c _urt_frtsubscriber_fetchLatest
+080047f8 l     F .text	00000018 _urt_srtsubscriber_fetchLatest
+08004810 l     F .text	00000018 _urt_nrtsubscriber_fetchLatest
+08004828 l     F .text	000001ac _urt_hrtsubscriber_fetchLatest
+080049d4 l     F .text	00000200 _urt_hrtsubscriber_fetchNext
+08004bd4 l     F .text	000000c8 _urt_basesubscriber_fetchNext
+08004c9c l     F .text	00000076 _urt_frtsubscriber_fetchNext
+08004d14 l     F .text	00000018 _urt_srtsubscriber_fetchNext
+08004d2c l     F .text	00000018 _urt_nrtsubscriber_fetchNext
+08004d44 l     F .text	00000078 urtCoreStartNodes
+08004dbc l     F .text	00000134 _urt_hrtrequest_retrieve
+08004ef0 l     F .text	00000108 _urt_frtrequest_retrieve
+08004ff8 l     F .text	000000c4 _urt_nrtrequest_retrieve
+080050bc l     F .text	00000004 _urt_srtrequest_retrieve
+080050c0 l     F .text	00000064 _urt_baserequest_prepareForSubmission
+08005124 l     F .text	00000150 _urt_hrtrequest_submit
+08005274 l     F .text	00000024 _urt_frtrequest_submit
+08005298 l     F .text	00000020 _urt_srtequest_submit_vmtcb
+080052b8 l     F .text	00000036 _urt_nrtequest_submit_vmtcb
+080052f0 l     F .text	00000308 _urtbenchmark_pubsub_hops
+20000ee0 l     O .bss	0000ecb8 _urtbenchmark_data
+080055f8 l     F .text	000002d4 _urtbenchmark_rpc_qos_jitter
+080058cc l     F .text	000002c0 _urtbenchmark_rpc_qos_deadline
+08005b8c l     F .text	000002cc _urtbenchmark_rpc_service
+08005e58 l     F .text	00000300 _urtbenchmark_rpc_request
+08006158 l     F .text	000002b4 _urtbenchmark_rpc_payload
+0800640c l     F .text	000002c8 _urtbenchmark_rpc_hops
+080066d4 l     F .text	00000658 _urtbenchmark_shellcb_rpc
+08006d2c l     F .text	000002b0 _urtbenchmark_pubsub_qos_rate
+08006fdc l     F .text	000002cc _urtbenchmark_pubsub_qos_jitter
+080072a8 l     F .text	000002b0 _urtbenchmark_pubsub_qos_deadline
+08007558 l     F .text	000002d8 _urtbenchmark_pubsub_topic
+08007830 l     F .text	000002c4 _urtbenchmark_pubsub_subscriber
+08007af4 l     F .text	00000310 _urtbenchmark_pubsub_publisher
+08007e04 l     F .text	000002a4 _urtbenchmark_pubsub_message
+080080a8 l     F .text	00000334 _urtbenchmark_pubsub_payload
+080083dc l     F .text	00000880 _urtbenchmark_shellcb_pubsub
+08008c5c l     F .text	00000268 _urtbenchmark_shellcb_node
+08008ec4 l     F .text	0000010c _urtbenchmark_shellcb_all
+08008fd0 l     F .text	000004d0 _aosSysPrintSystemInfo
+080094a0 l     F .text	0000000c _aosSysShellcmdInfoCallback
+20000da4 l     O .bss	00000010 _ZL13_stdiochannel
+20000db4 l     O .bss	00000014 _ZL16_eventListenerOS
+20000dc8 l     O .bss	00000014 _ZL18_eventListenerGPIO
+20000e70 l     O .bss	00000024 _stdshellchannel
+20000e94 l     O .bss	00000004 _synctime
+20000e98 l     O .bss	00000018 _systimer
+20000eb0 l     O .bss	00000008 _uptime
+20000eb8 l     O .bss	00000004 _urt_core_evtSource
+20000ebc l     O .bss	00000010 _urt_core_lock
+20000ecc l     O .bss	00000004 _urt_core_nodes
+20000ed0 l     O .bss	00000004 _urt_core_services
+20000ed4 l     O .bss	00000001 _urt_core_status
+20000ed8 l     O .bss	00000004 _urt_core_sync
+20000edc l     O .bss	00000004 _urt_core_topics
+2000fb98 l     O .bss	00000048 _urtbenchmark_timer
+20010380 l     O .bss	000001e8 ch_c0_idle_thread_wa
+20000800 l     O .data	0000000c _command_config
+2000080c l     O .data	0000000c _command_help
+20000818 l     O .data	0000000c _command_info
+20000824 l     O .data	00000004 _gpioLed
+20000828 l     O .data	00000004 _gpioUserButton
+2000082c l     O .data	00000010 _rtc_lld_vmt
+2000083c l     O .data	0000000c _shellcmd_config
+20000848 l     O .data	0000000c _shellcmd_info
+20000854 l     O .data	0000000c _shellcmd_kerneltest
+20000860 l     O .data	0000000c _shellcmd_memdump
+2000086c l     O .data	0000000c _shellcmd_shutdown
+20000878 l     O .data	0000000c _urtbenchmark_shellcmd_all
+20000884 l     O .data	0000000c _urtbenchmark_shellcmd_memory
+20000890 l     O .data	0000000c _urtbenchmark_shellcmd_node
+2000089c l     O .data	0000000c _urtbenchmark_shellcmd_pubsub
+200008a8 l     O .data	0000000c _urtbenchmark_shellcmd_rpc
+200008bc l     O .data	00000004 moduleLldLed
+0801558c l     O .rodata	00000008 moduleGpioLed
+200008c0 l     O .data	00000004 moduleLldUserButton
+08015594 l     O .rodata	00000008 moduleGpioUserButton
+080152a8 l     O .rodata	0000001c CSWTCH.53
+080152c4 l     O .rodata	0000001c CSWTCH.54
+080152e0 l     O .rodata	0000001c CSWTCH.55
+080152fc l     O .rodata	0000001c CSWTCH.56
+08015318 l     O .rodata	00000004 CSWTCH.74
+0801531c l     O .rodata	0000000f __func__.10464
+0801532c l     O .rodata	0000000c __func__.7118.lto_priv.0
+08015380 l     O .rodata	0000000c __func__.7118.lto_priv.7
+0801538c l     O .rodata	0000000c __func__.7174.lto_priv.0
+08015398 l     O .rodata	0000000c __func__.7174.lto_priv.1
+080153a4 l     O .rodata	0000000c __func__.7174.lto_priv.2
+080153b0 l     O .rodata	0000000c __func__.7174.lto_priv.3
+080153bc l     O .rodata	0000000c __func__.7174.lto_priv.4
+080153c8 l     O .rodata	00000014 __func__.7362
+080153dc l     O .rodata	00000017 __func__.7624
+080153f4 l     O .rodata	0000000b __func__.7643
+08015400 l     O .rodata	00000012 __func__.7646
+08015414 l     O .rodata	00000010 __func__.7670
+08015424 l     O .rodata	0000000d __func__.8876
+08015440 l     O .rodata	00000018 __func__.8901
+08015458 l     O .rodata	00000008 __func__.8930
+08015460 l     O .rodata	00000028 _channelvmt.lto_priv.0
+08015488 l     O .rodata	00000028 _channelvmt.lto_priv.1
+080154b0 l     O .rodata	0000000d _shell_name
+080154c0 l     O .rodata	00000028 _streamvmt.lto_priv.0
+080154e8 l     O .rodata	00000028 _streamvmt.lto_priv.1
+08015510 l     O .rodata	00000008 _urt_frtrequest_vmt
+08015518 l     O .rodata	0000000c _urt_frtsubscriber_vmt
+08015524 l     O .rodata	00000008 _urt_hrtrequest_vmt
+0801552c l     O .rodata	0000000c _urt_hrtsubscriber_vmt
+08015538 l     O .rodata	00000008 _urt_nrtrequest_vmt
+08015540 l     O .rodata	0000000c _urt_nrtsubscriber_vmt
+0801554c l     O .rodata	00000008 _urt_srtrequest_vmt
+08015554 l     O .rodata	0000000c _urt_srtsubscriber_vmt
+08015560 l     O .rodata	00000018 accu_month_len
+08015578 l     O .rodata	00000014 ch_core0_cfg
+0801559c l     O .rodata	00000010 oslib_test_001_001
+080155ac l     O .rodata	00000010 oslib_test_001_002
+080155bc l     O .rodata	00000010 oslib_test_001_003
+080155cc l     O .rodata	00000008 oslib_test_sequence_001
+080155d4 l     O .rodata	00000010 oslib_test_sequence_001_array
+080155e4 l     O .rodata	00000008 oslib_test_suite
+080155ec l     O .rodata	00000008 oslib_test_suite_array
+080155f4 l     O .rodata	00000010 rt_test_001_001
+08015604 l     O .rodata	00000010 rt_test_001_002
+08015614 l     O .rodata	00000010 rt_test_001_003
+08015624 l     O .rodata	00000010 rt_test_002_001
+08015634 l     O .rodata	00000010 rt_test_002_002
+08015644 l     O .rodata	00000010 rt_test_002_003
+08015654 l     O .rodata	00000010 rt_test_003_001
+08015664 l     O .rodata	00000010 rt_test_003_002
+08015674 l     O .rodata	00000010 rt_test_005_001
+08015684 l     O .rodata	00000010 rt_test_005_002
+08015694 l     O .rodata	00000010 rt_test_005_003
+080156a4 l     O .rodata	00000010 rt_test_005_004
+080156b4 l     O .rodata	00000010 rt_test_006_001
+080156c4 l     O .rodata	00000010 rt_test_007_001
+080156d4 l     O .rodata	00000010 rt_test_007_002
+080156e4 l     O .rodata	00000010 rt_test_007_003
+080156f4 l     O .rodata	00000010 rt_test_007_004
+08015704 l     O .rodata	00000010 rt_test_007_005
+08015714 l     O .rodata	00000010 rt_test_007_006
+08015724 l     O .rodata	00000010 rt_test_008_001
+08015734 l     O .rodata	00000010 rt_test_008_004
+08015744 l     O .rodata	00000010 rt_test_008_005
+08015754 l     O .rodata	00000010 rt_test_008_007
+08015764 l     O .rodata	00000010 rt_test_008_008
+08015774 l     O .rodata	00000010 rt_test_008_009
+08015784 l     O .rodata	00000010 rt_test_010_001
+08015794 l     O .rodata	00000010 rt_test_010_002
+080157a4 l     O .rodata	00000010 rt_test_010_003
+080157b4 l     O .rodata	00000010 rt_test_010_004
+080157c4 l     O .rodata	00000010 rt_test_010_005
+080157d4 l     O .rodata	00000010 rt_test_010_006
+080157e4 l     O .rodata	00000010 rt_test_010_007
+080157f4 l     O .rodata	00000010 rt_test_012_004
+08015804 l     O .rodata	00000010 rt_test_012_005
+08015814 l     O .rodata	00000010 rt_test_012_006
+08015824 l     O .rodata	00000010 rt_test_012_007
+08015834 l     O .rodata	00000010 rt_test_012_008
+08015844 l     O .rodata	00000010 rt_test_012_009
+08015854 l     O .rodata	00000010 rt_test_012_010
+08015864 l     O .rodata	00000010 rt_test_012_011
+08015874 l     O .rodata	00000010 rt_test_012_012
+08015884 l     O .rodata	00000008 rt_test_sequence_001
+0801588c l     O .rodata	00000010 rt_test_sequence_001_array
+0801589c l     O .rodata	00000008 rt_test_sequence_002
+080158a4 l     O .rodata	00000010 rt_test_sequence_002_array
+080158b4 l     O .rodata	00000008 rt_test_sequence_003
+080158bc l     O .rodata	0000000c rt_test_sequence_003_array
+080158c8 l     O .rodata	00000008 rt_test_sequence_005
+080158d0 l     O .rodata	00000014 rt_test_sequence_005_array
+080158e4 l     O .rodata	00000008 rt_test_sequence_006
+080158ec l     O .rodata	00000008 rt_test_sequence_006_array
+080158f4 l     O .rodata	00000008 rt_test_sequence_007
+080158fc l     O .rodata	0000001c rt_test_sequence_007_array
+08015918 l     O .rodata	00000008 rt_test_sequence_008
+08015920 l     O .rodata	0000001c rt_test_sequence_008_array
+0801593c l     O .rodata	00000008 rt_test_sequence_010
+08015944 l     O .rodata	00000020 rt_test_sequence_010_array
+08015964 l     O .rodata	00000008 rt_test_sequence_012
+0801596c l     O .rodata	00000028 rt_test_sequence_012_array
+08015994 l     O .rodata	00000008 rt_test_suite
+0801599c l     O .rodata	00000028 rt_test_suite_array
+080159c4 l     O .rodata	00000028 vmt
+00000000 l    df *ABS*	00000000 
+0800a120 l     F .text	0000005e _aosShellMoveCursor
+0800a180 l     F .text	00000030 _aosShellMapAscii2Custom
+0800a1b0 l     F .text	00000048 _aosShellCharcmp
+0800a524 l     F .text	00000002 tmo
+0800a534 l     F .text	00000018 __test_assert
+0800a570 l     F .text	00000010 test_putchar
+0800a580 l     F .text	00000018 test_emit_token
+0800a598 l     F .text	00000006 h3
+0800a5a0 l     F .text	00000006 h2
+0800a5a8 l     F .text	00000006 h1
+0800a5b0 l     F .text	00000006 thread
+0800a5b8 l     F .text	00000024 test_print_line
+0800a5f8 l     F .text	0000005c __port_irq_epilogue
+0800a66c l     F .text	00000086 _aosShellOverwriteOutput
+0800a6f4 l     F .text	00000090 _aosShellPrepare4Modification
+0800a7bc l     F .text	00000498 test_printf
+0800b914 l     F .text	00000030 __sch_ready_ahead
+0800b944 l     F .text	00000040 __sch_reschedule_ahead
+0800b984 l     F .text	00000030 __sch_ready_behind
+0800b9b4 l     F .text	0000005c vt_set_alarm
+0800bc68 l     F .text	00000074 chMtxUnlockS
+0800bcdc l     F .text	000000e0 chMtxLockS
+0800bdbc l     F .text	0000004c chSemSignalI
+0800be08 l     F .text	00000044 chThdExitS
+0800c6e0 l     F .text	0000005e __sch_wakeup
+0800bfc4 l     F .text	00000028 chThdEnqueueTimeoutS
+0800bfec l     F .text	0000007c chSysIntegrityCheckI
+0800c068 l     F .text	0000002c __dbg_check_leave_isr
+0800c094 l     F .text	0000002c __dbg_check_enter_isr
+0800ca98 l     F .text	00000048 bmk_thread4
+0800cae0 l     F .text	00000050 thread4
+0800cb30 l     F .text	0000006c thread1.lto_priv.0
+0800cde0 l     F .text	00000098 chEvtWaitOneTimeout
+0800d018 l     F .text	00000044 chEvtAddEvents
+0800d620 l     F .text	0000003c thread8
+0800d65c l     F .text	0000002c thread6
+0800d688 l     F .text	00000020 thread9
+0800d6a8 l     F .text	00000020 thread1.lto_priv.2
+0800d6c8 l     F .text	00000078 chSemSignal
+0800d740 l     F .text	00000084 chSemWait
+0800d7c4 l     F .text	00000028 bmk_thread7
+0800d7ec l     F .text	00000018 thread3
+0800d804 l     F .text	00000018 thread1.lto_priv.1
+0800d9bc l     F .text	0000002c bmk_thread8
+0800d9e8 l     F .text	00000048 chThdSleep
+0800da30 l     F .text	00000028 evt_thread7
+0800da58 l     F .text	00000018 evt_thread3
+0800da70 l     F .text	00000020 thread4A
+0800da90 l     F .text	00000058 thread4B
+0800dae8 l     F .text	00000050 thread2
+0800dbfc l     F .text	00000048 test_wait_tick
+0800e0c0 l     F .text	0000001c test_terminate_threads
+0800e330 l     F .text	00000024 test_wait_threads
+0800e378 l     F .text	00000006 bmk_thread3
+0800fce4 l     F .text	0000001c __dbg_check_suspend
+0800ff4c l     F .text	00000034 vtcb
+0800ff9c l     F .text	00000118 oqWriteTimeout
+080100c8 l     F .text	0000009c oqPutTimeout
+08010178 l     F .text	00000118 iqReadTimeout
+080102a4 l     F .text	00000074 iqGetTimeout
+08010ae8 l     F .text	00000198 _aosShellPrintPrompt
+200105a8 l     O .bss	00000010 mtx1
+200105b8 l     O .bss	0000000c sem1.lto_priv.1
+200105c8 l     O .bss	00000c08 test_buffer
+200111d0 l     O .bss	00000014 threads
+200111e4 l     O .bss	00000004 tr1
+200111e8 l     O .bss	00000018 vt1.9060
+20011200 l     O .bss	00000018 vt2.9061
+200008c4 l     O .data	00000004 es1
+200008c8 l     O .data	00000004 es2
+200008cc l     O .data	00000010 m1
+200008dc l     O .data	00000010 m2
+0801719c l     O .rodata	00000010 __func__.5624
+080171ac l     O .rodata	0000000c __func__.7118.lto_priv.10
+080171b8 l     O .rodata	0000000c __func__.7118.lto_priv.11
+080171c4 l     O .rodata	0000000c __func__.7118.lto_priv.12
+080171d0 l     O .rodata	0000000c __func__.7118.lto_priv.13
+080171dc l     O .rodata	0000000c __func__.7118.lto_priv.14
+080171e8 l     O .rodata	0000000c __func__.7118.lto_priv.15
+080171f4 l     O .rodata	0000000c __func__.7118.lto_priv.16
+08017200 l     O .rodata	0000000c __func__.7118.lto_priv.17
+0801720c l     O .rodata	0000000c __func__.7118.lto_priv.8
+08017218 l     O .rodata	0000000c __func__.7118.lto_priv.9
+08017224 l     O .rodata	0000000c __func__.7404
+08017230 l     O .rodata	00000013 __func__.7612.lto_priv.0
+08017244 l     O .rodata	00000012 __func__.7616.lto_priv.0
+08017258 l     O .rodata	0000001c __func__.7616.lto_priv.1
+08017274 l     O .rodata	00000016 __func__.7619
+0801728c l     O .rodata	0000000b __func__.7620
+08017298 l     O .rodata	00000011 __func__.7628.lto_priv.0
+080172ac l     O .rodata	00000010 __func__.7628.lto_priv.1
+080172bc l     O .rodata	0000000b __func__.7635
+080172c8 l     O .rodata	00000012 __func__.7639
+080172dc l     O .rodata	0000000c __func__.7642
+080172e8 l     O .rodata	0000000b __func__.7643
+080172f4 l     O .rodata	00000014 __func__.7644.lto_priv.0
+08017308 l     O .rodata	0000000c __func__.7644.lto_priv.1
+08017314 l     O .rodata	0000000c __func__.7645
+08017320 l     O .rodata	0000000c __func__.7651
+0801732c l     O .rodata	0000000e __func__.7652
+0801733c l     O .rodata	0000000b __func__.7654.lto_priv.0
+08017348 l     O .rodata	0000000d __func__.7655.lto_priv.0
+08017358 l     O .rodata	0000000d __func__.7655.lto_priv.1
+08017368 l     O .rodata	0000000d __func__.7656
+08017378 l     O .rodata	0000000d __func__.7659
+08017388 l     O .rodata	0000000a __func__.7660
+08017394 l     O .rodata	00000011 __func__.7661
+080173a8 l     O .rodata	0000000c __func__.7664
+080173b4 l     O .rodata	0000000d __func__.7666.lto_priv.0
+080173c4 l     O .rodata	00000011 __func__.7666.lto_priv.1
+080173d8 l     O .rodata	0000000c __func__.7682
+080173e4 l     O .rodata	0000000e __func__.7683
+080173f4 l     O .rodata	00000015 __func__.7695
+0801740c l     O .rodata	0000000d __func__.7701
+0801741c l     O .rodata	00000006 __func__.8907
+08017424 l     O .rodata	00000005 __func__.8911
+0801742c l     O .rodata	00000007 __func__.8921
+08017434 l     O .rodata	0000000e __func__.9012
+08017444 l     O .rodata	0000000f __func__.9063
+08017454 l     O .rodata	0000000c evhndl
+08017460 l     O .rodata	00000024 pow10
+08017484 l     O .rodata	00000080 ram_areas
+00000000 l    df *ABS*	00000000 sf_ceil.c
+00000000 l    df *ABS*	00000000 sf_round.c
+00000000 l    df *ABS*	00000000 atoi.c
+00000000 l    df *ABS*	00000000 errno.c
+00000000 l    df *ABS*	00000000 strtol.c
+080129f4 l     F .text	0000012c _strtol_l.isra.0
+00000000 l    df *ABS*	00000000 memmove.c
+00000000 l    df *ABS*	00000000 memset.c
+00000000 l    df *ABS*	00000000 strncmp.c
+00000000 l    df *ABS*	00000000 ctype_.c
+00000000 l    df *ABS*	00000000 impure.c
+200008f0 l     O .data	00000428 impure_data
+08003658 g     F .text	00000080 .hidden chSemResetWithMessage.constprop.0
+080022cc g     F .text	00000040 .hidden __test_assert_sequence.constprop.0
+0800c368 g     F .text	00000030 Vector58
+0800031e  w    F .text	00000000 VectorE8
+0800c23c g     F .text	0000006c Vector9C
+0800b8f4 g     F .text	00000004 .hidden rt_test_008_001_setup.lto_priv.0
+0800a4c8 g     F .text	0000001a .hidden _aosIOChannelGet.lto_priv.0
+00000000 g       .bss	00000000 __flash3_base__
+00000000 g       *ABS*	00000000 __flash1_end__
+0800031e  w    F .text	00000000 VectorAC
+0800e360 g     F .text	00000016 chThdExit
+0800bc38 g     F .text	0000002e .hidden chEvtBroadcastFlagsI
+0800bf74 g     F .text	00000050 .hidden chSchGoSleepTimeoutS
+00000000 g       .ram7	00000000 __flash6_free__
+00000000 g       .bss	00000000 __flash7_base__
+0800031e  w    F .text	00000000 DebugMon_Handler
+0800a29c g     F .text	00000026 .hidden _aosShellChannelReadt.lto_priv.0
+08080000 g       *ABS*	00000000 __flash0_end__
+0800031e  w    F .text	00000000 Vector1A0
+0800b8e4 g     F .text	00000004 .hidden rt_test_008_007_setup.lto_priv.0
+0800ee10 g     F .text	00000114 .hidden rt_test_008_007_execute.lto_priv.0
+00000000 g       .ram7	00000000 __flash7_free__
+0800c338 g     F .text	00000030 Vector5C
+0800a3a4 g     F .text	0000001a .hidden _aosShellChannelWrite.lto_priv.0
+08000dcc g     F .text	0000005a .hidden __floatdidf
+0800a3c0 g     F .text	0000002e .hidden _aosIOStreamCtl.lto_priv.0
+0800031e  w    F .text	00000000 Vector11C
+00000000 g       .ram5	00000000 __ram5_clear__
+00000000 g       .bss	00000000 __flash2_base__
+08015368 g     O .rodata	0000000c .hidden __func__.7118.lto_priv.5
+0800031e  w    F .text	00000000 HardFault_Handler
+0800031e  w    F .text	00000000 Vector1B8
+08000324 g     F .text	00000000 __port_switch
+0800031e  w    F .text	00000000 Vector19C
+20011218 g       .ram0_init	00000000 __ram0_init__
+0800a7a8 g     F .text	00000004 .hidden rt_test_010_006_setup.lto_priv.0
+0800031e  w    F .text	00000000 Vector8C
+0800031e  w    F .text	00000000 SysTick_Handler
+0800d05c g     F .text	00000060 .hidden chEvtUnregister
+080001e0 g       .vectors	00000000 __init_array_base__
+00000000 g       .ram1	00000000 __ram1_free__
+08012b38 g     F .text	000000d6 memmove
+080100b4 g     F .text	00000006 .hidden _writet.lto_priv.0
+0800031e  w    F .text	00000000 VectorDC
+00000000 g       .bss	00000000 __ram3_base__
+0800031e  w    F .text	00000000 PendSV_Handler
+0800031e  w    F .text	00000000 Vector168
+0800031e  w    F .text	00000000 NMI_Handler
+08000000 g       .vectors	00000000 _vectors
+08017610 g       .ARM.exidx	00000000 __exidx_end
+0800d0bc g     F .text	00000068 .hidden chEvtRegisterMaskWithFlags
+0800d2c8 g     F .text	0000006c .hidden chCondBroadcast
+0800bac0 g     F .text	00000064 .hidden chSchGoSleepS
+0800031e  w    F .text	00000000 Vector110
+080129e8 g     F .text	0000000c __errno
+08012d2c g       .text	00000000 __text_end__
+0800a7ac g     F .text	00000004 .hidden rt_test_010_005_setup.lto_priv.0
+080100bc g     F .text	0000000a .hidden _write.lto_priv.0
+0800d81c g     F .text	00000128 .hidden rt_test_007_001_execute.lto_priv.0
+0800b8f8 g     F .text	0000001c .hidden rt_test_008_004_setup.lto_priv.0
+20011218 g       .ram0	00000000 __ram0_free__
+2000fbe0 g     O .bss	00000738 .hidden aos
+20011218 g       .heap	00000000 __heap_base__
+0800a498 g     F .text	0000001a .hidden _aosIOChannelGett.lto_priv.0
+0800a7b0 g     F .text	00000004 .hidden rt_test_010_004_setup.lto_priv.0
+0800f46c g     F .text	000000a8 .hidden rt_test_007_005_execute.lto_priv.0
+0800d124 g     F .text	00000120 .hidden rt_test_010_001_execute.lto_priv.0
+0800a668 g     F .text	00000004 .hidden __idle_thread.lto_priv.0
+0800a44c g     F .text	00000014 .hidden _aosIOChannelCtl.lto_priv.0
+0800031e  w    F .text	00000000 Vector120
+0800031e  w    F .text	00000000 Vector1D8
+08015350 g     O .rodata	0000000c .hidden __func__.7118.lto_priv.3
+0800c760 g     F .text	00000020 __dbg_check_lock
+20000de0 g     O .bss	00000010 .hidden _commands_mtx.lto_priv.0
+200008b4 g     O .data	00000008 .hidden c1.lto_priv.0
+0800a5dc g     F .text	0000001c .hidden test_stream_putchar.lto_priv.0
+0800031e  w    F .text	00000000 VectorC8
+0800f840 g     F .text	00000108 .hidden rt_test_007_002_execute.lto_priv.0
+080036d8 g     F .text	000000a4 .hidden chSemSignalWait.constprop.0
+0800eaa0 g     F .text	000000d8 .hidden rt_test_010_004_execute.lto_priv.0
+080022a4 g     F .text	00000028 .hidden chCondSignalI.constprop.0
+0800ba54 g     F .text	0000006c .hidden chSchWakeupS
+08017b28 g       *ABS*	00000000 __ram3_init_text__
+0800b424 g     F .text	000000c4 .hidden rt_test_001_002_execute.lto_priv.0
+0800e380 g     F .text	000000a8 .hidden chThdCreateStatic
+0800ba30 g     F .text	00000024 .hidden chSchRescheduleS
+0800b84c g     F .text	00000048 .hidden _read.lto_priv.1
+080038c4 g     F .text	00000058 .hidden chEvtWaitAll.constprop.0
+0800031e  w    F .text	00000000 Vector94
+00000000 g       *ABS*	00000000 __ram5_end__
+0800de5c g     F .text	00000220 .hidden test_execute_inner.isra.0.lto_priv.0
+00000000 g       .ram5	00000000 __ram5_noinit__
+00000000 g       .ram7	00000000 __flash1_free__
+00000000 g       *ABS*	00000000 __ram5_size__
+0800e428 g     F .text	0000010c .hidden rt_test_012_008_execute.lto_priv.0
+0800031e  w    F .text	00000000 VectorA8
+08000364 g     F .text	00000134 memcpy
+08015374 g     O .rodata	0000000c .hidden __func__.7118.lto_priv.6
+0800031e  w    F .text	00000000 VectorB4
+0800a4f8 g     F .text	00000018 .hidden _aosIOChannelRead.lto_priv.0
+08000d54 g     F .text	00000022 .hidden __floatsidf
+0800a4b4 g     F .text	00000014 .hidden _aosIOChannelPutt.lto_priv.0
+00000000 g       *ABS*	00000000 __flash7_size__
+0800ec80 g     F .text	000000b4 .hidden rt_test_008_009_execute.lto_priv.0
+0800dd84 g     F .text	000000d8 .hidden rt_test_012_009_execute.lto_priv.0
+0800a558 g     F .text	00000018 .hidden rt_test_003_001_execute.lto_priv.0
+20000d18 g     O .bss	0000000c .hidden RTCD1
+08000fb8 g     F .text	00000000 .hidden __aeabi_uldivmod
+20000d24 g     O .bss	00000080 .hidden SD2
+0800bbd4 g     F .text	00000020 .hidden chSchReadyI
+00000000 g       .bss	00000000 __ram6_base__
+080124ec g     F .text	0000023c .hidden _aosShellCommandConfigCallback.lto_priv.0
+20000800 g       .pstack	00000000 __main_thread_stack_end__
+0800a228 g     F .text	0000002a .hidden _aosShellStreamPut.lto_priv.0
+08017608 g       .rodata	00000000 __rodata_end__
+0801298c g     F .text	00000054 roundf
+08000200 g     F .text	00000000 _crt0_entry
+0800031e  w    F .text	00000000 Vector74
+0800b5c4 g     F .text	00000004 .hidden oslib_test_001_001_execute.lto_priv.0
+0800031e  w    F .text	00000000 Vector160
+0800b5c8 g     F .text	000000b2 .hidden _aosShellStrccmp
+08002194 g     F .text	00000030 .hidden chThdDequeueNextI.constprop.0
+0800031e  w    F .text	00000000 Vector1B0
+0800031e  w    F .text	00000000 UsageFault_Handler
+0800031e  w    F .text	00000000 VectorEC
+0800ff80 g     F .text	0000001c .hidden _ctl.lto_priv.0
+0800b038 g     F .text	000003ec .hidden rt_test_001_003_execute.lto_priv.0
+00000000 g       .ram7	00000000 __flash4_free__
+20018000 g       .heap	00000000 __heap_end__
+08000d34 g     F .text	0000001e .hidden __aeabi_ui2d
+00000000 g       *ABS*	00000000 __ram1_size__
+08000fe8 g     F .text	000002c2 .hidden __udivmoddi4
+08000ab0 g     F .text	00000000 .hidden __aeabi_drsub
+0800031e  w    F .text	00000000 Vector40
+0800031e  w    F .text	00000000 VectorF8
+0800031e  w    F .text	00000000 Vector108
+0800c780 g     F .text	000000cc .hidden _aosShellStreamWritet.lto_priv.0
+0800b70c g     F .text	00000002 __cpu_init
+0800031e  w    F .text	00000000 VectorBC
+08010c80 g     F .text	0000186c .hidden _aosShellThreadFunction
+0800031e  w    F .text	00000000 Vector190
+00000000 g       .ram7	00000000 __flash3_free__
+0800031e  w    F .text	00000000 Vector150
+00000000 g       .ram1	00000000 __ram1_clear__
+0800031e  w    F .text	00000000 Vector124
+0800cf80 g     F .text	00000054 .hidden chEvtSignal
+080001e0 g       .vectors	00000000 __init_array_end__
+0800a664 g     F .text	00000004 .hidden _getsize.lto_priv.0
+080037cc g     F .text	00000048 .hidden chEvtGetAndClearEvents.constprop.0
+0800a2ec g     F .text	0000002c .hidden _aosShellChannelGett.lto_priv.0
+08000000 g       .vectors	00000000 __vectors_base__
+08000d78 g     F .text	00000042 .hidden __extendsfdf2
+00000000 g       .ram7	00000000 __ram7_free__
+00000000 g       *ABS*	00000000 __ram4_size__
+08000abc g     F .text	00000276 .hidden __adddf3
+0800031e  w    F .text	00000000 Vector1C4
+0800250c g     F .text	00000180 .hidden aosSysGetDateTime
+0800031e  w    F .text	00000000 Vector1CC
+00000000 g       *ABS*	00000000 __ram1_end__
+00000000 g       *ABS*	00000000 __ram4_end__
+08017608 g       .ARM.exidx	00000000 __exidx_start
+08017610 g       *ABS*	00000000 __textdata_base__
+0800085c  w    F .text	00000254 .hidden __aeabi_dmul
+08017b28 g       *ABS*	00000000 __ram0_init_text__
+08012728 g     F .text	00000154 .hidden _aosShellCommandHelpCallback.lto_priv.0
+08017b28 g       *ABS*	00000000 __ram1_init_text__
+00000000 g       *ABS*	00000000 __flash5_end__
+00000000 g       .ram7	00000000 __flash2_free__
+0800b7c8 g     F .text	00000010 .hidden rt_test_007_005_setup.lto_priv.0
+0800e35c g     F .text	00000004 .hidden rt_test_007_005_teardown.lto_priv.0
+0800031e  w    F .text	00000000 Vector148
+0800031e  w    F .text	00000000 Vector188
+08000d34 g     F .text	0000001e .hidden __floatunsidf
+0800b774 g     F .text	00000054 .hidden rt_test_010_002_execute.lto_priv.0
+0800033c g     F .text	00000000 __port_thread_start
+0800a4e4 g     F .text	00000014 .hidden _aosIOChannelPut.lto_priv.0
+00018000 g       *ABS*	00000000 __ram0_size__
+0800fd64 g     F .text	00000048 .hidden chSysRestoreStatusX.part.0
+08010330 g     F .text	00000798 .hidden chvprintf
+00000000 g       *ABS*	00000000 __flash2_end__
+08017b28 g       *ABS*	00000000 __ram5_init_text__
+00000000 g       *ABS*	00000000 __flash4_size__
+0800a254 g     F .text	0000002e .hidden _aosShellStreamWrite.lto_priv.0
+08012b20 g     F .text	00000018 strtol
+0800b7e0 g     F .text	00000004 .hidden rt_test_007_002_setup.lto_priv.0
+0800b710 g     F .text	00000044 .hidden chSysHalt
+0800031e  w    F .text	00000000 Vector198
+0800031e  w    F .text	00000000 Vector118
+08000e78 g     F .text	0000009e .hidden __aeabi_d2f
+00000000 g       .ram7	00000000 __flash5_free__
+0800c2d8 g     F .text	00000030 Vector64
+08003814 g     F .text	0000005c .hidden chEvtWaitOne.constprop.0
+0800031c  w    F .text	00000000 Reset_Handler
+0800dc44 g     F .text	000000a0 .hidden rt_test_012_011_execute.lto_priv.0
+0800b8a0 g     F .text	0000000c .hidden rt_test_012_011_setup.lto_priv.0
+0800031e  w    F .text	00000000 VectorCC
+0800b7f4 g     F .text	00000058 .hidden _write.lto_priv.1
+08000e28 g     F .text	0000004e .hidden __fixdfsi
+08015338 g     O .rodata	0000000c .hidden __func__.7118.lto_priv.1
+0800031e  w    F .text	00000000 Vector54
+0801016c g     F .text	0000000a .hidden _put.lto_priv.0
+0800031e  w    F .text	00000000 Vector98
+080001e0 g       .vectors	00000000 __vectors_end__
+2001059c g     O .bss	0000000c .hidden sem1.lto_priv.0
+00000000 g       .ram4	00000000 __ram4_clear__
+00000000 g       .bss	00000000 __flash4_base__
+20010574 g     O .bss	00000028 .hidden chtest
+00000000 g       .ram5	00000000 __ram5_free__
+0800c500 g     F .text	000001e0 VectorD8
+0800a284 g     F .text	00000016 .hidden _aosShellChannelCtl.lto_priv.0
+00000000 g       *ABS*	00000000 __flash6_end__
+08017b28 g       *ABS*	00000000 __ram6_init_text__
+0800031e  w    F .text	00000000 Vector138
+08000abc g     F .text	00000276 .hidden __aeabi_dadd
+0800031e  w    F .text	00000000 Vector24
+0800bb24 g     F .text	00000020 .hidden chDbgCheckClassI
+0800d5d8 g     F .text	00000048 .hidden chMtxLock
+00000000 g       .ram3	00000000 __ram3_clear__
+0800b704 g     F .text	00000002 __default_exit
+00000000 g       *ABS*	00000000 __ram6_end__
+0800cfd4 g     F .text	00000044 .hidden chEvtGetAndClearFlags
+00000000 g       .bss	00000000 __flash5_base__
+00000000 g       .ram6_init	00000000 __ram6_init__
+0800031e  w    F .text	00000000 Vector1AC
+08000dbc g     F .text	0000006a .hidden __aeabi_ul2d
+20000ddc g     O .bss	00000004 .hidden _commands.lto_priv.0
+0801535c g     O .rodata	0000000c .hidden __func__.7118.lto_priv.4
+0800c90c g     F .text	000000cc .hidden _aosIOStreamWritet.lto_priv.0
+0800a3f0 g     F .text	0000002a .hidden _aosIOStreamPut.lto_priv.0
+0800fd1c g     F .text	00000048 .hidden rt_test_002_003_execute.lto_priv.0
+00000000 g       .ram7_init	00000000 __ram7_init__
+0800031e  w    F .text	00000000 Vector178
+00000000 g       .ram6	00000000 __ram6_free__
+0800fd00 g     F .text	0000001c .hidden __dbg_check_disable
+0800b8ac g     F .text	00000024 .hidden rt_test_008_009_setup.lto_priv.0
+0800031e  w    F .text	00000000 Vector84
+00000000 g       .ram2	00000000 __ram2_noinit__
+0800b8d0 g     F .text	00000014 .hidden rt_test_008_008_setup.lto_priv.0
+20000d18 g       .data	00000000 __data_end__
+08000000 g       .bss	00000000 __flash0_base__
+0800c740 g     F .text	00000020 __dbg_check_unlock
+0800a510 g     F .text	00000014 .hidden _aosIOChannelWrite.lto_priv.0
+00000000 g       .ram6	00000000 __ram6_noinit__
+0800d244 g     F .text	00000084 .hidden chCondWait
+00000000 g       .ram4_init	00000000 __ram4_init__
+08010164 g     F .text	00000006 .hidden _putt.lto_priv.0
+0800031e  w    F .text	00000000 SecureFault_Handler
+20000d18 g       .bss	00000000 __bss_base__
+0800031e  w    F .text	00000000 Vector1A4
+20011218 g       .bss	00000000 __bss_end__
+0800b754 g     F .text	00000010 .hidden rt_test_012_010_setup.lto_priv.0
+0800b4e8 g     F .text	000000dc .hidden rt_test_001_001_execute.lto_priv.0
+08015434 g     O .rodata	0000000b .hidden __func__.8883.lto_priv.0
+00000000 g       .ram7	00000000 __ram7_clear__
+0800b894 g     F .text	0000000a .hidden chMtxObjectInit
+08017b28 g       .ram7	00000000 __flash0_init__
+08000ab8 g     F .text	0000027a .hidden __aeabi_dsub
+0800031e  w    F .text	00000000 VectorD0
+0800377c g     F .text	00000050 .hidden chCondSignal.constprop.0
+0800f644 g     F .text	000001fc .hidden rt_test_007_003_execute.lto_priv.0
+00000000 g       *ABS*	00000000 __ram7_size__
+0800031e  w    F .text	00000000 Vector1B4
+08000dbc g     F .text	0000006a .hidden __floatundidf
+0800d3e4 g     F .text	00000054 .hidden chMtxTryLock
+08010298 g     F .text	0000000a .hidden _read.lto_priv.0
+0800035e g       .text	00000000 __port_exit_from_isr
+0800031e  w    F .text	00000000 Vector140
+0800c398 g     F .text	00000024 .hidden __dbg_check_unlock_from_isr
+0800cb9c g     F .text	00000130 .hidden rt_test_002_001_execute.lto_priv.0
+0800b944 g     F .text	00000040 chSchDoPreemption
+0800c0c0 g     F .text	00000054 VectorE4
+08010318 g     F .text	00000006 .hidden _gett.lto_priv.0
+0800031e  w    F .text	00000000 VectorC0
+08015344 g     O .rodata	0000000c .hidden __func__.7118.lto_priv.2
+08012cb0 g     F .text	0000007a strncmp
+0800031e  w    F .text	00000000 Vector158
+08017b28 g       .ram7	00000000 __flash0_free__
+0800031e  w    F .text	00000000 Vector130
+00000000 g       .bss	00000000 __flash6_base__
+00000000 g       .ram4	00000000 __ram4_noinit__
+0800031e  w    F .text	00000000 Vector1C0
+0800a654 g     F .text	00000010 .hidden notify2.lto_priv.0
+0800cccc g     F .text	00000080 .hidden chEvtWaitAllTimeout
+080001e0 g       .vectors	00000000 __fini_array_end__
+0800f514 g     F .text	00000130 .hidden rt_test_007_004_execute.lto_priv.0
+0800b708 g     F .text	00000002 __late_init
+0800a460 g     F .text	00000018 .hidden _aosIOChannelReadt.lto_priv.0
+0800a1f8 g     F .text	0000002e .hidden _aosShellStreamCtl.lto_priv.0
+0800031e  w    F .text	00000000 Vector134
+0800ef24 g     F .text	0000014c .hidden rt_test_008_004_execute.lto_priv.0
+00000000 g       .ram6	00000000 __ram6_clear__
+20010568 g     O .bss	0000000c .hidden ch_system
+0800031e  w    F .text	00000000 Vector1D0
+0800fdac g     F .text	000001a0 .hidden rt_test_002_002_execute.lto_priv.0
+080021c4 g     F .text	0000007c .hidden vt_insert_first.constprop.0
+00000000 g       *ABS*	00000000 __flash3_end__
+08000d54 g     F .text	00000022 .hidden __aeabi_i2d
+0800ba10 g     F .text	00000020 .hidden chDbgCheckClassS
+0800031e  w    F .text	00000000 VectorF0
+0800031e  w    F .text	00000000 Vector12C
+0800e67c g     F .text	00000098 .hidden rt_test_012_006_execute.lto_priv.0
+0800031e  w    F .text	00000000 Vector13C
+080012ac  w    F .text	00000002 .hidden __aeabi_ldiv0
+0800a360 g     F .text	0000001c .hidden _aosShellChannelPut.lto_priv.0
+00000000 g       *ABS*	00000000 __ram3_size__
+08003870 g     F .text	00000054 .hidden chEvtWaitAny.constprop.0
+0800031e  w    F .text	00000000 Vector100
+0800085c  w    F .text	00000254 .hidden __muldf3
+0800c1c4 g     F .text	00000078 VectorE0
+0800031e  w    F .text	00000000 VectorF4
+00000000 g       .bss	00000000 __ram7_base__
+0800a7b4 g     F .text	00000004 .hidden rt_test_010_003_setup.lto_priv.0
+00000000 g       .ram2	00000000 __ram2_clear__
+00000000 g       *ABS*	00000000 __ram3_end__
+0800e9c0 g     F .text	000000e0 .hidden rt_test_010_005_execute.lto_priv.0
+0800a318 g     F .text	0000001c .hidden _aosShellChannelPutt.lto_priv.0
+20000df0 g     O .bss	00000080 .hidden _pal_events
+00000000 g       *ABS*	00000000 __ram2_size__
+0800fa90 g     F .text	00000224 .hidden rt_test_005_002_execute.lto_priv.0
+08012d2c g       .rodata	00000000 __rodata_base__
+08002240 g     F .text	00000064 .hidden chSemWaitTimeoutS.constprop.0
+00000000 g       *ABS*	00000000 __flash3_size__
+00000000 g       .bss	00000000 __ram1_base__
+08012c10 g     F .text	000000a0 memset
+0800031e  w    F .text	00000000 MemManage_Handler
+080096a0 g     F .text	00000a80 main
+0800031e  w    F .text	00000000 Vector6C
+00000000 g       *ABS*	00000000 __ram6_size__
+08010290 g     F .text	00000006 .hidden _readt.lto_priv.0
+08000352 g     F .text	00000000 __port_switch_from_isr
+080001e0 g       .vectors	00000000 __fini_array_base__
+0800031e  w    F .text	00000000 VectorA0
+08017b28 g       *ABS*	00000000 __ram2_init_text__
+00000000 g       *ABS*	00000000 __flash5_size__
+0800b67c g     F .text	00000020 SVC_Handler
+08000e78 g     F .text	0000009e .hidden __truncdfsf2
+00000000 g       .ram3	00000000 __ram3_free__
+0800ed34 g     F .text	000000dc .hidden rt_test_008_008_execute.lto_priv.0
+00000000 g       .ram7	00000000 __flash3_init__
+08000000 g       *ABS*	00000000 __textvectors_base__
+08000dcc g     F .text	0000005a .hidden __aeabi_l2d
+0800031e  w    F .text	00000000 VectorC4
+0800031e  w    F .text	00000000 Vector7C
+00000000 g       .ram7	00000000 __flash6_init__
+08010320 g     F .text	0000000a .hidden _get.lto_priv.0
+08017b28 g       *ABS*	00000000 __ram4_init_text__
+0800031e  w    F .text	00000000 Vector180
+00000000 g       .ram1	00000000 __ram1_noinit__
+0800e354 g     F .text	00000004 .hidden rt_test_007_006_teardown.lto_priv.0
+0800cf30 g     F .text	00000050 .hidden chEvtBroadcastFlags
+0800c3e0 g     F .text	00000120 VectorB0
+08010ac8 g     F .text	0000001c .hidden chprintf
+0800031e  w    F .text	00000000 Vector90
+0800bbf4 g     F .text	00000044 .hidden chEvtSignalI
+080004a8 g     F .text	000002dc strcmp
+08017610 g       .ARM.exidx	00000000 __exidx_end__
+0800268c g     F .text	00000078 .hidden aosSysGetUptimeX
+0800031e  w    F .text	00000000 Vector114
+0800031e  w    F .text	00000000 Vector164
+0800c308 g     F .text	00000030 Vector60
+0800a2c4 g     F .text	00000026 .hidden _aosShellChannelWritet.lto_priv.0
+0800e8d8 g     F .text	000000e8 .hidden rt_test_010_007_execute.lto_priv.0
+0800031e  w    F .text	00000000 Vector1BC
+0800a334 g     F .text	0000002c .hidden _aosShellChannelGet.lto_priv.0
+0800b7dc g     F .text	00000004 .hidden rt_test_007_003_setup.lto_priv.0
+0800031e  w    F .text	00000000 Vector1D4
+0800ac54 g     F .text	000001f0 .hidden oslib_test_001_003_execute.lto_priv.0
+00000000 g       *ABS*	00000000 __flash2_size__
+0800031e  w    F .text	00000000 Vector17C
+00000000 g       *ABS*	00000000 __flash4_end__
+00000000 g       .ram2_init	00000000 __ram2_init__
+0800c154 g     F .text	00000070 Vector48
+00000000 g       *ABS*	00000000 __ram2_end__
+0800d438 g     F .text	000001a0 .hidden rt_test_008_005_execute.lto_priv.0
+20000400 g       .pstack	00000000 __process_stack_base__
+0800031e  w    F .text	00000000 Vector1A8
+0800031e  w    F .text	00000000 Vector16C
+20010318 g     O .bss	00000068 .hidden ch0
+20011218 g       .ram0	00000000 __ram0_clear__
+0800a7b8 g     F .text	00000004 .hidden rt_test_010_002_setup.lto_priv.0
+0800c3bc g     F .text	00000024 .hidden __dbg_check_lock_from_isr
+0800f948 g     F .text	00000148 .hidden rt_test_006_001_execute.lto_priv.0
+200008ec g     O .data	00000004 _impure_ptr
+0800031e  w    F .text	00000000 Vector70
+0800031e  w    F .text	00000000 VectorD4
+0800be4c g     F .text	00000080 .hidden chVTDoResetI
+0800a37c g     F .text	00000028 .hidden _aosShellChannelRead.lto_priv.0
+00000000 g       .ram3	00000000 __ram3_noinit__
+0800bb44 g     F .text	00000090 .hidden chThdCreateSuspendedI
+20011218 g       .ram0	00000000 __ram0_noinit__
+0800af08 g     F .text	00000130 .hidden rt_test_012_012_execute.lto_priv.0
+0800b69c g     F .text	00000068 __init_ram_areas
+0800c114 g     F .text	00000040 Vector4C
+0800a54c g     F .text	0000000c .hidden rt_test_003_002_execute.lto_priv.0
+0800031e  w    F .text	00000000 Vector144
+0800031e  w    F .text	00000000 Vector80
+0800ae44 g     F .text	000000c4 .hidden oslib_test_001_002_execute.lto_priv.0
+0800031e  w    F .text	00000000 Vector15C
+00000000 g       .bss	00000000 __flash1_base__
+00000000 g       *ABS*	00000000 __ram7_end__
+0800c2a8 g     F .text	00000030 Vector68
+00000000 g       .ram7	00000000 __flash5_init__
+0800d334 g     F .text	000000b0 .hidden chMtxUnlock
+0800e240 g     F .text	0000008c .hidden rt_test_005_003_execute.lto_priv.0
+0800e358 g     F .text	00000004 .hidden rt_test_008_004_teardown.lto_priv.0
+08000200 g       .text	00000000 __text_base__
+0800cd4c g     F .text	00000094 .hidden chEvtWaitAnyTimeout
+080128fc g     F .text	00000090 ceilf
+20000400 g       .mstack	00000000 __main_stack_end__
+0800031e  w    F .text	00000000 Vector78
+00000000 g       .ram5_init	00000000 __ram5_init__
+00000000 g       .ram7	00000000 __flash7_init__
+00000000 g       *ABS*	00000000 __flash1_size__
+0800b7d8 g     F .text	00000004 .hidden rt_test_007_004_setup.lto_priv.0
+20000800 g       .data	00000000 __data_base__
+08000322  w    F .text	00000000 _unhandled_exception
+0800031e  w    F .text	00000000 Vector170
+0800a528 g     F .text	0000000c .hidden rt_test_006_001_setup.lto_priv.0
+0800c84c g     F .text	000000c0 .hidden _aosShellStreamPutt.lto_priv.0
+0800a478 g     F .text	00000020 .hidden _aosIOChannelWritet.lto_priv.0
+0800031e  w    F .text	00000000 Vector88
+0800a790 g     F .text	00000018 .hidden rt_test_010_007_setup.lto_priv.0
+08017608 g       .ARM.exidx	00000000 __exidx_base__
+0801287c g     F .text	00000080 .hidden _aosShellCommandInfoCallback.lto_priv.0
+08002aac g     F .text	00000034 .hidden aosShellcmdCheckHelp
+0800230c g     F .text	0000002c .hidden __test_assert_time_window.constprop.0
+00080000 g       *ABS*	00000000 __flash0_size__
+20000400 g       .pstack	00000000 __main_thread_stack_base__
+0800ce78 g     F .text	000000b8 .hidden rt_test_010_006_execute.lto_priv.0
+0800becc g     F .text	000000a8 .hidden chVTDoSetI
+00000000 g       .bss	00000000 __ram2_base__
+08000e28 g     F .text	0000004e .hidden __aeabi_d2iz
+08017b28 g       *ABS*	00000000 __ram7_init_text__
+00000000 g       .ram3_init	00000000 __ram3_init__
+0800031e  w    F .text	00000000 Vector104
+20000000 g       .bss	00000000 __ram0_base__
+0800031e  w    F .text	00000000 Vector184
+0800031e  w    F .text	00000000 Vector10C
+080129e0 g     F .text	00000008 atoi
+00000000 g       .ram1_init	00000000 __ram1_init__
+0800e0dc g     F .text	00000064 .hidden chThdSetPriority
+08017504 g     O .rodata	00000101 _ctype_
+080012ac  w    F .text	00000002 .hidden __aeabi_idiv0
+0800e7b0 g     F .text	00000128 .hidden rt_test_012_004_execute.lto_priv.0
+0800fcb4 g     F .text	0000002e .hidden chSysGetStatusAndLockX
+0800e2cc g     F .text	00000064 .hidden chThdWait
+00000000 g       .bss	00000000 __ram4_base__
+0800b764 g     F .text	00000010 .hidden rt_test_012_007_setup.lto_priv.0
+00000000 g       .bss	00000000 __ram5_base__
+0800031e  w    F .text	00000000 Vector14C
+0800dce4 g     F .text	000000a0 .hidden rt_test_012_010_execute.lto_priv.0
+0800031e  w    F .text	00000000 BusFault_Handler
+0800eb78 g     F .text	00000108 .hidden rt_test_010_003_execute.lto_priv.0
+00000000 g       *ABS*	00000000 __flash6_size__
+0800031e  w    F .text	00000000 Vector50
+0800031e  w    F .text	00000000 Vector1C8
+08000780 g     F .text	000000dc strlen
+00000000 g       .ram2	00000000 __ram2_free__
+0800031e  w    F .text	00000000 Vector194
+0800031e  w    F .text	00000000 Vector1DC
+0800031e  w    F .text	00000000 Vector154
+0800d944 g     F .text	00000078 .hidden chThdYield
+00000000 g       .ram4	00000000 __ram4_free__
+20018000 g       *ABS*	00000000 __ram0_end__
+0800e140 g     F .text	00000100 .hidden rt_test_005_004_execute.lto_priv.0
+0800c9d8 g     F .text	000000c0 .hidden _aosIOStreamPutt.lto_priv.0
+20000000 g       .mstack	00000000 __main_stack_base__
+0800031e  w    F .text	00000000 Vector44
+08000d78 g     F .text	00000042 .hidden __aeabi_f2d
+0800031e  w    F .text	00000000 Vector28
+0800031e  w    F .text	00000000 VectorB8
+0800b8e8 g     F .text	0000000c .hidden rt_test_008_005_setup.lto_priv.0
+0800e714 g     F .text	0000009c .hidden rt_test_012_005_execute.lto_priv.0
+00000400 g       *ABS*	00000000 __main_stack_size__
+0800031e  w    F .text	00000000 VectorFC
+0800b7e4 g     F .text	00000010 .hidden rt_test_007_001_setup.lto_priv.0
+00000000 g       .ram7	00000000 __ram7_noinit__
+0800db38 g     F .text	000000c4 .hidden rt_test_005_001_execute.lto_priv.0
+0800a784 g     F .text	0000000c .hidden rt_test_007_001_teardown.lto_priv.0
+08000ab8 g     F .text	0000027a .hidden __subdf3
+20000800 g       .pstack	00000000 __process_stack_end__
+0800e534 g     F .text	00000148 .hidden rt_test_012_007_execute.lto_priv.0
+0800031e  w    F .text	00000000 Vector34
+08000f18 g     F .text	00000000 .hidden __aeabi_ldivmod
+00000000 g       .ram7	00000000 __flash2_init__
+08002338 g     F .text	000001d4 __early_init
+00000000 g       .ram7	00000000 __flash4_init__
+0800031e  w    F .text	00000000 Vector128
+0800e07c g     F .text	00000044 .hidden chThdTerminate
+0800031e  w    F .text	00000000 VectorA4
+00000400 g       *ABS*	00000000 __process_stack_size__
+00000000 g       .ram7	00000000 __flash1_init__
+0800031e  w    F .text	00000000 Vector20
+0800031e  w    F .text	00000000 Vector18C
+0800a41c g     F .text	0000002e .hidden _aosIOStreamWrite.lto_priv.0
+00000000 g       *ABS*	00000000 __flash7_end__
+0800f070 g     F .text	00000100 .hidden rt_test_008_001_execute.lto_priv.0
+0800f170 g     F .text	000002fc .hidden rt_test_007_006_execute.lto_priv.0
+0800031e  w    F .text	00000000 Vector174
+
+

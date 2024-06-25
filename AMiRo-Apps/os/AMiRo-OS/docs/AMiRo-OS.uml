@@ -1,0 +1,93 @@
+/'
+AMiRo-OS is an operating system designed for the Autonomous Mini Robot (AMiRo) platform.
+Copyright (C) 2016..2022  Thomas Schöpping et al.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU (Lesser) General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU (Lesser) General Public License for more details.
+
+You should have received a copy of the GNU (Lesser) General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+'/
+
+@startuml
+skinparam componentStyle uml2
+
+'-------------------------------------------------------------------------------
+' AMiRo-BLT
+'-------------------------------------------------------------------------------
+
+!include ../bootloader/AMiRo-BLT/Target/docs/AMiRo-BLT.uml
+
+'-------------------------------------------------------------------------------
+' ChibiOS
+'-------------------------------------------------------------------------------
+
+node "ChibiOS" as ChibiOS_node {
+	interface hal.h #lightgrey
+	interface osal.h #lightgrey
+	interface cmsis.h #lightgrey
+	interface ch.h #lightgrey
+	interface ch.hpp #lightgrey
+
+	interface mcuconf.h #lightgrey
+	interface halconf.h #lightgrey
+	interface chconf.h #lightgrey
+
+	component "ChibiOS/HAL" as ChibiOS_HAL #lightgrey
+	component "ChibiOS/RT" as ChibiOS_RT #lightgrey
+
+	ChibiOS_HAL -up-( mcuconf.h
+	ChibiOS_HAL -up-( halconf.h
+	ChibiOS_HAL -up- hal.h
+	ChibiOS_HAL -up-( osal.h
+	ChibiOS_RT -up-( chconf.h
+	ChibiOS_RT -up-( hal.h
+	ChibiOS_RT -up- osal.h
+	ChibiOS_RT -up- cmsis.h
+	ChibiOS_RT -up- ch.h
+	ChibiOS_RT -up- ch.hpp
+}
+
+'-------------------------------------------------------------------------------
+' AMiRo-LLD
+'-------------------------------------------------------------------------------
+
+!include ../periphery-lld/AMiRo-LLD/docs/AMiRo-LLD.uml
+
+'-------------------------------------------------------------------------------
+' AMiRo-OS
+'-------------------------------------------------------------------------------
+
+node "AMiRo-OS" as AMiRoOS_node {
+	interface osconf.h
+	interface amiroos.h
+
+	component "AMiRo-OS" as AMiRoOS
+
+	AMiRoOS -up-( osconf.h
+	AMiRoOS -up- amiroos.h
+}
+
+'-------------------------------------------------------------------------------
+' dependencies
+'-------------------------------------------------------------------------------
+
+AMiRoOS -- mcuconf.h
+AMiRoOS -- halconf.h
+AMiRoOS -- chconf.h
+AMiRoOS --( hal.h
+AMiRoOS --( ch.h
+AMiRoOS --( amiroblt.h
+AMiRoOS -- alldconf.h
+AMiRoOS --( alldh
+AMiRoOS -- periphAL.h
+
+@enduml
+

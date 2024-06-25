@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="576px" preserveAspectRatio="none" style="width:793px;height:576px;" version="1.1" viewBox="0 0 793 576" width="793px" zoomAndPan="magnify"><defs><filter height="300%" id="fsxjt5g14u3q9" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="39" x="370.75" y="16.708">µRT</text><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="88" x="346.25" y="37.6611">Primitives</text><!--MD5=[e750dab3ce4ebe0433cc930181355272]
+class urt_status_t--><rect codeLine="28" fill="#FEFECE" filter="url(#fsxjt5g14u3q9)" height="295.2891" id="urt_status_t" style="stroke:#A80036;stroke-width:1.5;" width="253" x="13" y="48.9063"/><ellipse cx="97.75" cy="64.9063" fill="#FF7F3F" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M101.8594,70.9063 L94.1406,70.9063 L94.1406,58.5156 L101.8594,58.5156 L101.8594,60.6719 L96.5938,60.6719 L96.5938,63.3438 L101.3594,63.3438 L101.3594,65.5 L96.5938,65.5 L96.5938,68.75 L101.8594,68.75 L101.8594,70.9063 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="75" x="118.25" y="69.0605">urt_status_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="14" x2="265" y1="80.9063" y2="80.9063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="119" x="19" y="95.1167">URT_STATUS_OK = 0</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="192" x="19" y="107.9214">URT_STATUS_DEADLINEVIOLATION</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="172" x="19" y="120.7261">URT_STATUS_JITTERVIOLATION</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="166" x="19" y="133.5308">URT_STATUS_RATEVIOLATION</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="166" x="19" y="146.3354">URT_STATUS_SYNC_PENDING</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="153" x="19" y="159.1401">URT_STATUS_SYNC_ERROR</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="200" x="19" y="171.9448">URT_STATUS_NODE_INVALEVTMASK</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="180" x="19" y="201.5542">URT_STATUS_TOPIC_DUPLICATE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="178" x="19" y="214.3589">URT_STATUS_PUBLISH_LOCKED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="186" x="19" y="227.1636">URT_STATUS_PUBLISH_BLOCKED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="193" x="19" y="239.9683">URT_STATUS_FETCH_NOMESSAGE</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="14" x2="38" y1="184.9414" y2="184.9414"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="154" x="38" y="188.2495">URT_CFG_PUBSUB_ENABLED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="196" y="188.2495">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="241" x2="265" y1="184.9414" y2="184.9414"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="183" x="19" y="269.5776">URT_STATUS_PUBLISH_TIMEOUT</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="14" x2="17" y1="252.9648" y2="252.9648"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="196" x="17" y="256.2729">URT_CFG_OSAL_CONDVAR_TIMEOUT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="217" y="256.2729">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="262" x2="265" y1="252.9648" y2="252.9648"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="193" x="19" y="299.187">URT_STATUS_SERVICE_DUPLICATE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="201" x="19" y="311.9917">URT_STATUS_REQUEST_BADOWNER</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="183" x="19" y="324.7964">URT_STATUS_REQUEST_LOCKED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="199" x="19" y="337.6011">URT_STATUS_REQUEST_OBSOLETE</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="14" x2="48.5" y1="282.5742" y2="282.5742"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="133" x="48.5" y="285.8823">URT_CFG_RPC_ENABLED</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="185.5" y="285.8823">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="230.5" x2="265" y1="282.5742" y2="282.5742"/><!--MD5=[15452fea434e71f16c7de0feaca2b066]
+class urt_delay_t--><rect codeLine="33" fill="#FEFECE" filter="url(#fsxjt5g14u3q9)" height="132.8281" id="urt_delay_t" style="stroke:#A80036;stroke-width:1.5;" width="181" x="522" y="416.4063"/><ellipse cx="574.25" cy="432.4063" fill="#00CFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M575.0938,439.1563 L572.6406,439.1563 L572.6406,428.9063 L569.5,428.9063 L569.5,426.7656 L578.2344,426.7656 L578.2344,428.9063 L575.0938,428.9063 L575.0938,439.1563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="68" x="594.75" y="436.5605">urt_delay_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="523" x2="702" y1="448.4063" y2="448.4063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="528" y="479.4214">uint32_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="523" x2="526" y1="462.8086" y2="462.8086"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="133" x="526" y="466.1167">URT_CFG_DELAY_WIDTH</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="36" x="663" y="466.1167">== 32</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="699" x2="702" y1="462.8086" y2="462.8086"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="528" y="509.0308">uint64_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="523" x2="526" y1="492.418" y2="492.418"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="133" x="526" y="495.7261">URT_CFG_DELAY_WIDTH</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="36" x="663" y="495.7261">== 64</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="699" x2="702" y1="492.418" y2="492.418"/><line style="stroke:#A80036;stroke-width:1.5;" x1="523" x2="702" y1="515.625" y2="515.625"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="153" x="528" y="529.8354">URT_DELAY_IMMEDIATE = 0</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="164" x="528" y="542.6401">URT_DELAY_INFINITE = 0xF..F</text><!--MD5=[4bd59d3bc50b317c5523bafe6b73a042]
+class urt_rtclass_t--><rect codeLine="28" fill="#FEFECE" filter="url(#fsxjt5g14u3q9)" height="99.2188" id="urt_rtclass_t" style="stroke:#A80036;stroke-width:1.5;" width="109" x="301" y="146.9063"/><ellipse cx="316" cy="162.9063" fill="#FF7F3F" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M320.1094,168.9063 L312.3906,168.9063 L312.3906,156.5156 L320.1094,156.5156 L320.1094,158.6719 L314.8438,158.6719 L314.8438,161.3438 L319.6094,161.3438 L319.6094,163.5 L314.8438,163.5 L314.8438,166.75 L320.1094,166.75 L320.1094,168.9063 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="77" x="330" y="167.0605">urt_rtclass_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="302" x2="409" y1="178.9063" y2="178.9063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="50" x="307" y="193.1167">URT_NRT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="50" x="307" y="205.9214">URT_SRT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="48" x="307" y="218.7261">URT_FRT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="50" x="307" y="231.5308">URT_HRT</text><line style="stroke:#A80036;stroke-width:1.5;" x1="302" x2="409" y1="238.125" y2="238.125"/><!--MD5=[81e47bc16a7baa7cb65c7bc48dd317d5]
+class urt_usefulness_f--><rect codeLine="48" fill="#FEFECE" filter="url(#fsxjt5g14u3q9)" height="60.8047" id="urt_usefulness_f" style="stroke:#A80036;stroke-width:1.5;" width="334" x="445.5" y="165.9063"/><ellipse cx="557.25" cy="181.9063" fill="#E0E0E0" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M561.4844,177.6719 L556.2031,177.6719 L556.2031,180.3438 L561,180.3438 L561,182.5 L556.2031,182.5 L556.2031,187.9063 L553.7656,187.9063 L553.7656,175.5156 L561.4844,175.5156 L561.4844,177.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="102" x="577.75" y="186.0605">urt_usefulness_f</text><line style="stroke:#A80036;stroke-width:1.5;" x1="446.5" x2="778.5" y1="197.9063" y2="197.9063"/><line style="stroke:#A80036;stroke-width:1.5;" x1="446.5" x2="778.5" y1="205.9063" y2="205.9063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="322" x="451.5" y="220.1167">urt_usefulness_f (dt : urt_delay_t, params : void*) : float</text><!--MD5=[11b8401ec6eb16e0e61fdc1d91f31da4]
+class urt_profilingcounter_t--><rect codeLine="33" fill="#FEFECE" filter="url(#fsxjt5g14u3q9)" height="158.4375" id="urt_profilingcounter_t" style="stroke:#A80036;stroke-width:1.5;" width="265" x="7" y="403.9063"/><ellipse cx="68.25" cy="419.9063" fill="#00CFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M69.0938,426.6563 L66.6406,426.6563 L66.6406,416.4063 L63.5,416.4063 L63.5,414.2656 L72.2344,414.2656 L72.2344,416.4063 L69.0938,416.4063 L69.0938,426.6563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="134" x="88.75" y="424.0605">urt_profilingcounter_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="271" y1="435.9063" y2="435.9063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="38" x="13" y="466.9214">uint8_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="8" x2="14.5" y1="450.3086" y2="450.3086"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="217" x="14.5" y="453.6167">URT_CFG_PROFILING_COUNTER_WIDTH</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="29" x="235.5" y="453.6167">== 8</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="264.5" x2="271" y1="450.3086" y2="450.3086"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="13" y="496.5308">uint16_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="8" x2="11" y1="479.918" y2="479.918"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="217" x="11" y="483.2261">URT_CFG_PROFILING_COUNTER_WIDTH</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="36" x="232" y="483.2261">== 16</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="268" x2="271" y1="479.918" y2="479.918"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="13" y="526.1401">uint32_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="8" x2="11" y1="509.5273" y2="509.5273"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="217" x="11" y="512.8354">URT_CFG_PROFILING_COUNTER_WIDTH</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="36" x="232" y="512.8354">== 32</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="268" x2="271" y1="509.5273" y2="509.5273"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="13" y="555.7495">uint64_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="8" x2="11" y1="539.1367" y2="539.1367"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="217" x="11" y="542.4448">URT_CFG_PROFILING_COUNTER_WIDTH</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="36" x="232" y="542.4448">== 64</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="268" x2="271" y1="539.1367" y2="539.1367"/><!--MD5=[e0c5ef58bc626bdfda028ecb031e1681]
+link urt_usefulness_f to urt_delay_t--><path codeLine="121" d="M612.5,227.0463 C612.5,270.2163 612.5,351.6962 612.5,410.9363 " fill="none" id="urt_usefulness_f-to-urt_delay_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="612.5,416.2363,616.5,407.2363,612.5,411.2363,608.5,407.2363,612.5,416.2363" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[4dab9cb14facc99c18937d85239214d1]
+link urt_status_t to urt_rtclass_t--><!--MD5=[3bd4cf5b65c178c3553e60f623e5bb27]
+link urt_status_t to urt_profilingcounter_t--><!--MD5=[88fdbedeebd15137b7aae119a908bd3d]
+@startuml
+
+title **µRT**\nPrimitives
+
+!include ./procedures.iuml
+
+/'### ENTITIES ###############################################################'/
+
+!startsub ENTITIES
+
+/' Well defined error codes. '/
+$enumeration("urt_status_t") {
+    'Staus indicating success.
+  URT_STATUS_OK = 0
+    'Error status indicating a violated HRT deadline.
+  URT_STATUS_DEADLINEVIOLATION
+    'Error status indicating violated HRT jitter.
+  URT_STATUS_JITTERVIOLATION
+    'Error status indicating a violated HRT rate.
+  URT_STATUS_RATEVIOLATION
+    'Synchronization status indicating that further nodes need to synchronize.
+  URT_STATUS_SYNC_PENDING
+    'Synchronization status indicating a synchronization error.
+  URT_STATUS_SYNC_ERROR
+    'Status indicating that a node's ""_main"" thread encountered an invalid event mask.
+  URT_STATUS_NODE_INVALEVTMASK
+  .. ""URT_CFG_PUBSUB_ENABLED"" == true ..
+    'Status indicating that another topic with identical ID has been found.
+  URT_STATUS_TOPIC_DUPLICATE
+    'Status indicating a currently locked topic.
+  URT_STATUS_PUBLISH_LOCKED
+    'Status indicating a pending HRT subscriber.
+  URT_STATUS_PUBLISH_BLOCKED
+    'Status indicating that there is no (new) message.
+  URT_STATUS_FETCH_NOMESSAGE
+  .. ""URT_CFG_OSAL_CONDVAR_TIMEOUT"" == true ..
+    'Status indicating a timeout during a urtPublisherPublish() call.
+  URT_STATUS_PUBLISH_TIMEOUT
+  .. ""URT_CFG_RPC_ENABLED"" == true ..
+    'Status indicating that another service with identical ID has been found.
+  URT_STATUS_SERVICE_DUPLICATE
+    'Status indicating that a request is not owned by the calling service.
+  URT_STATUS_REQUEST_BADOWNER
+    'Status indicatting an aloready locked request.
+  URT_STATUS_REQUEST_LOCKED
+    'Status indicating an obsolete (re-emitted) request.
+  URT_STATUS_REQUEST_OBSOLETE
+}
+
+/' Temporal delay in microseconds. '/
+$type("urt_delay_t") {
+  .. ""URT_CFG_DELAY_WIDTH"" == 32 ..
+  uint32_t
+  .. ""URT_CFG_DELAY_WIDTH"" == 64 ..
+  uint64_t
+  __
+    'Special value constant for no delay at all.
+  URT_DELAY_IMMEDIATE = 0
+    'Special value constant for infinite delays.
+  URT_DELAY_INFINITE = 0xF..F
+}
+
+/' Real-time classification type. '/
+$enumeration("urt_rtclass_t") {
+    'Non rea-time.
+  URT_NRT
+    'Soft real-time.
+  URT_SRT
+    'Firm real-time.
+  URT_FRT
+    'Hard real-time.
+  URT_HRT
+}
+
+/' Function type to be called when calculating the usefulness of a message or request response. '/
+$function("urt_usefulness_f") {
+    'Takes a delay and optional parameters as arguments and returns a float in [0, 1].
+  urt_usefulness_f (dt : urt_delay_t, params : void*) : float
+}
+
+/' Counter type for profiling data. '/
+$type("urt_profilingcounter_t") {
+  .. ""URT_CFG_PROFILING_COUNTER_WIDTH"" == 8 ..
+  uint8_t
+  .. ""URT_CFG_PROFILING_COUNTER_WIDTH"" == 16 ..
+  uint16_t
+  .. ""URT_CFG_PROFILING_COUNTER_WIDTH"" == 32 ..
+  uint32_t
+  .. ""URT_CFG_PROFILING_COUNTER_WIDTH"" == 64 ..
+  uint64_t
+}
+
+!endsub
+
+/'### DEPENDENCIES & LAYOUT ##################################################'/
+
+!startsub DEPENDENCIES
+
+urt_usefulness_f ..> urt_delay_t
+
+!endsub
+
+/'### OUTRO ##################################################################'/
+
+@enduml
+
+@startuml
+
+title **µRT**\nPrimitives
+
+
+
+
+
+
+
+
+
+
+
+
+  class urt_status_t <<E,FF7F3F>> {
+  URT_STATUS_OK = 0
+  URT_STATUS_DEADLINEVIOLATION
+  URT_STATUS_JITTERVIOLATION
+  URT_STATUS_RATEVIOLATION
+  URT_STATUS_SYNC_PENDING
+  URT_STATUS_SYNC_ERROR
+  URT_STATUS_NODE_INVALEVTMASK
+  .. ""URT_CFG_PUBSUB_ENABLED"" == true ..
+  URT_STATUS_TOPIC_DUPLICATE
+  URT_STATUS_PUBLISH_LOCKED
+  URT_STATUS_PUBLISH_BLOCKED
+  URT_STATUS_FETCH_NOMESSAGE
+  .. ""URT_CFG_OSAL_CONDVAR_TIMEOUT"" == true ..
+  URT_STATUS_PUBLISH_TIMEOUT
+  .. ""URT_CFG_RPC_ENABLED"" == true ..
+  URT_STATUS_SERVICE_DUPLICATE
+  URT_STATUS_REQUEST_BADOWNER
+  URT_STATUS_REQUEST_LOCKED
+  URT_STATUS_REQUEST_OBSOLETE
+}
+
+  class urt_delay_t <<T,00CFFF>> {
+  .. ""URT_CFG_DELAY_WIDTH"" == 32 ..
+  uint32_t
+  .. ""URT_CFG_DELAY_WIDTH"" == 64 ..
+  uint64_t
+  __
+  URT_DELAY_IMMEDIATE = 0
+  URT_DELAY_INFINITE = 0xF..F
+}
+
+  class urt_rtclass_t <<E,FF7F3F>> {
+  URT_NRT
+  URT_SRT
+  URT_FRT
+  URT_HRT
+}
+
+  class urt_usefulness_f <<F,E0E0E0>> {
+  urt_usefulness_f (dt : urt_delay_t, params : void*) : float
+}
+
+  class urt_profilingcounter_t <<T,00CFFF>> {
+  .. ""URT_CFG_PROFILING_COUNTER_WIDTH"" == 8 ..
+  uint8_t
+  .. ""URT_CFG_PROFILING_COUNTER_WIDTH"" == 16 ..
+  uint16_t
+  .. ""URT_CFG_PROFILING_COUNTER_WIDTH"" == 32 ..
+  uint32_t
+  .. ""URT_CFG_PROFILING_COUNTER_WIDTH"" == 64 ..
+  uint64_t
+}
+
+
+
+
+urt_usefulness_f ..> urt_delay_t
+
+
+
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 11:25:05 CET 2021)
+(LGPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

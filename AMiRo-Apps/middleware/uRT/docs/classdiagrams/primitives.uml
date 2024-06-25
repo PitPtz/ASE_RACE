@@ -1,0 +1,129 @@
+/'
+µRT is a lightweight publish-subscribe & RPC middleware for real-time
+applications. It was developed as part of the software habitat for the
+Autonomous Mini Robot (AMiRo) but can be used for other purposes as well.
+
+Copyright (C) 2018..2022  Thomas Schöpping et al.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+'/
+
+/'### INTRO ##################################################################'/
+
+@startuml
+
+title **µRT**\nPrimitives
+
+!include ./procedures.iuml
+
+/'### ENTITIES ###############################################################'/
+
+!startsub ENTITIES
+
+/' Well defined error codes. '/
+$enumeration("urt_status_t") {
+    'Staus indicating success.
+  URT_STATUS_OK = 0
+    'Error status indicating a violated HRT deadline.
+  URT_STATUS_DEADLINEVIOLATION
+    'Error status indicating violated HRT jitter.
+  URT_STATUS_JITTERVIOLATION
+    'Error status indicating a violated HRT rate.
+  URT_STATUS_RATEVIOLATION
+    'Synchronization status indicating that further nodes need to synchronize.
+  URT_STATUS_SYNC_PENDING
+    'Synchronization status indicating a synchronization error.
+  URT_STATUS_SYNC_ERROR
+    'Status indicating that a node's ""_main"" thread encountered an invalid event mask.
+  URT_STATUS_NODE_INVALEVTMASK
+  .. ""URT_CFG_PUBSUB_ENABLED"" == true ..
+    'Status indicating that another topic with identical ID has been found.
+  URT_STATUS_TOPIC_DUPLICATE
+    'Status indicating a currently locked topic.
+  URT_STATUS_PUBLISH_LOCKED
+    'Status indicating a pending HRT subscriber.
+  URT_STATUS_PUBLISH_BLOCKED
+    'Status indicating that there is no (new) message.
+  URT_STATUS_FETCH_NOMESSAGE
+  .. ""URT_CFG_OSAL_CONDVAR_TIMEOUT"" == true ..
+    'Status indicating a timeout during a urtPublisherPublish() call.
+  URT_STATUS_PUBLISH_TIMEOUT
+  .. ""URT_CFG_RPC_ENABLED"" == true ..
+    'Status indicating that another service with identical ID has been found.
+  URT_STATUS_SERVICE_DUPLICATE
+    'Status indicating that a request is not owned by the calling service.
+  URT_STATUS_REQUEST_BADOWNER
+    'Status indicatting an aloready locked request.
+  URT_STATUS_REQUEST_LOCKED
+    'Status indicating an obsolete (re-emitted) request.
+  URT_STATUS_REQUEST_OBSOLETE
+}
+
+/' Temporal delay in microseconds. '/
+$type("urt_delay_t") {
+  .. ""URT_CFG_DELAY_WIDTH"" == 32 ..
+  uint32_t
+  .. ""URT_CFG_DELAY_WIDTH"" == 64 ..
+  uint64_t
+  __
+    'Special value constant for no delay at all.
+  URT_DELAY_IMMEDIATE = 0
+    'Special value constant for infinite delays.
+  URT_DELAY_INFINITE = 0xF..F
+}
+
+/' Real-time classification type. '/
+$enumeration("urt_rtclass_t") {
+    'Non rea-time.
+  URT_NRT
+    'Soft real-time.
+  URT_SRT
+    'Firm real-time.
+  URT_FRT
+    'Hard real-time.
+  URT_HRT
+}
+
+/' Function type to be called when calculating the usefulness of a message or request response. '/
+$function("urt_usefulness_f") {
+    'Takes a delay and optional parameters as arguments and returns a float in [0, 1].
+  urt_usefulness_f (dt : urt_delay_t, params : void*) : float
+}
+
+/' Counter type for profiling data. '/
+$type("urt_profilingcounter_t") {
+  .. ""URT_CFG_PROFILING_COUNTER_WIDTH"" == 8 ..
+  uint8_t
+  .. ""URT_CFG_PROFILING_COUNTER_WIDTH"" == 16 ..
+  uint16_t
+  .. ""URT_CFG_PROFILING_COUNTER_WIDTH"" == 32 ..
+  uint32_t
+  .. ""URT_CFG_PROFILING_COUNTER_WIDTH"" == 64 ..
+  uint64_t
+}
+
+!endsub
+
+/'### DEPENDENCIES & LAYOUT ##################################################'/
+
+!startsub DEPENDENCIES
+
+urt_usefulness_f ..> urt_delay_t
+
+!endsub
+
+/'### OUTRO ##################################################################'/
+
+@enduml
+

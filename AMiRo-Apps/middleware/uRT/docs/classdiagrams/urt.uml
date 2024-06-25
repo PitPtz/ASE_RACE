@@ -1,0 +1,245 @@
+/'
+µRT is a lightweight publish-subscribe & RPC middleware for real-time
+applications. It was developed as part of the software habitat for the
+Autonomous Mini Robot (AMiRo) but can be used for other purposes as well.
+
+Copyright (C) 2018..2022  Thomas Schöpping et al.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+'/
+
+/'### INTRO ##################################################################'/
+
+@startuml
+
+title **µRT**
+
+!include ./procedures.iuml
+
+/'### ENTITIES ###############################################################'/
+
+!startsub ENTITIES
+
+/' µRT core structure. '/
+$structure("urt_core_t") {
+    'List of nodes with no particular order.
+  - {field} {static} _urt_core_nodes : urt_node_t*
+    'Event source for control events.
+  - {field} {static} _urt_core_evtSource : urt_osEventSource_t
+    'Mutex used for synchronization.
+  - {field} {static} _urt_core_lock : urt_osMutex_t
+    'System execution/health status.
+  - {field} {static} _urt_core_status : urt_status_t
+  .. ""URT_CFG_PUBSUB_ENABLED"" == true ..
+    'List of topics ordered by their identifiers.
+  - {field} {static} _urt_core_topics : urt_topic_t*
+  .. ""URT_CFG_RPC_ENABLED"" == true ..
+    'List of services ordered by their identifiers.
+  - {field} {static} _urt_core_services : urt_service_t*
+  __
+    'Event flag to signal emergency shutdown.
+  + URT_CORE_EVENTFLAG_EMERGENCY : urt_osEventFlags_t
+    'Event flag for node termination requests.
+  + URT_CORE_EVENTFLAG_TERMINATE : urt_osEventFlags_t
+    'Event flag to proceed after node synchronization.
+  + URT_CORE_EVENTFLAG_PROCEED : urt_osEventFlags_t
+  __
+    'Initializes the urt_core_t object.
+  + {method} urtCoreInit (void) : void
+    'Retrieves the current system status.
+  + {method} urtCoreGetStatus (void) : urt_status_t
+    'Retrieve the core mutex lock.
+  + {method} urtCoreGetMutex (void) : urt_osMutex_t*
+    'Retrieve the core event source.
+  + {method} urtCoreGetEvtSource (void) : urt_osEventSource_t*
+    'Retrieve the event mask used for core events.
+  + {method} urtCoreGetEventMask (void) : urt_osEventMask_t
+    'Starts all node threads (nodes will block before the loop).
+  + {method} urtCoreStartNodes (void) : void
+    'Nodes can use this function to synchronize.
+  + {method} urtCoreSynchronizeNodes (node : urt_node_t*) : urt_status_t
+    'Stops all nodes and propagates a specified reason.
+  + {method} urtCoreStopNodes (reason : urt_status_t) : urt_status_t
+    'Retrieve node of the core.
+  + {method} urtCoreAddNode (node : urt_node_t*) : urt_status_t
+    'Prepend node to core's list of nodes.
+    'Execute emergency shutdown.
+  + {method} urtCorePanic (reason : urt_status_t) : void
+  .. ""URT_CFG_PUBSUB_ENABLED"" == true ..
+    'Add a topic to core's list of topics.
+  + {method} urtCoreAddTopic (topic : urt_topic_t*) : urt_status_t
+    'Retrieves a topic given an identifier.
+  + {method} urtCoreGetTopic (id : urt_topicid_t) : urt_topic_t*
+  .. ""URT_CFG_RPC_ENABLED"" == true ..
+    'Add a service to core's list of services.
+  + {method} urtCoreAddService (service : urt_service_t*) : urt_status_t
+    'Retrieves a service given an identifier.
+  + {method} urtCoreGetService (id : urt_serviceid_t) : urt_service_t*
+}
+
+$group("node") {
+  /' Function type to be called during setup phase of node threads. '/
+  $type("urt_nodeSetupCallback_t") {
+      'Takes the node and optional parameters as arguments and returns a event mask for the next iteration.
+    urt_nodeSetupCallback_t (node : urt_node_t*, arg : void*) : urt_osEventMask_t
+  }
+
+  /' Function type to be called during loop phase of node threads. '/
+  $type("urt_nodeLoopCallback_t") {
+      'Takes the node, a mask of occurred events and optional parameters as arguments and returns a event mask for the next iteration.
+    urt_nodeLoopCallback_t (node : urt_node_t*, events : urt_osEventMask_t, arg : void*) : urt_osEventMask_t
+  }
+
+  /' Function type to be called during shutdown phase of node threads. '/
+  $type("urt_nodeShutdownCallback_t") {
+      'Takes the node, an error code defining the cause of the shutdown and optional parameters as argumnets.
+    urt_nodeShutdownCallback_t (node : urt_node_t*, reason : urt_status_t, arg : void*) : void
+  }
+
+  /' Node profiling data. '/
+  $structure("urt_node_profilingdata_t") {
+      'Counter of executed loops.
+    + {field} loops : urt_profilingcounter_t
+  }
+
+  /' Node synchronization type. '/
+  $type("urt_nodestage_t") {
+    .. ""URT_CFG_NODESTAGE_WIDTH"" == 8 ..
+    uin8_t
+    .. ""URT_CFG_NODESTAGE_WIDTH"" == 16 ..
+    uint16_t
+    .. ""URT_CFG_NODESTAGE_WIDTH"" == 32 ..
+    uint32_t
+    .. ""URT_CFG_NODESTAGE_WIDTH"" == 64 ..
+    uint64_t
+  }
+
+  /' Node structure. '/
+  $structure("urt_node_t") {
+      'Pointer to the next node in a list.
+    + {field} next : urt_node_t*
+      'Pointer to the node thread.
+    + {field} thread : urt_osThread_t*
+      'Optional callback function to be called during the setup phase.
+    + {field} setupcallback : urt_nodeSetupCallback_t*
+      'Optional parameters for the setup callback function.
+    + {field} setupparams : void*
+      'Callback function to be called in each loop iteration.
+    + {field} loopcallback : urt_nodeLoopCallback_t*
+      'Optional parameters for the loop callback function.
+    + {field} loopparams : void*
+      'Optional callback function to be called during the shutdown phase.
+    + {field} shutdowncallback : urt_nodeShutdownCallback_t*
+      'Optional parameters for the shutdown callback function.
+    + {field} shutdownparams : void*
+      'Execution stage of the node.
+    + {field} stage : urt_nodestage_t
+      'Event listener for middleware-wide control events.
+    + {field} listener : urt_osEventListener_t
+    .. ""URT_CFG_PUBSUB_PROFILING"" == true || ""URT_CFG_RPC_PROFILING"" = true ..
+      'Profiling data.
+    + {field} profiling : urt_node_profilingdata_t
+    __
+    'The main() function of the node thread.
+    - {method} {static} _urt_node_main : urt_osThreadFunction_t
+      'Initializes an urt_node_t object.
+    + {method} urtNodeInit (node : urt_node_t*, thread : urt_osThread_t*, setupcallback : urt_nodeSetupCallback_t*, setupparams : void*, loopcallback : urt_nodeLoopCallback_t*, loopparams : void*, shutdowncallback : urt_nodeShutdownCallback_t*, shutodwnparams : void*) : void
+  }
+} /'node'/
+
+
+$group("sync") {
+  /' Synchronization group type. '/
+  $structure("urt_syncgroup_t") {
+    .. ""URT_CFG_SYNCGROUPS_ENABLED"" == true ..
+    URT_SYNC_EVENTFLAG_PROCEED : urt_osEventFlags_t
+    __
+    .. ""URT_CFG_SYNCGROUPS_ENABLED"" == true ..
+      'Pointer to the first node of the group.
+    + {field} nodes : urt_syncnode_t*
+      'Lock for exclusive access.
+    + {field} lock : urt_osMutex_t
+      'Event source for synchronization events.
+    + {field} source : urt_osEventSource_t
+    __
+    .. ""URT_CFG_SYNCGROUPS_ENABLED"" == true ..
+      'Initializes an urt_syncgroup_t object.
+    + {method} urtSyncGroupInit (syncgroup : urt_syncgroup_t*) : void
+  }
+
+  /' Synchronization node type. '/
+  $structure("urt_syncnode_t") {
+    .. ""URT_CFG_SYNCGROUPS_ENABLED"" == true ..
+      'Pointer to the next node in the group.
+    + {field} next : urt_syncnode_t*
+      'Pointer to the associated group.
+    + {field} group : urt_syncgroup_t*
+      'Event listener for synchronization events.
+    + {field} listener : urt_osEvenetListener_t
+      'Current synchronization state.
+    + {field} state : ""enum""{SYNCED, PENDING}
+    __
+    .. ""URT_CFG_SYNCGROUPS_ENABLED"" == true ..
+      'Initializes an urt_syncnode_t object.
+    + {method} urtSyncNodeInit (syncnode : urt_syncnode_t*) : void
+      'Join a synchronization group.
+    + {method} urtSyncNodeJoinGroup (node : urt_syncnode_t*, group : urt_syncgroup_t*, mask : urt_osEventMask_t) : urt_status_t
+      'Leave the associated synchronization group.
+    + {method} urtSyncNodeLeaveGroup (node : urt_syncnode_t*) : urt_status_t
+      'Synchronize with all node in the group.
+    + {method} urtSyncNodeSynchronize (node : urt_syncnode_t*) : urt_status_t
+  }
+} /' sync '/
+
+$module("Publish-Subscribe System") {
+  !includesub pubsub.uml!ENTITIES
+}
+
+$module("Remote Procedure Call System") {
+  !includesub rpc.uml!ENTITIES
+}
+
+!endsub
+
+/'### DEPENDENCIES & LAYOUT ##################################################'/
+
+!startsub DEPENDENCIES
+
+urt_core_t o--"0,1" urt_node_t
+urt_core_t o--"0,1" urt_topic_t
+urt_core_t o--"0,1" urt_service_t
+
+urt_node_t o-"0,1" urt_node_t
+urt_node_t o--"0,1" urt_nodeSetupCallback_t
+urt_node_t <.. urt_nodeSetupCallback_t
+urt_node_t o--"1" urt_nodeLoopCallback_t
+urt_node_t <.. urt_nodeLoopCallback_t
+urt_node_t o--"0,1" urt_nodeShutdownCallback_t
+urt_node_t <.. urt_nodeShutdownCallback_t
+urt_node_t *--"0,1" urt_node_profilingdata_t
+
+urt_syncgroup_t o- "0,1" urt_syncnode_t
+
+urt_syncnode_t o- "0,1" urt_syncnode_t
+urt_syncnode_t o- "0,1" urt_syncgroup_t
+
+!includesub pubsub.uml!DEPENDENCIES
+
+!includesub rpc.uml!DEPENDENCIES
+
+!endsub
+
+/'### OUTRO ##################################################################'/
+
+@enduml

@@ -1,0 +1,169 @@
+/'
+µRT is a lightweight publish-subscribe & RPC middleware for real-time
+applications. It was developed as part of the software habitat for the
+Autonomous Mini Robot (AMiRo) but can be used for other purposes as well.
+
+Copyright (C) 2018..2022  Thomas Schöpping et al.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+'/
+
+/'### INTRO ##################################################################'/
+
+@startuml
+
+title **µRT**\nOverview\n
+
+!include ./procedures.iuml
+
+/'### ENTITIES ###############################################################'/
+
+!startsub ENTITIES
+
+$module("Configuration") {
+  !includesub config.uml!ENTITIES
+}
+
+$module("Primitives") {
+  !includesub primitives.uml!ENTITIES
+}
+
+$module("OSAL") {
+  !includesub osal.uml!ENTITIES
+}
+
+$module("Middleware") {
+  !includesub urt.uml!ENTITIES
+}
+
+!endsub
+
+/'### DEPENDENCIES & LAYOUT ##################################################'/
+
+!startsub DEPENDENCIES
+
+!includesub config.uml!DEPENDENCIES
+
+!includesub primitives.uml!DEPENDENCIES
+urt_delay_t ..> urt_config
+urt_profilingcounter_t ..> urt_config
+urt_status_t ..> urt_config
+
+!includesub osal.uml!DEPENDENCIES
+urt_osTime_t ..> urt_delay_t
+urt_osCondvar_t ..> urt_delay_t
+urt_osThread_t ..> urt_delay_t
+urt_osTimer_t ..> urt_delay_t
+urt_events ..> urt_delay_t
+
+!includesub urt.uml!DEPENDENCIES
+urt_core_t *--"1" urt_osEventSource_t
+urt_core_t *--"1" urt_osMutex_t
+urt_core_t *--"1" urt_status_t
+urt_core_t ..> urt_osEventFlags_t
+urt_core_t ..> urt_osEventMask_t
+urt_core_t ..> urt_nodestage_t
+urt_core_t ..> urt_topicid_t
+urt_core_t ..> urt_serviceid_t
+urt_node_t o--"1" urt_osThread_t
+urt_node_t *--"1" urt_nodestage_t
+urt_node_t *--"1" urt_osEventListener_t
+urt_node_t o--"1" urt_osThreadFunction_t
+urt_node_t ..> urt_status_t
+urt_node_profilingdata_t *--"1" urt_profilingcounter_t
+urt_nodestage_t ..> urt_config
+urt_nodeSetupCallback_t ..> urt_osEventMask_t
+urt_nodeLoopCallback_t ..> urt_osEventMask_t
+urt_nodeShutdownCallback_t ..> urt_status_t
+urt_syncgroup_t ..> urt_config
+urt_syncgroup_t *--"1" urt_osMutex_t
+urt_syncgroup_t *--"1" urt_osEventSource_t
+urt_syncnode_t ..> urt_config
+urt_syncnode_t *--"1" urt_osEventListener_t
+urt_syncnode_t ..> urt_osEventMask_t
+urt_syncnode_t ..> urt_status_t
+urt_publisher_t ..> urt_config
+urt_publisher_t ..> urt_status_t
+urt_publisher_t ..> urt_osTime_t
+urt_publisher_t ..> urt_delay_t
+urt_publisher_profilingdata_t *--"1" urt_profilingcounter_t
+urt_topic_t *--"1" urt_topicid_t
+urt_topic_t *--"1" urt_osMutex_t
+urt_topic_t *--"1" urt_osEventSource_t
+urt_topic_t *--"1" urt_osCondvar_t
+urt_topic_t ..> urt_config
+urt_topic_t *--"0,1" urt_osTimer_t
+urt_topic_t ..> urt_status_t
+urt_topic_profilingdata_t *--"1" urt_profilingcounter_t
+urt_topicid_t ..> urt_config
+urt_message_t *--"2" urt_osTime_t
+urt_message_t ..> urt_config
+urt_message_t ..> urt_status_t
+urt_message_profilingdata_t *--"1" urt_profilingcounter_t
+urt_basesubscriber_t *--"1" urt_osEventListener_t
+urt_basesubscriber_t *--"1" urt_osTime_t
+urt_basesubscriber_t ..> urt_config
+urt_basesubscriber_t ..> urt_delay_t
+urt_basesubscriber_profilingdata_t *--"2" urt_delay_t
+urt_basesubscriber_profilingdata_t *--"1" urt_profilingcounter_t
+urt_nrtsubscriber_t ..> urt_config
+urt_nrtsubscriber_t ..> urt_status_t
+urt_srtsubscriber_t *--"0,1" urt_usefulness_f
+urt_srtsubscriber_t ..> urt_config
+urt_srtsubscriber_t ..> urt_status_t
+urt_frtsubscriber_t ..> urt_config
+urt_frtsubscriber_t *--"0,1,3,4" urt_delay_t
+urt_frtsubscriber_t ..> urt_status_t
+urt_hrtsubscriber_t ..> urt_config
+urt_hrtsubscriber_t *--"0..5" urt_delay_t
+urt_hrtsubscriber_t *--"0,1" urt_osTimer_t
+urt_hrtsubscriber_t ..> urt_status_t
+urt_baserequest_t ..> urt_config
+urt_baserequest_t *--"1" urt_osMutex_t
+urt_baserequest_t *--"1" urt_osTime_t
+urt_baserequest_t o--"0,1" urt_osThread_t
+urt_baserequest_t *--"1" urt_osEventMask_t
+urt_baserequest_profilingdata_t *--"2" urt_delay_t
+urt_baserequest_profilingdata_t *--"2" urt_profilingcounter_t
+urt_nrtrequest_t ..> urt_config
+urt_nrtrequest_t ..> urt_status_t
+urt_srtrequest_t ..> urt_config
+urt_srtrequest_t ..> urt_status_t
+urt_srtrequest_t ..> urt_usefulness_f
+urt_frtrequest_t *--"0,1,3,4" urt_delay_t
+urt_frtrequest_t ..> urt_config
+urt_frtrequest_t ..> urt_status_t
+urt_hrtrequest_t *--"0,1,3,4" urt_delay_t
+urt_hrtrequest_t *--"0,1" urt_osTimer_t
+urt_hrtrequest_t ..> urt_config
+urt_hrtrequest_t ..> urt_status_t
+urt_service_t ..> urt_config
+urt_service_t *--"1" urt_serviceid_t
+urt_service_t *--"1" urt_osMutex_t
+urt_service_t o--"0,1" urt_osThread_t
+urt_service_t *--"1" urt_osEventMask_t
+urt_service_dispatched_t *--"1" urt_osTime_t
+urt_service_t *--"1" urt_osEventSource_t
+urt_service_t *--"1" urt_osEventListener_t
+urt_service_t ..> urt_config
+urt_service_t ..> urt_status_t
+urt_service_profilingdata_t *--"2" urt_profilingcounter_t
+urt_serviceid_t ..> urt_config
+
+!endsub
+
+/'### OUTRO ##################################################################'/
+
+@enduml
+

@@ -1,0 +1,381 @@
+/'
+µRT is a lightweight publish-subscribe & RPC middleware for real-time
+applications. It was developed as part of the software habitat for the
+Autonomous Mini Robot (AMiRo) but can be used for other purposes as well.
+
+Copyright (C) 2018..2022  Thomas Schöpping et al.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+'/
+
+/'### INTRO ##################################################################'/
+
+@startuml
+
+title **µRT**\nPublish-Subscribe System
+
+!include ./procedures.iuml
+
+/'### ENTITIES ###############################################################'/
+
+!startsub ENTITIES
+
+$group("message") {
+  /' Message profiling data. '/
+  $structure("urt_message_profilingdata_t") {
+      'Counter how often a message has been used to publish data.
+    + {field} utilizations : urt_profilingcounter_t
+      'Counter of overall subscribers that did not consume the message yet.
+    + {field} numConsumersLeft : size_t
+  }
+
+  /' Type to uniquely identify messages. '/
+  $type("urt_messageid_t") {
+    uint64_t
+  }
+
+  /' Message type. '/
+  $structure("urt_message_t") {
+      'Pointer to the next message in a list.
+    + {field} next : urt_message_t*
+      'Identifier to identify messages.
+    + {field} id : urt_messageid_t
+      'Origin time of the information passed.
+    + {field} time : urt_osTime_t
+      'Pointer to some arbitrary (reusable) payload object.
+    + {field} payload : void*
+      'Size of the payload in bytes.
+    + {field} size : size_t
+      'Counter of HRT subscribers that did not consume the message yet.
+    + {field} numHrtConsumersLeft : size_t
+    .. ""URT_CFG_PUBSUB_PROFILING"" == true ..
+      'Profiling data.
+    + {field} profiling : urt_message_profilingdata_t
+    __
+      'Initializes a urt_message_t object.
+    + {method} urtMessageInit (message : urt_message_t*, payload : void*) : void
+  }
+} /' message '/
+
+$group("subscriber") {
+  /' Base subscriber profiling data. '/
+  $structure("urt_basesubscriber_profilingdata_t") {
+      'Minimum latency ever detected.
+    + {field} minLatency : urt_delay_t
+      'Maximum latency ever detected.
+    + {field} maxLatency : urt_delay_t
+      'Sum of all latencies.
+    + {field} sumLatencies : uint64_t
+      'Number of messages received.
+    + {field} numMessagesReceived : urt_profilingcounter_t
+  }
+  
+  /' Subscriber virtual method table. '/
+  $structure("urt_basesubscriber_VMT") {
+      'Pointer to the ""fetchNext()"" method.
+    + {field} fetchNext : urt_status_t(*)(instance : void*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*)
+      'Pointer to the ""fetchLatest()"" method.
+    + {field} fetchLatest : urt_status_t(*)(instance : void*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*)
+  }
+
+  /' Base subscriber type. '/
+  $structure("urt_basesubscriber_t") {
+      'Pointer to the virtual method table.
+    + {field} vmt : const urt_basesubscriber_VMT*
+      'Pointer to the topic, this subscriber subscribed to.
+    + {field} topic : urt_topic_t*
+      'Event listener to notify the node about new messages.
+    + {field} evtListener : urt_osEventListener_t
+      'Pointer to the message consumed most recently.
+    + {field} lastMessage : urt_message_t*
+      'Copy of the identifier of the last message read.
+    + {field} lastMessageID : urt_messageid_t
+    .. ""URT_CFG_PUBSUB_PROFILING"" == true ..
+      'Profiling data.
+    + {field} profiling : urt_basesubscriber_profilingdata_t
+    __
+      'Retrieve the real-time class of a subscriber.
+    + {method} urtSubscriberGetRtClass (subscriber : const urt_basesubscriber_t*) : urt_rtclass_t
+      'Fetch the next pending message.
+    + {method} urtSubscriberFetchNext (subscriber : urt_basesubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+      'Fetch the latest pending message.
+    + {method} urtSubscriberFetchLatest (subscriber : urt_basesubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+      'Unsubscribe from a topic.
+    + {method} urtSubscriberUnsubscribe (subscriber : urt_basesubscriber_t*) : urt_status_t
+  }
+
+  /' NRT subscriber type. '/
+  $structure("urt_nrtsubscriber_t") {
+      'Initializes a urt_nrtsubscriber_t object.
+    + {method} urtNrtSubscriberInit (subscriber : urt_nrtsubscriber_t*) : void
+      'Tries to subscribe to a topic.
+    + {method} urtNrtSubscriberSubscribe (subscriber : urt_nrtsubscriber_t*, topic : urt_topic_t*, mask : urt_osEventMask_t, flags : urt_osEventFlags_t) : urt_status_t
+      'Fetches the next message in the buffer, copies the payload and optionally returns payload size, origin time and/or latency.
+    + {method} urtNrtSubscriberFetchNext (subscriber : urt_nrtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+      'Fetches the latest message, copies the payload and optionally returns payload size, origin time and/or latency.
+    + {method} urtNrtSubscriberFetchLatest (subscriber : urt_nrtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+      'Unsubscribes from a topic.
+    + {method} urtNrtSubscriberUnsubscribe (subscriber : urt_nrtsubscriber_t*) : urt_status_t
+  }
+
+  /' SRT subscriber type. '/
+  $structure("urt_srtsubscriber_t") {
+      'Callback to calculate usefulness of a message
+    + {field} usefulnesscb : urt_usefulness_f*
+      'Optional parameters for the usefulness callback function.
+    + {field} cbparams : void*
+    __
+      'Initializes a urt_srtsubscriber_t object.
+    + {method} urtSrtSubscriberInit (subscriber : urt_srtsubscriber_t*) : void
+      'Tries to subscribe to a topic and sets all parameters.
+    + {method} urtSrtSubscriberSubscribe (subscriber : urt_srtsubscriber_t*, topic : urt_topic_t*, mask : urt_osEventMask_t, flags : urt_osEventFlags_t, usefulnesscb : urt_usefulness_f*, cbparams : void*) : urt_status_t
+      'Fetches the next message in the buffer, copies the payload and optionally returns payload size, origin time and/or latency.
+    + {method} urtSrtSubscriberFetchNext (subscriber : urt_srtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+      'Fetches the latest message, copies the payload and optionally returns payload size, origin time and/or latency.
+    + {method} urtSrtSubscriberFetchLatest (subscriber : urt_srtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+      'Calculates the usefulness of a message after the specified delay.
+    + {method} urtSrtSubscriberCalculateUsefulness (subscriber : urt_srtsubscriber_t*, latency : urt_delay_t) : float
+      'Unsubscribes from a topic.
+    + {method} urtSrtSubscriberUnsubscribe (subscriber : urt_srtsubscriber_t*) : urt_status_t
+  }
+
+  /' FRT subscriber type. '/
+  $structure("urt_frtsubscriber_t") {
+    .. ""URT_CFG_PUBSUB_QOS_DEADLINECHECKS"" == true ..
+      'Maximum temporal offset between creation and consumption of messages.
+    + {field} deadlineOffset : urt_delay_t
+    .. ""URT_CFG_PUBSUB_QOS_JITTERCHECKS"" == true ..
+      'Maximum expected jitter.
+    + {field} maxJitter : urt_delay_t
+      'Minimum latency ever detected (to calculate jitter).
+    + {field} minLatency : urt_delay_t
+      'Maximum latency ever detected (to calculate jitter).
+    + {field} maxLatency : urt_delay_t
+    __
+      'Initializes a urt_frtsubscriber_t object.
+    + {method} urtFrtSubscriberInit (subscriber : urt_frtsubscriber_t*) : void
+      'Tries to subscribe to a topic and sets all parameters.
+    + {method} urtFrtSubscriberSubscribe (subscriber : urt_frtsubscriber_t*, topic : urt_topic_t*, mask : urt_osEventMask_t, flags : urt_osEventFlags_t, deadline : urt_delay_t, jitter : urt_delay_t) : urt_status_t
+      'Fetches the next message in the buffer, copies the payload and optionally returns payload size, origin time and/or latency.
+    + {method} urtFrtSubscriberFetchNext (subscriber : urt_frtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+      'Fetches the latest message, copies the payload and optionally returns payload size, origin time and/or latency.
+    + {method} urtFrtSubscriberFetchLatest (subscriber : urt_frtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+      'Checks whether a message is valid after the specified delay.
+    + {method} urtFrtSubscriberCalculateValidity (subscriber : urt_frtsubscriber_t*, latency : urt_delay_t) : bool
+      'Unsubscribes from a topic.
+    + {method} urtFrtSubscriberUnsubscribe (subscriber : urt_frtsubscriber_t*) : urt_status_t
+  }
+
+  /' HRT subscriber type. '/
+  $structure("urt_hrtsubscriber_t") {
+    .. ""URT_CFG_PUBSUB_QOS_DEADLINECHECKS"" == true || ""URT_CFG_PUBSUB_QOS_JITTERCHECKS"" == true || ""URT_CFG_PUBSUB_RATECHECKS"" == true ..
+      'Pointer to the next HRT subscriber in a list.
+    + {field} next : urt_hrtsubscriber_t*
+    .. ""URT_CFG_PUBSUB_QOS_DEADLINECHECKS"" == true || ""URT_CFG_PUBSUB_QOS_JITTERCHECKS"" == true ..
+      'QoS timer to detect latency or jitter violations.
+    + {field} qosTimer : urt_osTimer_t
+      'Pointer to the message, which defined the currently set timer.
+    + {field} qosTimerMessage : urt_message_t*
+    .. ""URT_CFG_PUBSUB_QOS_DEADLINECHECKS"" == true ..
+      'Maximum temporal offset between creation and consumption of messages.
+    + {field} deadlineOffset : urt_delay_t
+    .. ""URT_CFG_PUBSUB_QOS_JITTERCHECKS"" == true ..
+      'Maximum expected jitter.
+    + {field} maxJitter : urt_delay_t
+      'Minimum latency ever detected (to calculate jitter).
+    + {field} minLatency : urt_delay_t
+      'Maximum latency ever detected (to calculate jitter).
+    + {field} maxLatency : urt_delay_t
+    .. ""URT_CFG_PUBSUB_QOS_RATECHECKS"" == true ..
+      'Expected rate at which data is published.
+    + {field} expectedRate : urt_delay_t
+    __
+      'Initializes a urt_hrtsubscriber_t object.
+    + {method} urtHrtSubscriberInit (subscriber : urt_hrtsubscriber_t*) : void
+      'Tries to subscribe to a topic and sets all parameters.
+    + {method} urtHrtSubscriberSubscribe (subscriber : urt_hrtsubscriber_t*, topic : urt_topic_t*, mask : urt_osEventMask_t, flags : urt_osEventFlags_t, deadline : urt_delay_t, rate : urt_delay_t, jitter : urt_delay_t) : urt_status_t
+      'Fetches the next message in the buffer, copies the payload and optionally returns payload size, origin time and/or latency.
+    + {method} urtHrtSubscriberFetchNext (subscriber : urt_hrtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+      'Fetches the latest message, copies the payload and optionally returns payload size, origin time and/or latency.
+    + {method} urtHrtSubscriberFetchLatest (subscriber : urt_hrtsubscriber_t*, payload : void*, bytes : size_t*, origin_time : urt_osTime_t*, latency : urt_delay_t*) : urt_status_t
+      'Unsubscribes from a topic.
+    + {method} urtHrtSubscriberUnsubscribe (subscriber : urt_hrtsubscriber_t*) : urt_status_t
+  }
+  
+  /' General subscriber type. '/
+  $union("urt_subscriber_t") {
+      'Base subscriber view.
+    + {field} base : urt_basesubscriber_t
+      'NRT subscriber view.
+    + {field} nrt : urt_nrtsubscriber_t
+      'SRT subscriber view.
+    + {field} srt : urt_srtsubscriber_t
+      'FRT subscriber view.
+    + {field} frt : urt_frtsubscriber_t
+      'HRT subscriber view.
+    + {field} hrt : urt_hrtsubscriber_t
+  }
+} /'subscriber'/
+
+$group("publisher") {
+  /' Publisher profiling data. '/
+  $structure("urt_publisher_profilingdata_t") {
+      'Counter of attempts to publish a message.
+    + {field} publishAttempts : urt_profilingcounter_t
+      'Counter of failed attempts to publish a message.
+    + {field} publishFails : urt_profilingcounter_t
+  }
+
+  /' Policies for publishing messages. '/
+  $enumeration("urt_publisher_publishpolicy_t") {
+      'Abort if a locked mutex or a blocking HRT subscriber is detected.
+    URT_PUBLISHER_PUBLISH_LAZY
+      'Abort only if a blocking HRT subscriber is detected.
+    URT_PUBLISHER_PUBLISH_DETERMINED
+      'Always publish, even if it takes a while.
+    URT_PUBLISHER_PUBLISH_ENFORCING
+  }
+
+  /' Publisher type. '/
+  $structure("urt_publisher_t") {
+    'Flag, whether the publish() method supports timeout.
+    URT_PUBSUB_PUBLISHER_PUBLISH_TIMEOUT : bool
+    __
+      'Pointer to the topic for publishing.
+    + {field} topic : urt_topic_t*
+    .. ""URT_CFG_PUBSUB_PROFILING"" == true ..
+      'Profiling data.
+    + {field} profiling : urt_publisher_profilingdata_t
+    __
+      'Initializes a urt_publisher_t object.
+    + {method} urtPublisherInit (publisher : urt_publisher_t*, topic : urt_topic_t*) : void
+    .. ""URT_PUBSUB_PUBLISHER_PUBLISH_TIMEOUT"" == false ..
+      'Publishes a message via the associated topic.
+    + {method} urtPublisherPublish (publisher : urt_publisher_t*, payload : void*, bytes : size_t, t : urt_osTime_t*, policy : urt_publisher_publishpolicy_t) : urt_status_t
+    .. ""URT_PUBSUB_PUBLISHER_PUBLISH_TIMEOUT"" == true ..
+      'Publishes a message via the associated topic with timeout.
+    + {method} urtPublisherPublish (publisher : urt_publisher_t*, payload : void*, bytes : size_t, t : urt_osTime_t*, policy : urt_publisher_publishpolicy_t, timeout : urt_delay_t) : urt_status_t
+  }
+} /' publisher '/
+
+$group("topic") {
+  /' Topic profiling data. '/
+  $structure("urt_topic_profilingdata_t") {
+      'Counter of overall published messages.
+    + {field} numMessagesPublished : urt_profilingcounter_t
+      'Counter how often non-HRT subscribers did not fetch a message before it was reused.
+    + {field} numMessagesDiscarded : urt_profilingcounter_t
+      'Number of overall subscribers.
+    + {field} numSubscribers : size_t
+  }
+
+  /' Topic ID type. '/
+  $type("urt_topicid_t") {
+    .. ""URT_CFG_PUBSUB_TOPICID_WIDTH"" == 8 ..
+    uin8_t
+    .. ""URT_CFG_PUBSUB_TOPICID_WIDTH"" == 16 ..
+    uint16_t
+    .. ""URT_CFG_PUBSUB_TOPICID_WIDTH"" == 32 ..
+    uint32_t
+    .. ""URT_CFG_PUBSUB_TOPICID_WIDTH"" == 64 ..
+    uint64_t
+  }
+
+  /' Topic type. '/
+  $structure("urt_topic_t") {
+      'Pointer to the next topic in a list.
+    + {field} next : urt_topic_t*
+      'Identifier of the topic.
+    + {field} id : urt_topicid_t
+      'Mutex lock for exclusive access.
+    + {field} lock : urt_osMutex_t
+      'Event source to inform all subscribers when a new message is published.
+    + {field} evtSource : urt_osEventSource_t
+      'Number of HRT subscribers.
+    + {field} numHrtSubscribers : size_t
+      'Condition variable to inform waiting publishers when a blocked message becomes available.
+    + {field} hrtReleased : urt_osCondvar_t
+      'Mandatory message, each Topic holds.
+    + {field} mandatoryMessage : urt_message_t
+      'Pointer to the message published most recently.
+    + {field} latestMessage : urt_message_t*
+    .. ""URT_CFG_PUBSUB_QOS_DEADLINECHECKS"" == true || ""URT_CFG_PUBSUB_QOS_RATECHECKS"" == true ..
+      'List of HRT subscribers, orderd by their expected rate (most critical first).
+    + {field} hrtSubscribers : urt_hrtsubscriber_t*
+    .. ""URT_CFG_PUBSUB_QOS_RATECHECKS"" == true ..
+      'Pointer to the message holding the most recent information.
+    + {field} latestInformation : urt_message_t*
+      'Timer to check for missed rates.
+    + {field} qosTimer : urt_osTimer_t
+    .. ""URT_CFG_PUBSUB_PROFILING"" == true ..
+      'Profiling data.
+    + {field} profiling : urt_topic_profilingdata_t
+    __
+      'Initializes an urt_topic_t object.
+    + {method} urtTopicInit (topic : urt_topic_t*, id : urt_topicid_t, payload : void*) : urt_status_t
+      'Add messages to the circular buffer.
+    + {method} urtTopicAddMessages (topic : urt_topic_t*, messages : urt_message_t*) : urt_status_t
+      'Retrieve size of the message buffer.
+    + {method} urtTopicBufferSize (topic : urt_topic_t*) : size_t
+  }
+} /' topic '/
+
+!endsub
+
+/'### DEPENDENCIES & LAYOUT ##################################################'/
+
+!startsub DEPENDENCIES
+
+urt_message_t o- "0,1" urt_message_t
+urt_message_t *-- "1" urt_messageid_t
+urt_message_t *--"0,1" urt_message_profilingdata_t
+
+urt_basesubscriber_t o--"1" urt_basesubscriber_VMT
+urt_basesubscriber_t o--"0,1" urt_topic_t
+urt_basesubscriber_t o--"0,1" urt_message_t
+urt_basesubscriber_t *--"1" urt_messageid_t
+urt_basesubscriber_t *--"0,1" urt_basesubscriber_profilingdata_t
+
+urt_nrtsubscriber_t --|> urt_basesubscriber_t
+
+urt_srtsubscriber_t --|> urt_basesubscriber_t
+
+urt_frtsubscriber_t --|> urt_basesubscriber_t
+
+urt_hrtsubscriber_t --|> urt_basesubscriber_t
+urt_hrtsubscriber_t o- "0,1" urt_hrtsubscriber_t
+urt_hrtsubscriber_t o- "0,1" urt_message_t
+
+urt_subscriber_t --|> urt_basesubscriber_t
+urt_subscriber_t *--"0,1" urt_nrtsubscriber_t
+urt_subscriber_t *--"0,1" urt_srtsubscriber_t
+urt_subscriber_t *--"0,1" urt_frtsubscriber_t
+urt_subscriber_t *--"0,1" urt_hrtsubscriber_t
+
+urt_publisher_t o- "1" urt_topic_t
+urt_publisher_t *--"0,1" urt_publisher_profilingdata_t
+urt_publisher_t ..> urt_publisher_publishpolicy_t
+urt_publisher_t ..> urt_message_t
+
+urt_topic_t o- "0,1" urt_topic_t
+urt_topic_t *-- "1" urt_topicid_t
+urt_topic_t o- "0,1" urt_hrtsubscriber_t
+urt_topic_t *--"1" urt_message_t
+urt_topic_t *--"0,1" urt_topic_profilingdata_t
+
+!endsub
+
+/'### OUTRO ##################################################################'/
+
+@enduml

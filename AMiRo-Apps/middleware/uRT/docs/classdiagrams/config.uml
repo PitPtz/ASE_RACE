@@ -1,0 +1,91 @@
+/'
+µRT is a lightweight publish-subscribe & RPC middleware for real-time
+applications. It was developed as part of the software habitat for the
+Autonomous Mini Robot (AMiRo) but can be used for other purposes as well.
+
+Copyright (C) 2018..2022  Thomas Schöpping et al.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+'/
+
+/'### INTRO ##################################################################'/
+
+@startuml
+
+title **µRT**\nConfiguration
+
+!include ./procedures.iuml
+
+/'### ENTITIES ###############################################################'/
+
+!startsub ENTITIES
+
+/' Not a type but a set of configuration macros. '/
+$configuration("urt_config") {
+  .. general ..
+    'Selector to specify the width of urt_delay_t type (32 or 64).
+  URT_CFG_DELAY_WIDTH : int
+    'Selector to specify the width of the urt_nodestage_t type (8, 16, 32 or 64).
+  URT_CFG_NODESTAGE_WIDTH : int
+    'Flag to en-/disable synchronization groups API.
+  URT_CFG_SYNCGROUPS_ENABLED : bool
+    'Flag to en-/disable timeout feature for condition variables API.
+  URT_CFG_OSAL_CONDVAR_TIMEOUT : bool
+  .. publish-subscribe ..
+    'Flag to en-/disable publush-subscribe functionality.
+  URT_CFG_PUBSUB_ENABLED : bool
+    'Selector to specify the width of the urt_topicid_t type (8, 16, 32 or 64).
+  URT_CFG_PUBSUB_TOPICID_WIDTH : int
+    'Flag to en-/disable profiling for publish-subscribe.
+  URT_CFG_PUBSUB_PROFILING : bool
+    'Flag to en-/disable QoS deadline checks (e.g. timers) for publish-subscribe.
+  URT_CFG_PUBSUB_QOS_DEADLINECHECKS : bool
+    'Flag to en-/disable QoS rate checks (e.g. timers) for publish-subscribe.
+  URT_CFG_PUBSUB_QOS_RATECHECKS : bool
+    'Flag to en-/disable QoS jitter checks for publish-subscribe.
+  URT_CFG_PUBSUB_QOS_JITTERCHECKS : bool
+  .. remote procedure calls ..
+    'Flag to en-/disable RPC functionality.
+  URT_CFG_RPC_ENABLED : bool
+    'Selector to specify the width of the urt_serviceid_t type (8, 16, 32 or 64).
+  URT_CFG_RPC_SERVICEID_WIDTH : int
+    'Flag to en-/disable profiling of RPCs.
+  URT_CFG_RPC_PROFILING : bool
+    'Flag to en-/disable QoS deadline checks (e.g. timers) for RPCs.
+  URT_CFG_RPC_QOS_DEADLINECHECKS : bool
+    'Flag to en-/disable QoS jitter checks for RPCs.
+  URT_CFG_RPC_QOS_JITTERCHECKS : bool
+  .. profiling ..
+    'Selector to specify the width of counter values for profiling (8, 16, 32 or 64).
+  URT_CFG_PROFILING_COUNTER_WIDTH : int
+  .. debug ..
+    'Selection to en-/disable debug checks.
+  URT_CFG_DEBUG_ENABLED : bool
+  .. OSAL ..
+    'OSAL header to be included by µRT.
+  URT_CFG_OSAL_HEADER : string
+    'Flag whether condition variables support timeout feature.
+  URT_CFG_OSAL_CONDVAR_TIMEOUT : bool
+}
+
+!endsub
+
+/'### DEPENDENCIES & LAYOUT ##################################################'/
+
+!startsub DEPENDENCIES
+!endsub
+
+/'### OUTRO ##################################################################'/
+
+@enduml

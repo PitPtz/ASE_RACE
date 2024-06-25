@@ -1,0 +1,167 @@
+{
+    "0": [
+        {
+            "id": "0",
+            "name": "TOPICID_FLOOR_PROXIMITY",
+            "description": "Floor proximity topic. ",
+            "payload": "DWD_floordata.h:floor_proximitydata_t",
+            "type": "0",
+            "origin_board_id": "0",
+            "support_can": "1"
+        },
+        {
+            "id": "1",
+            "name": "TOPICID_FLOOR_AMBIENT",
+            "description": "Floor ambient light topic. ",
+            "payload": "DWD_floordata.h:floor_ambientdata_t",
+            "type": "0",
+            "origin_board_id": "0",
+            "support_can": "1"
+        },
+        {
+            "id": "2",
+            "name": "TOPICID_DME",
+            "description": "DifferentialMotioEstimator motion topic. ",
+            "payload": "motiondata.h:motion_ev_csi",
+            "type": "0"
+        },
+        {
+            "id": "3",
+            "name": "TOPICID_PROXIMITYSENSOR_AMBIENT",
+            "description": "ProximitySensor ambient light topic. ",
+            "payload": "ProximitySensordata.h:proximitysensor_ambientdata_t",
+            "type": "0",
+            "origin_board_id": "1",
+            "support_can": "1"
+        },
+        {
+            "id": "4",
+            "name": "TOPICID_PROXIMITYSENSOR_PROXIMITY",
+            "description": "ProximitySensor proximity topic. ",
+            "payload": "ProximitySensordata.h:proximitysensor_proximitydata_t",
+            "type": "0",
+            "origin_board_id": "1",
+            "support_can": "1"
+        },
+        {
+            "id": "5",
+            "name": "TOPICID_TOUCH",
+            "description": "Touch topic. ",
+            "payload": "TouchSensordata.h:touch_data_t",
+            "type": "0"
+        },
+        {
+            "id": "6",
+            "name": "TOPICID_ACCELEROMETER",
+            "description": "Accelerometer motion topic. ",
+            "payload": "DWD_accodata.h:acco_converted_data_t",
+            "type": "0",
+            "origin_board_id": "0",
+            "support_can": "1"
+        },
+        {
+            "id": "7",
+            "name": "TOPICID_GYROSCOPE",
+            "description": "Gyroscope motion topic. ",
+            "payload": "DWD_gyrodata.h:gyro_converted_data_t",
+            "type": "0",
+            "origin_board_id": "0",
+            "support_can": "1"
+        },
+        {
+            "id": "8",
+            "name": "TOPICID_COMPASS",
+            "description": "Gravity direction topic. ",
+            "payload": "DWD_gravitydata.h:gravity_data_t",
+            "type": "0",
+            "origin_board_id": "0",
+            "support_can": "1"
+        },
+        {
+            "id": "9",
+            "name": "TOPICID_MAGNETOMETER",
+            "description": "TBD ",
+            "payload": "DWD_magnodata.h:magno_converted_data_t",
+            "type": "0",
+            "origin_board_id": "0",
+            "support_can": "1"
+        },
+        {
+            "id": "10",
+            "name": "TOPICID_ODOMETRY",
+            "description": "Odometry values topic. ",
+            "payload": "positiondata.h:position_cv_csi",
+            "type": "0",
+            "origin_board_id": "0",
+            "support_can": "1"
+        },
+        {
+            "id": "11",
+            "name": "TOPICID_BATTERY",
+            "description": "Battery values topic. ",
+            "payload": "chargedata.h:battery_data_t",
+            "type": "0",
+            "origin_board_id": "1",
+            "support_can": "1"
+        },
+        {
+            "id": "12",
+            "name": "TOPICID_STATUS",
+            "description": "",
+            "payload": "amirostatus.h:status_data_t",
+            "type": "0",
+            "origin_board_id": "1",
+            "support_can": "1"
+        }
+    ],
+    "1": [
+        {
+            "id": "0",
+            "name": "SERVICEID_LIGHT",
+            "description": "Light service. ",
+            "payload": "LightRing_leddata.h:light_led_data_t",
+            "type": "1",
+            "origin_board_id": "2",
+            "support_can": "1"
+        },
+        {
+            "id": "1",
+            "name": "SERVICEID_DMC_TARGET",
+            "description": "DifferentialMotorControl target motion service. ",
+            "payload": "motiondata.h:motion_ev_csi",
+            "type": "1",
+            "origin_board_id": "0",
+            "support_can": "1"
+        },
+        {
+            "id": "2",
+            "name": "SERVICEID_DMC_CALIBRATION",
+            "description": "DifferentialMotorControl calibration service. ",
+            "payload": "",
+            "type": "1"
+        },
+        {
+            "id": "3",
+            "name": "SERVICEID_FLOOR_CALIBRATION",
+            "description": "Floor proximity sensor calibration service. ",
+            "payload": "",
+            "type": "1"
+        },
+        {
+            "id": "4",
+            "name": "SERVICEID_PROXIMITYSENSOR_CALIBRATION",
+            "description": "ProximitySensor proximity sensor calibration service. ",
+            "payload": "",
+            "type": "1"
+        },
+        {
+            "id": "5",
+            "name": "SERVICEID_ODOMETRY",
+            "description": "Odometry reset values service. ",
+            "payload": "",
+            "type": "1",
+            "origin_board_id": "0",
+            "support_can": "1"
+        }
+    ]
+}

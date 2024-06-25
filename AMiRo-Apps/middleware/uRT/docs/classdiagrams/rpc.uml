@@ -1,0 +1,400 @@
+/'
+µRT is a lightweight publish-subscribe & RPC middleware for real-time
+applications. It was developed as part of the software habitat for the
+Autonomous Mini Robot (AMiRo) but can be used for other purposes as well.
+
+Copyright (C) 2018..2022  Thomas Schöpping et al.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+'/
+
+/'### INTRO ##################################################################'/
+
+@startuml
+
+title **µRT**\nRemote Procedure Call System
+
+!include ./procedures.iuml
+
+/'### ENTITIES ###############################################################'/
+
+!startsub ENTITIES
+
+$group("request") {
+  /' Retrieve policy enumeration. '/
+  $enumeration("urt_request_retrievepolicy_t") {
+      'Abort retrieval if a locked mutex or a bad owner is detected.
+    URT_REQUEST_RETRIEVE_LAZY
+      'Abort retrieval if a bad owner is detected.
+    URT_REQUEST_RETRIEVE_DETERMINED
+      'Always retrieve, even if this cancels the request.
+    URT_REQUEST_RETRIEVE_ENFORCING
+  }
+
+  /' Base request profiling data. '/
+  $structure("urt_baserequest_profilingdata_t") {
+      'Minumum latency ever detected.
+    + {field} minLatency : urt_delay_t
+      'Maximum latency ever detected.
+    + {field} maxLatency : urt_delay_t
+      'Sum of all latencies.
+    + {field} sumLatencies : uint64_t
+      'Number of calls emitted.
+    + {field} numCalls : urt_profilingcounter_t
+      'Number of calls that were not processed successfully.
+    + {field} numFails : urt_profilingcounter_t
+  }
+
+  /' Request virtual method table. '/
+  $structure("urt_baserequest_VMT") {
+      'Pointer to the ""submit()"" method.
+    + {field} submit : urt_status_t(*)(instance : void*, service : urt_service_t*, bytes : size_t, mask : urt_osEventMask_t, deadline : urt_delay_t)
+      'Pointer to the ""retrieve()"" method.
+    + {field} retrieve : urt_status_t(*)(instance : void*, policy : urt_request_retrievepolicy_t, bytes : size_t*, latency : urt_delay_t)
+  }
+
+  /' Base request structure type. '/
+  $structure("urt_baserequest_t") {
+      'Pointer to the virtual method table.
+    + {field} vmt : const urt_baserequest_VMT*
+      'Pointer to the previous request in a queue.
+    + {field} prev : urt_baserequest_t*
+      'Pointer to the next request in a queue.
+    + {field} next : urt_baserequest_t*
+      'Lock for exclusive access.
+    + {field} lock : urt_osMutex_t
+      'Pointer to the owning service.
+    + {field} service : urt_service_t*
+      'Time when the request was submitted.
+    + {field} submissionTime : urt_osTime_t
+      'Submitting thread to be notified by the service.
+    + {field} notification.thread : urt_osThread_t*
+      'Event mask to set on notification.
+    + {field} notification.mask : urt_osEventMask_t
+      'Pointer to an optional payload of the service request.
+    + {field} payload : void*
+      'Size of the current payload.
+    + {field} size : size_t
+    .. ""URT_CFG_RPC_PROFILING"" == true ..
+      'Profiling data.
+    + {field} profiling : urt_baserequest_profilingdata_t
+    __
+      'Retrieve the real-time class of a request.
+    + {method} urtRequestGetRtClass (request : const urt_baserequest_t*) : urt_rtclass_t
+      'Acquire a request.
+    + {method} urtRequestAcquire (request : urt_baserequest_t*) : urt_status_t
+      'Try to acquire a request.
+    + {method} urtRequestTryAcquire (request : urt_baserequest_t*) : urt_status_t
+      'Submit a request.
+    + {method} urtRequestSubmit (request : urt_baserequest_t*, service : urt_service_t*, bytes : size_t, mask : urt_osEventMask_t, deadline : urt_delay_t) : urt_status_t
+      'Retrieve whether a request was submitted but not retrieved yet.
+    + {method} urtRequestIsPending (request : urt_baserequest_t*) : bool
+      'Retrieve a request.
+    + {method} urtRequestRetrieve(request : urt_baserequest_t*, policy : urt_request_retrievepolicy_t, bytes : size_t*, latency : urt_delay_t*) : urt_status_t
+      'Release a request.
+    + {method} urtRequestRelease (request : urt_baserequest_t*) : urt_status_t
+      'Retrieve associated payload.
+    + {method} urtRequestGetPayload (request : urt_baserequest_t*) : void*
+      'Retrieve current payload size.
+    + {method} urtRequestGetPayloadSize (request : urt_baserequest_t*) : size_t
+      'Retrieve the submission time of a request.
+    + {method} urtRequestGetSubmissionTime(request : urt_baserequest_t*) : urt_osTime_t*
+      'Retrieve age (since submission).
+    + {method} urtRequestGetAge (request : const urt_baserequest_t*) : urt_delay_t
+  }
+
+  /' NRT request type. '/
+  $structure("urt_nrtrequest_t") {
+      'Initializes a urt_nrtrequest_t object.
+    + {method} urtNrtRequestInit (request : urt_nrtrequest_t*) : void
+      'Acquire and lock an NRT request (blocking).
+    + {method} urtNrtRequestAcquire (request : urt_nrtrequest_t*) : urt_status_t
+      'Try to acquire and lock an NRT request (non blocking).
+    + {method} urtNrtRequestTryAcquire (request : urt_nrtrequest_t*) : urt_status_t
+      'Submit an NRT request to the specified service.
+    + {method} urtNrtRequestSubmit (request : urt_nrtrequest_t*, service : urt_service_t*) : urt_status_t
+      'Retrieve whether an NRT request was submitted but not retrieved yet.
+    + {method} urtNrtRequestIsPending (request : urt_nrtrequest_t*) : bool
+      'Retrieve an NRT request, thereby removing it from the service's request queue if required.
+    + {method} urtNrtRequestRetrieve(request : urt_nrtrequest_t*, policy : urt_request_retrievepolicy_t, latency : urt_delay_t*) : urt_status_t
+      'Release an NRT request.
+    + {method} urtNrtRequestRelease (request : urt_nrtrequest_t*) : urt_status_t
+      'Retrieve associated payload.
+    + {method} urtNrtRequestGetPayload (request : urt_nrtrequest_t*) : void*
+      'Retrieve current payload size.
+    + {method} urtNrtRequestGetPayloadSize (request : urt_nrtrequest_t*) : size_t
+      'Retrieve the submission time of a request.
+    + {method} urtNrtRequestGetSubmissionTime(request : urt_nrtrequest_t*) : urt_osTime_t*
+      'Retrieve age (since submission).
+    + {method} urtNrtRequestGetAge (request : const urt_nrtrequest_t*) : urt_delay_t
+      'Release the request.
+    + {method} urtNrtRequestRelease (request : urt_nrtrequest_t*) : urt_status_t
+      'Retrieve whether athe request was submitted but not retrieved yet.
+    + {method} urtNrtRequestIsPending (request : urt_nrtrequest_t*) : bool
+  }
+
+  /' SRT request type. '/
+  $structure("urt_srtrequest_t") {
+      'Initializes a urt_srtrequest_t object.
+    + {method} urtSrtRequestInit (request : urt_srtrequest_t*) : void
+      'Acquire and lock an SRT request (blocking).
+    + {method} urtSrtRequestAcquire (request : urt_srtrequest_t*) : urt_status_t
+      'Try to acquire and lock an SRT request (non blocking).
+    + {method} urtSrtRequestTryAcquire (request : urt_srtrequest_t*) : urt_status_t
+      'Submit an SRT request to the specified service.
+    + {method} urtSrtRequestSubmit (request : urt_srtrequest_t*, service : urt_service_t*) : urt_status_t
+      'Retrieve whether an SRT request was submitted but not retrieved yet.
+    + {method} urtSrtRequestIsPending (request : urt_srtrequest_t*) : bool
+      'Retrieve an SRT request, thereby removing it from the service's request queue if required.
+    + {method} urtSrtRequestRetrieve(request : urt_srtrequest_t*, policy : urt_request_retrievepolicy_t, latency : urt_delay_t*) : t_urt_status
+      'Release an SRT request.
+    + {method} urtSrtRequestRelease (request : urt_srtrequest_t*) : urt_status_t
+      'Retrieve associated payload.
+    + {method} urtSrtRequestGetPayload (request : urt_srtrequest_t*) : void*
+      'Retrieve current payload size.
+    + {method} urtSrtRequestGetPayloadSize (request : urt_srtrequest_t*) : size_t
+      'Retrieve the submission time of a request.
+    + {method} urtSrtRequestGetSubmissionTime(request : urt_srtrequest_t*) : urt_osTime_t*
+      'Retrieve age (since submission).
+    + {method} urtSrtRequestGetAge (request : const urt_srtrequest_t*) : urt_delay_t
+      'Release the request.
+    + {method} urtSrtRequestRelease (request : urt_srtrequest_t*) : urt_status_t
+      'Retrieve whether athe request was submitted but not retrieved yet.
+    + {method} urtSrtRequestIsPending (request : urt_srtrequest_t*) : bool
+      'Calculate the usefulness on an SRT RPC response.
+    + {method} urtSrtCalculateUsefulness (request : urt_srtrequest_t*, usefulnesscb : urt_usefulness_f, cbparams : void*) : float
+  }
+
+  /' FRT request type. '/
+  $structure("urt_frtrequest_t") {
+    .. ""URT_CFG_RPC_QOS_DEADLINECHECKS"" == true ..
+      'Maximum temporal offset between sending and consuming the FRT request.
+    + {field} deadlineOffset : urt_delay_t
+    .. ""URT_CFG_RPC_QOS_JITTERCHECKS"" == true ..
+      'Maximum expected jitter.
+    + {field} maxJitter : urt_delay_t
+      'Minimum latency ever detected (to calculate jitter).
+    + {field} minLatency : urt_delay_t
+      'Maximum latency ever detected (to calculate jitter).
+    + {field} maxLatency : urt_delay_t
+    __
+      'Initializes a urt_frtrequest_t object.
+    + {method} urtFrtRequestInit (request : urt_frtrequest_t*) : void
+      'Acquire and lock an FRT request (blocking).
+    + {method} urtFrtRequestAcquire (request : urt_frtrequest_t*) : urt_status_t
+      'Try to acquire and lock an FRT request (non blocking).
+    + {method} urtFrtRequestTryAcquire (request : urt_frtrequest_t*) : urt_status_t
+      'Submit an FRT request to the specified service.
+    + {method} urtFrtRequestSubmit (request : urt_frtrequest_t*, service : urt_service_t*, deadline : urt_delay_t) : urt_status_t
+      'Retrieve whether an FRT request was submitted but not retrieved yet.
+    + {method} urtFrtRequestIsPending (request : urt_frtrequest_t*) : bool
+      'Retrieve an FRT request, thereby removing it from the service's request queue if required.
+    + {method} urtFrtRequestRetrieve(request : urt_frtrequest_t*, policy : urt_request_retrievepolicy_t, latency : urt_delay_t*) : urt_status_t
+      'Release an FRT request.
+    + {method} urtFrtRequestRelease (request : urt_frtrequest_t*) : urt_status_t
+      'Retrieve associated payload.
+    + {method} urtFrtRequestGetPayload (request : urt_frtrequest_t*) : void*
+      'Retrieve current payload size.
+    + {method} urtFrtRequestGetPayloadSize (request : urt_frtrequest_t*) : size_t
+      'Retrieve the submission time of a request.
+    + {method} urtFrtRequestGetSubmissionTime(request : urt_frtrequest_t*) : urt_osTime_t*
+      'Retrieve age (since submission).
+    + {method} urtFrtRequestGetAge (request : const urt_frtrequest_t*) : urt_delay_t
+      'Release the request.
+    + {method} urtFrtRequestRelease (request : urt_frtrequest_t*) : urt_status_t
+      'Retrieve whether athe request was submitted but not retrieved yet.
+    + {method} urtFrtRequestIsPending (request : urt_frtrequest_t*) : bool
+      'Calculate the validity on an FRT RPC response.
+    + {method} urtFrtCalculateValidity (request : urt_frtrequest_t) : bool
+  }
+
+  /' HRT request type. '/
+  $structure("urt_hrtrequest_t") {
+    .. ""URT_CFG_RPC_QOS_DEADLINECHECKS"" == true ..
+      'Maximum temporal offset between sending and consuming the HRT request.
+    + {field} deadlineOffset : urt_delay_t
+    .. ""URT_CFG_RPC_QOS_JITTERCHECKS"" == true ..
+      'Maximum expected jitter.
+    + {field} maxJitter : urt_delay_t
+      'Minimum latency ever detected (to calculate jitter).
+    + {field} minLatency : urt_delay_t
+      'Maximum latency ever detected (to calculate jitter).
+    + {field} maxLatency : urt_delay_t
+    .. ""URT_CFG_RPC_QOS_DEADLINECHECKS"" == true || ""URT_CFG_RPC_QOS_JITTERCHECKS"" == true ..
+      'QoS timer to detect missed deadlines and/or jitter.
+    + {field} qosTimer : urt_osTimer_t
+    __
+      'Initializes a urt_hrtrequest_t object.
+    + {method} urtHrtRequestInit (request : urt_hrtrequest_t*) : void
+      'Acquire and lock an HRT request (blocking).
+    + {method} urtHrtRequestAcquire (request : urt_hrtrequest_t*) : urt_status_t
+      'Try to acquire and lock an HRT request (non blocking).
+    + {method} urtHrtRequestTryAcquire (request : urt_hrtrequest_t*) : urt_status_t
+      'Submit an HRT request to the specified service.
+    + {method} urtHrtRequestSubmit (request : urt_hrtrequest_t*, service : urt_service_t*, deadline : urt_delay_t) : urt_status_t
+      'Retrieve whether an HRT request was submitted but not retrieved yet.
+    + {method} urtHrtRequestIsPending (request : urt_hrtrequest_t*) : bool
+      'Retrieve an HRT request, thereby removing it from the service's request queue if required.
+    + {method} urtHrtRequestRetrieve(request : urt_hrtrequest_t*, policy : urt_request_retrievepolicy_t, latency : urt_delay_t*) : urt_status_t
+      'Release the request.
+    + {method} urtHrtRequestRelease (request : urt_hrtrequest_t*) : urt_status_t
+      'Retrieve associated payload.
+    + {method} urtHrtRequestGetPayload (request : urt_hrtrequest_t*) : void*
+      'Retrieve current payload size.
+    + {method} urtHrtRequestGetPayloadSize (request : urt_hrtrequest_t*) : size_t
+      'Retrieve the submission time of a request.
+    + {method} urtHrtRequestGetSubmissionTime(request : urt_hrtrequest_t*) : urt_osTime_t*
+      'Retrieve age (since submission).
+    + {method} urtHrtRequestGetAge (request : const urt_hrtrequest_t*) : urt_delay_t
+      'Release the request.
+    + {method} urtHrtRequestReleas e(request : urt_hrtrequest_t*) : urt_status_t
+      'Retrieve whether athe request was submitted but not retrieved yet.
+    + {method} urtHrtRequestIsPending (request : urt_hrtrequest_t*) : bool
+  }
+  
+  /' General request type. '/
+  $union("urt_request_t") {
+      'Base request view.
+    + {field} base : urt_baserequest_t
+      'NRT request view.
+    + {field} nrt : urt_nrtrequest_t
+      'SRT request view.
+    + {field} srt : urt_srtrequest_t
+      'FRT request view.
+    + {field} frt : urt_frtrequest_t
+      'HRT request view.
+    + {field} hrt : urt_hrtrequest_t
+  }
+}
+
+$group("service") {
+  /' Service profiling data. '/
+  $structure("urt_service_profilingdata_t") {
+      'Number of calls.
+    + {field} numCalls : urt_profilingcounter_t
+      'Number of lost ownerships.
+    + {field} numOwnershipLost : urt_profilingcounter_t
+  }
+
+  /' Service ID type. '/
+  $type("urt_serviceid_t") {
+    .. ""URT_CFG_RPC_SERVICEID_WIDTH"" == 8 ..
+    uin8_t
+    .. ""URT_CFG_RPC_SERVICEID_WIDTH"" == 16 ..
+    uint16_t
+    .. ""URT_CFG_RPC_SERVICEID_WIDTH"" == 32 ..
+    uint32_t
+    .. ""URT_CFG_RPC_SERVICEID_WIDTH"" == 64 ..
+    uint64_t
+  }
+
+  /' Data structure representing dispatched requests. '/
+  $structure("urt_service_dispatched_t") {
+      'Pointer to the dispatched request.
+    + {field} request : urt_baserequest_t* const
+      'Submission time of the dispatched request.
+    + {field} submissionTime : const urt_osTime_t
+    __
+      'Check whether a request has been dispatched.
+    + {method} urtServiceDispatchedIsValid (dispatched : urt_service_dispatched_t*) : bool
+      'Retrieve the pointer to the payload of a dispatched request.
+    + {method} urtServiceDispatchedGetPayload (dispatched : urt_service_dispatched_t*) : void*
+      'Retrieve the submission time of a dispatched request.
+    + {method} urtServiceDispatchedGetSubmissionTime (dispatched : urt_service_dispatched_t*) : urt_osTime_t*
+      'Check whether a dispatched requests expects no return value.
+    + {method} urtServiceDispatchedNoreturn (dispatched : urt_service_dispatched_t*) : bool
+  }
+
+  /' Service structure type. '/
+  $structure("urt_service_t") {
+      'Pointer to the next service in a list.
+    + {field} next : urt_service_t*
+      'Identifier of the service.
+    + {field} id : urt_serviceid_t
+      'Mutex lock for exclusive access.
+    + {field} lock : urt_osMutex_t
+      'Pointer to the first element in a queue of pending requests.
+    + {field} queue.front : urt_baserequest_t*
+      'Pointer to the last HRT request in a queue of pending requests.
+    + {field} queue.hrtBack : urt_hrtrequest_t*
+      'Pointer to the last FRT/SRT request in a queue pf pending requests.
+    + {field} queue.fsrtBack : urt_baserequest_t*
+      'Pointer to the last element in a queue of pending requests.
+    + {field} queue.back : urt_baserequest_t*
+      'Pointer to the thread which provides the service.
+    + {field} notification.thread : urt_osThread_t*
+      'Event mask to set when signaling the servicing thread.
+    + {field} notofication.maks : urt_osEventMask_t
+    .. ""URT_CFG_RPC_PROFILING"" == true ..
+      'Profiling data.
+    + {field} profiling : urt_service_profilingdata_t
+    __
+      'Initializes a urt_service_t object.
+    + {method} urtServiceInit (service : urt_service_t*, id : urt_serviceid_t, thread : urt_osThread_t*, mask : urt_osEventMask_t) : urt_status_t
+      'Dispatch the next pending request.
+    + {method} urtServiceDispatch (service : urt_service_t*, dispatched : urt_service_dispatched_t*, payload : void*, bytes : size_t*, noreturn : bool*) : bool
+      'Acquire and lock the specified request (blocking).
+    + {method} urtServiceAcquireRequest (service* urt_serviceid_t*, request : urt_service_dispatched_t*) : urt_status_t
+      'Acquire and lock the specified request (non blocking).
+    + {method} urtServiceTryAcquireRequest (service* urt_serviceid_t*, request : urt_service_dispatched_t*) : urt_status_t
+      'Respond to a request.
+    + {method} urtServiceRespond (request : urt_baserequest_t*) : urt_status_t
+      'Retrieve the length of the queue of pending requests.
+    + {method} urtServiceQueueLength(service : urt_service_t*, hrt : size_t*, fsrt : size_t*, nrt : size_t*) : size_t
+  }
+} /' service '/
+
+!endsub
+
+/'### DEPENDENCIES & LAYOUT ##################################################'/
+
+!startsub DEPENDENCIES
+
+urt_baserequest_t o--"1" urt_baserequest_VMT
+urt_baserequest_t o- "0,1,2" urt_baserequest_t
+urt_baserequest_t o- "0,1" urt_service_t
+urt_baserequest_t *--"0,1" urt_baserequest_profilingdata_t
+
+urt_nrtrequest_t --|> urt_baserequest_t
+urt_nrtrequest_t ..> urt_request_retrievepolicy_t
+
+urt_srtrequest_t --|> urt_baserequest_t
+urt_srtrequest_t ..> urt_request_retrievepolicy_t
+
+urt_frtrequest_t --|> urt_baserequest_t
+urt_frtrequest_t ..> urt_request_retrievepolicy_t
+
+urt_hrtrequest_t --|> urt_baserequest_t
+urt_hrtrequest_t ..> urt_request_retrievepolicy_t
+
+urt_request_t --|> urt_baserequest_t
+urt_request_t *--"0,1" urt_nrtrequest_t
+urt_request_t *--"0,1" urt_srtrequest_t
+urt_request_t *--"0,1" urt_frtrequest_t
+urt_request_t *--"0,1" urt_hrtrequest_t
+
+urt_service_t o- "0,1" urt_service_t
+urt_service_t *--"1" urt_serviceid_t
+urt_service_t o- "0,2,3" urt_baserequest_t
+urt_service_t o- "0,1" urt_hrtrequest_t
+urt_service_t *--"0,1" urt_service_profilingdata_t
+urt_service_t ..> urt_service_dispatched_t
+
+urt_service_dispatched_t o--"0,1" urt_baserequest_t
+
+!endsub
+
+/'### OUTRO ##################################################################'/
+
+@enduml

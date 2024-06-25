@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="844px" preserveAspectRatio="none" style="width:5508px;height:844px;" version="1.1" viewBox="0 0 5508 844" width="5508px" zoomAndPan="magnify"><defs><filter height="300%" id="f5azsvhyueir9" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="39" x="2728" y="16.708">µRT</text><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="387" x="2554" y="37.6611">Operating System Abstraction Layer (OSAL)</text><!--MD5=[62106fc051f244acf17caf792167c8db]
+cluster debug--><rect fill="#FFFFFF" filter="url(#f5azsvhyueir9)" height="112" style="stroke:#000000;stroke-width:1.5;" width="282" x="4944" y="87.4063"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="50" x="5060" y="102.4014">debug</text><!--MD5=[48ccbfc44b1b031f9b243763d7ad5184]
+cluster mutex--><rect fill="#FFFFFF" filter="url(#f5azsvhyueir9)" height="150" style="stroke:#000000;stroke-width:1.5;" width="330" x="773" y="68.4063"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="49" x="913.5" y="83.4014">mutex</text><!--MD5=[2e45f233f6bb64aa81ebe67fb6de8946]
+cluster condition variable--><rect fill="#FFFFFF" filter="url(#f5azsvhyueir9)" height="454.5" style="stroke:#000000;stroke-width:1.5;" width="742" x="7" y="48.9063"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="140" x="308" y="63.9014">condition variable</text><!--MD5=[8d74b40516bd265adb19f202ab81f40d]
+cluster events--><rect fill="#FFFFFF" filter="url(#f5azsvhyueir9)" height="713.5" style="stroke:#000000;stroke-width:1.5;" width="1658" x="1127" y="68.4063"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="54" x="1929" y="83.4014">events</text><!--MD5=[b978ecedb6f4da3f32705dc09c84a7d6]
+cluster streams--><rect fill="#FFFFFF" filter="url(#f5azsvhyueir9)" height="125" style="stroke:#000000;stroke-width:1.5;" width="246" x="5250" y="80.9063"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="64" x="5341" y="95.9014">streams</text><!--MD5=[3dab47d3fc3e186ff10f67819eb99ff8]
+cluster time--><rect fill="#FFFFFF" filter="url(#f5azsvhyueir9)" height="163" style="stroke:#000000;stroke-width:1.5;" width="420" x="4682" y="353.4063"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="34" x="4875" y="368.4014">time</text><!--MD5=[107bb3f79455a18bd83c75ada1ac7979]
+cluster thread--><rect fill="#FFFFFF" filter="url(#f5azsvhyueir9)" height="586" style="stroke:#000000;stroke-width:1.5;" width="1055" x="2809" y="246.9063"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="52" x="3310.5" y="261.9014">thread</text><!--MD5=[c7113df1f710ca294cbd01734aa00974]
+cluster timer--><rect fill="#FFFFFF" filter="url(#f5azsvhyueir9)" height="429" style="stroke:#000000;stroke-width:1.5;" width="770" x="3888" y="61.9063"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="41" x="4252.5" y="76.9014">timer</text><!--MD5=[f106a25c06a671b3918b1a8f37571a4d]
+class urt_debug--><rect codeLine="48" fill="#FEFECE" filter="url(#f5azsvhyueir9)" height="60.8047" id="urt_debug" style="stroke:#A80036;stroke-width:1.5;" width="249" x="4960.5" y="122.4063"/><ellipse cx="5048.75" cy="138.4063" fill="#E0E0E0" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M5052.9844,134.1719 L5047.7031,134.1719 L5047.7031,136.8438 L5052.5,136.8438 L5052.5,139 L5047.7031,139 L5047.7031,144.4063 L5045.2656,144.4063 L5045.2656,132.0156 L5052.9844,132.0156 L5052.9844,134.1719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="64" x="5069.25" y="142.5605">urt_debug</text><line style="stroke:#A80036;stroke-width:1.5;" x1="4961.5" x2="5208.5" y1="154.4063" y2="154.4063"/><line style="stroke:#A80036;stroke-width:1.5;" x1="4961.5" x2="5208.5" y1="162.4063" y2="162.4063"/><ellipse cx="4971.5" cy="173.4063" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="223" x="4980.5" y="176.6167">urtDebugAssert (condition : bool) : void</text><!--MD5=[532279a7a1cac9af7f32856ca2ae6b9b]
+class urt_osMutex_t--><rect codeLine="33" fill="#FEFECE" filter="url(#f5azsvhyueir9)" height="99.2188" id="urt_osMutex_t" style="stroke:#A80036;stroke-width:1.5;" width="298" x="789" y="103.4063"/><ellipse cx="890.25" cy="119.4063" fill="#00CFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M891.0938,126.1563 L888.6406,126.1563 L888.6406,115.9063 L885.5,115.9063 L885.5,113.7656 L894.2344,113.7656 L894.2344,115.9063 L891.0938,115.9063 L891.0938,126.1563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="87" x="910.75" y="123.5605">urt_osMutex_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="790" x2="1086" y1="135.4063" y2="135.4063"/><line style="stroke:#A80036;stroke-width:1.5;" x1="790" x2="1086" y1="143.4063" y2="143.4063"/><ellipse cx="800" cy="154.4063" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="245" x="809" y="157.6167">urtMutexInit (mutex : urt_osMutex_t*) : void</text><ellipse cx="800" cy="167.2109" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="253" x="809" y="170.4214">urtMutexLock (mutex : urt_osMutex_t*) : void</text><ellipse cx="800" cy="180.0156" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="272" x="809" y="183.2261">urtMutexTryLock (mutex : urt_osMutex_t*) : bool</text><ellipse cx="800" cy="192.8203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="265" x="809" y="196.0308">urtMutexUnlock (mutex : urt_osMutex_t*) : void</text><!--MD5=[52fa11869cb40c93fa7702378ddd839e]
+class urt_osCondvarWaitStatus_t--><rect codeLine="28" fill="#FEFECE" filter="url(#f5azsvhyueir9)" height="86.4141" id="urt_osCondvarWaitStatus_t" style="stroke:#A80036;stroke-width:1.5;" width="270" x="243" y="401.4063"/><ellipse cx="289.25" cy="417.4063" fill="#FF7F3F" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M293.3594,423.4063 L285.6406,423.4063 L285.6406,411.0156 L293.3594,411.0156 L293.3594,413.1719 L288.0938,413.1719 L288.0938,415.8438 L292.8594,415.8438 L292.8594,418 L288.0938,418 L288.0938,421.25 L293.3594,421.25 L293.3594,423.4063 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="169" x="309.75" y="421.5605">urt_osCondvarWaitStatus_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="244" x2="512" y1="433.4063" y2="433.4063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="230" x="249" y="447.6167">URT_CONDVAR_WAITSTATUS_SIGNAL = 1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="258" x="249" y="460.4214">URT_CONDVAR_WAITSTATUS_BROADCAST = 2</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="239" x="249" y="473.2261">URT_CONDVAR_WAITSTATUS_TIMEOUT = 0</text><line style="stroke:#A80036;stroke-width:1.5;" x1="244" x2="512" y1="479.8203" y2="479.8203"/><!--MD5=[004fc5dee471033e8e4138c1c73f0692]
+class urt_osCondvar_t--><rect codeLine="33" fill="#FEFECE" filter="url(#f5azsvhyueir9)" height="137.6328" id="urt_osCondvar_t" style="stroke:#A80036;stroke-width:1.5;" width="710" x="23" y="83.9063"/><ellipse cx="323.25" cy="99.9063" fill="#00CFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M324.0938,106.6563 L321.6406,106.6563 L321.6406,96.4063 L318.5,96.4063 L318.5,94.2656 L327.2344,94.2656 L327.2344,96.4063 L324.0938,96.4063 L324.0938,106.6563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="101" x="343.75" y="104.0605">urt_osCondvar_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="24" x2="732" y1="115.9063" y2="115.9063"/><ellipse cx="34" cy="126.9063" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="283" x="43" y="130.1167">urtCondvarInit (condvar : urt_osCondvar_t*) : void</text><ellipse cx="34" cy="139.7109" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="301" x="43" y="142.9214">urtCondvarSignal (condvar : urt_osCondvar_t*) : void</text><ellipse cx="34" cy="152.5156" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="324" x="43" y="155.7261">urtCondvarBroadcast (condvar : urt_osCondvar_t*) : void</text><ellipse cx="34" cy="182.125" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="559" x="43" y="185.3354">urtCondvarWait (condvar : urt_osCondvar_t*, mutex : urt_osMutex_t*) : urt_osCondvarWaitStatus_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="24" x2="253" y1="168.7227" y2="168.7227"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="196" x="253" y="172.0308">URT_CFG_OSAL_CONDVAR_TIMEOUT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="50" x="453" y="172.0308">== false</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="503" x2="732" y1="168.7227" y2="168.7227"/><ellipse cx="34" cy="211.7344" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="684" x="43" y="214.9448">urtCondvarWait (condvar : urt_osCondvar_t*, mutex : urt_osMutex_t*, timeout : urt_delay_t) : urt_osCondvarWaitStatus_t</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="24" x2="255.5" y1="198.332" y2="198.332"/><text fill="#000000" font-family="monospace" font-size="11" lengthAdjust="spacing" textLength="196" x="255.5" y="201.6401">URT_CFG_OSAL_CONDVAR_TIMEOUT</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="45" x="455.5" y="201.6401">== true</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="500.5" x2="732" y1="198.332" y2="198.332"/><!--MD5=[0a4e0f34d8da0ad3ed6ecf72f02e09c8]
+class urt_osEventMask_t--><rect codeLine="33" fill="#FEFECE" filter="url(#f5azsvhyueir9)" height="73.6094" id="urt_osEventMask_t" style="stroke:#A80036;stroke-width:1.5;" width="280" x="1143" y="407.4063"/><ellipse cx="1220.25" cy="423.4063" fill="#00CFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1221.0938,430.1563 L1218.6406,430.1563 L1218.6406,419.9063 L1215.5,419.9063 L1215.5,417.7656 L1224.2344,417.7656 L1224.2344,419.9063 L1221.0938,419.9063 L1221.0938,430.1563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="117" x="1240.75" y="427.5605">urt_osEventMask_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1144" x2="1422" y1="439.4063" y2="439.4063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="268" x="1149" y="453.6167">URT_EVENTMASK_MAXPRIO : urt_osEventMask_t</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="238" x="1149" y="466.4214">URT_EVENTMASK_ALL : urt_osEventMask_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1144" x2="1422" y1="473.0156" y2="473.0156"/><!--MD5=[dc1cc33af288560680c15dec1e56eda0]
+class urt_osEventFlags_t--><rect codeLine="33" fill="#FEFECE" filter="url(#f5azsvhyueir9)" height="48" id="urt_osEventFlags_t" style="stroke:#A80036;stroke-width:1.5;" width="150" x="1864" y="717.9063"/><ellipse cx="1879" cy="733.9063" fill="#00CFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1879.8438,740.6563 L1877.3906,740.6563 L1877.3906,730.4063 L1874.25,730.4063 L1874.25,728.2656 L1882.9844,728.2656 L1882.9844,730.4063 L1879.8438,730.4063 L1879.8438,740.6563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="118" x="1893" y="738.0605">urt_osEventFlags_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1865" x2="2013" y1="749.9063" y2="749.9063"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1865" x2="2013" y1="757.9063" y2="757.9063"/><!--MD5=[e2bbbd64e6979bf7b755747a6c0ba948]
+class urt_osEventWait_t--><rect codeLine="28" fill="#FEFECE" filter="url(#f5azsvhyueir9)" height="86.4141" id="urt_osEventWait_t" style="stroke:#A80036;stroke-width:1.5;" width="162" x="1495" y="401.4063"/><ellipse cx="1518.1" cy="417.4063" fill="#FF7F3F" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1522.2094,423.4063 L1514.4906,423.4063 L1514.4906,411.0156 L1522.2094,411.0156 L1522.2094,413.1719 L1516.9438,413.1719 L1516.9438,415.8438 L1521.7094,415.8438 L1521.7094,418 L1516.9438,418 L1516.9438,421.25 L1522.2094,421.25 L1522.2094,423.4063 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="112" x="1533.9" y="421.5605">urt_osEventWait_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1496" x2="1656" y1="433.4063" y2="433.4063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="150" x="1501" y="447.6167">URT_EVENT_WAIT_ONE = 0</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="148" x="1501" y="460.4214">URT_EVENT_WAIT_ANY = 1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="145" x="1501" y="473.2261">URT_EVENT_WAIT_ALL = 2</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1496" x2="1656" y1="479.8203" y2="479.8203"/><!--MD5=[d054ac2eda12ce4b1fe5a18c9be716c1]
+class urt_osEventListener_t--><rect codeLine="33" fill="#FEFECE" filter="url(#f5azsvhyueir9)" height="86.4141" id="urt_osEventListener_t" style="stroke:#A80036;stroke-width:1.5;" width="494" x="1692" y="401.4063"/><ellipse cx="1867.25" cy="417.4063" fill="#00CFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1868.0938,424.1563 L1865.6406,424.1563 L1865.6406,413.9063 L1862.5,413.9063 L1862.5,411.7656 L1871.2344,411.7656 L1871.2344,413.9063 L1868.0938,413.9063 L1868.0938,424.1563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="135" x="1887.75" y="421.5605">urt_osEventListener_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1693" x2="2185" y1="433.4063" y2="433.4063"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1693" x2="2185" y1="441.4063" y2="441.4063"/><ellipse cx="1703" cy="452.4063" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="341" x="1712" y="455.6167">urtEventListenerInit (listener : urt_osEventListener_t*) : void</text><ellipse cx="1703" cy="465.2109" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="458" x="1712" y="468.4214">urtEventListenerGetFlags (listener : urt_osEventListener_t*) : urt_osEventFlags_t</text><ellipse cx="1703" cy="478.0156" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="468" x="1712" y="481.2261">urtEventListenerClearFlags (listener : urt_osEventListener_t*) : urt_osEventFlags_t</text><!--MD5=[4d6906f8b977dc26629fa492460e6327]
+class urt_osEventSource_t--><rect codeLine="33" fill="#FEFECE" filter="url(#f5azsvhyueir9)" height="73.6094" id="urt_osEventSource_t" style="stroke:#A80036;stroke-width:1.5;" width="547" x="2221.5" y="407.4063"/><ellipse cx="2426.25" cy="423.4063" fill="#00CFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2427.0938,430.1563 L2424.6406,430.1563 L2424.6406,419.9063 L2421.5,419.9063 L2421.5,417.7656 L2430.2344,417.7656 L2430.2344,419.9063 L2427.0938,419.9063 L2427.0938,430.1563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="129" x="2446.75" y="427.5605">urt_osEventSource_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2222.5" x2="2767.5" y1="439.4063" y2="439.4063"/><line style="stroke:#A80036;stroke-width:1.5;" x1="2222.5" x2="2767.5" y1="447.4063" y2="447.4063"/><ellipse cx="2232.5" cy="458.4063" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="325" x="2241.5" y="461.6167">urtEventSourceInit (source : urt_osEventSource_t*) : void</text><ellipse cx="2232.5" cy="471.2109" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="521" x="2241.5" y="474.4214">urtEventSourceBroadcast (source : urt_osEventSource_t*, flags : urt_osEventFlags_t) : void</text><!--MD5=[04a3b5a37031e2a4d723f19d8adf86f5]
+class urt_events--><rect codeLine="48" fill="#FEFECE" filter="url(#f5azsvhyueir9)" height="99.2188" id="urt_events" style="stroke:#A80036;stroke-width:1.5;" width="845" x="1334.5" y="103.4063"/><ellipse cx="1719.75" cy="119.4063" fill="#E0E0E0" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1723.9844,115.1719 L1718.7031,115.1719 L1718.7031,117.8438 L1723.5,117.8438 L1723.5,120 L1718.7031,120 L1718.7031,125.4063 L1716.2656,125.4063 L1716.2656,113.0156 L1723.9844,113.0156 L1723.9844,115.1719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="66" x="1740.25" y="123.5605">urt_events</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1335.5" x2="2178.5" y1="135.4063" y2="135.4063"/><line style="stroke:#A80036;stroke-width:1.5;" x1="1335.5" x2="2178.5" y1="143.4063" y2="143.4063"/><ellipse cx="1345.5" cy="154.4063" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="819" x="1354.5" y="157.6167">urtEventRegister (source : urt_osEventSource_t*, listener : urt_osEventListener_t*, mask : urt_osEventMask_t, flags : urt_osEventFlags_t) : void</text><ellipse cx="1345.5" cy="167.2109" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="520" x="1354.5" y="170.4214">urtEventUnregister (source : urt_osEventSource_t*, listener : urt_osEventListener_t*) : void</text><ellipse cx="1345.5" cy="180.0156" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="427" x="1354.5" y="183.2261">urtEventSignal (thread : urt_osThread_t*, mask : urt_osEventMask_t) : void</text><ellipse cx="1345.5" cy="192.8203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="618" x="1354.5" y="196.0308">urtEventWait (mask : urt_osEventMask_t, type : urt_osEventWait_t, timeout : urt_delay_t) : urt_osEventMask_t</text><!--MD5=[0cf29100c96c506429a28b45d347cc92]
+class urt_streams--><rect codeLine="48" fill="#FEFECE" filter="url(#f5azsvhyueir9)" height="73.6094" id="urt_streams" style="stroke:#A80036;stroke-width:1.5;" width="213" x="5266.5" y="115.9063"/><ellipse cx="5331.25" cy="131.9063" fill="#E0E0E0" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M5335.4844,127.6719 L5330.2031,127.6719 L5330.2031,130.3438 L5335,130.3438 L5335,132.5 L5330.2031,132.5 L5330.2031,137.9063 L5327.7656,137.9063 L5327.7656,125.5156 L5335.4844,125.5156 L5335.4844,127.6719 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="75" x="5351.75" y="136.0605">urt_streams</text><line style="stroke:#A80036;stroke-width:1.5;" x1="5267.5" x2="5478.5" y1="147.9063" y2="147.9063"/><line style="stroke:#A80036;stroke-width:1.5;" x1="5267.5" x2="5478.5" y1="155.9063" y2="155.9063"/><ellipse cx="5277.5" cy="166.9063" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="170" x="5286.5" y="170.1167">urtPrintf (fmt : char*, ... ) : int</text><ellipse cx="5277.5" cy="179.7109" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="187" x="5286.5" y="182.9214">urtErrPrintf (fmt : char*, ... ) : int</text><!--MD5=[3677786d1f00795918091b0110bfa4af]
+class urt_osTime_t--><rect codeLine="33" fill="#FEFECE" filter="url(#f5azsvhyueir9)" height="112.0234" id="urt_osTime_t" style="stroke:#A80036;stroke-width:1.5;" width="388" x="4698" y="388.4063"/><ellipse cx="4848.25" cy="404.4063" fill="#00CFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M4849.0938,411.1563 L4846.6406,411.1563 L4846.6406,400.9063 L4843.5,400.9063 L4843.5,398.7656 L4852.2344,398.7656 L4852.2344,400.9063 L4849.0938,400.9063 L4849.0938,411.1563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="79" x="4868.75" y="408.5605">urt_osTime_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="4699" x2="5085" y1="420.4063" y2="420.4063"/><line style="stroke:#A80036;stroke-width:1.5;" x1="4699" x2="5085" y1="428.4063" y2="428.4063"/><ellipse cx="4709" cy="439.4063" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="302" x="4718" y="442.6167">urtTimeSet (time: urt_osTime_t*, us : uint64_t) : void</text><ellipse cx="4709" cy="452.2109" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="250" x="4718" y="455.4214">urtTimeGet (time : urt_osTime_t*) : uint64_t</text><ellipse cx="4709" cy="465.0156" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="232" x="4718" y="468.2261">urtTimeNow (time : urt_osTime_t*) : void</text><ellipse cx="4709" cy="477.8203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="344" x="4718" y="481.0308">urtTimeAdd (time : urt_osTime_t*, offset : urt_delay_t) : void</text><ellipse cx="4709" cy="490.625" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="362" x="4718" y="493.8354">urtTimeDiff (from : urt_osTime_t*, to : urt_osTime_t*) : uint64_t</text><!--MD5=[86c16d91227b9a9ec3b6b9b0285de4e9]
+class urt_osThreadPrio_t--><rect codeLine="33" fill="#FEFECE" filter="url(#f5azsvhyueir9)" height="150.4375" id="urt_osThreadPrio_t" style="stroke:#A80036;stroke-width:1.5;" width="197" x="2825.5" y="666.9063"/><ellipse cx="2861.65" cy="682.9063" fill="#00CFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M2862.4938,689.6563 L2860.0406,689.6563 L2860.0406,679.4063 L2856.9,679.4063 L2856.9,677.2656 L2865.6344,677.2656 L2865.6344,679.4063 L2862.4938,679.4063 L2862.4938,689.6563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="118" x="2880.35" y="687.0605">urt_osThreadPrio_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2826.5" x2="3021.5" y1="698.9063" y2="698.9063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="160" x="2831.5" y="713.1167">URT_THREAD_PRIO_LOW_MIN</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="163" x="2831.5" y="725.9214">URT_THREAD_PRIO_LOW_MAX</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="182" x="2831.5" y="738.7261">URT_THREAD_PRIO_NORMAL_MIN</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="185" x="2831.5" y="751.5308">URT_THREAD_PRIO_NORMAL_MAX</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="164" x="2831.5" y="764.3354">URT_THREAD_PRIO_HIGH_MIN</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="167" x="2831.5" y="777.1401">URT_THREAD_PRIO_HIGH_MAX</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="150" x="2831.5" y="789.9448">URT_THREAD_PRIO_RT_MIN</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="153" x="2831.5" y="802.7495">URT_THREAD_PRIO_RT_MAX</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2826.5" x2="3021.5" y1="809.3438" y2="809.3438"/><!--MD5=[69d8aab9aa387a2f5052ea3da80e80ea]
+class urt_osThreadFunction_t--><rect codeLine="33" fill="#FEFECE" filter="url(#f5azsvhyueir9)" height="60.8047" id="urt_osThreadFunction_t" style="stroke:#A80036;stroke-width:1.5;" width="252" x="3058" y="711.4063"/><ellipse cx="3105.75" cy="727.4063" fill="#00CFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M3106.5938,734.1563 L3104.1406,734.1563 L3104.1406,723.9063 L3101,723.9063 L3101,721.7656 L3109.7344,721.7656 L3109.7344,723.9063 L3106.5938,723.9063 L3106.5938,734.1563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="148" x="3126.25" y="731.5605">urt_osThreadFunction_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="3059" x2="3309" y1="743.4063" y2="743.4063"/><line style="stroke:#A80036;stroke-width:1.5;" x1="3059" x2="3309" y1="751.4063" y2="751.4063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="240" x="3064" y="765.6167">urt_osThreadFunction_t (arg : void*) : void</text><!--MD5=[ab5f611d45c3fa10609c33f780d8c3e1]
+class urt_osThreadTerminateSignal_t--><rect codeLine="28" fill="#FEFECE" filter="url(#f5azsvhyueir9)" height="73.6094" id="urt_osThreadTerminateSignal_t" style="stroke:#A80036;stroke-width:1.5;" width="242" x="3345" y="704.9063"/><ellipse cx="3366.75" cy="720.9063" fill="#FF7F3F" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M3370.8594,726.9063 L3363.1406,726.9063 L3363.1406,714.5156 L3370.8594,714.5156 L3370.8594,716.6719 L3365.5938,716.6719 L3365.5938,719.3438 L3370.3594,719.3438 L3370.3594,721.5 L3365.5938,721.5 L3365.5938,724.75 L3370.8594,724.75 L3370.8594,726.9063 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="195" x="3382.25" y="725.0605">urt_osThreadTerminateSignal_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="3346" x2="3586" y1="736.9063" y2="736.9063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="230" x="3351" y="751.1167">URT_THREAD_TERMINATE_REQUEST = 15</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="192" x="3351" y="763.9214">URT_THREAD_TERMINATE_KILL = 9</text><line style="stroke:#A80036;stroke-width:1.5;" x1="3346" x2="3586" y1="770.5156" y2="770.5156"/><!--MD5=[47d14ad2c233fae1b32b8d0a283e820a]
+class urt_osThreadState_t--><rect codeLine="28" fill="#FEFECE" filter="url(#f5azsvhyueir9)" height="137.6328" id="urt_osThreadState_t" style="stroke:#A80036;stroke-width:1.5;" width="226" x="3622" y="672.9063"/><ellipse cx="3666.75" cy="688.9063" fill="#FF7F3F" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M3670.8594,694.9063 L3663.1406,694.9063 L3663.1406,682.5156 L3670.8594,682.5156 L3670.8594,684.6719 L3665.5938,684.6719 L3665.5938,687.3438 L3670.3594,687.3438 L3670.3594,689.5 L3665.5938,689.5 L3665.5938,692.75 L3670.8594,692.75 L3670.8594,694.9063 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="128" x="3687.25" y="693.0605">urt_osThreadState_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="3623" x2="3847" y1="704.9063" y2="704.9063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="194" x="3628" y="719.1167">URT_THREAD_STATE_INACTIVE = 0</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="195" x="3628" y="731.9214">URT_THREAD_STATE_RUNNING = 1</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="180" x="3628" y="744.7261">URT_THREAD_STATE_READY = 2</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="199" x="3628" y="757.5308">URT_THREAD_STATE_SLEEPING = 3</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="213" x="3628" y="770.3354">URT_THREAD_STATE_SUSPENDED = 4</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="190" x="3628" y="783.1401">URT_THREAD_STATE_WAITING = 5</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="214" x="3628" y="795.9448">URT_THREAD_STATE_TERMINATED = 6</text><line style="stroke:#A80036;stroke-width:1.5;" x1="3623" x2="3847" y1="802.5391" y2="802.5391"/><!--MD5=[0a16224ede9ffa9bb2d34e085a076e6d]
+class urt_osThread_t--><rect codeLine="33" fill="#FEFECE" filter="url(#f5azsvhyueir9)" height="324.8984" id="urt_osThread_t" style="stroke:#A80036;stroke-width:1.5;" width="778" x="2947" y="281.9063"/><ellipse cx="3284.75" cy="297.9063" fill="#00CFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M3285.5938,304.6563 L3283.1406,304.6563 L3283.1406,294.4063 L3280,294.4063 L3280,292.2656 L3288.7344,292.2656 L3288.7344,294.4063 L3285.5938,294.4063 L3285.5938,304.6563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="94" x="3305.25" y="302.0605">urt_osThread_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="2948" x2="3724" y1="313.9063" y2="313.9063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="179" x="2953" y="328.1167">URT_THREAD_SLEEP_MAX : float</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="225" x="2953" y="340.9214">URT_THREAD_SSLEP_MAX : unsigned int</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="233" x="2953" y="353.7261">URT_THREAD_MSLEEP_MAX : unsigned int</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="224" x="2953" y="366.5308">URT_THREAD_USLEEP_MAX : urt_delay_t</text><line style="stroke:#A80036;stroke-width:1.0;" x1="2948" x2="3724" y1="373.125" y2="373.125"/><ellipse cx="2958" cy="384.125" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="248" x="2967" y="387.3354">URT_THREAD_MEMORY (varname, stacksize)</text><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,2.0;" x1="2948" x2="3724" y1="393.9297" y2="393.9297"/><ellipse cx="2958" cy="404.9297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="752" x="2967" y="408.1401">urtThreadInit (memory : void*, size : size_t, prio : urt_osThreadPrio_t, func : urt_osThreadFunction_t*, arg : void*) : urt_osThread_t*</text><ellipse cx="2958" cy="417.7344" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="272" x="2967" y="420.9448">urtThreadStart (thread : urt_osThread_t*) : void</text><ellipse cx="2958" cy="430.5391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="153" x="2967" y="433.7495">urtThreadYield (void) : void</text><ellipse cx="2958" cy="443.3438" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="271" x="2967" y="446.5542">urtThreadGetPriority (void) : urt_osThreadPrio_t</text><ellipse cx="2958" cy="456.1484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="304" x="2967" y="459.3589">urtThreadSetPriority (prio : urt_osThreadPrio_t) : void</text><ellipse cx="2958" cy="468.9531" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="220" x="2967" y="472.1636">urtThreadSleep (seconds : float) : void</text><ellipse cx="2958" cy="481.7578" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="273" x="2967" y="484.9683">urtThreadSSleep (seconds : unsigned int) : void</text><ellipse cx="2958" cy="494.5625" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="297" x="2967" y="497.7729">urtThreadMSleep (milliseconds : unsigned int) : void</text><ellipse cx="2958" cy="507.3672" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="297" x="2967" y="510.5776">urtThreadUSleep (microseconds : urt_delay_t) : void</text><ellipse cx="2958" cy="520.1719" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="277" x="2967" y="523.3823">urtThreadSleepUntil (time : urt_osTime_t*) : void</text><ellipse cx="2958" cy="532.9766" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="146" x="2967" y="536.187">urtThreadExit (void) : void</text><ellipse cx="2958" cy="545.7813" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="518" x="2967" y="548.9917">urtThreadTerminate (thread : urt_osThread_t*, sig : urt_osThreadTerminateSignal_t) : void</text><ellipse cx="2958" cy="558.5859" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="224" x="2967" y="561.7964">urtThreadShouldTerminate (void) : bool</text><ellipse cx="2958" cy="571.3906" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="264" x="2967" y="574.6011">urtThreadJoin (thread : urt_osThread_t*) : void</text><ellipse cx="2958" cy="584.1953" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="387" x="2967" y="587.4058">urtThreadGetState (thread : urt_osThread_t*) : urt_osThreadState_t</text><ellipse cx="2958" cy="597" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="237" x="2967" y="600.2104">urtThreadGetSelf (void) : urt_osThread_t*</text><!--MD5=[93799a03260ba286abda700174f4f205]
+class urt_osTimerCallback_t--><rect codeLine="33" fill="#FEFECE" filter="url(#f5azsvhyueir9)" height="60.8047" id="urt_osTimerCallback_t" style="stroke:#A80036;stroke-width:1.5;" width="286" x="4130" y="413.9063"/><ellipse cx="4200.75" cy="429.9063" fill="#00CFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M4201.5938,436.6563 L4199.1406,436.6563 L4199.1406,426.4063 L4196,426.4063 L4196,424.2656 L4204.7344,424.2656 L4204.7344,426.4063 L4201.5938,426.4063 L4201.5938,436.6563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="136" x="4221.25" y="434.0605">urt_osTimerCallback_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="4131" x2="4415" y1="445.9063" y2="445.9063"/><line style="stroke:#A80036;stroke-width:1.5;" x1="4131" x2="4415" y1="453.9063" y2="453.9063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="274" x="4136" y="468.1167">urt_osTimerCallback_t (parameter : void*) : void</text><!--MD5=[0b340d7b925b1eab6a1b7e084f68a7c2]
+class urt_osTimer_t--><rect codeLine="33" fill="#FEFECE" filter="url(#f5azsvhyueir9)" height="112.0234" id="urt_osTimer_t" style="stroke:#A80036;stroke-width:1.5;" width="737" x="3904.5" y="96.9063"/><ellipse cx="4226.75" cy="112.9063" fill="#00CFFF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M4227.5938,119.6563 L4225.1406,119.6563 L4225.1406,109.4063 L4222,109.4063 L4222,107.2656 L4230.7344,107.2656 L4230.7344,109.4063 L4227.5938,109.4063 L4227.5938,119.6563 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="84" x="4247.25" y="117.0605">urt_osTimer_t</text><line style="stroke:#A80036;stroke-width:1.5;" x1="3905.5" x2="4640.5" y1="128.9063" y2="128.9063"/><line style="stroke:#A80036;stroke-width:1.5;" x1="3905.5" x2="4640.5" y1="136.9063" y2="136.9063"/><ellipse cx="3915.5" cy="147.9063" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="240" x="3924.5" y="151.1167">urtTimerInit (timer : urt_osTimer_t*) : void</text><ellipse cx="3915.5" cy="160.7109" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="669" x="3924.5" y="163.9214">urtTimerSet (timer : urt_osTimer_t*, time : urtOsTime_t*, callback : urt_osTimerCallback_t*, parameter : void*) : void</text><ellipse cx="3915.5" cy="173.5156" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="711" x="3924.5" y="176.7261">urtTimerSetPeriodic (timer : urt_osTimer_t*, period : urt_delay_t, callback : urt_osTimerCallback_t*, parameter : void*) : void</text><ellipse cx="3915.5" cy="186.3203" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="255" x="3924.5" y="189.5308">urtTimerReset (timer : urt_osTimer_t*) : void</text><ellipse cx="3915.5" cy="199.125" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="271" x="3924.5" y="202.3354">urtTimerIsArmed (timer : urt_osTimer_t*) : bool</text><!--MD5=[e3360fc40e9fdd57a9a7765da2498ba3]
+class version--><rect codeLine="23" fill="#FEFECE" filter="url(#f5azsvhyueir9)" height="73.6094" id="version" style="stroke:#A80036;stroke-width:1.5;" width="249" x="4676.5" y="115.9063"/><ellipse cx="4774.25" cy="131.9063" fill="#BFBFBF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M4777.2188,137.5469 Q4776.6406,137.8438 4776,137.9844 Q4775.3594,138.1406 4774.6563,138.1406 Q4772.1563,138.1406 4770.8281,136.5 Q4769.5156,134.8438 4769.5156,131.7188 Q4769.5156,128.5938 4770.8281,126.9375 Q4772.1563,125.2813 4774.6563,125.2813 Q4775.3594,125.2813 4776,125.4375 Q4776.6563,125.5938 4777.2188,125.8906 L4777.2188,128.6094 Q4776.5938,128.0313 4776,127.7656 Q4775.4063,127.4844 4774.7813,127.4844 Q4773.4375,127.4844 4772.75,128.5625 Q4772.0625,129.625 4772.0625,131.7188 Q4772.0625,133.8125 4772.75,134.8906 Q4773.4375,135.9531 4774.7813,135.9531 Q4775.4063,135.9531 4776,135.6875 Q4776.5938,135.4063 4777.2188,134.8281 L4777.2188,137.5469 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="45" x="4794.75" y="136.0605">version</text><line style="stroke:#A80036;stroke-width:1.5;" x1="4677.5" x2="4924.5" y1="147.9063" y2="147.9063"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="236" x="4682.5" y="162.1167">URT_OSAL_VERSION_MAJOR : unsigned int</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="237" x="4682.5" y="174.9214">URT_OSAL_VERSION_MINOR : unsigned int</text><line style="stroke:#A80036;stroke-width:1.5;" x1="4677.5" x2="4924.5" y1="181.5156" y2="181.5156"/><!--MD5=[7766572fa0c619a5409829048dc0b6d6]
+link urt_osCondvar_t to urt_osCondvarWaitStatus_t--><path codeLine="307" d="M378,222.1463 C378,275.6962 378,348.8463 378,396.1063 " fill="none" id="urt_osCondvar_t-to-urt_osCondvarWaitStatus_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="378,401.1763,382,392.1763,378,396.1763,374,392.1763,378,401.1763" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[9b2507ea88616aeae65e3c4d63560016]
+link urt_osCondvar_t to urt_osMutex_t--><path codeLine="308" d="M733.2,152.9063 C749.99,152.9063 766.79,152.9063 783.58,152.9063 " fill="none" id="urt_osCondvar_t-to-urt_osMutex_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="788.8,152.9063,779.8,148.9063,783.8,152.9063,779.8,156.9063,788.8,152.9063" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[56a3b3ef284e7e577b4773190d8f2a32]
+link urt_osTimer_t to urt_osTime_t--><path codeLine="310" d="M4586.32,208.9362 C4611.12,217.5263 4635.32,227.4462 4658,238.9063 C4729.43,274.9863 4796.64,337.9163 4840.55,384.4563 " fill="none" id="urt_osTimer_t-to-urt_osTime_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="4844.19,388.3463,4840.9539,379.0442,4840.7708,384.6981,4835.1169,384.515,4844.19,388.3463" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[83094e108045c8f9585007cdb3b7cb2e]
+link urt_osTimer_t to urt_osTimerCallback_t--><path codeLine="311" d="M4273,209.0363 C4273,267.7663 4273,358.9363 4273,408.4763 " fill="none" id="urt_osTimer_t-to-urt_osTimerCallback_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="4273,413.7163,4277,404.7163,4273,408.7163,4269,404.7163,4273,413.7163" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[8d8c3240b5b2b5edf6544088e583ffa5]
+link urt_osThread_t to urt_osThreadPrio_t--><path codeLine="313" d="M3110.71,606.9863 C3081.47,627.9663 3052.75,648.5663 3026.93,667.0763 " fill="none" id="urt_osThread_t-to-urt_osThreadPrio_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="3022.82,670.0363,3032.4633,668.0344,3026.8809,667.1192,3027.7961,661.5369,3022.82,670.0363" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d7d1d43fd970fb07a484642bc19fcb13]
+link urt_osThread_t to urt_osThreadFunction_t--><path codeLine="314" d="M3252.88,606.9863 C3233.44,644.7863 3214.62,681.3763 3201.58,706.7262 " fill="none" id="urt_osThread_t-to-urt_osThreadFunction_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="3199.22,711.3263,3206.8942,705.1532,3201.5074,706.8801,3199.7804,701.4933,3199.22,711.3263" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[6564761b32ad7eeb5abb8896c72cfca5]
+link urt_osThread_t to urt_osThreadTerminateSignal_t--><path codeLine="315" d="M3407.09,606.9863 C3422.26,641.4762 3436.98,674.9463 3447.92,699.7963 " fill="none" id="urt_osThread_t-to-urt_osThreadTerminateSignal_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="3450.05,704.6563,3450.0815,694.8074,3448.0339,700.0807,3442.7606,698.0332,3450.05,704.6563" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[92ba23225d8de8f8080583fedda5e6f8]
+link urt_osThread_t to urt_osThreadState_t--><path codeLine="316" d="M3554.18,606.9863 C3583.88,628.9863 3613.03,650.5763 3638.95,669.7763 " fill="none" id="urt_osThread_t-to-urt_osThreadState_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="3643.09,672.8363,3638.236,664.2666,3639.0712,669.8615,3633.4763,670.6967,3643.09,672.8363" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[78b286ab2177e5f7b31e6e832d821818]
+link urt_osThread_t to urt_osTime_t--><path codeLine="317" d="M3714.32,281.8563 C3777.11,261.2663 3842.36,243.5963 3905.5,232.6563 C3945.73,225.6862 4600.27,225.6862 4640.5,232.6563 C4730.57,248.2563 4806.38,327.2162 4850.52,384.1463 " fill="none" id="urt_osThread_t-to-urt_osTime_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="4853.64,388.2063,4851.3198,378.6346,4850.5901,384.2442,4844.9805,383.5145,4853.64,388.2063" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[659af6ab57e6a38ebfd5c07c5616787c]
+link urt_osEventListener_t to urt_osEventFlags_t--><path codeLine="319" d="M1939,487.4263 C1939,548.5863 1939,660.4963 1939,712.6963 " fill="none" id="urt_osEventListener_t-to-urt_osEventFlags_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1939,717.8663,1943,708.8663,1939,712.8663,1935,708.8663,1939,717.8663" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[eac11679f26c499aa1c571e1f795945d]
+link urt_osEventSource_t to urt_osEventFlags_t--><path codeLine="320" d="M2431.52,481.5563 C2372.83,514.7663 2283,565.0263 2204,606.9063 C2130.6,645.8163 2044.61,688.8263 1990.96,715.3663 " fill="none" id="urt_osEventSource_t-to-urt_osEventFlags_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1986.19,717.7262,1996.0303,717.3168,1990.6707,715.5074,1992.4801,710.1477,1986.19,717.7262" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0259cdb10c6c32168d1d17d25519d939]
+link urt_events to urt_osEventSource_t--><path codeLine="321" d="M2095.96,202.4362 C2133.1,212.4163 2169.81,224.4362 2204,238.9063 C2300.91,279.9063 2397.75,356.9363 2451.66,403.8663 " fill="none" id="urt_events-to-urt_osEventSource_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="2455.47,407.1863,2451.3476,398.2416,2451.7133,403.8867,2446.0683,404.2523,2455.47,407.1863" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0ce043e0e9532fc393f3f8836f5de19a]
+link urt_events to urt_osEventListener_t--><path codeLine="322" d="M1787.67,202.6862 C1821.66,256.7663 1876.1,343.3563 1909.58,396.6163 " fill="none" id="urt_events-to-urt_osEventListener_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1912.36,401.0263,1910.9584,391.2776,1909.6997,396.7927,1904.1847,395.5341,1912.36,401.0263" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[430bebba9cd89d3ba8f63b2078968bca]
+link urt_events to urt_osEventMask_t--><path codeLine="323" d="M1521.97,202.4963 C1496.66,212.4763 1472.12,224.4763 1450,238.9063 C1385.29,281.1263 1333.39,356.4063 1305.49,402.9063 " fill="none" id="urt_events-to-urt_osEventMask_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1302.87,407.3163,1310.9082,401.6253,1305.4257,403.0187,1304.0322,397.5362,1302.87,407.3163" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b1b185abc2161e087cab32ae7fdb2c40]
+link urt_events to urt_osEventFlags_t--><path codeLine="324" d="M1541.17,202.4362 C1511.66,213.1363 1488.02,225.3763 1478,238.9063 C1429.32,304.6163 1428.9,541.5063 1478,606.9063 C1523.73,667.8263 1739.17,710.0663 1858.66,729.2463 " fill="none" id="urt_events-to-urt_osEventFlags_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1863.93,730.0863,1855.6696,724.723,1858.992,729.3013,1854.4136,732.6238,1863.93,730.0863" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[706a1974d1b474cbba7e7b0213f243a1]
+link urt_events to urt_osEventWait_t--><path codeLine="325" d="M1704.76,202.8362 C1694.2,214.1063 1683.68,226.4662 1675,238.9063 C1640.01,289.0563 1611.09,353.4663 1593.73,396.4663 " fill="none" id="urt_events-to-urt_osEventWait_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1591.77,401.3363,1598.8446,394.4842,1593.6392,396.6988,1591.4247,391.4934,1591.77,401.3363" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b2a418b5421fb4ffe691e7836ba4dc3d]
+link urt_events to urt_osThread_t--><path codeLine="326" d="M2179.78,162.9163 C2366.99,173.5263 2588.78,195.2463 2785,238.9063 C2836.5,250.3663 2889.67,265.5363 2941.75,282.4562 " fill="none" id="urt_events-to-urt_osThread_t" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="2946.78,284.0963,2939.453,277.5148,2942.0239,282.5537,2936.985,285.1246,2946.78,284.0963" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[714d1c48935668530abaf46443feefe1]
+@startuml
+
+title **µRT**\nOperating System Abstraction Layer (OSAL)
+
+!include ./procedures.iuml
+
+/'### ENTITIES ###############################################################'/
+
+!startsub ENTITIES
+
+/' Version definition. '/
+$configuration("version") {
+    'Major version of OSAL implementation.
+  URT_OSAL_VERSION_MAJOR : unsigned int
+    'Minor version of OSAL implementation.
+  URT_OSAL_VERSION_MINOR : unsigned int
+} /' version '/
+
+/' OS debugging feature. '/
+$group("debug") {
+  /' Just a function for debugging. '/
+  $function("urt_debug") {
+      'Checks the condition in debug mode.
+    + {method} urtDebugAssert (condition : bool) : void
+  }
+} /' debug '/
+
+/' OS mutex lock feature. '/
+$group("mutex") {
+  /' OS mutex lock interface. '/
+  $type("urt_osMutex_t") {
+      'Initializes a urt_osMutex_t object.
+    + {method} urtMutexInit (mutex : urt_osMutex_t*) : void
+      'Block the thread until the mutex could be locked.
+    + {method} urtMutexLock (mutex : urt_osMutex_t*) : void
+      'Tries to lock the mutex, but does not block but immediately returns an indicator.
+    + {method} urtMutexTryLock (mutex : urt_osMutex_t*) : bool
+      'Unlocks a previously locked mutex.
+    + {method} urtMutexUnlock (mutex : urt_osMutex_t*) : void
+  }
+} /' mutex '/
+
+/' OS condition variable feature. '/
+$group("condition variable") {
+  /' Return type for the wait function on condition variables. '/
+  $enumeration("urt_osCondvarWaitStatus_t") {
+      'The condition variable has been signaled.
+    URT_CONDVAR_WAITSTATUS_SIGNAL = 1
+      'The condition variable has been broadcasted.
+    URT_CONDVAR_WAITSTATUS_BROADCAST = 2
+      'The wait function timed out.
+    URT_CONDVAR_WAITSTATUS_TIMEOUT = 0
+  }
+
+  /' Condition variable interface. '/
+  $type("urt_osCondvar_t") {
+      'Initializes a urt_osCondvar_t object.
+    + {method} urtCondvarInit (condvar : urt_osCondvar_t*) : void
+      'Signals one thread that is waiting for the condition variable.
+    + {method} urtCondvarSignal (condvar : urt_osCondvar_t*) : void
+      'Signals all threads that are waiting for the condition variable.
+    + {method} urtCondvarBroadcast (condvar : urt_osCondvar_t*) : void
+    .. ""URT_CFG_OSAL_CONDVAR_TIMEOUT"" == false ..
+      'Waits for the condition variable.
+    + {method} urtCondvarWait (condvar : urt_osCondvar_t*, mutex : urt_osMutex_t*) : urt_osCondvarWaitStatus_t
+    .. ""URT_CFG_OSAL_CONDVAR_TIMEOUT"" == true ..
+      'Waits for the condition variable with timeout.
+    + {method} urtCondvarWait (condvar : urt_osCondvar_t*, mutex : urt_osMutex_t*, timeout : urt_delay_t) : urt_osCondvarWaitStatus_t
+  }
+} /' condition variable '/
+
+/' OS event feature. '/
+$group("events") {
+  /' OS event mask type. '/
+  $type("urt_osEventMask_t") {
+      'The event mask, which will be handled with maximum priority by the event system.
+    URT_EVENTMASK_MAXPRIO : urt_osEventMask_t
+      'Event mask to filter no events at all (typically 0xF..F).
+    URT_EVENTMASK_ALL : urt_osEventMask_t
+  }
+
+  /' OS event flag type. '/
+  $type("urt_osEventFlags_t") {
+  }
+
+  /' OS event wait type. '/
+  $enumeration("urt_osEventWait_t") {
+      'Wait for exactly one event.
+    URT_EVENT_WAIT_ONE = 0
+      'Wait for at least one event.
+    URT_EVENT_WAIT_ANY = 1
+      'Wait for all events.
+    URT_EVENT_WAIT_ALL = 2
+  }
+
+  /' OS event listener interface. '/
+  $type("urt_osEventListener_t") {
+      'Initializes an urt_osEventListener_t object.
+    + {method} urtEventListenerInit (listener : urt_osEventListener_t*) : void
+      'Retrieves the flags of the event listener.
+    + {method} urtEventListenerGetFlags (listener : urt_osEventListener_t*) : urt_osEventFlags_t
+      'Retrieves and clears the flags of the event listener.
+    + {method} urtEventListenerClearFlags (listener : urt_osEventListener_t*) : urt_osEventFlags_t
+  }
+
+  /' OS event source interface. '/
+  $type("urt_osEventSource_t") {
+      'Initializes an urt_osEventSource_t object.
+    + {method} urtEventSourceInit (source : urt_osEventSource_t*) : void
+      'Emits an event.
+    + {method} urtEventSourceBroadcast (source : urt_osEventSource_t*, flags : urt_osEventFlags_t) : void
+  }
+
+  /' Not a class/type but a set of static event-related functions. '/
+  $function("urt_events") {
+      'Registers a lister to a source.
+    + {method} urtEventRegister (source : urt_osEventSource_t*, listener : urt_osEventListener_t*, mask : urt_osEventMask_t, flags : urt_osEventFlags_t) : void
+      'Unregisters a listener from a source.
+    + {method} urtEventUnregister (source : urt_osEventSource_t*, listener : urt_osEventListener_t*) : void
+      'Signal an event to a single thread.
+    + {method} urtEventSignal (thread : urt_osThread_t*, mask : urt_osEventMask_t) : void
+      'Blocks the thread until any event occurs or the timeout expires.
+    + {method} urtEventWait (mask : urt_osEventMask_t, type : urt_osEventWait_t, timeout : urt_delay_t) : urt_osEventMask_t
+  }
+} /' events '/
+
+/' OS streams feature. '/
+$group("streams") {
+  /' Not a class/type but a set of output-related functions. '/
+  $function("urt_streams") {
+      'Prints a formatted string to the standard output stream (stdout).
+    + {method} urtPrintf (fmt : char*, ... ) : int
+      'Prints a formatted string to the standard error stream (stderr).
+    + {method} urtErrPrintf (fmt : char*, ... ) : int
+  }
+} /' streams '/
+
+/' OS time measurement feature. '/
+$group("time") {
+  /' OS time type with arbitrary resolution. '/
+  $type("urt_osTime_t") {
+      'Set an OS time to a specified value (in microseconds).
+    + {method} urtTimeSet (time: urt_osTime_t*, us : uint64_t) : void
+      'Retrieve the microsecond equivalent value from an OS time.
+    + {method} urtTimeGet (time : urt_osTime_t*) : uint64_t
+      'Retrieves the current system time.
+    + {method} urtTimeNow (time : urt_osTime_t*) : void
+      'Increase a system time object.
+    + {method} urtTimeAdd (time : urt_osTime_t*, offset : urt_delay_t) : void
+      'Calculate difference between two OS times in microseconds.
+    + {method} urtTimeDiff (from : urt_osTime_t*, to : urt_osTime_t*) : uint64_t
+  }
+} /' time '/
+
+/' OS thread feature. '/
+$group("thread") {
+  /' Thread priority type. '/
+  $type("urt_osThreadPrio_t") {
+      'Minimum priority for low priority threads.
+    URT_THREAD_PRIO_LOW_MIN
+      'Maximum priority for low priority threads.
+    URT_THREAD_PRIO_LOW_MAX
+      'Minimum priority for normal priority threads.
+    URT_THREAD_PRIO_NORMAL_MIN
+      'Maximum priority for normal priority threads.
+    URT_THREAD_PRIO_NORMAL_MAX
+      'Minimum priority for high priority threads.
+    URT_THREAD_PRIO_HIGH_MIN
+      'Maximum priority for high priority threads.
+    URT_THREAD_PRIO_HIGH_MAX
+      'Minimum priority for real-time threads.
+    URT_THREAD_PRIO_RT_MIN
+      'Maximum priority for real-time threads.
+    URT_THREAD_PRIO_RT_MAX
+  }
+
+  /' Thread main function type. '/
+  $type("urt_osThreadFunction_t") {
+    urt_osThreadFunction_t (arg : void*) : void
+  }
+
+  /' Thread terminate signals. '/
+  $enumeration("urt_osThreadTerminateSignal_t") {
+      'Signal to request termination asap.
+    URT_THREAD_TERMINATE_REQUEST = 15
+      'Signal to kill a thread immediately.
+    URT_THREAD_TERMINATE_KILL = 9
+  }
+
+  /' Thread execution states. '/
+  $enumeration("urt_osThreadState_t") {
+      'Thread has not been started yet.
+    URT_THREAD_STATE_INACTIVE = 0
+      'Thread is currently being executed.
+    URT_THREAD_STATE_RUNNING = 1
+      'Thread is ready but waiting to be scheduled.
+    URT_THREAD_STATE_READY = 2
+      'Thread is actively sleeping.
+    URT_THREAD_STATE_SLEEPING = 3
+      'Thread has ben suspended explicitely.
+    URT_THREAD_STATE_SUSPENDED = 4
+      'Thread is waiting for something (e.g. Mutex, event, etc.).
+    URT_THREAD_STATE_WAITING = 5
+      'Thread has terminated.
+    URT_THREAD_STATE_TERMINATED = 6
+  }
+
+  /' OS thread interface. '/
+  $type("urt_osThread_t") {
+     'Maximum sleep interval in seconds (as float).
+    URT_THREAD_SLEEP_MAX : float
+      'Maximum sleep interval in seconds.
+    URT_THREAD_SSLEP_MAX : unsigned int
+      'Maximum sleep interval in milliseconds.
+    URT_THREAD_MSLEEP_MAX : unsigned int
+      'Maximum sleep interval in microseconds.
+    URT_THREAD_USLEEP_MAX : urt_delay_t
+    - -
+      'Macro to setup working area as static variable (handles alignment if required).
+    + {method} URT_THREAD_MEMORY (varname, stacksize)
+    ..
+      'Initializes an urt_osThread_t object.
+    + {method} urtThreadInit (memory : void*, size : size_t, prio : urt_osThreadPrio_t, func : urt_osThreadFunction_t*, arg : void*) : urt_osThread_t*
+      'Starts a thread.
+    + {method} urtThreadStart (thread : urt_osThread_t*) : void
+      'The calling threads yields.
+    + {method} urtThreadYield (void) : void
+      'Retrieves the priority of the calling thread.
+    + {method} urtThreadGetPriority (void) : urt_osThreadPrio_t
+      'Sets the priority of the calling thread.
+    + {method} urtThreadSetPriority (prio : urt_osThreadPrio_t) : void
+      'Suspends the calling thread for the specified time.
+    + {method} urtThreadSleep (seconds : float) : void
+      'Suspends the calling thread for the specified time.
+    + {method} urtThreadSSleep (seconds : unsigned int) : void
+      'Suspends the calling thread for the specified time.
+    + {method} urtThreadMSleep (milliseconds : unsigned int) : void
+      'Suspends the calling thread for the specified time.
+    + {method} urtThreadUSleep (microseconds : urt_delay_t) : void
+      'Suspends the calling thread until the specified time.
+    + {method} urtThreadSleepUntil (time : urt_osTime_t*) : void
+      'The calling thread exits execution (terminates).
+    + {method} urtThreadExit (void) : void
+      'Terminates a specified thread.
+    + {method} urtThreadTerminate (thread : urt_osThread_t*, sig : urt_osThreadTerminateSignal_t) : void
+      'Retrieves whether the calling thread has been requested to terminate.
+    + {method} urtThreadShouldTerminate (void) : bool
+      'Waits until the specified thread terminates.
+    + {method} urtThreadJoin (thread : urt_osThread_t*) : void
+      'Retrieves the execution state of the specified thread.
+    + {method} urtThreadGetState (thread : urt_osThread_t*) : urt_osThreadState_t
+      'Retrieves the calling thread itself.
+    + {method} urtThreadGetSelf (void) : urt_osThread_t*
+  }
+} /'thread'/
+
+/' OS timer feature. '/
+$group("timer") {
+  /' Timer callback definition. '/
+  $type("urt_osTimerCallback_t") {
+    urt_osTimerCallback_t (parameter : void*) : void
+  }
+
+  /' OS timer interface. '/
+  $type("urt_osTimer_t") {
+      'Initializes an urt_osTimer_t object.
+    + {method} urtTimerInit (timer : urt_osTimer_t*) : void
+      'Sets the timer to a specified delay with specified callback and arguments.
+    + {method} urtTimerSet (timer : urt_osTimer_t*, time : urtOsTime_t*, callback : urt_osTimerCallback_t*, parameter : void*) : void
+      'Sets the timer to a specified period with specified callback and arguments.
+    + {method} urtTimerSetPeriodic (timer : urt_osTimer_t*, period : urt_delay_t, callback : urt_osTimerCallback_t*, parameter : void*) : void
+      'Resets the timer.
+    + {method} urtTimerReset (timer : urt_osTimer_t*) : void
+      'Check whether the timer is already armed.
+    + {method} urtTimerIsArmed (timer : urt_osTimer_t*) : bool
+  }
+} /'condition variable'/
+
+!endsub
+
+/'### DEPENDENCIES & LAYOUT ##################################################'/
+
+!startsub DEPENDENCIES
+
+urt_osCondvar_t ..> urt_osCondvarWaitStatus_t
+urt_osCondvar_t .> urt_osMutex_t
+
+urt_osTimer_t ..> urt_osTime_t
+urt_osTimer_t ..> urt_osTimerCallback_t
+
+urt_osThread_t ..> urt_osThreadPrio_t
+urt_osThread_t ..> urt_osThreadFunction_t
+urt_osThread_t ..> urt_osThreadTerminateSignal_t
+urt_osThread_t ..> urt_osThreadState_t
+urt_osThread_t .> urt_osTime_t
+
+urt_osEventListener_t ..> urt_osEventFlags_t
+urt_osEventSource_t ..> urt_osEventFlags_t
+urt_events ..> urt_osEventSource_t
+urt_events ..> urt_osEventListener_t
+urt_events ..> urt_osEventMask_t
+urt_events ..> urt_osEventFlags_t
+urt_events ..> urt_osEventWait_t
+urt_events ..> urt_osThread_t
+
+!endsub
+
+/'### OUTRO ##################################################################'/
+
+@enduml
+
+@startuml
+
+title **µRT**\nOperating System Abstraction Layer (OSAL)
+
+
+
+
+
+
+
+
+
+
+
+
+  class version <<C,BFBFBF>> {
+  URT_OSAL_VERSION_MAJOR : unsigned int
+  URT_OSAL_VERSION_MINOR : unsigned int
+} 
+
+  package "debug" <<Rectangle>> {
+    class urt_debug <<F,E0E0E0>> {
+    + {method} urtDebugAssert (condition : bool) : void
+  }
+} 
+
+  package "mutex" <<Rectangle>> {
+    class urt_osMutex_t <<T,00CFFF>> {
+    + {method} urtMutexInit (mutex : urt_osMutex_t*) : void
+    + {method} urtMutexLock (mutex : urt_osMutex_t*) : void
+    + {method} urtMutexTryLock (mutex : urt_osMutex_t*) : bool
+    + {method} urtMutexUnlock (mutex : urt_osMutex_t*) : void
+  }
+} 
+
+  package "condition variable" <<Rectangle>> {
+    class urt_osCondvarWaitStatus_t <<E,FF7F3F>> {
+    URT_CONDVAR_WAITSTATUS_SIGNAL = 1
+    URT_CONDVAR_WAITSTATUS_BROADCAST = 2
+    URT_CONDVAR_WAITSTATUS_TIMEOUT = 0
+  }
+
+    class urt_osCondvar_t <<T,00CFFF>> {
+    + {method} urtCondvarInit (condvar : urt_osCondvar_t*) : void
+    + {method} urtCondvarSignal (condvar : urt_osCondvar_t*) : void
+    + {method} urtCondvarBroadcast (condvar : urt_osCondvar_t*) : void
+    .. ""URT_CFG_OSAL_CONDVAR_TIMEOUT"" == false ..
+    + {method} urtCondvarWait (condvar : urt_osCondvar_t*, mutex : urt_osMutex_t*) : urt_osCondvarWaitStatus_t
+    .. ""URT_CFG_OSAL_CONDVAR_TIMEOUT"" == true ..
+    + {method} urtCondvarWait (condvar : urt_osCondvar_t*, mutex : urt_osMutex_t*, timeout : urt_delay_t) : urt_osCondvarWaitStatus_t
+  }
+} 
+
+  package "events" <<Rectangle>> {
+    class urt_osEventMask_t <<T,00CFFF>> {
+    URT_EVENTMASK_MAXPRIO : urt_osEventMask_t
+    URT_EVENTMASK_ALL : urt_osEventMask_t
+  }
+
+    class urt_osEventFlags_t <<T,00CFFF>> {
+  }
+
+    class urt_osEventWait_t <<E,FF7F3F>> {
+    URT_EVENT_WAIT_ONE = 0
+    URT_EVENT_WAIT_ANY = 1
+    URT_EVENT_WAIT_ALL = 2
+  }
+
+    class urt_osEventListener_t <<T,00CFFF>> {
+    + {method} urtEventListenerInit (listener : urt_osEventListener_t*) : void
+    + {method} urtEventListenerGetFlags (listener : urt_osEventListener_t*) : urt_osEventFlags_t
+    + {method} urtEventListenerClearFlags (listener : urt_osEventListener_t*) : urt_osEventFlags_t
+  }
+
+    class urt_osEventSource_t <<T,00CFFF>> {
+    + {method} urtEventSourceInit (source : urt_osEventSource_t*) : void
+    + {method} urtEventSourceBroadcast (source : urt_osEventSource_t*, flags : urt_osEventFlags_t) : void
+  }
+
+    class urt_events <<F,E0E0E0>> {
+    + {method} urtEventRegister (source : urt_osEventSource_t*, listener : urt_osEventListener_t*, mask : urt_osEventMask_t, flags : urt_osEventFlags_t) : void
+    + {method} urtEventUnregister (source : urt_osEventSource_t*, listener : urt_osEventListener_t*) : void
+    + {method} urtEventSignal (thread : urt_osThread_t*, mask : urt_osEventMask_t) : void
+    + {method} urtEventWait (mask : urt_osEventMask_t, type : urt_osEventWait_t, timeout : urt_delay_t) : urt_osEventMask_t
+  }
+} 
+
+  package "streams" <<Rectangle>> {
+    class urt_streams <<F,E0E0E0>> {
+    + {method} urtPrintf (fmt : char*, ... ) : int
+    + {method} urtErrPrintf (fmt : char*, ... ) : int
+  }
+} 
+
+  package "time" <<Rectangle>> {
+    class urt_osTime_t <<T,00CFFF>> {
+    + {method} urtTimeSet (time: urt_osTime_t*, us : uint64_t) : void
+    + {method} urtTimeGet (time : urt_osTime_t*) : uint64_t
+    + {method} urtTimeNow (time : urt_osTime_t*) : void
+    + {method} urtTimeAdd (time : urt_osTime_t*, offset : urt_delay_t) : void
+    + {method} urtTimeDiff (from : urt_osTime_t*, to : urt_osTime_t*) : uint64_t
+  }
+} 
+
+  package "thread" <<Rectangle>> {
+    class urt_osThreadPrio_t <<T,00CFFF>> {
+    URT_THREAD_PRIO_LOW_MIN
+    URT_THREAD_PRIO_LOW_MAX
+    URT_THREAD_PRIO_NORMAL_MIN
+    URT_THREAD_PRIO_NORMAL_MAX
+    URT_THREAD_PRIO_HIGH_MIN
+    URT_THREAD_PRIO_HIGH_MAX
+    URT_THREAD_PRIO_RT_MIN
+    URT_THREAD_PRIO_RT_MAX
+  }
+
+    class urt_osThreadFunction_t <<T,00CFFF>> {
+    urt_osThreadFunction_t (arg : void*) : void
+  }
+
+    class urt_osThreadTerminateSignal_t <<E,FF7F3F>> {
+    URT_THREAD_TERMINATE_REQUEST = 15
+    URT_THREAD_TERMINATE_KILL = 9
+  }
+
+    class urt_osThreadState_t <<E,FF7F3F>> {
+    URT_THREAD_STATE_INACTIVE = 0
+    URT_THREAD_STATE_RUNNING = 1
+    URT_THREAD_STATE_READY = 2
+    URT_THREAD_STATE_SLEEPING = 3
+    URT_THREAD_STATE_SUSPENDED = 4
+    URT_THREAD_STATE_WAITING = 5
+    URT_THREAD_STATE_TERMINATED = 6
+  }
+
+    class urt_osThread_t <<T,00CFFF>> {
+    URT_THREAD_SLEEP_MAX : float
+    URT_THREAD_SSLEP_MAX : unsigned int
+    URT_THREAD_MSLEEP_MAX : unsigned int
+    URT_THREAD_USLEEP_MAX : urt_delay_t
+    - -
+    + {method} URT_THREAD_MEMORY (varname, stacksize)
+    ..
+    + {method} urtThreadInit (memory : void*, size : size_t, prio : urt_osThreadPrio_t, func : urt_osThreadFunction_t*, arg : void*) : urt_osThread_t*
+    + {method} urtThreadStart (thread : urt_osThread_t*) : void
+    + {method} urtThreadYield (void) : void
+    + {method} urtThreadGetPriority (void) : urt_osThreadPrio_t
+    + {method} urtThreadSetPriority (prio : urt_osThreadPrio_t) : void
+    + {method} urtThreadSleep (seconds : float) : void
+    + {method} urtThreadSSleep (seconds : unsigned int) : void
+    + {method} urtThreadMSleep (milliseconds : unsigned int) : void
+    + {method} urtThreadUSleep (microseconds : urt_delay_t) : void
+    + {method} urtThreadSleepUntil (time : urt_osTime_t*) : void
+    + {method} urtThreadExit (void) : void
+    + {method} urtThreadTerminate (thread : urt_osThread_t*, sig : urt_osThreadTerminateSignal_t) : void
+    + {method} urtThreadShouldTerminate (void) : bool
+    + {method} urtThreadJoin (thread : urt_osThread_t*) : void
+    + {method} urtThreadGetState (thread : urt_osThread_t*) : urt_osThreadState_t
+    + {method} urtThreadGetSelf (void) : urt_osThread_t*
+  }
+} 
+
+  package "timer" <<Rectangle>> {
+    class urt_osTimerCallback_t <<T,00CFFF>> {
+    urt_osTimerCallback_t (parameter : void*) : void
+  }
+
+    class urt_osTimer_t <<T,00CFFF>> {
+    + {method} urtTimerInit (timer : urt_osTimer_t*) : void
+    + {method} urtTimerSet (timer : urt_osTimer_t*, time : urtOsTime_t*, callback : urt_osTimerCallback_t*, parameter : void*) : void
+    + {method} urtTimerSetPeriodic (timer : urt_osTimer_t*, period : urt_delay_t, callback : urt_osTimerCallback_t*, parameter : void*) : void
+    + {method} urtTimerReset (timer : urt_osTimer_t*) : void
+    + {method} urtTimerIsArmed (timer : urt_osTimer_t*) : bool
+  }
+} 
+
+
+
+
+urt_osCondvar_t ..> urt_osCondvarWaitStatus_t
+urt_osCondvar_t .> urt_osMutex_t
+
+urt_osTimer_t ..> urt_osTime_t
+urt_osTimer_t ..> urt_osTimerCallback_t
+
+urt_osThread_t ..> urt_osThreadPrio_t
+urt_osThread_t ..> urt_osThreadFunction_t
+urt_osThread_t ..> urt_osThreadTerminateSignal_t
+urt_osThread_t ..> urt_osThreadState_t
+urt_osThread_t .> urt_osTime_t
+
+urt_osEventListener_t ..> urt_osEventFlags_t
+urt_osEventSource_t ..> urt_osEventFlags_t
+urt_events ..> urt_osEventSource_t
+urt_events ..> urt_osEventListener_t
+urt_events ..> urt_osEventMask_t
+urt_events ..> urt_osEventFlags_t
+urt_events ..> urt_osEventWait_t
+urt_events ..> urt_osThread_t
+
+
+
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 11:25:05 CET 2021)
+(LGPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

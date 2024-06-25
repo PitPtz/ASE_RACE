@@ -1,0 +1,1444 @@
+diff --git a/os/hal/dox/hal_qei.dox b/os/hal/dox/hal_qei.dox
+new file mode 100644
+--- /dev/null
++++ b/os/hal/dox/hal_qei.dox
+@@ -0,0 +1,9 @@
++/**
++ * @defgroup QEI QEI Driver
++ * @brief   Quadrature Encoder Interface
++ *
++ * @pre     In order to use the QEI driver the @p HAL_USE_QEI option
++ *          must be enabled in @p halconf.h.
++ *
++ * @ingroup HAL_NORMAL_DRIVERS
++ */
+diff --git a/os/hal/hal.mk b/os/hal/hal.mk
+--- a/os/hal/hal.mk
++++ b/os/hal/hal.mk
+@@ -58,6 +58,9 @@ endif
+ ifneq ($(findstring HAL_USE_PWM TRUE,$(HALCONF)),)
+ HALSRC += $(CHIBIOS)/os/hal/src/hal_pwm.c
+ endif
++ifneq ($(findstring HAL_USE_QEI TRUE,$(HALCONF)),)
++HALSRC += $(CHIBIOS)/os/hal/src/hal_qei.c
++endif
+ ifneq ($(findstring HAL_USE_RTC TRUE,$(HALCONF)),)
+ HALSRC += $(CHIBIOS)/os/hal/src/hal_rtc.c
+ endif
+@@ -111,6 +114,7 @@ HALSRC = $(CHIBIOS)/os/hal/src/hal.c \
+          $(CHIBIOS)/os/hal/src/hal_mmc_spi.c \
+          $(CHIBIOS)/os/hal/src/hal_pal.c \
+          $(CHIBIOS)/os/hal/src/hal_pwm.c \
++         $(CHIBIOS)/os/hal/src/hal_qei.c \
+          $(CHIBIOS)/os/hal/src/hal_rtc.c \
+          $(CHIBIOS)/os/hal/src/hal_sdc.c \
+          $(CHIBIOS)/os/hal/src/hal_serial.c \
+diff --git a/os/hal/include/hal.h b/os/hal/include/hal.h
+--- a/os/hal/include/hal.h
++++ b/os/hal/include/hal.h
+@@ -179,6 +179,10 @@
+ #define HAL_USE_PWM                         FALSE
+ #endif
+ 
++#if !defined(HAL_USE_QEI)
++#define HAL_USE_QEI                         FALSE
++#endif
++
+ #if !defined(HAL_USE_RTC)
+ #define HAL_USE_RTC                         FALSE
+ #endif
+@@ -308,6 +312,7 @@ static inline halfreq_t halClockGetPointX(halclkpt_t clkpt) {
+ #include "hal_icu.h"
+ #include "hal_mac.h"
+ #include "hal_pwm.h"
++#include "hal_qei.h"
+ #include "hal_rtc.h"
+ #include "hal_serial.h"
+ #include "hal_sdc.h"
+diff --git a/os/hal/include/hal_qei.h b/os/hal/include/hal_qei.h
+new file mode 100644
+--- /dev/null
++++ b/os/hal/include/hal_qei.h
+@@ -0,0 +1,160 @@
++/*
++    ChibiOS - Copyright (C) 2006..2016 Martino Migliavacca
++
++    Licensed under the Apache License, Version 2.0 (the "License");
++    you may not use this file except in compliance with the License.
++    You may obtain a copy of the License at
++
++        http://www.apache.org/licenses/LICENSE-2.0
++
++    Unless required by applicable law or agreed to in writing, software
++    distributed under the License is distributed on an "AS IS" BASIS,
++    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++    See the License for the specific language governing permissions and
++    limitations under the License.
++*/
++
++/**
++ * @file    hal_qei.h
++ * @brief   QEI Driver macros and structures.
++ *
++ * @addtogroup QEI
++ * @{
++ */
++
++#ifndef HAL_QEI_H
++#define HAL_QEI_H
++
++#if (HAL_USE_QEI == TRUE) || defined(__DOXYGEN__)
++
++/*===========================================================================*/
++/* Driver constants.                                                         */
++/*===========================================================================*/
++
++/*===========================================================================*/
++/* Driver pre-compile time settings.                                         */
++/*===========================================================================*/
++
++/*===========================================================================*/
++/* Derived constants and error checks.                                       */
++/*===========================================================================*/
++
++/*===========================================================================*/
++/* Driver data structures and types.                                         */
++/*===========================================================================*/
++
++/**
++ * @brief   Driver state machine possible states.
++ */
++typedef enum {
++  QEI_UNINIT = 0,                   /**< Not initialized.                   */
++  QEI_STOP = 1,                     /**< Stopped.                           */
++  QEI_READY = 2,                    /**< Ready.                             */
++  QEI_ACTIVE = 3,                   /**< Active.                            */
++} qeistate_t;
++
++/**
++ * @brief   Type of a structure representing an QEI driver.
++ */
++typedef struct QEIDriver QEIDriver;
++
++/**
++ * @brief   QEI notification callback type.
++ *
++ * @param[in] qeip      pointer to a @p QEIDriver object
++ */
++typedef void (*qeicallback_t)(QEIDriver *qeip);
++
++/**
++ * @brief   Driver possible handling of counter overflow/underflow.
++ *
++ * @details When counter is going to overflow, the new value is
++ *          computed according to this mode in such a way that 
++ *          the counter will either wrap around, stay unchange 
++ *          or reach min/max
++ *
++ * @note    All driver implementation should support the
++ *          QEI_OVERFLOW_WRAP mode.
++ *
++ * @note    Mode QEI_OVERFLOW_DISCARD and QEI_OVERFLOW_MINMAX are included
++ *          if QEI_USE_OVERFLOW_DISCARD and QEI_USE_OVERFLOW_MINMAX are
++ *          set to TRUE in halconf_community.h and are not necessary supported
++ *          by all drivers
++ */
++typedef enum {
++  QEI_OVERFLOW_WRAP    = 0,     /**< Counter value will wrap around.        */
++#if defined(QEI_USE_OVERFLOW_DISCARD) && QEI_USE_OVERFLOW_DISCARD == TRUE
++  QEI_OVERFLOW_DISCARD = 1,     /**< Counter doesn't change.                */
++#endif
++#if defined(QEI_USE_OVERFLOW_MINMAX) && QEI_USE_OVERFLOW_MINMAX == TRUE
++  QEI_OVERFLOW_MINMAX  = 2,     /**< Counter will be updated upto min or max.*/
++#endif
++} qeioverflow_t;
++
++
++#include "hal_qei_lld.h"
++
++
++/*===========================================================================*/
++/* Driver macros.                                                            */
++/*===========================================================================*/
++
++/**
++ * @name    Macro Functions
++ * @{
++ */
++/**
++ * @brief   Enables the input capture.
++ *
++ * @param[in] qeip      pointer to the @p QEIDriver object
++ *
++ * @iclass
++ */
++#define qeiEnableI(qeip) qei_lld_enable(qeip)
++
++/**
++ * @brief   Disables the input capture.
++ *
++ * @param[in] qeip      pointer to the @p QEIDriver object
++ *
++ * @iclass
++ */
++#define qeiDisableI(qeip) qei_lld_disable(qeip)
++
++/**
++ * @brief   Returns the counter value.
++ *
++ * @param[in] qeip      pointer to the @p QEIDriver object
++ * @return              The current counter value.
++ *
++ * @iclass
++ */
++#define qeiGetCountI(qeip) qei_lld_get_count(qeip)
++
++/*===========================================================================*/
++/* External declarations.                                                    */
++/*===========================================================================*/
++
++#ifdef __cplusplus
++extern "C" {
++#endif
++  void qeiInit(void);
++  void qeiObjectInit(QEIDriver *qeip);
++  void qeiStart(QEIDriver *qeip, const QEIConfig *config);
++  void qeiStop(QEIDriver *qeip);
++  void qeiEnable(QEIDriver *qeip);
++  void qeiDisable(QEIDriver *qeip);
++  qeicnt_t qeiGetCount(QEIDriver *qeip);
++  void qeiSetCount(QEIDriver *qeip, qeicnt_t value);
++  qeidelta_t qeiUpdate(QEIDriver *qeip);
++  qeidelta_t qeiUpdateI(QEIDriver *qeip);
++  qeidelta_t qeiAdjustI(QEIDriver *qeip, qeidelta_t delta);
++#ifdef __cplusplus
++}
++#endif
++
++#endif /* HAL_USE_QEI  == TRUE */
++
++#endif /* HAL_QEI_H */
++
++/** @} */
+diff --git a/os/hal/ports/STM32/LLD/TIMv1/driver.mk b/os/hal/ports/STM32/LLD/TIMv1/driver.mk
+--- a/os/hal/ports/STM32/LLD/TIMv1/driver.mk
++++ b/os/hal/ports/STM32/LLD/TIMv1/driver.mk
+@@ -8,10 +8,14 @@ endif
+ ifneq ($(findstring HAL_USE_PWM TRUE,$(HALCONF)),)
+ PLATFORMSRC += $(CHIBIOS)/os/hal/ports/STM32/LLD/TIMv1/hal_pwm_lld.c
+ endif
++ifneq ($(findstring HAL_USE_QEI TRUE,$(HALCONF)),)
++PLATFORMSRC += $(CHIBIOS)/os/hal/ports/STM32/LLD/TIMv1/hal_qei_lld.c
++endif
+ else
+ PLATFORMSRC += $(CHIBIOS)/os/hal/ports/STM32/LLD/TIMv1/hal_gpt_lld.c
+ PLATFORMSRC += $(CHIBIOS)/os/hal/ports/STM32/LLD/TIMv1/hal_icu_lld.c
+ PLATFORMSRC += $(CHIBIOS)/os/hal/ports/STM32/LLD/TIMv1/hal_pwm_lld.c
++PLATFORMSRC += $(CHIBIOS)/os/hal/ports/STM32/LLD/TIMv1/hal_qei_lld.c
+ endif
+ 
+ PLATFORMINC += $(CHIBIOS)/os/hal/ports/STM32/LLD/TIMv1
+diff --git a/os/hal/ports/STM32/LLD/TIMv1/hal_qei_lld.c b/os/hal/ports/STM32/LLD/TIMv1/hal_qei_lld.c
+new file mode 100644
+--- /dev/null
++++ b/os/hal/ports/STM32/LLD/TIMv1/hal_qei_lld.c
+@@ -0,0 +1,295 @@
++/*
++    ChibiOS - Copyright (C) 2006..2016 Martino Migliavacca
++
++    Licensed under the Apache License, Version 2.0 (the "License");
++    you may not use this file except in compliance with the License.
++    You may obtain a copy of the License at
++
++        http://www.apache.org/licenses/LICENSE-2.0
++
++    Unless required by applicable law or agreed to in writing, software
++    distributed under the License is distributed on an "AS IS" BASIS,
++    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++    See the License for the specific language governing permissions and
++    limitations under the License.
++*/
++
++/**
++ * @file    TIMv1/hal_qei_lld.c
++ * @brief   STM32 QEI subsystem low level driver header.
++ *
++ * @addtogroup QEI
++ * @{
++ */
++
++#include "hal.h"
++
++#if (HAL_USE_QEI == TRUE) || defined(__DOXYGEN__)
++
++/*===========================================================================*/
++/* Driver local definitions.                                                 */
++/*===========================================================================*/
++
++/*===========================================================================*/
++/* Driver exported variables.                                                */
++/*===========================================================================*/
++
++/**
++ * @brief   QEID1 driver identifier.
++ * @note    The driver QEID1 allocates the complex timer TIM1 when enabled.
++ */
++#if STM32_QEI_USE_TIM1 || defined(__DOXYGEN__)
++QEIDriver QEID1;
++#endif
++
++/**
++ * @brief   QEID2 driver identifier.
++ * @note    The driver QEID1 allocates the timer TIM2 when enabled.
++ */
++#if STM32_QEI_USE_TIM2 || defined(__DOXYGEN__)
++QEIDriver QEID2;
++#endif
++
++/**
++ * @brief   QEID3 driver identifier.
++ * @note    The driver QEID1 allocates the timer TIM3 when enabled.
++ */
++#if STM32_QEI_USE_TIM3 || defined(__DOXYGEN__)
++QEIDriver QEID3;
++#endif
++
++/**
++ * @brief   QEID4 driver identifier.
++ * @note    The driver QEID4 allocates the timer TIM4 when enabled.
++ */
++#if STM32_QEI_USE_TIM4 || defined(__DOXYGEN__)
++QEIDriver QEID4;
++#endif
++
++/**
++ * @brief   QEID5 driver identifier.
++ * @note    The driver QEID5 allocates the timer TIM5 when enabled.
++ */
++#if STM32_QEI_USE_TIM5 || defined(__DOXYGEN__)
++QEIDriver QEID5;
++#endif
++
++/**
++ * @brief   QEID8 driver identifier.
++ * @note    The driver QEID8 allocates the timer TIM8 when enabled.
++ */
++#if STM32_QEI_USE_TIM8 || defined(__DOXYGEN__)
++QEIDriver QEID8;
++#endif
++
++/*===========================================================================*/
++/* Driver local variables and types.                                         */
++/*===========================================================================*/
++
++/*===========================================================================*/
++/* Driver local functions.                                                   */
++/*===========================================================================*/
++
++/*===========================================================================*/
++/* Driver interrupt handlers.                                                */
++/*===========================================================================*/
++
++/*===========================================================================*/
++/* Driver exported functions.                                                */
++/*===========================================================================*/
++
++/**
++ * @brief   Low level QEI driver initialization.
++ *
++ * @notapi
++ */
++void qei_lld_init(void) {
++
++#if STM32_QEI_USE_TIM1
++  /* Driver initialization.*/
++  qeiObjectInit(&QEID1);
++  QEID1.tim = STM32_TIM1;
++#endif
++
++#if STM32_QEI_USE_TIM2
++  /* Driver initialization.*/
++  qeiObjectInit(&QEID2);
++  QEID2.tim = STM32_TIM2;
++#endif
++
++#if STM32_QEI_USE_TIM3
++  /* Driver initialization.*/
++  qeiObjectInit(&QEID3);
++  QEID3.tim = STM32_TIM3;
++#endif
++
++#if STM32_QEI_USE_TIM4
++  /* Driver initialization.*/
++  qeiObjectInit(&QEID4);
++  QEID4.tim = STM32_TIM4;
++#endif
++
++#if STM32_QEI_USE_TIM5
++  /* Driver initialization.*/
++  qeiObjectInit(&QEID5);
++  QEID5.tim = STM32_TIM5;
++#endif
++
++#if STM32_QEI_USE_TIM8
++  /* Driver initialization.*/
++  qeiObjectInit(&QEID8);
++  QEID8.tim = STM32_TIM8;
++#endif
++}
++
++/**
++ * @brief   Configures and activates the QEI peripheral.
++ *
++ * @param[in] qeip      pointer to the @p QEIDriver object
++ *
++ * @notapi
++ */
++void qei_lld_start(QEIDriver *qeip) {
++  osalDbgAssert((qeip->config->min == 0) || (qeip->config->max == 0),
++		"only min/max set to 0 is supported");
++
++  if (qeip->state == QEI_STOP) {
++    /* Clock activation and timer reset.*/
++#if STM32_QEI_USE_TIM1
++    if (&QEID1 == qeip) {
++      rccEnableTIM1(FALSE);
++      rccResetTIM1();
++    }
++#endif
++#if STM32_QEI_USE_TIM2
++    if (&QEID2 == qeip) {
++      rccEnableTIM2(FALSE);
++      rccResetTIM2();
++    }
++#endif
++#if STM32_QEI_USE_TIM3
++    if (&QEID3 == qeip) {
++      rccEnableTIM3(FALSE);
++      rccResetTIM3();
++    }
++#endif
++#if STM32_QEI_USE_TIM4
++    if (&QEID4 == qeip) {
++      rccEnableTIM4(FALSE);
++      rccResetTIM4();
++    }
++#endif
++
++#if STM32_QEI_USE_TIM5
++    if (&QEID5 == qeip) {
++      rccEnableTIM5(FALSE);
++      rccResetTIM5();
++    }
++#endif
++#if STM32_QEI_USE_TIM8
++    if (&QEID8 == qeip) {
++      rccEnableTIM8(FALSE);
++      rccResetTIM8();
++    }
++#endif
++  }
++   /* Timer configuration.*/
++  qeip->tim->CR1  = 0;                      /* Initially stopped. */
++  qeip->tim->CR2  = 0;
++  qeip->tim->PSC  = 0;
++  qeip->tim->DIER = 0;
++  qeip->tim->ARR  = 0xFFFF;
++
++  /* Set Capture Compare 1 and Capture Compare 2 as input. */
++   qeip->tim->CCMR1 |= TIM_CCMR1_CC1S_0 | TIM_CCMR1_CC2S_0;
++
++  if (qeip->config->mode == QEI_MODE_QUADRATURE) {
++    if (qeip->config->resolution == QEI_BOTH_EDGES)
++      qeip->tim->SMCR = TIM_SMCR_SMS_1 | TIM_SMCR_SMS_0;
++    else
++      qeip->tim->SMCR = TIM_SMCR_SMS_0;
++  } else {
++    /* Direction/Clock mode.
++     * Direction input on TI1, Clock input on TI2. */
++    qeip->tim->SMCR = TIM_SMCR_SMS_0;
++  }
++
++  if (qeip->config->dirinv == QEI_DIRINV_TRUE)
++    qeip->tim->CCER = TIM_CCER_CC1E | TIM_CCER_CC1P | TIM_CCER_CC2E;
++  else
++    qeip->tim->CCER = TIM_CCER_CC1E | TIM_CCER_CC2E;
++}
++
++/**
++ * @brief   Deactivates the QEI peripheral.
++ *
++ * @param[in] qeip      pointer to the @p QEIDriver object
++ *
++ * @notapi
++ */
++void qei_lld_stop(QEIDriver *qeip) {
++
++  if (qeip->state == QEI_READY) {
++    qeip->tim->CR1 = 0;                    /* Timer disabled. */
++
++    /* Clock deactivation.*/
++#if STM32_QEI_USE_TIM1
++    if (&QEID1 == qeip) {
++      rccDisableTIM1();
++    }
++#endif
++#if STM32_QEI_USE_TIM2
++    if (&QEID2 == qeip) {
++      rccDisableTIM2();
++    }
++#endif
++#if STM32_QEI_USE_TIM3
++    if (&QEID3 == qeip) {
++      rccDisableTIM3();
++    }
++#endif
++#if STM32_QEI_USE_TIM4
++    if (&QEID4 == qeip) {
++      rccDisableTIM4();
++    }
++#endif
++#if STM32_QEI_USE_TIM5
++    if (&QEID5 == qeip) {
++      rccDisableTIM5();
++    }
++#endif
++  }
++#if STM32_QEI_USE_TIM8
++    if (&QEID8 == qeip) {
++      rccDisableTIM8();
++    }
++#endif
++}
++
++/**
++ * @brief   Enables the input capture.
++ *
++ * @param[in] qeip      pointer to the @p QEIDriver object
++ *
++ * @notapi
++ */
++void qei_lld_enable(QEIDriver *qeip) {
++
++  qeip->tim->CR1 = TIM_CR1_CEN;            /* Timer enabled. */
++}
++
++/**
++ * @brief   Disables the input capture.
++ *
++ * @param[in] qeip      pointer to the @p QEIDriver object
++ *
++ * @notapi
++ */
++void qei_lld_disable(QEIDriver *qeip) {
++
++  qeip->tim->CR1 = 0;                    /* Timer disabled. */
++}
++
++#endif /* HAL_USE_QEI */
++
++/** @} */
+diff --git a/os/hal/ports/STM32/LLD/TIMv1/hal_qei_lld.h b/os/hal/ports/STM32/LLD/TIMv1/hal_qei_lld.h
+new file mode 100644
+--- /dev/null
++++ b/os/hal/ports/STM32/LLD/TIMv1/hal_qei_lld.h
+@@ -0,0 +1,464 @@
++/*
++    ChibiOS - Copyright (C) 2006..2016 Martino Migliavacca
++
++    Licensed under the Apache License, Version 2.0 (the "License");
++    you may not use this file except in compliance with the License.
++    You may obtain a copy of the License at
++
++        http://www.apache.org/licenses/LICENSE-2.0
++
++    Unless required by applicable law or agreed to in writing, software
++    distributed under the License is distributed on an "AS IS" BASIS,
++    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++    See the License for the specific language governing permissions and
++    limitations under the License.
++*/
++
++/**
++ * @file    TIMv1/hal_qei_lld.h
++ * @brief   STM32 QEI subsystem low level driver header.
++ *
++ * @addtogroup QEI
++ * @{
++ */
++
++#ifndef HAL_QEI_LLD_H
++#define HAL_QEI_LLD_H
++
++#if (HAL_USE_QEI == TRUE) || defined(__DOXYGEN__)
++
++#include "stm32_tim.h"
++
++/*===========================================================================*/
++/* Driver constants.                                                         */
++/*===========================================================================*/
++
++/**
++ * @brief Mininum usable value for defining counter underflow
++ */
++#define QEI_COUNT_MIN (0)
++
++/**
++ * @brief Maximum usable value for defining counter overflow
++ */
++#define QEI_COUNT_MAX (65535)
++
++/*===========================================================================*/
++/* Driver pre-compile time settings.                                         */
++/*===========================================================================*/
++
++/**
++ * @name    Configuration options
++ * @{
++ */
++/**
++ * @brief   QEID1 driver enable switch.
++ * @details If set to @p TRUE the support for QEID1 is included.
++ * @note    The default is @p TRUE.
++ */
++#if !defined(STM32_QEI_USE_TIM1) || defined(__DOXYGEN__)
++#define STM32_QEI_USE_TIM1                  FALSE
++#endif
++
++/**
++ * @brief   QEID2 driver enable switch.
++ * @details If set to @p TRUE the support for QEID2 is included.
++ * @note    The default is @p TRUE.
++ */
++#if !defined(STM32_QEI_USE_TIM2) || defined(__DOXYGEN__)
++#define STM32_QEI_USE_TIM2                  FALSE
++#endif
++
++/**
++ * @brief   QEID3 driver enable switch.
++ * @details If set to @p TRUE the support for QEID3 is included.
++ * @note    The default is @p TRUE.
++ */
++#if !defined(STM32_QEI_USE_TIM3) || defined(__DOXYGEN__)
++#define STM32_QEI_USE_TIM3                  FALSE
++#endif
++
++/**
++ * @brief   QEID4 driver enable switch.
++ * @details If set to @p TRUE the support for QEID4 is included.
++ * @note    The default is @p TRUE.
++ */
++#if !defined(STM32_QEI_USE_TIM4) || defined(__DOXYGEN__)
++#define STM32_QEI_USE_TIM4                  FALSE
++#endif
++
++/**
++ * @brief   QEID5 driver enable switch.
++ * @details If set to @p TRUE the support for QEID5 is included.
++ * @note    The default is @p TRUE.
++ */
++#if !defined(STM32_QEI_USE_TIM5) || defined(__DOXYGEN__)
++#define STM32_QEI_USE_TIM5                  FALSE
++#endif
++
++/**
++ * @brief   QEID8 driver enable switch.
++ * @details If set to @p TRUE the support for QEID8 is included.
++ * @note    The default is @p TRUE.
++ */
++#if !defined(STM32_QEI_USE_TIM8) || defined(__DOXYGEN__)
++#define STM32_QEI_USE_TIM8                  FALSE
++#endif
++
++/**
++ * @brief   QEID1 interrupt priority level setting.
++ */
++#if !defined(STM32_QEI_TIM1_IRQ_PRIORITY) || defined(__DOXYGEN__)
++#define STM32_QEI_TIM1_IRQ_PRIORITY         7
++#endif
++
++/**
++ * @brief   QEID2 interrupt priority level setting.
++ */
++#if !defined(STM32_QEI_TIM2_IRQ_PRIORITY) || defined(__DOXYGEN__)
++#define STM32_QEI_TIM2_IRQ_PRIORITY         7
++#endif
++
++/**
++ * @brief   QEID3 interrupt priority level setting.
++ */
++#if !defined(STM32_QEI_TIM3_IRQ_PRIORITY) || defined(__DOXYGEN__)
++#define STM32_QEI_TIM3_IRQ_PRIORITY         7
++#endif
++
++/**
++ * @brief   QEID4 interrupt priority level setting.
++ */
++#if !defined(STM32_QEI_TIM4_IRQ_PRIORITY) || defined(__DOXYGEN__)
++#define STM32_QEI_TIM4_IRQ_PRIORITY         7
++#endif
++
++/**
++ * @brief   QEID5 interrupt priority level setting.
++ */
++#if !defined(STM32_QEI_TIM5_IRQ_PRIORITY) || defined(__DOXYGEN__)
++#define STM32_QEI_TIM5_IRQ_PRIORITY         7
++#endif
++
++/**
++ * @brief   QEID8 interrupt priority level setting.
++ */
++#if !defined(STM32_QEI_TIM8_IRQ_PRIORITY) || defined(__DOXYGEN__)
++#define STM32_QEI_TIM8_IRQ_PRIORITY         7
++#endif
++/** @} */
++
++/*===========================================================================*/
++/* Derived constants and error checks.                                       */
++/*===========================================================================*/
++
++#if STM32_QEI_USE_TIM1 && !STM32_HAS_TIM1
++#error "TIM1 not present in the selected device"
++#endif
++
++#if STM32_QEI_USE_TIM2 && !STM32_HAS_TIM2
++#error "TIM2 not present in the selected device"
++#endif
++
++#if STM32_QEI_USE_TIM3 && !STM32_HAS_TIM3
++#error "TIM3 not present in the selected device"
++#endif
++
++#if STM32_QEI_USE_TIM4 && !STM32_HAS_TIM4
++#error "TIM4 not present in the selected device"
++#endif
++
++#if STM32_QEI_USE_TIM5 && !STM32_HAS_TIM5
++#error "TIM5 not present in the selected device"
++#endif
++
++#if STM32_QEI_USE_TIM8 && !STM32_HAS_TIM8
++#error "TIM8 not present in the selected device"
++#endif
++
++#if !STM32_QEI_USE_TIM1 && !STM32_QEI_USE_TIM2 &&                           \
++    !STM32_QEI_USE_TIM3 && !STM32_QEI_USE_TIM4 &&                           \
++    !STM32_QEI_USE_TIM5 && !STM32_QEI_USE_TIM8
++#error "QEI driver activated but no TIM peripheral assigned"
++#endif
++
++/* Checks on allocation of TIMx units.*/
++#if STM32_QEI_USE_TIM1
++#if defined(STM32_TIM1_IS_USED)
++#error "QEID1 requires TIM1 but the timer is already used"
++#else
++#define STM32_TIM1_IS_USED
++#endif
++#endif
++
++#if STM32_QEI_USE_TIM2
++#if defined(STM32_TIM2_IS_USED)
++#error "QEID2 requires TIM2 but the timer is already used"
++#else
++#define STM32_TIM2_IS_USED
++#endif
++#endif
++
++#if STM32_QEI_USE_TIM3
++#if defined(STM32_TIM3_IS_USED)
++#error "QEID3 requires TIM3 but the timer is already used"
++#else
++#define STM32_TIM3_IS_USED
++#endif
++#endif
++
++#if STM32_QEI_USE_TIM4
++#if defined(STM32_TIM4_IS_USED)
++#error "QEID4 requires TIM4 but the timer is already used"
++#else
++#define STM32_TIM4_IS_USED
++#endif
++#endif
++
++#if STM32_QEI_USE_TIM5
++#if defined(STM32_TIM5_IS_USED)
++#error "QEID5 requires TIM5 but the timer is already used"
++#else
++#define STM32_TIM5_IS_USED
++#endif
++#endif
++
++#if STM32_QEI_USE_TIM8
++#if defined(STM32_TIM8_IS_USED)
++#error "QEID8 requires TIM8 but the timer is already used"
++#else
++#define STM32_TIM8_IS_USED
++#endif
++#endif
++
++/* IRQ priority checks.*/
++#if STM32_QEI_USE_TIM1 &&                                                   \
++    !OSAL_IRQ_IS_VALID_PRIORITY(STM32_QEI_TIM1_IRQ_PRIORITY)
++#error "Invalid IRQ priority assigned to TIM1"
++#endif
++
++#if STM32_QEI_USE_TIM2 &&                                                   \
++    !OSAL_IRQ_IS_VALID_PRIORITY(STM32_QEI_TIM2_IRQ_PRIORITY)
++#error "Invalid IRQ priority assigned to TIM2"
++#endif
++
++#if STM32_QEI_USE_TIM3 &&                                                   \
++    !OSAL_IRQ_IS_VALID_PRIORITY(STM32_QEI_TIM3_IRQ_PRIORITY)
++#error "Invalid IRQ priority assigned to TIM3"
++#endif
++
++#if STM32_QEI_USE_TIM4 &&                                                   \
++    !OSAL_IRQ_IS_VALID_PRIORITY(STM32_QEI_TIM4_IRQ_PRIORITY)
++#error "Invalid IRQ priority assigned to TIM4"
++#endif
++
++#if STM32_QEI_USE_TIM5 &&                                                   \
++    !OSAL_IRQ_IS_VALID_PRIORITY(STM32_QEI_TIM5_IRQ_PRIORITY)
++#error "Invalid IRQ priority assigned to TIM5"
++#endif
++
++#if STM32_QEI_USE_TIM8 &&                                                   \
++    !OSAL_IRQ_IS_VALID_PRIORITY(STM32_QEI_TIM8_IRQ_PRIORITY)
++#error "Invalid IRQ priority assigned to TIM8"
++#endif
++
++#if QEI_USE_OVERFLOW_DISCARD
++#error "QEI_USE_OVERFLOW_DISCARD not supported by this driver"
++#endif
++
++#if QEI_USE_OVERFLOW_MINMAX
++#error "QEI_USE_OVERFLOW_MINMAX not supported by this driver"
++#endif
++
++/*===========================================================================*/
++/* Driver data structures and types.                                         */
++/*===========================================================================*/
++
++/**
++ * @brief   QEI count mode.
++ */
++typedef enum {
++  QEI_MODE_QUADRATURE = 0,          /**< Quadrature encoder mode.           */
++  QEI_MODE_DIRCLOCK = 1,            /**< Direction/Clock mode.              */
++} qeimode_t;
++
++/**
++ * @brief   QEI resolution.
++ */
++typedef enum {
++  QEI_SINGLE_EDGE = 0,        /**< Count only on edges from first channel.  */
++  QEI_BOTH_EDGES = 1,         /**< Count on both edges (resolution doubles).*/
++} qeiresolution_t;
++
++/**
++ * @brief   QEI direction inversion.
++ */
++typedef enum {
++  QEI_DIRINV_FALSE = 0,             /**< Do not invert counter direction.   */
++  QEI_DIRINV_TRUE = 1,              /**< Invert counter direction.          */
++} qeidirinv_t;
++
++/**
++ * @brief   QEI counter type.
++ */
++typedef int16_t qeicnt_t;
++
++/**
++ * @brief   QEI delta type.
++ */
++typedef int32_t qeidelta_t;
++
++/**
++ * @brief   Driver configuration structure.
++ * @note    It could be empty on some architectures.
++ */
++typedef struct {
++  /**
++   * @brief   Count mode.
++   */
++  qeimode_t                 mode;
++  /**
++   * @brief   Resolution.
++   */
++  qeiresolution_t           resolution;
++  /**
++   * @brief   Direction inversion.
++   */
++  qeidirinv_t               dirinv;
++  /**
++   * @brief   Handling of counter overflow/underflow
++   *
++   * @details When overflow occurs, the counter value is updated
++   *          according to:
++   *            - QEI_OVERFLOW_DISCARD:
++   *                discard the update value, counter doesn't change
++   */
++  qeioverflow_t             overflow;
++  /**
++   * @brief   Min count value.
++   *
++   * @note    If min == max, then QEI_COUNT_MIN is used.
++   *
++   * @note    Only min set to 0 / QEI_COUNT_MIN is supported.
++   */
++  qeicnt_t                  min;
++  /**
++   * @brief   Max count value.
++   *
++   * @note    If min == max, then QEI_COUNT_MAX is used.
++   *
++   * @note    Only max set to 0 / QEI_COUNT_MAX is supported.
++   */
++  qeicnt_t                  max;
++  /**
++    * @brief  Notify of value change
++    *
++    * @note   Called from ISR context.
++    */
++  qeicallback_t             notify_cb;
++  /**
++   * @brief   Notify of overflow
++   *
++   * @note    Overflow notification is performed after
++   *          value changed notification.
++   * @note    Called from ISR context.
++   */
++  void (*overflow_cb)(QEIDriver *qeip, qeidelta_t delta);
++  /* End of the mandatory fields.*/
++} QEIConfig;
++
++/**
++ * @brief   Structure representing an QEI driver.
++ */
++struct QEIDriver {
++  /**
++   * @brief Driver state.
++   */
++  qeistate_t                state;
++  /**
++   * @brief Last count value.
++   */
++  qeicnt_t                  last;
++  /**
++   * @brief Current configuration data.
++   */
++  const QEIConfig           *config;
++#if defined(QEI_DRIVER_EXT_FIELDS)
++  QEI_DRIVER_EXT_FIELDS
++#endif
++  /* End of the mandatory fields.*/
++  /**
++   * @brief Pointer to the TIMx registers block.
++   */
++  stm32_tim_t               *tim;
++};
++
++/*===========================================================================*/
++/* Driver macros.                                                            */
++/*===========================================================================*/
++
++/**
++ * @brief   Returns the counter value.
++ *
++ * @param[in] qeip      pointer to the @p QEIDriver object
++ * @return              The current counter value.
++ *
++ * @notapi
++ */
++#define qei_lld_get_count(qeip) ((qeip)->tim->CNT)
++
++/**
++ * @brief   Set the counter value.
++ *
++ * @param[in] qeip      pointer to the @p QEIDriver object
++ * @param[in] qeip      counter value
++ *
++ * @notapi
++ */
++#define qei_lld_set_count(qeip, value) ((qeip)->tim->CNT = (value))
++
++/*===========================================================================*/
++/* External declarations.                                                    */
++/*===========================================================================*/
++
++#if STM32_QEI_USE_TIM1 && !defined(__DOXYGEN__)
++extern QEIDriver QEID1;
++#endif
++
++#if STM32_QEI_USE_TIM2 && !defined(__DOXYGEN__)
++extern QEIDriver QEID2;
++#endif
++
++#if STM32_QEI_USE_TIM3 && !defined(__DOXYGEN__)
++extern QEIDriver QEID3;
++#endif
++
++#if STM32_QEI_USE_TIM4 && !defined(__DOXYGEN__)
++extern QEIDriver QEID4;
++#endif
++
++#if STM32_QEI_USE_TIM5 && !defined(__DOXYGEN__)
++extern QEIDriver QEID5;
++#endif
++
++#if STM32_QEI_USE_TIM8 && !defined(__DOXYGEN__)
++extern QEIDriver QEID8;
++#endif
++
++#ifdef __cplusplus
++extern "C" {
++#endif
++  void qei_lld_init(void);
++  void qei_lld_start(QEIDriver *qeip);
++  void qei_lld_stop(QEIDriver *qeip);
++  void qei_lld_enable(QEIDriver *qeip);
++  void qei_lld_disable(QEIDriver *qeip);
++#ifdef __cplusplus
++}
++#endif
++
++#endif /* HAL_USE_QEI */
++
++#endif /* HAL_QEI_LLD_H */
++
++/** @} */
+diff --git a/os/hal/src/hal.c b/os/hal/src/hal.c
+--- a/os/hal/src/hal.c
++++ b/os/hal/src/hal.c
+@@ -101,6 +101,9 @@ void halInit(void) {
+ #if (HAL_USE_PWM == TRUE) || defined(__DOXYGEN__)
+   pwmInit();
+ #endif
++#if (HAL_USE_QEI == TRUE) || defined(__DOXYGEN__)
++  qeiInit();
++#endif
+ #if (HAL_USE_SERIAL == TRUE) || defined(__DOXYGEN__)
+   sdInit();
+ #endif
+diff --git a/os/hal/src/hal_qei.c b/os/hal/src/hal_qei.c
+new file mode 100644
+--- /dev/null
++++ b/os/hal/src/hal_qei.c
+@@ -0,0 +1,375 @@
++/*
++    ChibiOS - Copyright (C) 2006..2016 Martino Migliavacca
++
++    Licensed under the Apache License, Version 2.0 (the "License");
++    you may not use this file except in compliance with the License.
++    You may obtain a copy of the License at
++
++        http://www.apache.org/licenses/LICENSE-2.0
++
++    Unless required by applicable law or agreed to in writing, software
++    distributed under the License is distributed on an "AS IS" BASIS,
++    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++    See the License for the specific language governing permissions and
++    limitations under the License.
++*/
++
++/**
++ * @file    hal_qei.c
++ * @brief   QEI Driver code.
++ *
++ * @addtogroup QEI
++ * @{
++ */
++
++#include "hal.h"
++
++#if (HAL_USE_QEI == TRUE) || defined(__DOXYGEN__)
++
++/*===========================================================================*/
++/* Driver local definitions.                                                 */
++/*===========================================================================*/
++
++/*===========================================================================*/
++/* Driver exported variables.                                                */
++/*===========================================================================*/
++
++/*===========================================================================*/
++/* Driver local variables and types.                                         */
++/*===========================================================================*/
++
++/*===========================================================================*/
++/* Driver local functions.                                                   */
++/*===========================================================================*/
++
++/**
++ * @brief   Helper for correclty handling overflow/underflow
++ *
++ * @details Underflow/overflow will be handled according to mode:
++ *          QEI_OVERFLOW_WRAP:    counter value will wrap around.
++ *          QEI_OVERFLOW_DISCARD: counter will not change
++ *          QEI_OVERFLOW_MINMAX:  counter will be updated upto min or max.
++ *
++ * @note    This function is for use by low level driver.
++ *
++ * @param[in,out] count counter value
++ * @param[in,out] delta adjustment value
++ * @param[in]     min   minimum allowed value for counter
++ * @param[in]     max   maximum allowed value for counter
++ * @param[in]     mode  how to handle overflow
++ *
++ * @return        true if counter underflow/overflow occured or
++ *                was due to occur
++ *
++ */
++static inline
++bool qei_adjust_count(qeicnt_t *count, qeidelta_t *delta,
++		      qeicnt_t min, qeicnt_t max, qeioverflow_t mode) {
++  /* For information on signed integer overflow see:
++   * https://www.securecoding.cert.org/confluence/x/RgE
++   */
++
++  /* Get values */
++  const qeicnt_t   _count = *count;
++  const qeidelta_t _delta = *delta;
++
++  /* Overflow operation
++   */
++  if ((_delta > 0) && (_count > (max - _delta))) {
++    switch(mode) {
++    case QEI_OVERFLOW_WRAP:
++      *delta = 0;
++      *count = (min + (_count - (max - _delta))) - 1;
++      break;
++#if QEI_USE_OVERFLOW_DISCARD == TRUE
++    case QEI_OVERFLOW_DISCARD:
++      *delta = _delta;
++      *count = _count;
++      break;
++#endif
++#if QEI_USE_OVERFLOW_MINMAX == TRUE
++    case QEI_OVERFLOW_MINMAX:
++      *delta = _count - (max - _delta);
++      *count = max;
++      break;
++#endif
++    }
++    return true;
++    
++ /* Underflow operation
++  */
++  } else if ((_delta < 0) && (_count < (min - _delta))) {
++    switch(mode) {
++    case QEI_OVERFLOW_WRAP:
++      *delta = 0;
++      *count = (max + (_count - (min - _delta))) + 1;
++    break;
++#if QEI_USE_OVERFLOW_DISCARD == TRUE
++    case QEI_OVERFLOW_DISCARD:
++      *delta = _delta;
++      *count = _count;
++      break;
++#endif
++#if QEI_USE_OVERFLOW_MINMAX == TRUE
++    case QEI_OVERFLOW_MINMAX:
++      *delta = _count - (min - _delta);
++      *count = min;
++      break;
++#endif
++    }
++    return true;
++
++  /* Normal operation
++   */
++  } else {
++    *delta = 0;
++    *count = _count + _delta;
++    return false;
++  }
++}
++
++/*===========================================================================*/
++/* Driver exported functions.                                                */
++/*===========================================================================*/
++
++/**
++ * @brief   QEI Driver initialization.
++ * @note    This function is implicitly invoked by @p halInit(), there is
++ *          no need to explicitly initialize the driver.
++ *
++ * @init
++ */
++void qeiInit(void) {
++
++  qei_lld_init();
++}
++
++/**
++ * @brief   Initializes the standard part of a @p QEIDriver structure.
++ *
++ * @param[out] qeip     pointer to the @p QEIDriver object
++ *
++ * @init
++ */
++void qeiObjectInit(QEIDriver *qeip) {
++
++  qeip->state = QEI_STOP;
++  qeip->last = 0;
++  qeip->config = NULL;
++}
++
++/**
++ * @brief   Configures and activates the QEI peripheral.
++ *
++ * @param[in] qeip      pointer to the @p QEIDriver object
++ * @param[in] config    pointer to the @p QEIConfig object
++ *
++ * @api
++ */
++void qeiStart(QEIDriver *qeip, const QEIConfig *config) {
++
++  osalDbgCheck((qeip != NULL) && (config != NULL));
++
++  osalSysLock();
++  osalDbgAssert((qeip->state == QEI_STOP) || (qeip->state == QEI_READY),
++                "invalid state");
++  qeip->config = config;
++  qei_lld_start(qeip);
++  qeip->state = QEI_READY;
++  osalSysUnlock();
++}
++
++/**
++ * @brief   Deactivates the QEI peripheral.
++ *
++ * @param[in] qeip      pointer to the @p QEIDriver object
++ *
++ * @api
++ */
++void qeiStop(QEIDriver *qeip) {
++
++  osalDbgCheck(qeip != NULL);
++
++  osalSysLock();
++  osalDbgAssert((qeip->state == QEI_STOP) || (qeip->state == QEI_READY),
++                "invalid state");
++  qei_lld_stop(qeip);
++  qeip->state = QEI_STOP;
++  osalSysUnlock();
++}
++
++/**
++ * @brief   Enables the quadrature encoder interface.
++ *
++ * @param[in] qeip      pointer to the @p QEIDriver object
++ *
++ * @api
++ */
++void qeiEnable(QEIDriver *qeip) {
++
++  osalDbgCheck(qeip != NULL);
++
++  osalSysLock();
++  osalDbgAssert(qeip->state == QEI_READY, "invalid state");
++  qei_lld_enable(qeip);
++  qeip->state = QEI_ACTIVE;
++  osalSysUnlock();
++}
++
++/**
++ * @brief   Disables the quadrature encoder interface.
++ *
++ * @param[in] qeip      pointer to the @p QEIDriver object
++ *
++ * @api
++ */
++void qeiDisable(QEIDriver *qeip) {
++
++  osalDbgCheck(qeip != NULL);
++
++  osalSysLock();
++  osalDbgAssert((qeip->state == QEI_READY) || (qeip->state == QEI_ACTIVE),
++                "invalid state");
++  qei_lld_disable(qeip);
++  qeip->state = QEI_READY;
++  osalSysUnlock();
++}
++
++/**
++ * @brief   Returns the counter value.
++ *
++ * @param[in] qeip      pointer to the @p QEIDriver object
++ * @return              The current counter value.
++ *
++ * @api
++ */
++qeicnt_t qeiGetCount(QEIDriver *qeip) {
++  qeicnt_t cnt;
++
++  osalSysLock();
++  cnt = qeiGetCountI(qeip);
++  osalSysUnlock();
++
++  return cnt;
++}
++
++/**
++ * @brief   Set counter value.
++ *
++ * @param[in] qeip      pointer to the @p QEIDriver object.
++ * @param[in] value     the new counter value.
++ *
++ * @api
++ */
++void qeiSetCount(QEIDriver *qeip, qeicnt_t value) {
++  osalDbgCheck(qeip != NULL);
++  osalDbgAssert((qeip->state == QEI_READY) || (qeip->state == QEI_ACTIVE),
++		"invalid state");
++
++  osalSysLock();
++  qei_lld_set_count(qeip, value);
++  osalSysUnlock();
++}
++
++/**
++ * @brief   Adjust the counter by delta.
++ *
++ * @param[in] qeip      pointer to the @p QEIDriver object.
++ * @param[in] delta     the adjustement value.
++ * @return              the remaining delta (can occur during overflow).
++ *
++ * @api
++ */
++qeidelta_t qeiAdjust(QEIDriver *qeip, qeidelta_t delta) {
++  osalDbgCheck(qeip != NULL);
++  osalDbgAssert((qeip->state == QEI_ACTIVE), "invalid state");
++
++  osalSysLock();
++  delta = qeiAdjustI(qeip, delta);
++  osalSysUnlock();
++
++  return delta;
++}
++
++/**
++ * @brief   Adjust the counter by delta.
++ *
++ * @param[in] qeip      pointer to the @p QEIDriver object.
++ * @param[in] delta     the adjustement value.
++ * @return              the remaining delta (can occur during overflow).
++ *
++ * @api
++ */
++qeidelta_t qeiAdjustI(QEIDriver *qeip, qeidelta_t delta) {
++  /* Get boundaries */
++  qeicnt_t min = QEI_COUNT_MIN;
++  qeicnt_t max = QEI_COUNT_MAX;
++  if (qeip->config->min != qeip->config->max) {
++    min = qeip->config->min;
++    max = qeip->config->max;
++  }
++
++  /* Get counter */
++  qeicnt_t count = qei_lld_get_count(qeip);
++  
++  /* Adjust counter value */
++  bool overflowed = qei_adjust_count(&count, &delta,
++				     min, max, qeip->config->overflow);
++
++  /* Notify for value change */
++  qei_lld_set_count(qeip, count);
++
++  /* Notify for overflow (passing the remaining delta) */
++  if (overflowed && qeip->config->overflow_cb)
++    qeip->config->overflow_cb(qeip, delta);
++
++  /* Remaining delta */
++  return delta;
++}
++
++
++/**
++ * @brief   Returns the counter delta from last reading.
++ *
++ * @param[in] qeip      pointer to the @p QEIDriver object
++ * @return              The delta from last read.
++ *
++ * @api
++ */
++qeidelta_t qeiUpdate(QEIDriver *qeip) {
++  qeidelta_t diff;
++
++  osalSysLock();
++  diff = qeiUpdateI(qeip);
++  osalSysUnlock();
++
++  return diff;
++}
++
++/**
++ * @brief   Returns the counter delta from last reading.
++ *
++ * @param[in] qeip      pointer to the @p QEIDriver object
++ * @return              The delta from last read.
++ *
++ * @iclass
++ */
++qeidelta_t qeiUpdateI(QEIDriver *qeip) {
++  qeicnt_t cnt;
++  qeidelta_t delta;
++
++  osalDbgCheckClassI();
++  osalDbgCheck(qeip != NULL);
++  osalDbgAssert((qeip->state == QEI_READY) || (qeip->state == QEI_ACTIVE),
++                "invalid state");
++
++  cnt = qei_lld_get_count(qeip);
++  delta = (qeicnt_t)(cnt - qeip->last);
++  qeip->last = cnt;
++
++  return delta;
++}
++
++#endif /* HAL_USE_QEI == TRUE */
++
++/** @} */
+diff --git a/os/hal/templates/halconf.h b/os/hal/templates/halconf.h
+--- a/os/hal/templates/halconf.h
++++ b/os/hal/templates/halconf.h
+@@ -201,6 +201,13 @@
+ #define HAL_USE_WSPI                        TRUE
+ #endif
+ 
++/**
++ * @brief   Enables the QEI subsystem.
++ */
++#if !defined(HAL_USE_QEI) || defined(__DOXYGEN__)
++#define HAL_USE_QEI                 FALSE
++#endif
++
+ /*===========================================================================*/
+ /* PAL driver related settings.                                              */
+ /*===========================================================================*/
+@@ -545,6 +552,24 @@
+ #define WSPI_USE_MUTUAL_EXCLUSION           TRUE
+ #endif
+ 
++/*===========================================================================*/
++/* QEI driver related settings.                                              */
++/*===========================================================================*/
++
++/**
++ * @brief   Enables discard of overlow
++ */
++#if !defined(QEI_USE_OVERFLOW_DISCARD) || defined(__DOXYGEN__)
++#define QEI_USE_OVERFLOW_DISCARD    FALSE
++#endif
++
++/**
++ * @brief   Enables min max of overlow
++ */
++#if !defined(QEI_USE_OVERFLOW_MINMAX) || defined(__DOXYGEN__)
++#define QEI_USE_OVERFLOW_MINMAX     FALSE
++#endif
++
+ #endif /* HALCONF_H */
+ 
+ /** @} */

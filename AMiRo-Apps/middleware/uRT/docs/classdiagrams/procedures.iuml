@@ -1,0 +1,59 @@
+/'
+µRT is a lightweight publish-subscribe & RPC middleware for real-time
+applications. It was developed as part of the software habitat for the
+Autonomous Mini Robot (AMiRo) but can be used for other purposes as well.
+
+Copyright (C) 2018..2022  Thomas Schöpping et al.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+'/
+
+/' Generate a configuration object. '/
+!procedure $configuration($name)
+  class $name <<C,BFBFBF>>
+!endprocedure
+
+/' Generate a enumeration definition. '/
+!procedure $enumeration($name)
+  class $name <<E,FF7F3F>>
+!endprocedure
+
+/' Generate a type definition. '/
+!procedure $type($name)
+  class $name <<T,00CFFF>>
+!endprocedure
+
+/' Generate a structure definition. '/
+!procedure $structure($name)
+  class $name <<S,BFAFFF>>
+!endprocedure
+
+/' generate a union structure definition '/
+!procedure $union($name)
+  class $name <<U,7FCF7F>>
+!endprocedure
+
+/' Generate a procedure declaration. '/
+!procedure $function($name)
+  class $name <<F,E0E0E0>>
+!endprocedure
+
+/' Generate a group. '/
+!procedure $group($name)
+  package "$name" <<Rectangle>>
+!endprocedure
+
+!procedure $module($name)
+  package "$name" <<Node>>
+!endprocedure

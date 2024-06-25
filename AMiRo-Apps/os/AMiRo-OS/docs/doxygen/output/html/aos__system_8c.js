@@ -1,0 +1,25 @@
+var aos__system_8c =
+[
+    [ "SYSTEM_INFO_NAMEWIDTH", "aos__system_8c.html#a4d673cae6dc32f65615d6ef4f16751de", null ],
+    [ "SYSTEM_INFO_SEPARATOR_TEXTPOS", "aos__system_8c.html#a94835939381b2bf552359f3430a86bed", null ],
+    [ "SYSTEM_INFO_WIDTH", "aos__system_8c.html#ac8b03f34a1ffe41753a3faf6b2b0d812", null ],
+    [ "SYSTEM_MEMDUMP_COLUMNS", "aos__system_8c.html#abac480e44b74bfee95182994c80e7713", null ],
+    [ "SYSTIMER_PERIOD", "aos__system_8c.html#a4957f72438e9a2828169b293617d802a", null ],
+    [ "_aosSysPrintSystemInfo", "aos__system_8c.html#a628cf3b4bb954a6c8dcc2897050f1fb5", null ],
+    [ "_aosSysPrintSystemInfoLine", "aos__system_8c.html#ad7b175b2c59ea14d32d828e0710df530", null ],
+    [ "_aosSysPrintSystemInfoSeparator", "aos__system_8c.html#a537f44af8a47bad304a259d332a9a5f7", null ],
+    [ "_aosSysShellcmdMemdumpCallback_BtokiB", "aos__system_8c.html#a16e8c2cbb2f2d305a5803ddc00b95f60", null ],
+    [ "_aosSysShellcmdMemdumpCallback_printDump", "aos__system_8c.html#ad6cef52a82cdd95e0ddca268397dcf17", null ],
+    [ "aosSysDeinit", "group__core__system.html#ga560e26d3b2ad2f0d1aab4a2a7bd51ac9", null ],
+    [ "aosSysGetDateTime", "group__core__system.html#ga3dd74ddd730f9506f6d0d4ec4a7c5292", null ],
+    [ "aosSysGetStdGpioCallback", "group__core__system.html#ga76d9188b6cd3a016b401941ac460e989", null ],
+    [ "aosSysGetUptimeX", "group__core__system.html#gaf2b22a2612cc5d75d10102e6d51cf737", null ],
+    [ "aosSysInit", "group__core__system.html#ga6a0e7dab8c3ac20e0ef0ccab9046b368", null ],
+    [ "aosSysSetDateTime", "group__core__system.html#gab6d60547592cca551e2a7b81e55c2483", null ],
+    [ "aosSysShutdownInit", "group__core__system.html#gab2f7b7c3fc1770a330569e5dc13f48cb", null ],
+    [ "aosSysShutdownToBootloader", "group__core__system.html#ga574fa575b1982a9d381d9b6062ed850a", null ],
+    [ "aosSysStart", "group__core__system.html#gaae33d5811802f7552aaf9848d28974c3", null ],
+    [ "aosSysStartUptimeS", "group__core__system.html#ga25800b14e746a1534c2b7dd10481ec65", null ],
+    [ "aosSysStop", "group__core__system.html#ga09b19e58d4153ec06058acf8dcf3dcc8", null ],
+    [ "aos", "group__core__system.html#ga1dead17b67c10ec2e6cb8dbd7bd31d29", null ]
+];

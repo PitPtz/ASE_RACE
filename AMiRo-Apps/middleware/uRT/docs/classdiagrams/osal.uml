@@ -1,0 +1,333 @@
+/'
+µRT is a lightweight publish-subscribe & RPC middleware for real-time
+applications. It was developed as part of the software habitat for the
+Autonomous Mini Robot (AMiRo) but can be used for other purposes as well.
+
+Copyright (C) 2018..2022  Thomas Schöpping et al.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+'/
+
+/'### INTRO ##################################################################'/
+
+@startuml
+
+title **µRT**\nOperating System Abstraction Layer (OSAL)
+
+!include ./procedures.iuml
+
+/'### ENTITIES ###############################################################'/
+
+!startsub ENTITIES
+
+/' Version definition. '/
+$configuration("version") {
+    'Major version of OSAL implementation.
+  URT_OSAL_VERSION_MAJOR : unsigned int
+    'Minor version of OSAL implementation.
+  URT_OSAL_VERSION_MINOR : unsigned int
+} /' version '/
+
+/' OS debugging feature. '/
+$group("debug") {
+  /' Just a function for debugging. '/
+  $function("urt_debug") {
+      'Checks the condition in debug mode.
+    + {method} urtDebugAssert (condition : bool) : void
+  }
+} /' debug '/
+
+/' OS mutex lock feature. '/
+$group("mutex") {
+  /' OS mutex lock interface. '/
+  $type("urt_osMutex_t") {
+      'Initializes a urt_osMutex_t object.
+    + {method} urtMutexInit (mutex : urt_osMutex_t*) : void
+      'Block the thread until the mutex could be locked.
+    + {method} urtMutexLock (mutex : urt_osMutex_t*) : void
+      'Tries to lock the mutex, but does not block but immediately returns an indicator.
+    + {method} urtMutexTryLock (mutex : urt_osMutex_t*) : bool
+      'Unlocks a previously locked mutex.
+    + {method} urtMutexUnlock (mutex : urt_osMutex_t*) : void
+  }
+} /' mutex '/
+
+/' OS condition variable feature. '/
+$group("condition variable") {
+  /' Return type for the wait function on condition variables. '/
+  $enumeration("urt_osCondvarWaitStatus_t") {
+      'The condition variable has been signaled.
+    URT_CONDVAR_WAITSTATUS_SIGNAL = 1
+      'The condition variable has been broadcasted.
+    URT_CONDVAR_WAITSTATUS_BROADCAST = 2
+      'The wait function timed out.
+    URT_CONDVAR_WAITSTATUS_TIMEOUT = 0
+  }
+
+  /' Condition variable interface. '/
+  $type("urt_osCondvar_t") {
+      'Initializes a urt_osCondvar_t object.
+    + {method} urtCondvarInit (condvar : urt_osCondvar_t*) : void
+      'Signals one thread that is waiting for the condition variable.
+    + {method} urtCondvarSignal (condvar : urt_osCondvar_t*) : void
+      'Signals all threads that are waiting for the condition variable.
+    + {method} urtCondvarBroadcast (condvar : urt_osCondvar_t*) : void
+    .. ""URT_CFG_OSAL_CONDVAR_TIMEOUT"" == false ..
+      'Waits for the condition variable.
+    + {method} urtCondvarWait (condvar : urt_osCondvar_t*, mutex : urt_osMutex_t*) : urt_osCondvarWaitStatus_t
+    .. ""URT_CFG_OSAL_CONDVAR_TIMEOUT"" == true ..
+      'Waits for the condition variable with timeout.
+    + {method} urtCondvarWait (condvar : urt_osCondvar_t*, mutex : urt_osMutex_t*, timeout : urt_delay_t) : urt_osCondvarWaitStatus_t
+  }
+} /' condition variable '/
+
+/' OS event feature. '/
+$group("events") {
+  /' OS event mask type. '/
+  $type("urt_osEventMask_t") {
+      'The event mask, which will be handled with maximum priority by the event system.
+    URT_EVENTMASK_MAXPRIO : urt_osEventMask_t
+      'Event mask to filter no events at all (typically 0xF..F).
+    URT_EVENTMASK_ALL : urt_osEventMask_t
+  }
+
+  /' OS event flag type. '/
+  $type("urt_osEventFlags_t") {
+  }
+
+  /' OS event wait type. '/
+  $enumeration("urt_osEventWait_t") {
+      'Wait for exactly one event.
+    URT_EVENT_WAIT_ONE = 0
+      'Wait for at least one event.
+    URT_EVENT_WAIT_ANY = 1
+      'Wait for all events.
+    URT_EVENT_WAIT_ALL = 2
+  }
+
+  /' OS event listener interface. '/
+  $type("urt_osEventListener_t") {
+      'Initializes an urt_osEventListener_t object.
+    + {method} urtEventListenerInit (listener : urt_osEventListener_t*) : void
+      'Retrieves the flags of the event listener.
+    + {method} urtEventListenerGetFlags (listener : urt_osEventListener_t*) : urt_osEventFlags_t
+      'Retrieves and clears the flags of the event listener.
+    + {method} urtEventListenerClearFlags (listener : urt_osEventListener_t*) : urt_osEventFlags_t
+  }
+
+  /' OS event source interface. '/
+  $type("urt_osEventSource_t") {
+      'Initializes an urt_osEventSource_t object.
+    + {method} urtEventSourceInit (source : urt_osEventSource_t*) : void
+      'Emits an event.
+    + {method} urtEventSourceBroadcast (source : urt_osEventSource_t*, flags : urt_osEventFlags_t) : void
+  }
+
+  /' Not a class/type but a set of static event-related functions. '/
+  $function("urt_events") {
+      'Registers a lister to a source.
+    + {method} urtEventRegister (source : urt_osEventSource_t*, listener : urt_osEventListener_t*, mask : urt_osEventMask_t, flags : urt_osEventFlags_t) : void
+      'Unregisters a listener from a source.
+    + {method} urtEventUnregister (source : urt_osEventSource_t*, listener : urt_osEventListener_t*) : void
+      'Signal an event to a single thread.
+    + {method} urtEventSignal (thread : urt_osThread_t*, mask : urt_osEventMask_t) : void
+      'Blocks the thread until any event occurs or the timeout expires.
+    + {method} urtEventWait (mask : urt_osEventMask_t, type : urt_osEventWait_t, timeout : urt_delay_t) : urt_osEventMask_t
+  }
+} /' events '/
+
+/' OS streams feature. '/
+$group("streams") {
+  /' Not a class/type but a set of output-related functions. '/
+  $function("urt_streams") {
+      'Prints a formatted string to the standard output stream (stdout).
+    + {method} urtPrintf (fmt : char*, ... ) : int
+      'Prints a formatted string to the standard error stream (stderr).
+    + {method} urtErrPrintf (fmt : char*, ... ) : int
+  }
+} /' streams '/
+
+/' OS time measurement feature. '/
+$group("time") {
+  /' OS time type with arbitrary resolution. '/
+  $type("urt_osTime_t") {
+      'Set an OS time to a specified value (in microseconds).
+    + {method} urtTimeSet (time: urt_osTime_t*, us : uint64_t) : void
+      'Retrieve the microsecond equivalent value from an OS time.
+    + {method} urtTimeGet (time : urt_osTime_t*) : uint64_t
+      'Retrieves the current system time.
+    + {method} urtTimeNow (time : urt_osTime_t*) : void
+      'Increase a system time object.
+    + {method} urtTimeAdd (time : urt_osTime_t*, offset : urt_delay_t) : void
+      'Calculate difference between two OS times in microseconds.
+    + {method} urtTimeDiff (from : urt_osTime_t*, to : urt_osTime_t*) : uint64_t
+  }
+} /' time '/
+
+/' OS thread feature. '/
+$group("thread") {
+  /' Thread priority type. '/
+  $type("urt_osThreadPrio_t") {
+      'Minimum priority for low priority threads.
+    URT_THREAD_PRIO_LOW_MIN
+      'Maximum priority for low priority threads.
+    URT_THREAD_PRIO_LOW_MAX
+      'Minimum priority for normal priority threads.
+    URT_THREAD_PRIO_NORMAL_MIN
+      'Maximum priority for normal priority threads.
+    URT_THREAD_PRIO_NORMAL_MAX
+      'Minimum priority for high priority threads.
+    URT_THREAD_PRIO_HIGH_MIN
+      'Maximum priority for high priority threads.
+    URT_THREAD_PRIO_HIGH_MAX
+      'Minimum priority for real-time threads.
+    URT_THREAD_PRIO_RT_MIN
+      'Maximum priority for real-time threads.
+    URT_THREAD_PRIO_RT_MAX
+  }
+
+  /' Thread main function type. '/
+  $type("urt_osThreadFunction_t") {
+    urt_osThreadFunction_t (arg : void*) : void
+  }
+
+  /' Thread terminate signals. '/
+  $enumeration("urt_osThreadTerminateSignal_t") {
+      'Signal to request termination asap.
+    URT_THREAD_TERMINATE_REQUEST = 15
+      'Signal to kill a thread immediately.
+    URT_THREAD_TERMINATE_KILL = 9
+  }
+
+  /' Thread execution states. '/
+  $enumeration("urt_osThreadState_t") {
+      'Thread has not been started yet.
+    URT_THREAD_STATE_INACTIVE = 0
+      'Thread is currently being executed.
+    URT_THREAD_STATE_RUNNING = 1
+      'Thread is ready but waiting to be scheduled.
+    URT_THREAD_STATE_READY = 2
+      'Thread is actively sleeping.
+    URT_THREAD_STATE_SLEEPING = 3
+      'Thread has ben suspended explicitely.
+    URT_THREAD_STATE_SUSPENDED = 4
+      'Thread is waiting for something (e.g. Mutex, event, etc.).
+    URT_THREAD_STATE_WAITING = 5
+      'Thread has terminated.
+    URT_THREAD_STATE_TERMINATED = 6
+  }
+
+  /' OS thread interface. '/
+  $type("urt_osThread_t") {
+     'Maximum sleep interval in seconds (as float).
+    URT_THREAD_SLEEP_MAX : float
+      'Maximum sleep interval in seconds.
+    URT_THREAD_SSLEP_MAX : unsigned int
+      'Maximum sleep interval in milliseconds.
+    URT_THREAD_MSLEEP_MAX : unsigned int
+      'Maximum sleep interval in microseconds.
+    URT_THREAD_USLEEP_MAX : urt_delay_t
+    --
+      'Macro to setup working area as static variable (handles alignment if required).
+    + {method} URT_THREAD_MEMORY (varname, stacksize)
+    ..
+      'Initializes an urt_osThread_t object.
+    + {method} urtThreadInit (memory : void*, size : size_t, prio : urt_osThreadPrio_t, func : urt_osThreadFunction_t*, arg : void*) : urt_osThread_t*
+      'Starts a thread.
+    + {method} urtThreadStart (thread : urt_osThread_t*) : void
+      'The calling threads yields.
+    + {method} urtThreadYield (void) : void
+      'Retrieves the priority of the calling thread.
+    + {method} urtThreadGetPriority (void) : urt_osThreadPrio_t
+      'Sets the priority of the calling thread.
+    + {method} urtThreadSetPriority (prio : urt_osThreadPrio_t) : void
+      'Suspends the calling thread for the specified time.
+    + {method} urtThreadSleep (seconds : float) : void
+      'Suspends the calling thread for the specified time.
+    + {method} urtThreadSSleep (seconds : unsigned int) : void
+      'Suspends the calling thread for the specified time.
+    + {method} urtThreadMSleep (milliseconds : unsigned int) : void
+      'Suspends the calling thread for the specified time.
+    + {method} urtThreadUSleep (microseconds : urt_delay_t) : void
+      'Suspends the calling thread until the specified time.
+    + {method} urtThreadSleepUntil (time : urt_osTime_t*) : void
+      'The calling thread exits execution (terminates).
+    + {method} urtThreadExit (void) : void
+      'Terminates a specified thread.
+    + {method} urtThreadTerminate (thread : urt_osThread_t*, sig : urt_osThreadTerminateSignal_t) : void
+      'Retrieves whether the calling thread has been requested to terminate.
+    + {method} urtThreadShouldTerminate (void) : bool
+      'Waits until the specified thread terminates.
+    + {method} urtThreadJoin (thread : urt_osThread_t*) : void
+      'Retrieves the execution state of the specified thread.
+    + {method} urtThreadGetState (thread : urt_osThread_t*) : urt_osThreadState_t
+      'Retrieves the calling thread itself.
+    + {method} urtThreadGetSelf (void) : urt_osThread_t*
+  }
+} /'thread'/
+
+/' OS timer feature. '/
+$group("timer") {
+  /' Timer callback definition. '/
+  $type("urt_osTimerCallback_t") {
+    urt_osTimerCallback_t (parameter : void*) : void
+  }
+
+  /' OS timer interface. '/
+  $type("urt_osTimer_t") {
+      'Initializes an urt_osTimer_t object.
+    + {method} urtTimerInit (timer : urt_osTimer_t*) : void
+      'Sets the timer to a specified delay with specified callback and arguments.
+    + {method} urtTimerSet (timer : urt_osTimer_t*, time : urtOsTime_t*, callback : urt_osTimerCallback_t*, parameter : void*) : void
+      'Sets the timer to a specified period with specified callback and arguments.
+    + {method} urtTimerSetPeriodic (timer : urt_osTimer_t*, period : urt_delay_t, callback : urt_osTimerCallback_t*, parameter : void*) : void
+      'Resets the timer.
+    + {method} urtTimerReset (timer : urt_osTimer_t*) : void
+      'Check whether the timer is already armed.
+    + {method} urtTimerIsArmed (timer : urt_osTimer_t*) : bool
+  }
+} /'condition variable'/
+
+!endsub
+
+/'### DEPENDENCIES & LAYOUT ##################################################'/
+
+!startsub DEPENDENCIES
+
+urt_osCondvar_t ..> urt_osCondvarWaitStatus_t
+urt_osCondvar_t .> urt_osMutex_t
+
+urt_osTimer_t ..> urt_osTime_t
+urt_osTimer_t ..> urt_osTimerCallback_t
+
+urt_osThread_t ..> urt_osThreadPrio_t
+urt_osThread_t ..> urt_osThreadFunction_t
+urt_osThread_t ..> urt_osThreadTerminateSignal_t
+urt_osThread_t ..> urt_osThreadState_t
+urt_osThread_t .> urt_osTime_t
+
+urt_osEventListener_t ..> urt_osEventFlags_t
+urt_osEventSource_t ..> urt_osEventFlags_t
+urt_events ..> urt_osEventSource_t
+urt_events ..> urt_osEventListener_t
+urt_events ..> urt_osEventMask_t
+urt_events ..> urt_osEventFlags_t
+urt_events ..> urt_osEventWait_t
+urt_events ..> urt_osThread_t
+
+!endsub
+
+/'### OUTRO ##################################################################'/
+
+@enduml

@@ -1,0 +1,9 @@
+/**
+ * @defgroup QEI QEI Driver
+ * @brief   Quadrature Encoder Interface
+ *
+ * @pre     In order to use the QEI driver the @p HAL_USE_QEI option
+ *          must be enabled in @p halconf.h.
+ *
+ * @ingroup HAL_NORMAL_DRIVERS
+ */

@@ -1,0 +1,655 @@
+diff --git a/os/rt/include/chobjects.h b/os/rt/include/chobjects.h
+--- a/os/rt/include/chobjects.h
++++ b/os/rt/include/chobjects.h
+@@ -213,6 +213,23 @@ struct ch_thread {
+    * @brief   References to this thread.
+    */
+   trefs_t                       refs;
++#endif
++#if (CH_CFG_USE_THREADHIERARCHY == TRUE) || defined(__DOXYGEN__)
++  /**
++   * @brief   Pointer to the parent thread.
++   * @note    NULL only for the main thread.
++   */
++  thread_t                      *parent;
++  /**
++   * @brief   Pointer to the first child thread.
++   * @note    NULL if there are no child threads.
++   */
++  thread_t                      *children;
++  /**
++   * @brief   Pointer to the next sibling thread.
++   * @brief   NULL if there are no more child threads.
++   */
++  thread_t                      *sibling;
+ #endif
+   /**
+    * @brief   Number of ticks remaining to this thread.
+diff --git a/os/rt/src/chthreads.c b/os/rt/src/chthreads.c
+--- a/os/rt/src/chthreads.c
++++ b/os/rt/src/chthreads.c
+@@ -70,6 +70,84 @@
+ /* Module local functions.                                                   */
+ /*===========================================================================*/
+ 
++#if CH_CFG_USE_THREADHIERARCHY == TRUE || defined(__DOXYGEN__)
++
++/**
++ * @brief   Insert a thread to the list of children of another thread.
++ * @details If @p CH_CFG_THREADHIERARCHY_ORDERED is @p TRUE, children are ordered by their priorities (high to low).
++ *          Children with identical priority are ordered by 'age' (youngest first).
++ *
++ * @param[in] parent  Pointer to the parent thread (must not be NULL).
++ * @param[in] child   Pointer to the child thread (must not be NULL).
++ */
++static inline void __thd_addChild(thread_t *parent, thread_t *child) {
++  child->parent = parent;
++#if CH_CFG_THREADHIERARCHY_ORDERED == TRUE
++  thread_t *sibling = parent->children;
++#if CH_CFG_USE_MUTEXES == TRUE
++  if (sibling == NULL || sibling->realprio <= child->realprio) {
++#else
++  if (sibling == NULL || sibling->prio <= child->prio) {
++#endif
++    child->sibling = sibling;
++    parent->children = child;
++  } else {
++#if CH_CFG_USE_MUTEXES == TRUE
++    while (sibling->sibling != NULL && sibling->sibling->realprio > child->realprio) {
++#else
++    while (sibling->sibling != NULL && sibling->sibling->prio > child->prio) {
++#endif
++      sibling = sibling->sibling;
++    }
++    child->sibling = sibling->sibling;
++    sibling->sibling = child;
++  }
++#else
++  child->sibling = parent->children;
++  parent->children = child;
++#endif
++  return;
++}
++
++/**
++ * @brief   Retrieve the next descendant in the thread hierarchy, if there are any.
++ *
++ * @param[in] ancestor    Pointer to the calling thread or ancestor (must not be NULL).
++ * @param[in] descendant  Pointer to an already retrieved descendant, or NULL if none was retrieved yet.
++ *
++ * @return  Pointer to the next descendant thread or NULL if there are no further descendants.
++ */
++static thread_t* __thd_nextDescendant(thread_t const* const ancestor, thread_t const* descendant) {
++  chDbgCheck(ancestor != NULL);
++
++  // if this is an initial call
++  if (descendant == NULL) {
++    // return the first child of the ancestor
++    return ancestor->children;
++  }
++  // if the descendant has further children
++  else if (descendant->children != NULL) {
++    // return the first child of the descendant
++    return descendant->children;
++  }
++  // if the dscendant has further siblings
++  else if (descendant->sibling != NULL) {
++    // return the next sibling of the descendant
++    return descendant->sibling;
++  }
++  // if the descendant has no children and no further siblings
++  else {
++    // backtrack its ancestors until one of those has further siblings or the original ancestor is reached again
++    do {
++      descendant = descendant->parent;
++    } while (descendant->sibling == NULL && descendant != ancestor);
++    // return either the next sibling of an ancestor or NULL
++    return (descendant != ancestor) ? descendant->sibling : NULL;
++  }
++}
++
++#endif
++
+ /*===========================================================================*/
+ /* Module exported functions.                                                */
+ /*===========================================================================*/
+@@ -115,6 +193,15 @@ thread_t *__thd_object_init(os_instance_t *oip,
+ #else
+   (void)name;
+ #endif
++#if CH_CFG_USE_THREADHIERARCHY == TRUE
++  if (tp == &oip->mainthread) {
++    tp->parent = NULL;
++    tp->sibling = NULL;
++  } else {
++    __thd_addChild(chThdGetSelfX(), tp);
++  }
++  tp->children = NULL;
++#endif
+ #if CH_CFG_USE_WAITEXIT == TRUE
+   ch_list_init(&tp->waiting);
+ #endif
+@@ -532,6 +619,30 @@ void chThdExitS(msg_t msg) {
+   }
+ #endif
+ 
++#if CH_CFG_USE_THREADHIERARCHY == TRUE
++  /* Wait for all child threads to terminate.*/
++  while (currtp->children != NULL) {
++    thread_t* const child = currtp->children;
++    if (likely(child->state != CH_STATE_FINAL)) {
++      ch_list_link(&child->waiting, &currtp->hdr.list);
++      chSchGoSleepS(CH_STATE_WTEXIT);
++    }
++  }
++  /* Remove from parent's list of children.*/
++  if (currtp->parent != NULL) {
++    if (currtp->parent->children == currtp) {
++      currtp->parent->children = currtp->sibling;
++    } else {
++      thread_t* child = currtp->parent->children;
++      while (child->sibling != currtp) {
++        child = child->sibling;
++      }
++      child->sibling = currtp->sibling;
++    }
++    currtp->parent = NULL;
++  }
++#endif
++
+   /* Going into final state.*/
+   chSchGoSleepS(CH_STATE_FINAL);
+ 
+@@ -616,6 +727,43 @@ tprio_t chThdSetPriority(tprio_t newprio) {
+ #else
+   oldprio = currtp->hdr.pqueue.prio;
+   currtp->hdr.pqueue.prio = newprio;
++#endif
++#if (CH_CFG_USE_THREADHIERARCHY == TRUE) && (CH_CFG_THREADHIERARCHY_ORDERED == TRUE)
++  /* Reorder sibling list. */
++  if (currtp->parent != NULL && newprio != oldprio) {
++    thread_t *sibling, *oldsibling;
++    if (newprio > oldprio) {
++      oldsibling = currtp->sibling;
++      __thd_addChild(currtp->parent, currtp);
++      sibling = currtp->sibling;
++      if (sibling != NULL) {
++        while (sibling->sibling != currtp) {
++          sibling = sibling->sibling;
++        }
++        sibling->sibling = oldsibling;
++      }
++    } else /*if (newprio < oldprio)*/ {
++      sibling = currtp->parent->children;
++      if (sibling == currtp) {
++        currtp->parent->children = currtp->sibling;
++        __thd_addChild(currtp->parent, currtp);
++      } else {
++        while (sibling->sibling != currtp) {
++          sibling = sibling->sibling;
++        }
++        sibling->sibling = currtp->sibling;
++#if CH_CFG_USE_MUTEXES == TRUE
++        while (sibling->sibling != NULL && sibling->sibling->realprio > currtp->realprio) {
++#else
++        while (sibling->sibling != NULL && sibling->sibling->prio > currtp->prio) {
++#endif
++          sibling = sibling->sibling;
++        }
++        currtp->sibling = sibling->sibling;
++        sibling->sibling = currtp;
++      }
++    }
++  }
+ #endif
+   chSchRescheduleS();
+   chSysUnlock();
+@@ -638,6 +786,13 @@ tprio_t chThdSetPriority(tprio_t newprio) {
+ void chThdTerminate(thread_t *tp) {
+ 
+   chSysLock();
++#if (CH_CFG_USE_THREADHIERARCHY == TRUE)
++  for (thread_t* descendant = __thd_nextDescendant(tp, NULL);
++       descendant != NULL;
++       descendant = __thd_nextDescendant(tp, descendant)) {
++    descendant->flags |= CH_FLAG_TERMINATE;
++  }
++#endif
+   tp->flags |= CH_FLAG_TERMINATE;
+   chSysUnlock();
+ }
+diff --git a/test/rt/source/test/rt_test_sequence_001.c b/test/rt/source/test/rt_test_sequence_001.c
+--- a/test/rt/source/test/rt_test_sequence_001.c
++++ b/test/rt/source/test/rt_test_sequence_001.c
+@@ -195,6 +195,12 @@ static void rt_test_001_003_execute(void) {
+     test_print("--- CH_CFG_USE_REGISTRY:                ");
+     test_printn(CH_CFG_USE_REGISTRY);
+     test_println("");
++    test_print("--- CH_CFG_USE_THREADHIERARCHY:         ");
++    test_printn(CH_CFG_USE_THREADHIERARCHY);
++    test_println("");
++    test_print("--- CH_CFG_THREADHIERARCHY_ORDERED:     ");
++    test_printn(CH_CFG_THREADHIERARCHY_ORDERED);
++    test_println("");
+     test_print("--- CH_CFG_USE_WAITEXIT:                ");
+     test_printn(CH_CFG_USE_WAITEXIT);
+     test_println("");
+diff --git a/test/rt/source/test/rt_test_sequence_005.c b/test/rt/source/test/rt_test_sequence_005.c
+--- a/test/rt/source/test/rt_test_sequence_005.c
++++ b/test/rt/source/test/rt_test_sequence_005.c
+@@ -34,6 +34,7 @@
+  * - @subpage rt_test_005_002
+  * - @subpage rt_test_005_003
+  * - @subpage rt_test_005_004
++ * - @subpage rt_test_005_005
+  * .
+  */
+ 
+@@ -46,6 +47,22 @@ static THD_FUNCTION(thread, p) {
+   test_emit_token(*(char *)p);
+ }
+ 
++#if (CH_CFG_USE_THREADHIERARCHY)
++
++#define CHILDTHREAD_SLEEP_MS          10
++
++static THD_FUNCTION(hierarchythread, p) {
++
++  do {
++    if (*(tprio_t *)p != chThdGetPriorityX()) {
++      chThdSetPriority(*(tprio_t *)p);
++    }
++    chThdSleepMilliseconds(CHILDTHREAD_SLEEP_MS);
++  } while (!chThdShouldTerminateX());
++}
++
++#endif
++
+ /****************************************************************************
+  * Test cases.
+  ****************************************************************************/
+@@ -339,6 +356,366 @@ static const testcase_t rt_test_005_004 = {
+ };
+ #endif /* CH_CFG_USE_MUTEXES == TRUE */
+ 
++#if (CH_CFG_USE_THREADHIERARCHY) || defined(__DOXYGEN__)
++/**
++ * @page rt_test_005_005 [5.5] Thread hierarach with (un)ordered lists.
++ *
++ * <h2>Description</h2>
++ * The functionality of the thread hierarchy is tested.
++ *
++ * <h2>Conditions</h2>
++ * This test is only executed if the following preprocessor condition
++ * evaluates to true:
++ * - CH_CFG_USE_THREADHIERARCHY
++ * This test comprises additional tests if the following preprocessor
++ * condition evaluates to true:
++ * - CH_CFG_THREADHIERARCHY_ORDERED
++ * .
++ *
++ * <h2>Test Steps</h2>
++ * - [5.5.1] Creating 5 child threads with increasing priority, hierarchy
++ *           information is tested.
++ * - [5.5.2] Creating 5 child threads with decreasing priority, hierarchy
++ *           information is tested.
++ * - [5.5.3] Creating 5 child threads with identical priority, hierarchy
++ *           information is tested.
++ * - [5.5.4] Creating 5 child threads with increasing priority which are
++ *           terminated in a controlled manner, hierarchy information is tested.
++ * - [5.5.5] Creating 5 child threads with increasing priority and then
++ *           increasing the priority of a low-priority child, hierarchy
++ *           information is tested.
++ * - [5.5.6] Creating 5 child threads with increasing priority and then
++ *           decreasing the priority of a high-priority child, hierarchy
++ *           information is tested.
++ */
++
++static void rt_test_005_005_execute(void) {
++
++  /* [5.5.1] Creating 5 child threads with increasing priority, hierarchy
++   * information is tested. */
++  test_set_step(1);
++  {
++    tprio_t prios[MAX_THREADS];
++    thread_t *threads_cpy[MAX_THREADS];
++    thread_t *parents[MAX_THREADS];
++    thread_t *siblings[MAX_THREADS];
++    prios[0] = chThdGetPriorityX()-5;
++    prios[1] = chThdGetPriorityX()-4;
++    prios[2] = chThdGetPriorityX()-3;
++    prios[3] = chThdGetPriorityX()-2;
++    prios[4] = chThdGetPriorityX()-1;
++    threads[0] = chThdCreateStatic(wa[0], WA_SIZE, prios[0], hierarchythread, &prios[0]);
++    threads[1] = chThdCreateStatic(wa[1], WA_SIZE, prios[1], hierarchythread, &prios[1]);
++    threads[2] = chThdCreateStatic(wa[2], WA_SIZE, prios[2], hierarchythread, &prios[2]);
++    threads[3] = chThdCreateStatic(wa[3], WA_SIZE, prios[3], hierarchythread, &prios[3]);
++    threads[4] = chThdCreateStatic(wa[4], WA_SIZE, prios[4], hierarchythread, &prios[4]);
++    threads_cpy[0] = threads[0];
++    threads_cpy[1] = threads[1];
++    threads_cpy[2] = threads[2];
++    threads_cpy[3] = threads[3];
++    threads_cpy[4] = threads[4];
++    parents[0] = threads[0]->parent;
++    parents[1] = threads[1]->parent;
++    parents[2] = threads[2]->parent;
++    parents[3] = threads[3]->parent;
++    parents[4] = threads[4]->parent;
++    siblings[0] = threads[0]->sibling;
++    siblings[1] = threads[1]->sibling;
++    siblings[2] = threads[2]->sibling;
++    siblings[3] = threads[3]->sibling;
++    siblings[4] = threads[4]->sibling;
++    test_terminate_threads();
++    test_wait_threads();
++    test_assert(parents[0] == chThdGetSelfX() &&
++                parents[1] == chThdGetSelfX() &&
++                parents[2] == chThdGetSelfX() &&
++                parents[3] == chThdGetSelfX() &&
++                parents[4] == chThdGetSelfX() &&
++                siblings[1] == threads_cpy[0] &&
++                siblings[2] == threads_cpy[1] &&
++                siblings[3] == threads_cpy[2] &&
++                siblings[4] == threads_cpy[3], "invalid children list");
++  }
++  test_end_step(1);
++
++  /* [5.5.2] Creating 5 child threads with decreasing priority, hierarchy
++   * information is tested. */
++  test_set_step(2);
++  {
++    tprio_t prios[MAX_THREADS];
++    thread_t *threads_cpy[MAX_THREADS];
++    thread_t *parents[MAX_THREADS];
++    thread_t *siblings[MAX_THREADS];
++    prios[0] = chThdGetPriorityX()-1;
++    prios[1] = chThdGetPriorityX()-2;
++    prios[2] = chThdGetPriorityX()-3;
++    prios[3] = chThdGetPriorityX()-4;
++    prios[4] = chThdGetPriorityX()-5;
++    threads[0] = chThdCreateStatic(wa[0], WA_SIZE, prios[0], hierarchythread, &prios[0]);
++    threads[1] = chThdCreateStatic(wa[1], WA_SIZE, prios[1], hierarchythread, &prios[1]);
++    threads[2] = chThdCreateStatic(wa[2], WA_SIZE, prios[2], hierarchythread, &prios[2]);
++    threads[3] = chThdCreateStatic(wa[3], WA_SIZE, prios[3], hierarchythread, &prios[3]);
++    threads[4] = chThdCreateStatic(wa[4], WA_SIZE, prios[4], hierarchythread, &prios[4]);
++    threads_cpy[0] = threads[0];
++    threads_cpy[1] = threads[1];
++    threads_cpy[2] = threads[2];
++    threads_cpy[3] = threads[3];
++    threads_cpy[4] = threads[4];
++    parents[0] = threads[0]->parent;
++    parents[1] = threads[1]->parent;
++    parents[2] = threads[2]->parent;
++    parents[3] = threads[3]->parent;
++    parents[4] = threads[4]->parent;
++    siblings[0] = threads[0]->sibling;
++    siblings[1] = threads[1]->sibling;
++    siblings[2] = threads[2]->sibling;
++    siblings[3] = threads[3]->sibling;
++    siblings[4] = threads[4]->sibling;
++    test_terminate_threads();
++    test_wait_threads();
++#if CH_CFG_THREADHIERARCHY_ORDERED == TRUE
++    test_assert(parents[0] == chThdGetSelfX() &&
++                parents[1] == chThdGetSelfX() &&
++                parents[2] == chThdGetSelfX() &&
++                parents[3] == chThdGetSelfX() &&
++                parents[4] == chThdGetSelfX() &&
++                siblings[0] == threads_cpy[1] &&
++                siblings[1] == threads_cpy[2] &&
++                siblings[2] == threads_cpy[3] &&
++                siblings[3] == threads_cpy[4], "invalid children list");
++#else
++    test_assert(parents[0] == chThdGetSelfX() &&
++                parents[1] == chThdGetSelfX() &&
++                parents[2] == chThdGetSelfX() &&
++                parents[3] == chThdGetSelfX() &&
++                parents[4] == chThdGetSelfX() &&
++                siblings[1] == threads_cpy[0] &&
++                siblings[2] == threads_cpy[1] &&
++                siblings[3] == threads_cpy[2] &&
++                siblings[4] == threads_cpy[3], "invalid children list");
++#endif
++  }
++  test_end_step(2);
++
++  /* [5.5.3] Creating 5 child threads with identical priority, hierarchy
++   * information is tested. */
++  test_set_step(3);
++  {
++    tprio_t prios[MAX_THREADS];
++    thread_t *threads_cpy[MAX_THREADS];
++    thread_t *parents[MAX_THREADS];
++    thread_t *siblings[MAX_THREADS];
++    prios[0] = chThdGetPriorityX()-1;
++    prios[1] = chThdGetPriorityX()-1;
++    prios[2] = chThdGetPriorityX()-1;
++    prios[3] = chThdGetPriorityX()-1;
++    prios[4] = chThdGetPriorityX()-1;
++    threads[0] = chThdCreateStatic(wa[0], WA_SIZE, prios[0], hierarchythread, &prios[0]);
++    threads[1] = chThdCreateStatic(wa[1], WA_SIZE, prios[1], hierarchythread, &prios[1]);
++    threads[2] = chThdCreateStatic(wa[2], WA_SIZE, prios[2], hierarchythread, &prios[2]);
++    threads[3] = chThdCreateStatic(wa[3], WA_SIZE, prios[3], hierarchythread, &prios[3]);
++    threads[4] = chThdCreateStatic(wa[4], WA_SIZE, prios[4], hierarchythread, &prios[4]);
++    threads_cpy[0] = threads[0];
++    threads_cpy[1] = threads[1];
++    threads_cpy[2] = threads[2];
++    threads_cpy[3] = threads[3];
++    threads_cpy[4] = threads[4];
++    parents[0] = threads[0]->parent;
++    parents[1] = threads[1]->parent;
++    parents[2] = threads[2]->parent;
++    parents[3] = threads[3]->parent;
++    parents[4] = threads[4]->parent;
++    siblings[0] = threads[0]->sibling;
++    siblings[1] = threads[1]->sibling;
++    siblings[2] = threads[2]->sibling;
++    siblings[3] = threads[3]->sibling;
++    siblings[4] = threads[4]->sibling;
++    test_terminate_threads();
++    test_wait_threads();
++    test_assert(parents[0] == chThdGetSelfX() &&
++                parents[1] == chThdGetSelfX() &&
++                parents[2] == chThdGetSelfX() &&
++                parents[3] == chThdGetSelfX() &&
++                parents[4] == chThdGetSelfX() &&
++                siblings[1] == threads_cpy[0] &&
++                siblings[2] == threads_cpy[1] &&
++                siblings[3] == threads_cpy[2] &&
++                siblings[4] == threads_cpy[3] , "invalid children list");
++  }
++  test_end_step(3);
++
++  /* [5.5.4] Creating 5 child threads with increasing priority, which are
++   * terminated in a controlled manner, hierarchy information is tested. */
++  test_set_step(4);
++  {
++    tprio_t prios[MAX_THREADS];
++    thread_t *threads_cpy[MAX_THREADS];
++    thread_t *parents[MAX_THREADS];
++    thread_t *siblings[MAX_THREADS];
++    prios[0] = chThdGetPriorityX()-5;
++    prios[1] = chThdGetPriorityX()-4;
++    prios[2] = chThdGetPriorityX()-3;
++    prios[3] = chThdGetPriorityX()-2;
++    prios[4] = chThdGetPriorityX()-1;
++    threads[0] = chThdCreateStatic(wa[0], WA_SIZE, prios[0], hierarchythread, &prios[0]);
++    threads[1] = chThdCreateStatic(wa[1], WA_SIZE, prios[1], hierarchythread, &prios[1]);
++    threads[2] = chThdCreateStatic(wa[2], WA_SIZE, prios[2], hierarchythread, &prios[2]);
++    threads[3] = chThdCreateStatic(wa[3], WA_SIZE, prios[3], hierarchythread, &prios[3]);
++    threads[4] = chThdCreateStatic(wa[4], WA_SIZE, prios[4], hierarchythread, &prios[4]);
++    threads_cpy[0] = threads[0];
++    threads_cpy[1] = threads[1];
++    threads_cpy[2] = threads[2];
++    threads_cpy[3] = threads[3];
++    threads_cpy[4] = threads[4];
++#if CH_CFG_USE_REGISTRY == TRUE
++    chThdAddRef(threads[1]);
++    chThdAddRef(threads[4]);
++#endif
++    chThdTerminate(threads[1]);
++    chThdTerminate(threads[4]);
++    chThdWait(threads[1]);
++    chThdWait(threads[4]);
++    parents[0] = threads[0]->parent;
++    parents[1] = threads[1]->parent;
++    parents[2] = threads[2]->parent;
++    parents[3] = threads[3]->parent;
++    parents[4] = threads[4]->parent;
++    siblings[0] = threads[0]->sibling;
++    siblings[1] = threads[1]->sibling;
++    siblings[2] = threads[2]->sibling;
++    siblings[3] = threads[3]->sibling;
++    siblings[4] = threads[4]->sibling;
++    test_terminate_threads();
++    test_wait_threads();
++    test_assert(parents[0] == chThdGetSelfX() &&
++                parents[2] == chThdGetSelfX() &&
++                parents[3] == chThdGetSelfX() &&
++                siblings[2] == threads_cpy[0] &&
++                siblings[3] == threads_cpy[2], "invalid children list");
++  }
++  test_end_step(4);
++
++  /* [5.5.5] Creating 5 child threads with increasing priority and then
++   * increasing the priority of a low-priority child, hierarchy information is
++   * tested. */
++  test_set_step(5);
++  {
++    tprio_t prios[MAX_THREADS];
++    thread_t *threads_cpy[MAX_THREADS];
++    tprio_t testprios[2];
++    thread_t *siblings[MAX_THREADS];
++    prios[0] = chThdGetPriorityX()-5;
++    prios[1] = chThdGetPriorityX()-4;
++    prios[2] = chThdGetPriorityX()-3;
++    prios[3] = chThdGetPriorityX()-2;
++    prios[4] = chThdGetPriorityX()-1;
++    threads[0] = chThdCreateStatic(wa[0], WA_SIZE, prios[0], hierarchythread, &prios[0]);
++    threads[1] = chThdCreateStatic(wa[1], WA_SIZE, prios[1], hierarchythread, &prios[1]);
++    threads[2] = chThdCreateStatic(wa[2], WA_SIZE, prios[2], hierarchythread, &prios[2]);
++    threads[3] = chThdCreateStatic(wa[3], WA_SIZE, prios[3], hierarchythread, &prios[3]);
++    threads[4] = chThdCreateStatic(wa[4], WA_SIZE, prios[4], hierarchythread, &prios[4]);
++    threads_cpy[0] = threads[0];
++    threads_cpy[1] = threads[1];
++    threads_cpy[2] = threads[2];
++    threads_cpy[3] = threads[3];
++    threads_cpy[4] = threads[4];
++    chThdSleepMilliseconds(CHILDTHREAD_SLEEP_MS*2);
++    testprios[0] = threads[0]->hdr.pqueue.prio;
++    prios[0] = prios[4];
++    chThdSleepMilliseconds(CHILDTHREAD_SLEEP_MS*2);
++    testprios[1] = threads[0]->hdr.pqueue.prio;
++    siblings[0] = threads[0]->sibling;
++    siblings[1] = threads[1]->sibling;
++    siblings[2] = threads[2]->sibling;
++    siblings[3] = threads[3]->sibling;
++    siblings[4] = threads[4]->sibling;
++    test_terminate_threads();
++    test_wait_threads();
++#if CH_CFG_THREADHIERARCHY_ORDERED == TRUE
++    test_assert(testprios[0] == chThdGetPriorityX()-5 &&
++                testprios[1] == prios[4] &&
++                siblings[0] == threads_cpy[4] &&
++                siblings[2] == threads_cpy[1] &&
++                siblings[3] == threads_cpy[2] &&
++                siblings[4] == threads_cpy[3], "invalid children list");
++#else
++    test_assert(testprios[0] == chThdGetPriorityX()-5 &&
++                testprios[1] == prios[4] &&
++                siblings[1] == threads_cpy[0] &&
++                siblings[2] == threads_cpy[1] &&
++                siblings[3] == threads_cpy[2] &&
++                siblings[4] == threads_cpy[3], "invalid children list");
++#endif
++  }
++  test_end_step(5);
++
++  /* [5.5.6] Creating 5 child threads with increasing priority and then
++   * decreasing the priority of a high-priority child, hierarchy information is
++   * tested. */
++  test_set_step(6);
++  {
++    tprio_t prios[MAX_THREADS];
++    thread_t *threads_cpy[MAX_THREADS];
++    tprio_t testprios[2];
++    thread_t *siblings[MAX_THREADS];
++    prios[0] = chThdGetPriorityX()-5;
++    prios[1] = chThdGetPriorityX()-4;
++    prios[2] = chThdGetPriorityX()-3;
++    prios[3] = chThdGetPriorityX()-2;
++    prios[4] = chThdGetPriorityX()-1;
++    threads[0] = chThdCreateStatic(wa[0], WA_SIZE, prios[0], hierarchythread, &prios[0]);
++    threads[1] = chThdCreateStatic(wa[1], WA_SIZE, prios[1], hierarchythread, &prios[1]);
++    threads[2] = chThdCreateStatic(wa[2], WA_SIZE, prios[2], hierarchythread, &prios[2]);
++    threads[3] = chThdCreateStatic(wa[3], WA_SIZE, prios[3], hierarchythread, &prios[3]);
++    threads[4] = chThdCreateStatic(wa[4], WA_SIZE, prios[4], hierarchythread, &prios[4]);
++    threads_cpy[0] = threads[0];
++    threads_cpy[1] = threads[1];
++    threads_cpy[2] = threads[2];
++    threads_cpy[3] = threads[3];
++    threads_cpy[4] = threads[4];
++    chThdSleepMilliseconds(CHILDTHREAD_SLEEP_MS*2);
++    testprios[0] = threads[4]->hdr.pqueue.prio;
++    prios[4] = prios[0];
++    chThdSleepMilliseconds(CHILDTHREAD_SLEEP_MS*2);
++    testprios[1] = threads[4]->hdr.pqueue.prio;
++    siblings[0] = threads[0]->sibling;
++    siblings[1] = threads[1]->sibling;
++    siblings[2] = threads[2]->sibling;
++    siblings[3] = threads[3]->sibling;
++    siblings[4] = threads[4]->sibling;
++    test_terminate_threads();
++    test_wait_threads();
++#if CH_CFG_THREADHIERARCHY_ORDERED == TRUE
++    test_assert(testprios[0] == chThdGetPriorityX()-1 &&
++                testprios[1] == prios[0] &&
++                siblings[1] == threads_cpy[4] &&
++                siblings[2] == threads_cpy[1] &&
++                siblings[3] == threads_cpy[2] &&
++                siblings[4] == threads_cpy[0], "invalid children list");
++#else
++    test_assert(testprios[0] == chThdGetPriorityX()-1 &&
++                testprios[1] == prios[0] &&
++                siblings[1] == threads_cpy[0] &&
++                siblings[2] == threads_cpy[1] &&
++                siblings[3] == threads_cpy[2] &&
++                siblings[4] == threads_cpy[3], "invalid children list");
++#endif
++  }
++  test_end_step(6);
++}
++
++static const testcase_t rt_test_005_005 = {
++#if CH_CFG_THREADHIERARCHY_ORDERED == TRUE
++  "Thread hierarchy with ordered lists",
++#else
++  "Thread hierarchy with unordered lists",
++#endif
++  NULL,
++  NULL,
++  rt_test_005_005_execute
++};
++#endif /* CH_CFG_USE_THREADHIERARCHY */
++
+ /****************************************************************************
+  * Exported data.
+  ****************************************************************************/
+@@ -352,6 +729,9 @@ const testcase_t * const rt_test_sequence_005_array[] = {
+   &rt_test_005_003,
+ #if (CH_CFG_USE_MUTEXES == TRUE) || defined(__DOXYGEN__)
+   &rt_test_005_004,
++#endif
++#if (CH_CFG_USE_THREADHIERARCHY == TRUE) || defined(__DOXYGEN__)
++  &rt_test_005_005,
+ #endif
+   NULL
+ };
+@@ -363,3 +743,7 @@ const testsequence_t rt_test_sequence_005 = {
+   "Threads Functionality",
+   rt_test_sequence_005_array
+ };
++
++#if (CH_CFG_USE_THREADHIERARCHY == TRUE)
++#undef CHILDTHREAD_SLEEP_MS
++#endif

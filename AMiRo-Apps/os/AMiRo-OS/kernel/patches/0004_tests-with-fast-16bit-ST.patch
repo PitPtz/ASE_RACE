@@ -1,0 +1,443 @@
+diff --git a/os/test/include/ch_test.h b/os/test/include/ch_test.h
+--- a/os/test/include/ch_test.h
++++ b/os/test/include/ch_test.h
+@@ -199,6 +199,12 @@ typedef struct {
+ /* Module macros.                                                            */
+ /*===========================================================================*/
+ 
++/**
++ * @brief   Limit interval value to be representable as @p systime_t.
++ */
++#define test_limit_interval(interval, offset)                               \
++  (((interval) > (sysinterval_t)TIME_MAX_SYSTIME-(offset)) ? (sysinterval_t)TIME_MAX_SYSTIME-(offset) : (interval))
++
+ /**
+  * @brief   Sets the step identifier.
+  *
+diff --git a/test/rt/source/test/rt_test_sequence_004.c b/test/rt/source/test/rt_test_sequence_004.c
+--- a/test/rt/source/test/rt_test_sequence_004.c
++++ b/test/rt/source/test/rt_test_sequence_004.c
+@@ -71,17 +71,22 @@ static void rt_test_004_001_execute(void) {
+     systime_t start, end;
+     systimestamp_t last, now;
+ 
++    sysinterval_t remaining = TIME_MS2I(1000);
+     last = chVTGetTimeStamp();
+-    start = test_wait_tick();
+-    end = chTimeAddX(start, TIME_MS2I(1000));
+-    do {
+-      now = chVTGetTimeStamp();
+-      test_assert(last <= now, "not monotonic");
+-      last = now;
++    while (remaining) {
++      const sysinterval_t interval = test_limit_interval(remaining, CH_CFG_ST_TIMEDELTA);
++      start = test_wait_tick();
++      end = chTimeAddX(start, interval);
++      do {
++        now = chVTGetTimeStamp();
++        test_assert(last <= now, "not monotonic");
++        last = now;
+ #if defined(SIMULATOR)
+-      _sim_check_for_interrupts();
++        _sim_check_for_interrupts();
+ #endif
+-    } while (chVTIsSystemTimeWithinX(start, end));
++      } while (chVTIsSystemTimeWithinX(start, end));
++      remaining -= interval;
++    }
+   }
+   test_end_step(1);
+ }
+
+diff --git a/test/rt/source/test/rt_test_sequence_005.c b/test/rt/source/test/rt_test_sequence_005.c
+--- a/test/rt/source/test/rt_test_sequence_005.c
++++ b/test/rt/source/test/rt_test_sequence_005.c
+@@ -94,11 +94,15 @@ static void rt_test_005_001_execute(void) {
+      again.*/
+   test_set_step(2);
+   {
+-    time = chVTGetSystemTimeX();
+-    chThdSleepMicroseconds(100000);
+-    test_assert_time_window(chTimeAddX(time, TIME_US2I(100000)),
+-                            chTimeAddX(time, TIME_US2I(100000) + CH_CFG_ST_TIMEDELTA + 1),
+-                            "out of time window");
++    time_usecs_t us = TIME_I2US(test_limit_interval(TIME_US2I(100000), CH_CFG_ST_TIMEDELTA + 1));
++    if (us > 1) {
++      us -= 1;
++      time = chVTGetSystemTimeX();
++      chThdSleepMicroseconds(us);
++      test_assert_time_window(chTimeAddX(time, TIME_US2I(us)),
++                              chTimeAddX(time, TIME_US2I(us) + CH_CFG_ST_TIMEDELTA + 1),
++                              "out of time window");
++    }
+   }
+   test_end_step(2);
+ 
+@@ -107,11 +111,15 @@ static void rt_test_005_001_execute(void) {
+      again.*/
+   test_set_step(3);
+   {
+-    time = chVTGetSystemTimeX();
+-    chThdSleepMilliseconds(100);
+-    test_assert_time_window(chTimeAddX(time, TIME_MS2I(100)),
+-                            chTimeAddX(time, TIME_MS2I(100) + CH_CFG_ST_TIMEDELTA + 1),
+-                            "out of time window");
++    time_msecs_t ms = TIME_I2MS(test_limit_interval(TIME_MS2I(100), CH_CFG_ST_TIMEDELTA + 1));
++    if (ms > 1) {
++      ms -= 1;
++      time = chVTGetSystemTimeX();
++      chThdSleepMilliseconds(ms);
++      test_assert_time_window(chTimeAddX(time, TIME_MS2I(ms)),
++                              chTimeAddX(time, TIME_MS2I(ms) + CH_CFG_ST_TIMEDELTA + 1),
++                              "out of time window");
++    }
+   }
+   test_end_step(3);
+ 
+@@ -119,11 +127,15 @@ static void rt_test_005_001_execute(void) {
+      for 1 second and on exit the system time is verified again.*/
+   test_set_step(4);
+   {
+-    time = chVTGetSystemTimeX();
+-    chThdSleepSeconds(1);
+-    test_assert_time_window(chTimeAddX(time, TIME_S2I(1)),
+-                            chTimeAddX(time, TIME_S2I(1) + CH_CFG_ST_TIMEDELTA + 1),
+-                            "out of time window");
++    time_secs_t s = TIME_I2S(test_limit_interval(TIME_S2I(1), CH_CFG_ST_TIMEDELTA + 1));
++    if (s > 1) {
++      s -= 1;
++      time = chVTGetSystemTimeX();
++      chThdSleepSeconds(s);
++      test_assert_time_window(chTimeAddX(time, TIME_S2I(s)),
++                              chTimeAddX(time, TIME_S2I(s) + CH_CFG_ST_TIMEDELTA + 1),
++                              "out of time window");
++    }
+   }
+   test_end_step(4);
+ 
+diff --git a/test/rt/source/test/rt_test_sequence_006.c b/test/rt/source/test/rt_test_sequence_006.c
+--- a/test/rt/source/test/rt_test_sequence_006.c
++++ b/test/rt/source/test/rt_test_sequence_006.c
+@@ -98,12 +98,13 @@ static void rt_test_006_001_execute(void) {
+      the state of the reference are tested.*/
+   test_set_step(2);
+   {
++    const sysinterval_t interval = test_limit_interval(TIME_MS2I(1000), CH_CFG_ST_TIMEDELTA + 1);
+     chSysLock();
+     time = chVTGetSystemTimeX();
+-    msg = chThdSuspendTimeoutS(&tr1, TIME_MS2I(1000));
++    msg = chThdSuspendTimeoutS(&tr1, interval);
+     chSysUnlock();
+-    test_assert_time_window(chTimeAddX(time, TIME_MS2I(1000)),
+-                            chTimeAddX(time, TIME_MS2I(1000) + CH_CFG_ST_TIMEDELTA + 1),
++    test_assert_time_window(chTimeAddX(time, interval),
++                            chTimeAddX(time, interval + CH_CFG_ST_TIMEDELTA + 1),
+                             "out of time window");
+     test_assert(NULL == tr1, "not NULL");
+     test_assert(MSG_TIMEOUT == msg, "wrong returned message");
+diff --git a/test/rt/source/test/rt_test_sequence_007.c b/test/rt/source/test/rt_test_sequence_007.c
+--- a/test/rt/source/test/rt_test_sequence_007.c
++++ b/test/rt/source/test/rt_test_sequence_007.c
+@@ -267,15 +267,19 @@ static void rt_test_007_003_execute(void) {
+   /* [7.3.3] Testing timeout condition.*/
+   test_set_step(3);
+   {
+-    target_time = chTimeAddX(test_wait_tick(), TIME_MS2I(5 * 50));
+-    for (i = 0; i < 5; i++) {
++    unsigned int loops = (TIME_MAX_SYSTIME - ALLOWED_DELAY) / TIME_MS2I(50);
++    loops = (loops > 5) ? 5 : loops;
++    target_time = chTimeAddX(test_wait_tick(), TIME_MS2I(loops * 50));
++    for (i = 0; i < loops; i++) {
+       test_emit_token('A' + i);
+       msg = chSemWaitTimeout(&sem1, TIME_MS2I(50));
+       test_assert(msg == MSG_TIMEOUT, "wrong wake-up message");
+       test_assert(ch_queue_isempty(&sem1.queue), "queue not empty");
+       test_assert(sem1.cnt == 0, "counter not zero");
+     }
+-    test_assert_sequence("ABCDE", "invalid sequence");
++    char sequence[] = "ABCDE";
++    sequence[loops] = '\0';
++    test_assert_sequence(sequence, "invalid sequence");
+     test_assert_time_window(target_time,
+                             chTimeAddX(target_time, ALLOWED_DELAY),
+                             "out of time window");
+diff --git a/test/rt/source/test/rt_test_sequence_012.c b/test/rt/source/test/rt_test_sequence_012.c
+--- a/test/rt/source/test/rt_test_sequence_012.c
++++ b/test/rt/source/test/rt_test_sequence_012.c
+@@ -83,15 +83,20 @@ NOINLINE static unsigned int msg_loop_test(thread_t *tp) {
+   systime_t start, end;
+ 
+   uint32_t n = 0;
+-  start = test_wait_tick();
+-  end = chTimeAddX(start, TIME_MS2I(1000));
+-  do {
+-    (void)chMsgSend(tp, 1);
+-    n++;
++  sysinterval_t remaining = TIME_MS2I(1000);
++  while (remaining) {
++    const sysinterval_t interval = test_limit_interval(remaining, CH_CFG_ST_TIMEDELTA);
++    start = test_wait_tick();
++    end = chTimeAddX(start, interval);
++    do {
++      (void)chMsgSend(tp, 1);
++      n++;
+ #if defined(SIMULATOR)
+-    _sim_check_for_interrupts();
++      _sim_check_for_interrupts();
+ #endif
+-  } while (chVTIsSystemTimeWithinX(start, end));
++    } while (chVTIsSystemTimeWithinX(start, end));
++    remaining -= interval;
++  }
+   (void)chMsgSend(tp, 0);
+   return n;
+ }
+@@ -386,20 +391,25 @@ static void rt_test_012_004_execute(void) {
+     systime_t start, end;
+ 
+     n = 0;
+-    start = test_wait_tick();
+-    end = chTimeAddX(start, TIME_MS2I(1000));
+-    do {
+-      chSysLock();
+-      chSchWakeupS(tp, MSG_OK);
+-      chSchWakeupS(tp, MSG_OK);
+-      chSchWakeupS(tp, MSG_OK);
+-      chSchWakeupS(tp, MSG_OK);
+-      chSysUnlock();
+-      n += 4;
++    sysinterval_t remaining = TIME_MS2I(1000);
++    while (remaining) {
++      const sysinterval_t interval = test_limit_interval(remaining, CH_CFG_ST_TIMEDELTA);
++      start = test_wait_tick();
++      end = chTimeAddX(start, interval);
++      do {
++        chSysLock();
++        chSchWakeupS(tp, MSG_OK);
++        chSchWakeupS(tp, MSG_OK);
++        chSchWakeupS(tp, MSG_OK);
++        chSchWakeupS(tp, MSG_OK);
++        chSysUnlock();
++        n += 4;
+ #if defined(SIMULATOR)
+-      _sim_check_for_interrupts();
++        _sim_check_for_interrupts();
+ #endif
+-    } while (chVTIsSystemTimeWithinX(start, end));
++      } while (chVTIsSystemTimeWithinX(start, end));
++      remaining -= interval;
++    }
+   }
+   test_end_step(2);
+ 
+@@ -459,15 +469,20 @@ static void rt_test_012_005_execute(void) {
+   test_set_step(1);
+   {
+     n = 0;
+-    start = test_wait_tick();
+-    end = chTimeAddX(start, TIME_MS2I(1000));
+-    do {
+-      chThdWait(chThdCreateStatic(wa[0], WA_SIZE, prio, bmk_thread3, NULL));
+-      n++;
++    sysinterval_t remaining = TIME_MS2I(1000);
++    while (remaining) {
++      const sysinterval_t interval = test_limit_interval(remaining, CH_CFG_ST_TIMEDELTA);
++      start = test_wait_tick();
++      end = chTimeAddX(start, interval);
++      do {
++        chThdWait(chThdCreateStatic(wa[0], WA_SIZE, prio, bmk_thread3, NULL));
++        n++;
+ #if defined(SIMULATOR)
+-      _sim_check_for_interrupts();
++        _sim_check_for_interrupts();
+ #endif
+-    } while (chVTIsSystemTimeWithinX(start, end));
++      } while (chVTIsSystemTimeWithinX(start, end));
++      remaining -= interval;
++    }
+   }
+   test_end_step(1);
+ 
+@@ -518,19 +533,24 @@ static void rt_test_012_006_execute(void) {
+   test_set_step(1);
+   {
+     n = 0;
+-    start = test_wait_tick();
+-    end = chTimeAddX(start, TIME_MS2I(1000));
+-    do {
++    sysinterval_t remaining = TIME_MS2I(1000);
++    while (remaining) {
++      const sysinterval_t interval = test_limit_interval(remaining, CH_CFG_ST_TIMEDELTA);
++      start = test_wait_tick();
++      end = chTimeAddX(start, interval);
++      do {
+ #if CH_CFG_USE_REGISTRY
+-      chThdRelease(chThdCreateStatic(wa[0], WA_SIZE, prio, bmk_thread3, NULL));
++        chThdRelease(chThdCreateStatic(wa[0], WA_SIZE, prio, bmk_thread3, NULL));
+ #else
+-      chThdCreateStatic(wa[0], WA_SIZE, prio, bmk_thread3, NULL);
++        chThdCreateStatic(wa[0], WA_SIZE, prio, bmk_thread3, NULL);
+ #endif
+-      n++;
++        n++;
+ #if defined(SIMULATOR)
+-      _sim_check_for_interrupts();
++        _sim_check_for_interrupts();
+ #endif
+-    } while (chVTIsSystemTimeWithinX(start, end));
++      } while (chVTIsSystemTimeWithinX(start, end));
++      remaining -= interval;
++    }
+   }
+   test_end_step(1);
+ 
+@@ -603,15 +623,20 @@ static void rt_test_012_007_execute(void) {
+     systime_t start, end;
+ 
+     n = 0;
+-    start = test_wait_tick();
+-    end = chTimeAddX(start, TIME_MS2I(1000));
+-    do {
+-      chSemReset(&sem1, 0);
+-      n++;
++    sysinterval_t remaining = TIME_MS2I(1000);
++    while (remaining) {
++      const sysinterval_t interval = test_limit_interval(remaining, CH_CFG_ST_TIMEDELTA);
++      start = test_wait_tick();
++      end = chTimeAddX(start, interval);
++      do {
++        chSemReset(&sem1, 0);
++        n++;
+ #if defined(SIMULATOR)
+-      _sim_check_for_interrupts();
++        _sim_check_for_interrupts();
+ #endif
+-    } while (chVTIsSystemTimeWithinX(start, end));
++      } while (chVTIsSystemTimeWithinX(start, end));
++      remaining -= interval;
++    }
+   }
+   test_end_step(2);
+ 
+@@ -734,20 +759,25 @@ static void rt_test_012_009_execute(void) {
+     systime_t start, end;
+ 
+     n = 0;
+-    start = test_wait_tick();
+-    end = chTimeAddX(start, TIME_MS2I(1000));
+-    do {
+-      chSysLock();
+-      chVTDoSetI(&vt1, 1, tmo, NULL);
+-      chVTDoSetI(&vt2, 10000, tmo, NULL);
+-      chVTDoResetI(&vt1);
+-      chVTDoResetI(&vt2);
+-      chSysUnlock();
+-      n++;
++    sysinterval_t remaining = TIME_MS2I(1000);
++    while (remaining) {
++      const sysinterval_t interval = test_limit_interval(remaining, CH_CFG_ST_TIMEDELTA);
++      start = test_wait_tick();
++      end = chTimeAddX(start, interval);
++      do {
++        chSysLock();
++        chVTDoSetI(&vt1, 1, tmo, NULL);
++        chVTDoSetI(&vt2, 10000, tmo, NULL);
++        chVTDoResetI(&vt1);
++        chVTDoResetI(&vt2);
++        chSysUnlock();
++        n++;
+ #if defined(SIMULATOR)
+-      _sim_check_for_interrupts();
++        _sim_check_for_interrupts();
+ #endif
+-    } while (chVTIsSystemTimeWithinX(start, end));
++      } while (chVTIsSystemTimeWithinX(start, end));
++      remaining -= interval;
++    }
+   }
+   test_end_step(1);
+ 
+@@ -805,22 +835,27 @@ static void rt_test_012_010_execute(void) {
+     systime_t start, end;
+ 
+     n = 0;
+-    start = test_wait_tick();
+-    end = chTimeAddX(start, TIME_MS2I(1000));
+-    do {
+-      chSemWait(&sem1);
+-      chSemSignal(&sem1);
+-      chSemWait(&sem1);
+-      chSemSignal(&sem1);
+-      chSemWait(&sem1);
+-      chSemSignal(&sem1);
+-      chSemWait(&sem1);
+-      chSemSignal(&sem1);
+-      n++;
++    sysinterval_t remaining = TIME_MS2I(1000);
++    while (remaining) {
++      const sysinterval_t interval = test_limit_interval(remaining, CH_CFG_ST_TIMEDELTA);
++      start = test_wait_tick();
++      end = chTimeAddX(start, interval);
++      do {
++        chSemWait(&sem1);
++        chSemSignal(&sem1);
++        chSemWait(&sem1);
++        chSemSignal(&sem1);
++        chSemWait(&sem1);
++        chSemSignal(&sem1);
++        chSemWait(&sem1);
++        chSemSignal(&sem1);
++        n++;
+ #if defined(SIMULATOR)
+-      _sim_check_for_interrupts();
++        _sim_check_for_interrupts();
+ #endif
+-    } while (chVTIsSystemTimeWithinX(start, end));
++      } while (chVTIsSystemTimeWithinX(start, end));
++      remaining -= interval;
++    }
+   }
+   test_end_step(1);
+ 
+@@ -879,22 +914,27 @@ static void rt_test_012_011_execute(void) {
+     systime_t start, end;
+ 
+     n = 0;
+-    start = test_wait_tick();
+-    end = chTimeAddX(start, TIME_MS2I(1000));
+-    do {
+-      chMtxLock(&mtx1);
+-      chMtxUnlock(&mtx1);
+-      chMtxLock(&mtx1);
+-      chMtxUnlock(&mtx1);
+-      chMtxLock(&mtx1);
+-      chMtxUnlock(&mtx1);
+-      chMtxLock(&mtx1);
+-      chMtxUnlock(&mtx1);
+-      n++;
++    sysinterval_t remaining = TIME_MS2I(1000);
++    while (remaining) {
++      const sysinterval_t interval = test_limit_interval(remaining, CH_CFG_ST_TIMEDELTA);
++      start = test_wait_tick();
++      end = chTimeAddX(start, interval);
++      do {
++        chMtxLock(&mtx1);
++        chMtxUnlock(&mtx1);
++        chMtxLock(&mtx1);
++        chMtxUnlock(&mtx1);
++        chMtxLock(&mtx1);
++        chMtxUnlock(&mtx1);
++        chMtxLock(&mtx1);
++        chMtxUnlock(&mtx1);
++        n++;
+ #if defined(SIMULATOR)
+-      _sim_check_for_interrupts();
++        _sim_check_for_interrupts();
+ #endif
+-    } while (chVTIsSystemTimeWithinX(start, end));
++      } while (chVTIsSystemTimeWithinX(start, end));
++      remaining -= interval;
++    }
+   }
+   test_end_step(1);
+ 
