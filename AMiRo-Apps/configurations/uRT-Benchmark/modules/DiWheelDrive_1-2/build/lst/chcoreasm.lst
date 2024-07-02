@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccoBsE0z.s 			page 1
+ARM GAS  /tmp/ccd0qdob.s 			page 1
 
 
    1              	# 1 "../../kernel/ChibiOS/os/common/ports/ARMv7-M/compilers/GCC/chcoreasm.S"
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccoBsE0z.s 			page 1
   15              	
   16              	    You should have received a copy of the GNU General Public License
   17              	    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-ARM GAS  /tmp/ccoBsE0z.s 			page 2
+ARM GAS  /tmp/ccd0qdob.s 			page 2
 
 
   18              	*/
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccoBsE0z.s 			page 1
   70              	#if CH_LICENSE == CH_LICENSE_PARTNER
   38              	#include "chconf.h"
    1              	/*
-ARM GAS  /tmp/ccoBsE0z.s 			page 3
+ARM GAS  /tmp/ccd0qdob.s 			page 3
 
 
    2              	AMiRo-OS is an operating system designed for the Autonomous Mini Robot (AMiRo) platform.
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccoBsE0z.s 			page 1
   19              	/**
   20              	 * @file    aosconf.h
   21              	 * @brief   AMiRo-OS Configuration file for the DiWheelDrive v1.2 module.
-ARM GAS  /tmp/ccoBsE0z.s 			page 4
+ARM GAS  /tmp/ccd0qdob.s 			page 4
 
 
   22              	 * @details Contains the application specific AMiRo-OS settings.
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccoBsE0z.s 			page 1
   24              	 *
   25              	 * @addtogroup configs_urtbenchmark_modules_diwheeldrive12
   26              	 * @{
-ARM GAS  /tmp/ccoBsE0z.s 			page 5
+ARM GAS  /tmp/ccd0qdob.s 			page 5
 
 
   27              	 */
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccoBsE0z.s 			page 1
   81              	 * @{
   82              	 */
   83              	/*===========================================================================*/
-ARM GAS  /tmp/ccoBsE0z.s 			page 6
+ARM GAS  /tmp/ccd0qdob.s 			page 6
 
 
   84              	
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccoBsE0z.s 			page 1
   85              	
   86              	// more common definitions in aos_chconf.h
   87              	
-ARM GAS  /tmp/ccoBsE0z.s 			page 7
+ARM GAS  /tmp/ccd0qdob.s 			page 7
 
 
   88              	/** @} */
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccoBsE0z.s 			page 1
  142              	
  143              	/** @} */
  144              	
-ARM GAS  /tmp/ccoBsE0z.s 			page 8
+ARM GAS  /tmp/ccd0qdob.s 			page 8
 
 
  145              	/*===========================================================================*/
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccoBsE0z.s 			page 1
    4              	
    5              	    This file is part of ChibiOS.
    6              	
-ARM GAS  /tmp/ccoBsE0z.s 			page 9
+ARM GAS  /tmp/ccd0qdob.s 			page 9
 
 
    7              	    ChibiOS is free software; you can redistribute it and/or modify
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccoBsE0z.s 			page 1
   29              	#define CMPARAMS_H
   30              	
   31              	/**
-ARM GAS  /tmp/ccoBsE0z.s 			page 10
+ARM GAS  /tmp/ccd0qdob.s 			page 10
 
 
   32              	 * @brief   Cortex core model.
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccoBsE0z.s 			page 1
   64              	                .cpu    cortex-m4
   65              	#if CORTEX_USE_FPU
   66              	                .fpu    fpv4-sp-d16
-ARM GAS  /tmp/ccoBsE0z.s 			page 11
+ARM GAS  /tmp/ccd0qdob.s 			page 11
 
 
   67              	#else
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccoBsE0z.s 			page 1
  121              	#endif
  122              	
  123 0004 C1F80CD0 	                str     sp, [r1, #CONTEXT_OFFSET]
-ARM GAS  /tmp/ccoBsE0z.s 			page 12
+ARM GAS  /tmp/ccd0qdob.s 			page 12
 
 
  124              	#if (CORTEX_SIMPLIFIED_PRIORITY == FALSE) &&                                \
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccoBsE0z.s 			page 1
  178              	 *
  179              	 * Threads execution starts here, the code leaves the system critical zone
  180              	 * and then jumps into the thread function passed in register R4. The
-ARM GAS  /tmp/ccoBsE0z.s 			page 13
+ARM GAS  /tmp/ccd0qdob.s 			page 13
 
 
  181              	 * register R5 contains the thread parameter. The function chThdExit() is
@@ -778,13 +778,13 @@ ARM GAS  /tmp/ccoBsE0z.s 			page 1
  235              	                str     r2, [r3, #0]
  236              	                cpsie   i
  237              	#else /* !CORTEX_SIMPLIFIED_PRIORITY */
-ARM GAS  /tmp/ccoBsE0z.s 			page 14
+ARM GAS  /tmp/ccd0qdob.s 			page 14
 
 
  238 0032 00DF     	                svc     #0
  239              	#endif /* !CORTEX_SIMPLIFIED_PRIORITY */
  240 0034 FEE7     	.L1:            b       .L1
-ARM GAS  /tmp/ccoBsE0z.s 			page 15
+ARM GAS  /tmp/ccd0qdob.s 			page 15
 
 
 DEFINED SYMBOLS

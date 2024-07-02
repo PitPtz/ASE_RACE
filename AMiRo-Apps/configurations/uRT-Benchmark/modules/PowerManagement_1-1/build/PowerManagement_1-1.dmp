@@ -1,6 +1,6 @@
 
-/home/pit/ASE/AMiRo-Apps/configurations/uRT-Benchmark/modules/PowerManagement_1-1/build/PowerManagement_1-1.elf:     file format elf32-littlearm
-/home/pit/ASE/AMiRo-Apps/configurations/uRT-Benchmark/modules/PowerManagement_1-1/build/PowerManagement_1-1.elf
+/home/pit/ASE_RACE/AMiRo-Apps/configurations/uRT-Benchmark/modules/PowerManagement_1-1/build/PowerManagement_1-1.elf:     file format elf32-littlearm
+/home/pit/ASE_RACE/AMiRo-Apps/configurations/uRT-Benchmark/modules/PowerManagement_1-1/build/PowerManagement_1-1.elf
 architecture: armv7e-m, flags 0x00000112:
 EXEC_P, HAS_SYMS, D_PAGED
 start address 0x0800831d
@@ -103,9 +103,9 @@ SYMBOL TABLE:
 00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
 00000000 l    d  .comment	00000000 .comment
 00000000 l    d  .debug_frame	00000000 .debug_frame
-00000000 l    df *ABS*	00000000 /home/pit/ASE/AMiRo-Apps/configurations/uRT-Benchmark/modules/PowerManagement_1-1/build/obj/vectors.o
+00000000 l    df *ABS*	00000000 /home/pit/ASE_RACE/AMiRo-Apps/configurations/uRT-Benchmark/modules/PowerManagement_1-1/build/obj/vectors.o
 08008322 l       .text	00000000 .stay
-00000000 l    df *ABS*	00000000 /home/pit/ASE/AMiRo-Apps/configurations/uRT-Benchmark/modules/PowerManagement_1-1/build/obj/crt0_v7m.o
+00000000 l    df *ABS*	00000000 /home/pit/ASE_RACE/AMiRo-Apps/configurations/uRT-Benchmark/modules/PowerManagement_1-1/build/obj/crt0_v7m.o
 08008274 l       .text	00000000 msloop
 08008282 l       .text	00000000 psloop
 08008292 l       .text	00000000 dloop
@@ -114,7 +114,7 @@ SYMBOL TABLE:
 080082c8 l       .text	00000000 endinitloop
 080082d0 l       .text	00000000 finiloop
 080082dc l       .text	00000000 endfiniloop
-00000000 l    df *ABS*	00000000 /home/pit/ASE/AMiRo-Apps/configurations/uRT-Benchmark/modules/PowerManagement_1-1/build/obj/chcoreasm.o
+00000000 l    df *ABS*	00000000 /home/pit/ASE_RACE/AMiRo-Apps/configurations/uRT-Benchmark/modules/PowerManagement_1-1/build/obj/chcoreasm.o
 08008350 l       .text	00000000 .zombies
 00000000 l    df *ABS*	00000000 lib_a-memcpy.o
 00000000 l    df *ABS*	00000000 lib_a-strcmp.o

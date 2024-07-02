@@ -141,7 +141,7 @@ void wallfolowing(intro_wallfollowing_node_t* intro_wl){
   float trans = 0.05;
   const int target = 10000;
 
-  const float p_val = 0.0007;
+  const float p_val = 0.0001;
 
 
   rot = rot + p_val*(+target - s_wwn);
@@ -152,7 +152,7 @@ void wallfolowing(intro_wallfollowing_node_t* intro_wl){
      || intro_wl->ring.data.data[1] > 4000
   ) {
     trans = 0;
-    rot = -2;
+    rot = -1;
   }
   
 
@@ -162,36 +162,66 @@ void wallfolowing(intro_wallfollowing_node_t* intro_wl){
 void wl_followLine(intro_wallfollowing_node_t* intro_wl)
 {
   // Read val
-    // white = 24000
-    // black = 3000
-    uint16_t l_sensor = intro_wl -> floor.data.data[1];
-    l_sensor = 26000 - l_sensor; 
-    uint16_t r_sensor = intro_wl -> floor.data.data[2];
+    // white_l = 25500
+    // white_r = 24300
+    // black_l = 13200
+    // black_r = 13000
 
-    uint16_t diff = r_sensor-l_sensor;
-    float p_c1 = 0.0001;
+    auto l_sensor = intro_wl -> floor.data.data[1];
+    l_sensor = 25000 - l_sensor;
+    
+    auto r_sensor = intro_wl -> floor.data.data[2];
+
+void wl_followLine(intro_wallfollowing_node_t* intro_wl)
+{
+  auto r_sensor_outside = intro_wl->ring.data.data[3];
+
+  auto l_sensor = intro_wl->floor.data.data[1];
+  l_sensor = r_sensor_outside - l_sensor;
+  
+  auto r_sensor = intro_wl->floor.data.data[2];
+
+  auto diff = r_sensor - l_sensor;
+  float p_c1 = 0.0002;
+  float d_c1 = 0.0001;
+
+  static float prev_diff = 0.0;
+  float turn_speed = p_c1 * diff + d_c1 * (diff - prev_diff);
+  float speed = 0.2;
+
+
+  wl_signalMotorService(intro_wl, speed, turn_speed);
+
+  prev_diff = diff;
+
+  return;
+}
+
+    auto diff = r_sensor-l_sensor;
+    float p_c1 = 0.0002;
+
 
     float turn_speed = p_c1 * diff;
-    float speed = 0.05;
+    float speed = 0.2;
     wl_signalMotorService(intro_wl,speed,turn_speed);
 
   return;
 }
 
-void publish_amiro_status(intro_wallfollowing_node_t* intro_wl, uint8_t status)
-{
-  status_data_t status_data;
-  status_data.status = status;
+// void publish_amiro_status(intro_wallfollowing_node_t* intro_wl, uint8_t status)
+// {
+//   status_data_t status_data;
+//   status_data.status = status;
   
-  urt_osTime_t timestamp;
-  urtTimeNow(&timestamp);
+//   urt_osTime_t timestamp;
+//   urtTimeNow(&timestamp);
 
-  urtPublisherPublish(&intro_wl->status_publisher,
-                      &status_data,
-                      sizeof(status_data),
-                      &timestamp,
-                      URT_PUBLISHER_PUBLISH_LAZY);
-}
+//   urtPublisherPublish(&intro_wl->status_publisher,
+//                       &status_data,
+//                       sizeof(status_data),
+//                       &timestamp,
+//                       URT_PUBLISHER_PUBLISH_LAZY);
+// }
 
 /**
  * @addtogroup apps_intro
@@ -265,15 +295,12 @@ urt_osEventMask_t _intro_wl_Loop(urt_node_t* node, urt_osEventMask_t event, void
       wl->light.data.color[2] = GREEN;
       intro_wl_signalLightService(wl);
       wl->state = WL_LINEFOLLOWING;
-      publish_amiro_status(wl, WL_LINEFOLLOWING);
-
-    } else if (wl->ring.data.data[6] > 40000) {
+      }else if (wl->ring.data.data[6] > 40000) {
       urtPrintf("State: WL_PRINTING\n");
       wl->light.data.color[2] = RED;
       intro_wl_signalLightService(wl);
 
       wl->state = WL_PRINTING;
-      publish_amiro_status(wl, WL_PRINTING);
       urtThreadSSleep(2);
     }
     break;
@@ -282,48 +309,45 @@ urt_osEventMask_t _intro_wl_Loop(urt_node_t* node, urt_osEventMask_t event, void
     if (wl->ring.data.data[3] > 40000 && wl->ring.data.data[4] > 40000) {
       wl_signalMotorService(wl,0,0);
       urtPrintf("State: WL_IDLE\n");
-      wl->light.data.color[2] = BLUE;
-      intro_wl_signalLightService(wl);
-
+      // wl->light.data.color[2] = BLUE;
+      // intro_wl_signalLightService(wl);
       wl->state = WL_IDLE;
-      publish_amiro_status(wl, WL_IDLE);
     }
 
-     wallfolowing(wl);
+    wallfolowing(wl);
     if (wl->ring.data.data[0] < 15000 && wl->ring.data.data[7] < 15000 
     && ( wl -> floor.data.data[1] < 10000 ||  wl -> floor.data.data[2] < 10000 )) {
       wl->state = WL_LINEFOLLOWING;
-      publish_amiro_status(wl, WL_LINEFOLLOWING);
-      wl->light.data.color[2] = GREEN;
-      intro_wl_signalLightService(wl);
-      }
+      // wl->light.data.color[2] = GREEN;
+      // intro_wl_signalLightService(wl);
+    }
     break;
   }
   case WL_LINEFOLLOWING: {
+
     if (wl->ring.data.data[3] > 40000 && wl->ring.data.data[4] > 40000) {
       wl_signalMotorService(wl,0,0);
       urtPrintf("State: WL_IDLE\n");
-      wl->light.data.color[2] = BLUE;
-      intro_wl_signalLightService(wl);
+      // wl->light.data.color[2] = BLUE;
+      // intro_wl_signalLightService(wl);
       wl->state = WL_IDLE;
-      publish_amiro_status(wl, WL_IDLE);
-
     }
     
     wl_followLine(wl);
 
-    if (wl->ring.data.data[0] > 4000 || wl->ring.data.data[7] > 4000 
-     || wl->ring.data.data[6] > 4000 || wl->ring.data.data[1] > 4000 ) {
-      wl->state = WL_WALLFOLLOWING;
-      publish_amiro_status(wl, WL_LINEFOLLOWING);
+    if (wl->ring.data.data[0] > 4500 || wl->ring.data.data[7] > 4500){
+      wl->state = WL_OBSTACLE;
+    }
 
-      wl->light.data.color[2] = ORANGE;
-      intro_wl_signalLightService(wl);
-      }
+    // if (wl->ring.data.data[0] > 4000 || wl->ring.data.data[7] > 4000 
+    //  || wl->ring.data.data[6] > 4000 || wl->ring.data.data[1] > 4000 ) {
+    //   wl->state = WL_WALLFOLLOWING;
+    //   // wl->light.data.color[2] = ORANGE;
+    //   // intro_wl_signalLightService(wl);
+    // }
     break;
   } 
   case WL_PRINTING: {
-    
 
     urtPrintf("Ring Proximity Data:\n");
     for (uint8_t r = 0; r < 8; r++) {
@@ -340,13 +364,24 @@ urt_osEventMask_t _intro_wl_Loop(urt_node_t* node, urt_osEventMask_t event, void
 
     if (wl->ring.data.data[3] > 40000 && wl->ring.data.data[4] > 40000) {
       urtPrintf("State: WL_IDLE\n");
-      wl->light.data.color[2] = BLUE;
-      intro_wl_signalLightService(wl);
+      // wl->light.data.color[2] = BLUE;
+      // intro_wl_signalLightService(wl);
 
       wl->state = WL_IDLE;
-      publish_amiro_status(wl, WL_IDLE);
-
     }
+    break;
+  }
+  case WL_OBSTACLE: {
+    wl_signalMotorService(wl,0,0);
+    wl->light.data.color[0] = RED;
+    wl->light.data.color[24] = RED;
+    intro_wl_signalLightService(wl);
+    urtThreadSSleep(1);
+
+    wl->light.data.color[0] = GREEN;
+    wl->light.data.color[24] = YELLOW;
+    intro_wl_signalLightService(wl);
+    wl->state = WL_LINEFOLLOWING;
     break;
   }
   default: break;
@@ -411,7 +446,7 @@ void intro_wl_Init(intro_wallfollowing_node_t* intro_wl,
   urtNrtSubscriberInit(&intro_wl->floor.nrt);
   urtNrtSubscriberInit(&intro_wl->ring.nrt);
 
-  urtPublisherInit(&intro_wl->status_publisher, urtCoreGetTopic(topicID_status));
+  // urtPublisherInit(&intro_wl->status_publisher, urtCoreGetTopic(topicID_status));
 
   urtNrtRequestInit(&intro_wl->light.request, &intro_wl->light.data);
   // Initialize the motor request
@@ -422,7 +457,7 @@ void intro_wl_Init(intro_wallfollowing_node_t* intro_wl,
               _intro_wl_Loop, intro_wl,
               _intro_wl_Shutdown, intro_wl);
 
-  //Set Color Of light Ring
+  // Set Color Of light Ring
   for (int i = 0; i < 12; i++) {
     intro_wl->light.data.color[i]  = GREEN; 
   }

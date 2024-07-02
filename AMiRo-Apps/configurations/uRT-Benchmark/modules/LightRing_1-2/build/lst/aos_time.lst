@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc1iAqwr.s 			page 1
+ARM GAS  /tmp/cca1hFWI.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -12,13 +12,13 @@ ARM GAS  /tmp/cc1iAqwr.s 			page 1
    9              		.eabi_attribute 34, 1
   10              		.eabi_attribute 18, 4
   11              		.file	"aos_time.c"
-  12              		.section	.gnu.lto_.profile.a7c6bcc6946a5c71,"e",%progbits
+  12              		.section	.gnu.lto_.profile.6b6c6e2368dea0eb,"e",%progbits
   13 0000 789CE360 		.ascii	"x\234\343``\004B \000\000\000]\000\013"
   13      60044220 
   13      0000005D 
   13      000B
   14              		.text
-  15              		.section	.gnu.lto_.icf.a7c6bcc6946a5c71,"e",%progbits
+  15              		.section	.gnu.lto_.icf.6b6c6e2368dea0eb,"e",%progbits
   16 0000 789CE360 		.ascii	"x\234\343``d`g@\000F\206}k.\2051\000\000\012\370\002"
   16      60646067 
   16      40004686 
@@ -26,7 +26,7 @@ ARM GAS  /tmp/cc1iAqwr.s 			page 1
   16      3100000A 
   17 0016 A4       		.ascii	"\244"
   18              		.text
-  19              		.section	.gnu.lto_.jmpfuncs.a7c6bcc6946a5c71,"e",%progbits
+  19              		.section	.gnu.lto_.jmpfuncs.6b6c6e2368dea0eb,"e",%progbits
   20 0000 789CE360 		.ascii	"x\234\343``d\020a@\000F\006fFFF\366\372\371\314\014"
   20      60641061 
   20      40004606 
@@ -36,7 +36,7 @@ ARM GAS  /tmp/cc1iAqwr.s 			page 1
   21      19002154 
   21      0390
   22              		.text
-  23              		.section	.gnu.lto_.inline.a7c6bcc6946a5c71,"e",%progbits
+  23              		.section	.gnu.lto_.inline.6b6c6e2368dea0eb,"e",%progbits
   24 0000 789CE360 		.ascii	"x\234\343``dhg@\000F\006\006\361\206\206\206\033L\351"
   24      60646867 
   24      40004606 
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc1iAqwr.s 			page 1
   27      031B906A 
   28 004a 4A616260 		.ascii	"Jab`b\340\002\262\0160\2452(00\201$\231\2228\030\024"
   28      62E002B2 
-ARM GAS  /tmp/cc1iAqwr.s 			page 2
+ARM GAS  /tmp/cca1hFWI.s 			page 2
 
 
   28      0E30A532 
@@ -72,14 +72,14 @@ ARM GAS  /tmp/cc1iAqwr.s 			page 1
   30 0072 D81900DD 		.ascii	"\330\031\000\335\254\035q"
   30      AC1D71
   31              		.text
-  32              		.section	.gnu.lto_.pureconst.a7c6bcc6946a5c71,"e",%progbits
+  32              		.section	.gnu.lto_.pureconst.6b6c6e2368dea0eb,"e",%progbits
   33 0000 789CE360 		.ascii	"x\234\343``d`a`\000\222\015,\000\001\236\000\223"
   33      60646061 
   33      6000920D 
   33      2C00019E 
   33      0093
   34              		.text
-  35              		.section	.gnu.lto_aosTimeDayOfWeekFromDate.a7c6bcc6946a5c71,"e",%progbits
+  35              		.section	.gnu.lto_aosTimeDayOfWeekFromDate.6b6c6e2368dea0eb,"e",%progbits
   36 0000 789C6D94 		.ascii	"x\234m\224\337OTG\024\307\347\314\314\275w\177\002\012"
   36      DF4F5447 
   36      14C7E7CC 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc1iAqwr.s 			page 1
   43      DF5400D8 
   43      3E2EA4
   44 0091 03FBE090 		.ascii	"\003\373\340\2208* \231\310\334\216n\376R\251\270\312"
-ARM GAS  /tmp/cc1iAqwr.s 			page 3
+ARM GAS  /tmp/cca1hFWI.s 			page 3
 
 
   44      382A2099 
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc1iAqwr.s 			page 1
   55      39D5AEAE 
   55      28D92B1C 
   56 0164 B8641AFC 		.ascii	"\270d\032\374\210\015\306\301\354\031\371\223\207G\257"
-ARM GAS  /tmp/cc1iAqwr.s 			page 4
+ARM GAS  /tmp/cca1hFWI.s 			page 4
 
 
   56      880DC6C1 
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc1iAqwr.s 			page 1
   67      A1AF8056 
   67      9916A569 
   67      51C2
-ARM GAS  /tmp/cc1iAqwr.s 			page 5
+ARM GAS  /tmp/cca1hFWI.s 			page 5
 
 
   68 0245 7E838EF9 		.ascii	"~\203\216\371\361\271\324\260\215m\300\035\032\350<"
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc1iAqwr.s 			page 1
   80 030a 78250597 		.ascii	"x%\005\227\375T\241\011\2060\362\372\377*\027\217\352"
   80      FD54A109 
   80      8630F2FA 
-ARM GAS  /tmp/cc1iAqwr.s 			page 6
+ARM GAS  /tmp/cca1hFWI.s 			page 6
 
 
   80      FF2A178F 
@@ -354,11 +354,11 @@ ARM GAS  /tmp/cc1iAqwr.s 			page 1
   90      48BAE6
   91 03d9 81       		.ascii	"\201"
   92              		.text
-  93              		.section	.gnu.lto_.symbol_nodes.a7c6bcc6946a5c71,"e",%progbits
+  93              		.section	.gnu.lto_.symbol_nodes.6b6c6e2368dea0eb,"e",%progbits
   94 0000 789CE360 		.ascii	"x\234\343``d\220e\000\002\246n\246z\206\006 `a\234p"
   94      60649065 
   94      0002A66E 
-ARM GAS  /tmp/cc1iAqwr.s 			page 7
+ARM GAS  /tmp/cca1hFWI.s 			page 7
 
 
   94      A67A8606 
@@ -369,13 +369,13 @@ ARM GAS  /tmp/cc1iAqwr.s 			page 1
   95      0076BC06 
   95      93
   96              		.text
-  97              		.section	.gnu.lto_.refs.a7c6bcc6946a5c71,"e",%progbits
+  97              		.section	.gnu.lto_.refs.6b6c6e2368dea0eb,"e",%progbits
   98 0000 789CE360 		.ascii	"x\234\343``\004B \000\000\000]\000\013"
   98      60044220 
   98      0000005D 
   98      000B
   99              		.text
- 100              		.section	.gnu.lto_.decls.a7c6bcc6946a5c71,"e",%progbits
+ 100              		.section	.gnu.lto_.decls.6b6c6e2368dea0eb,"e",%progbits
  101 0000 789C8553 		.ascii	"x\234\205SML\023A\024\236o\267JY\301\022\202\001\205"
  101      4D4C1341 
  101      149E6FB7 
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc1iAqwr.s 			page 1
  108      12
  109 00a5 30FE7565 		.ascii	"0\376ue\016\022\340\353\276\337\275\355\212\252\210"
  109      0E12E0EB 
-ARM GAS  /tmp/cc1iAqwr.s 			page 8
+ARM GAS  /tmp/cca1hFWI.s 			page 8
 
 
  109      BEDFBDED 
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc1iAqwr.s 			page 1
  120      4D4216
  121 0180 278D09E2 		.ascii	"'\215\011\342\355\274\267\321\320\266s\021\221*\352"
  121      EDBCB7D1 
-ARM GAS  /tmp/cc1iAqwr.s 			page 9
+ARM GAS  /tmp/cca1hFWI.s 			page 9
 
 
  121      D0B67311 
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc1iAqwr.s 			page 1
  132      DA
  133 0254 6B7CC9A7 		.ascii	"k|\311\247\030\346(\351\327\274\252\257 \010yI\302\204"
  133      18E628E9 
-ARM GAS  /tmp/cc1iAqwr.s 			page 10
+ARM GAS  /tmp/cca1hFWI.s 			page 10
 
 
  133      D7BCAAAF 
@@ -574,7 +574,7 @@ ARM GAS  /tmp/cc1iAqwr.s 			page 1
  139      07EE
  140 02ce 4B26C0   		.ascii	"K&\300"
  141              		.text
- 142              		.section	.gnu.lto_.symtab.a7c6bcc6946a5c71,"e",%progbits
+ 142              		.section	.gnu.lto_.symtab.6b6c6e2368dea0eb,"e",%progbits
  143 0000 616F7354 		.ascii	"aosTimeDayOfWeekFromDate\000"
  143      696D6544 
  143      61794F66 
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc1iAqwr.s 			page 1
  152      2D6D7468 
  152      756D6227 
  152      20272D6D 
-ARM GAS  /tmp/cc1iAqwr.s 			page 11
+ARM GAS  /tmp/cca1hFWI.s 			page 11
 
 
  153 0066 2720272D 		.ascii	"' '-O2' '-fstack-usage' '-ffunction-sections' '-fda"
@@ -615,7 +615,7 @@ ARM GAS  /tmp/cc1iAqwr.s 			page 1
  156              		.comm	__gnu_lto_v1,1,1
  157              		.comm	__gnu_lto_slim,1,1
  158              		.ident	"GCC: (GNU Arm Embedded Toolchain 9-2020-q2-update) 9.3.1 20200408 (release)"
-ARM GAS  /tmp/cc1iAqwr.s 			page 12
+ARM GAS  /tmp/cca1hFWI.s 			page 12
 
 
 DEFINED SYMBOLS

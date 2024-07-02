@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccvPB5cn.s 			page 1
+ARM GAS  /tmp/cc67KApv.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -13,13 +13,13 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
   10              		.eabi_attribute 34, 1
   11              		.eabi_attribute 18, 4
   12              		.file	"module.c"
-  13              		.section	.gnu.lto_.profile.44e17910620ce6c3,"e",%progbits
+  13              		.section	.gnu.lto_.profile.3a6dace1bea53e73,"e",%progbits
   14 0000 789CE360 		.ascii	"x\234\343``\004B \000\000\000]\000\013"
   14      60044220 
   14      0000005D 
   14      000B
   15              		.text
-  16              		.section	.gnu.lto_.icf.44e17910620ce6c3,"e",%progbits
+  16              		.section	.gnu.lto_.icf.3a6dace1bea53e73,"e",%progbits
   17 0000 789CE360 		.ascii	"x\234\343``d0`@\000\016\206\236\271\023\24722N~\277"
   17      60643060 
   17      40000E86 
@@ -38,27 +38,27 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
   20      0010FE15 
   20      AA
   21              		.text
-  22              		.section	.gnu.lto_.jmpfuncs.44e17910620ce6c3,"e",%progbits
+  22              		.section	.gnu.lto_.jmpfuncs.3a6dace1bea53e73,"e",%progbits
   23 0000 789CE360 		.ascii	"x\234\343``d`b@\006\000\000\316\000\014"
   23      60646062 
   23      40060000 
   23      CE000C
   24              		.text
-  25              		.section	.gnu.lto_.inline.44e17910620ce6c3,"e",%progbits
+  25              		.section	.gnu.lto_.inline.3a6dace1bea53e73,"e",%progbits
   26 0000 789CE360 		.ascii	"x\234\343``d`b@\006\000\000\316\000\014"
   26      60646062 
   26      40060000 
   26      CE000C
   27              		.text
-  28              		.section	.gnu.lto_.pureconst.44e17910620ce6c3,"e",%progbits
+  28              		.section	.gnu.lto_.pureconst.3a6dace1bea53e73,"e",%progbits
   29 0000 789CE360 		.ascii	"x\234\343``\004B \000\000\000]\000\013"
   29      60044220 
   29      0000005D 
   29      000B
   30              		.text
-  31              		.section	.gnu.lto_moduleLldUserButton.44e17910620ce6c3,"e",%progbits
+  31              		.section	.gnu.lto_moduleLldUserButton.3a6dace1bea53e73,"e",%progbits
   32 0000 789CE360 		.ascii	"x\234\343``d\260f``\340f\200\200\351\314\214\273\277"
-ARM GAS  /tmp/ccvPB5cn.s 			page 2
+ARM GAS  /tmp/cc67KApv.s 			page 2
 
 
   32      6064B066 
@@ -85,7 +85,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
   36      0600B838 
   36      179F
   37              		.text
-  38              		.section	.gnu.lto_moduleGpioUserButton.44e17910620ce6c3,"e",%progbits
+  38              		.section	.gnu.lto_moduleGpioUserButton.3a6dace1bea53e73,"e",%progbits
   39 0000 789CE360 		.ascii	"x\234\343``d\350```\340f\200\200\351\314\214\215\335"
   39      6064E860 
   39      6060E066 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
   45      613E33F3 
   45      0C6666C6 
   45      BD8C2D40 
-ARM GAS  /tmp/ccvPB5cn.s 			page 3
+ARM GAS  /tmp/cc67KApv.s 			page 3
 
 
   45      B35818F7 
@@ -129,7 +129,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
   46      003D
   47 008f 0C2F4D   		.ascii	"\014/M"
   48              		.text
-  49              		.section	.gnu.lto_moduleLldLed.44e17910620ce6c3,"e",%progbits
+  49              		.section	.gnu.lto_moduleLldLed.3a6dace1bea53e73,"e",%progbits
   50 0000 789CE360 		.ascii	"x\234\343``d\260f``\340f\200\200\351\314\214\273\277"
   50      6064B066 
   50      6060E066 
@@ -155,7 +155,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
   54      0600B995 
   54      17A6
   55              		.text
-  56              		.section	.gnu.lto_moduleGpioLed.44e17910620ce6c3,"e",%progbits
+  56              		.section	.gnu.lto_moduleGpioLed.3a6dace1bea53e73,"e",%progbits
   57 0000 789CE360 		.ascii	"x\234\343``d\350```\340f\200\200\351\314\214}\315\357"
   57      6064E860 
   57      6060E066 
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
   61 0046 A33448DB 		.ascii	"\2434H\333\334\025g\376s\266065v44<\350\356d\226\233"
   61      DC1567FE 
   61      73B63036 
-ARM GAS  /tmp/ccvPB5cn.s 			page 4
+ARM GAS  /tmp/cc67KApv.s 			page 4
 
 
   61      35763434 
@@ -199,7 +199,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
   64      03004A91 
   64      2F1E
   65              		.text
-  66              		.section	.gnu.lto_moduleShellPrompt.44e17910620ce6c3,"e",%progbits
+  66              		.section	.gnu.lto_moduleShellPrompt.3a6dace1bea53e73,"e",%progbits
   67 0000 789CE360 		.ascii	"x\234\343``d0e``\220b\200\200\351\314\214SN\036\270"
   67      60643065 
   67      60609062 
@@ -226,7 +226,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
   71      92190080 
   72 005d 1419C5   		.ascii	"\024\031\305"
   73              		.text
-  74              		.section	.gnu.lto__gpioUserButton.44e17910620ce6c3,"e",%progbits
+  74              		.section	.gnu.lto__gpioUserButton.3a6dace1bea53e73,"e",%progbits
   75 0000 789CE360 		.ascii	"x\234\343``d0d`\000\222\0200\235\231\361\360\214's9"
   75      60643064 
   75      60009210 
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
   76      0A7DB8F9 
   76      7B1BA7
   77 0028 E5F6868E 		.ascii	"\345\366\206\216\005\015\002\363\231\031g\000\245v1"
-ARM GAS  /tmp/ccvPB5cn.s 			page 5
+ARM GAS  /tmp/cc67KApv.s 			page 5
 
 
   77      050D02F3 
@@ -249,7 +249,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
   78      00F92511 
   78      6A
   79              		.text
-  80              		.section	.gnu.lto__gpioLed.44e17910620ce6c3,"e",%progbits
+  80              		.section	.gnu.lto__gpioLed.3a6dace1bea53e73,"e",%progbits
   81 0000 789CE360 		.ascii	"x\234\343``d0d`\000\222\0200\235\231\361\362\362\205"
   81      60643064 
   81      60009210 
@@ -270,7 +270,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
   84      00EAE410 
   84      D7
   85              		.text
-  86              		.section	.gnu.lto_moduleHalSerialConfig.44e17910620ce6c3,"e",%progbits
+  86              		.section	.gnu.lto_moduleHalSerialConfig.3a6dace1bea53e73,"e",%progbits
   87 0000 789CE360 		.ascii	"x\234\343``d\010f`\000\222\0200\235\231\361\370\373"
   87      60640866 
   87      60009210 
@@ -296,9 +296,9 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
   91      1900
   92 0053 FDD519BC 		.ascii	"\375\325\031\274"
   93              		.text
-  94              		.section	.gnu.lto_.symbol_nodes.44e17910620ce6c3,"e",%progbits
+  94              		.section	.gnu.lto_.symbol_nodes.3a6dace1bea53e73,"e",%progbits
   95 0000 789C25C9 		.ascii	"x\234%\311\321\025@0\024\004\321\315\304C\035\312Q\025"
-ARM GAS  /tmp/ccvPB5cn.s 			page 6
+ARM GAS  /tmp/cc67KApv.s 			page 6
 
 
   95      D1154030 
@@ -317,7 +317,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
   98      C1F42FBD 
   98      EA3C0C38 
   99              		.text
- 100              		.section	.gnu.lto_.refs.44e17910620ce6c3,"e",%progbits
+ 100              		.section	.gnu.lto_.refs.3a6dace1bea53e73,"e",%progbits
  101 0000 789CE360 		.ascii	"x\234\343``d\020d`\000\222L\214\214\214L\254\214LL\314"
  101      60641064 
  101      6000924C 
@@ -327,7 +327,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
  102      0C000357 
  102      003C
  103              		.text
- 104              		.section	.gnu.lto_.decls.44e17910620ce6c3,"e",%progbits
+ 104              		.section	.gnu.lto_.decls.3a6dace1bea53e73,"e",%progbits
  105 0000 789C9D57 		.ascii	"x\234\235W{PS\331\031\277\337=\011\204\220\210\202\355"
  105      7B5053D9 
  105      19BFDF3D 
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
  110      73D50820 
  110      B4E90561 
  110      BF
-ARM GAS  /tmp/ccvPB5cn.s 			page 7
+ARM GAS  /tmp/cc67KApv.s 			page 7
 
 
  111 0074 2808BD20 		.ascii	"(\010\275 \010#\370\013\023\004\241A\010\374ip\325\341"
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
  122      16C818E7 
  122      A6B5
  123 0146 3B1791D9 		.ascii	";\027\221\331\014\331\274\356X6D\345\312H\011\270#\340"
-ARM GAS  /tmp/ccvPB5cn.s 			page 8
+ARM GAS  /tmp/cc67KApv.s 			page 8
 
 
  123      0CD9BCEE 
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
  134      5E3A2F7D 
  134      FCCFAA81 
  134      261DD9
-ARM GAS  /tmp/ccvPB5cn.s 			page 9
+ARM GAS  /tmp/cc67KApv.s 			page 9
 
 
  135 0225 CFB147DD 		.ascii	"\317\261G\335\003\017\265*Q\200+\254f\270s\370\340\320"
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
  146      2657F164 
  146      F033096C 
  146      1F1E22F2 
-ARM GAS  /tmp/ccvPB5cn.s 			page 10
+ARM GAS  /tmp/cc67KApv.s 			page 10
 
 
  146      1192B825 
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
  158 03ca C5B6C86D 		.ascii	"\305\266\310m>\234\255\303Q\304gQ\216\304'D=\032\275"
  158      3E9CADC3 
  158      51C46751 
-ARM GAS  /tmp/ccvPB5cn.s 			page 11
+ARM GAS  /tmp/cc67KApv.s 			page 11
 
 
  158      8EC42744 
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
  169      58AE0627 
  169      E46AD0CF 
  170 04b0 F286B114 		.ascii	"\362\206\261\0247^<O\310~\316rg\360\254OG*\230@\326"
-ARM GAS  /tmp/ccvPB5cn.s 			page 12
+ARM GAS  /tmp/cc67KApv.s 			page 12
 
 
  170      375E3C4F 
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
  181      51330DD6 
  181      8B5A7021 
  181      37C505EF 
-ARM GAS  /tmp/ccvPB5cn.s 			page 13
+ARM GAS  /tmp/cc67KApv.s 			page 13
 
 
  181      C6FA9E
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
  193      8A5F255C 
  193      D8D17AA0 
  193      4417BC65 
-ARM GAS  /tmp/ccvPB5cn.s 			page 14
+ARM GAS  /tmp/cc67KApv.s 			page 14
 
 
  193      76066B19 
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
  205 0734 6B9EED96 		.ascii	"k\236\355\226\377\203\244G\261\256\350\352i\3665%\311"
  205      FF83A447 
  205      B1AEE8EA 
-ARM GAS  /tmp/ccvPB5cn.s 			page 15
+ARM GAS  /tmp/cc67KApv.s 			page 15
 
 
  205      69F63525 
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
  217      85A9FC
  218 0805 8E9A18F3 		.ascii	"\216\232\030\363)$\305\024\277\312\234\020j\262Z\022"
  218      2924C514 
-ARM GAS  /tmp/ccvPB5cn.s 			page 16
+ARM GAS  /tmp/cc67KApv.s 			page 16
 
 
  218      BFCA9C10 
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
  229      0DAF32DB 
  229      93
  230 08df CD56C3E2 		.ascii	"\315V\303\342$\313\227\226?\2560\330R\015\2106\244\330"
-ARM GAS  /tmp/ccvPB5cn.s 			page 17
+ARM GAS  /tmp/cc67KApv.s 			page 17
 
 
  230      24CB9796 
@@ -975,7 +975,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
  232      A523FF06 
  232      4CAA0DCF 
  233              		.text
- 234              		.section	.gnu.lto_.symtab.44e17910620ce6c3,"e",%progbits
+ 234              		.section	.gnu.lto_.symtab.3a6dace1bea53e73,"e",%progbits
  235 0000 6D6F6475 		.ascii	"moduleLldUserButton\000"
  235      6C654C6C 
  235      64557365 
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
  257 0074 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
  257      00000000 
  258 007c F9000000 		.ascii	"\371\000\000\000"
-ARM GAS  /tmp/ccvPB5cn.s 			page 18
+ARM GAS  /tmp/cc67KApv.s 			page 18
 
 
  259 0080 6D6F6475 		.ascii	"moduleShellPrompt\000"
@@ -1074,7 +1074,7 @@ ARM GAS  /tmp/ccvPB5cn.s 			page 1
  279              		.comm	__gnu_lto_v1,1,1
  280              		.comm	__gnu_lto_slim,1,1
  281              		.ident	"GCC: (GNU Arm Embedded Toolchain 9-2020-q2-update) 9.3.1 20200408 (release)"
-ARM GAS  /tmp/ccvPB5cn.s 			page 19
+ARM GAS  /tmp/cc67KApv.s 			page 19
 
 
 DEFINED SYMBOLS

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccE5qQqM.s 			page 1
+ARM GAS  /tmp/ccPELOm8.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -13,13 +13,13 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
   10              		.eabi_attribute 34, 1
   11              		.eabi_attribute 18, 4
   12              		.file	"rt_test_sequence_012.c"
-  13              		.section	.gnu.lto_.profile.4a22ffe115692bc,"e",%progbits
+  13              		.section	.gnu.lto_.profile.a349e60a0c60c74a,"e",%progbits
   14 0000 789CE360 		.ascii	"x\234\343``\004B \000\000\000]\000\013"
   14      60044220 
   14      0000005D 
   14      000B
   15              		.text
-  16              		.section	.gnu.lto_.icf.4a22ffe115692bc,"e",%progbits
+  16              		.section	.gnu.lto_.icf.a349e60a0c60c74a,"e",%progbits
   17 0000 789C01DB 		.ascii	"x\234\001\333\000$\377\010\000\001\000\313\000\000\000"
   17      0024FF08 
   17      000100CB 
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
   25      13
   26 0078 9ABFA480 		.ascii	"\232\277\244\200\010\025\363\325\321\301\002\026\322"
   26      0815F3D5 
-ARM GAS  /tmp/ccE5qQqM.s 			page 2
+ARM GAS  /tmp/ccPELOm8.s 			page 2
 
 
   26      D1C10216 
@@ -92,7 +92,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
   33      5700E5F5 
   33      68C4
   34              		.text
-  35              		.section	.gnu.lto_.jmpfuncs.4a22ffe115692bc,"e",%progbits
+  35              		.section	.gnu.lto_.jmpfuncs.a349e60a0c60c74a,"e",%progbits
   36 0000 789CED98 		.ascii	"x\234\355\230OL\024W\030\300\337\2673\313\316\376c\241"
   36      4F4C1457 
   36      18C0DFB7 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
   40      5BDAB87D 
   40      6FDE
   41 005b DB815D98 		.ascii	"\333\201]\230a\230\335v\215q\222\011\357\315\373\376"
-ARM GAS  /tmp/ccE5qQqM.s 			page 3
+ARM GAS  /tmp/ccPELOm8.s 			page 3
 
 
   41      6198DD76 
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
   52      1E991018 
   52      9604
   53 0133 3F722CC9 		.ascii	"?r,\311$\326\347]\017\277\365\341\215\032\326@.\261"
-ARM GAS  /tmp/ccE5qQqM.s 			page 4
+ARM GAS  /tmp/ccPELOm8.s 			page 4
 
 
   53      24D6E75D 
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
   65 0202 FBE40C22 		.ascii	"\373\344\014\";2f-`\267\034\240B\240'\3444\223\373\236"
   65      3B32662D 
   65      60B71CA0 
-ARM GAS  /tmp/ccE5qQqM.s 			page 5
+ARM GAS  /tmp/ccPELOm8.s 			page 5
 
 
   65      42A027E4 
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
   76      9370DF7C 
   76      96
   77 02df A3D96739 		.ascii	"\243\331g9i5\313\267\014\263L\0034\334\361\361\204\207"
-ARM GAS  /tmp/ccE5qQqM.s 			page 6
+ARM GAS  /tmp/ccPELOm8.s 			page 6
 
 
   77      6935CBB7 
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
   88      8B02464C 
   88      C407
   89 03b9 0E8744B6 		.ascii	"\016\207D\266u7\303=\036\277f\036\276\245t\364\377+"
-ARM GAS  /tmp/ccE5qQqM.s 			page 7
+ARM GAS  /tmp/ccPELOm8.s 			page 7
 
 
   89      7537C33D 
@@ -416,9 +416,9 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  100      2FA99E54 
  100      A3
  101              		.text
- 102              		.section	.gnu.lto_.inline.4a22ffe115692bc,"e",%progbits
+ 102              		.section	.gnu.lto_.inline.a349e60a0c60c74a,"e",%progbits
  103 0000 789CD554 		.ascii	"x\234\325TO/CA\020\237\235\355\037^\253\252\342o\034"
-ARM GAS  /tmp/ccE5qQqM.s 			page 8
+ARM GAS  /tmp/ccPELOm8.s 			page 8
 
 
  103      4F2F4341 
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  115 00d4 E4261F11 		.ascii	"\344&\037\021d\234\026d\034.Q)\271\320\320s\002\323"
  115      649C1664 
  115      1C2E5129 
-ARM GAS  /tmp/ccE5qQqM.s 			page 9
+ARM GAS  /tmp/ccPELOm8.s 			page 9
 
 
  115      B9D0D073 
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  126      281E8A
  127 01b6 82B67442 		.ascii	"\202\266tBC\362:r\250^\271\373H(.\007\244\340\2253\343"
  127      43F23A72 
-ARM GAS  /tmp/ccE5qQqM.s 			page 10
+ARM GAS  /tmp/ccPELOm8.s 			page 10
 
 
  127      A85EB9FB 
@@ -548,7 +548,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  128      15780735 
  128      F2D4C2
  129              		.text
- 130              		.section	.gnu.lto_.pureconst.4a22ffe115692bc,"e",%progbits
+ 130              		.section	.gnu.lto_.pureconst.a349e60a0c60c74a,"e",%progbits
  131 0000 789C05C1 		.ascii	"x\234\005\301\213\011\2000\014@\301\024_\304\037\005"
  131      8B098030 
  131      0C40C114 
@@ -567,7 +567,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  134      F4076B86 
  134      0D7E
  135              		.text
- 136              		.section	.gnu.lto_tmo.4a22ffe115692bc,"e",%progbits
+ 136              		.section	.gnu.lto_tmo.a349e60a0c60c74a,"e",%progbits
  137 0000 789C6590 		.ascii	"x\234e\220\317K\002Q\020\307\347\273\263\376\240\362"
  137      CF4B0251 
  137      10C7E7BB 
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  142      0027135E 
  142      504E410E 
  143 006e 5C66DC14 		.ascii	"\\f\334\024\333gJ\250._\204U\356L\344\305\332`\225\211"
-ARM GAS  /tmp/ccE5qQqM.s 			page 11
+ARM GAS  /tmp/ccPELOm8.s 			page 11
 
 
  143      DB674AA8 
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  154 013c 9E4AE8B1 		.ascii	"\236J\350\261\321\261\361p\202x\325L\273\322q#\276\364"
  154      D1B1F170 
  154      8278D54C 
-ARM GAS  /tmp/ccE5qQqM.s 			page 12
+ARM GAS  /tmp/ccPELOm8.s 			page 12
 
 
  154      BBD27123 
@@ -666,7 +666,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  155 014e 037D3378 		.ascii	"\003}3x["
  155      5B
  156              		.text
- 157              		.section	.gnu.lto_rt_test_012_012_execute.4a22ffe115692bc,"e",%progbits
+ 157              		.section	.gnu.lto_rt_test_012_012_execute.a349e60a0c60c74a,"e",%progbits
  158 0000 789C95D8 		.ascii	"x\234\225\330[L\024W\030\007\360\371f\026X\020\264\232"
  158      5B4C1457 
  158      1807F0F9 
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  168 00ba 5C7E8B5B 		.ascii	"\\~\213[\271eq)\316R\336\223\005\316L\317\3178.^\340"
  168      B9657129 
  168      CE52DE93 
-ARM GAS  /tmp/ccE5qQqM.s 			page 13
+ARM GAS  /tmp/ccPELOm8.s 			page 13
 
 
  168      05CE4CCF 
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  180 0190 4D0AC953 		.ascii	"M\012\311S#\363\205\363\236\246_i\235\007\326\235Yr"
  180      23F385F3 
  180      9EA65F69 
-ARM GAS  /tmp/ccE5qQqM.s 			page 14
+ARM GAS  /tmp/ccPELOm8.s 			page 14
 
 
  180      9D07D69D 
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  191      3FD6
  192 026e 42DFE942 		.ascii	"B\337\351B\337%\242\217\255:Y\352C\321\363\320\275\022"
  192      DF25A28F 
-ARM GAS  /tmp/ccE5qQqM.s 			page 15
+ARM GAS  /tmp/ccPELOm8.s 			page 15
 
 
  192      AD3A59EA 
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  203      8A580E6F 
  203      E9003D03 
  203      63B506
-ARM GAS  /tmp/ccE5qQqM.s 			page 16
+ARM GAS  /tmp/ccPELOm8.s 			page 16
 
 
  204 0353 4AF11358 		.ascii	"J\361\023X\320\224\330\315\222\370N\221\370\037\243"
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  215      C89298A6 
  215      48FC8B
  216 0426 91571A06 		.ascii	"\221W\032\006q^W\"\226\303\3374\257\354a\353\254\207"
-ARM GAS  /tmp/ccE5qQqM.s 			page 17
+ARM GAS  /tmp/ccPELOm8.s 			page 17
 
 
  216      715E5722 
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  227      B140251A 
  227      E1B6A6C4 
  228 04fa 3496C452 		.ascii	"4\226\304RE\342\035Fc\245x\342]]\211X\016e\253\224\230"
-ARM GAS  /tmp/ccE5qQqM.s 			page 18
+ARM GAS  /tmp/ccPELOm8.s 			page 18
 
 
  228      45E21D46 
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  239      28793924 
  239      897D725E 
  239      4FF424D6 
-ARM GAS  /tmp/ccE5qQqM.s 			page 19
+ARM GAS  /tmp/ccPELOm8.s 			page 19
 
 
  239      B224F62B 
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  251      F4FEF7C1 
  251      61E67D07 
  252 06b8 C87DBA0A 		.ascii	"\310}\272\0129d\016\363\225W\201\346C\373~\012\226W"
-ARM GAS  /tmp/ccE5qQqM.s 			page 20
+ARM GAS  /tmp/ccPELOm8.s 			page 20
 
 
  252      39640EF3 
@@ -1155,7 +1155,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  254      7FC2F47F 
  254      88
  255              		.text
- 256              		.section	.gnu.lto_rt_test_012_011_execute.4a22ffe115692bc,"e",%progbits
+ 256              		.section	.gnu.lto_rt_test_012_011_execute.a349e60a0c60c74a,"e",%progbits
  257 0000 789C8D56 		.ascii	"x\234\215V]PSG\024\336s7?7\221@\265*?\216\025\246\303"
  257      5D505347 
  257      14DE7337 
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  265      FC82A812 
  265      A80C52CB 
  265      2035009F 
-ARM GAS  /tmp/ccE5qQqM.s 			page 21
+ARM GAS  /tmp/ccPELOm8.s 			page 21
 
 
  266 00a7 934420DB 		.ascii	"\223D \333\005\252\020\225*5l\247*\022\374S\314\274"
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  277      917ECDBD 
  277      56F68C55 
  278 017b AF15E875 		.ascii	"\257\025\350u\332C\317\311^Up%\262\3276\346\361r\300"
-ARM GAS  /tmp/ccE5qQqM.s 			page 22
+ARM GAS  /tmp/ccPELOm8.s 			page 22
 
 
  278      DA43CFC9 
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  289      B6952C53 
  289      0EAA7550 
  289      B6
-ARM GAS  /tmp/ccE5qQqM.s 			page 23
+ARM GAS  /tmp/ccPELOm8.s 			page 23
 
 
  290 0255 3077DB4A 		.ascii	"0w\333J\216\360\205\251\200\033>\237/\006n\242\341s"
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  301      CBCDE2F6 
  301      2C98FB59 
  301      44EEE741 
-ARM GAS  /tmp/ccE5qQqM.s 			page 24
+ARM GAS  /tmp/ccPELOm8.s 			page 24
 
 
  301      EE
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  312      97
  313 03f1 FE436E1C 		.ascii	"\376Cn\034h\350\014\326\006^\301\012aoc\271\332A\023"
  313      68E80CD6 
-ARM GAS  /tmp/ccE5qQqM.s 			page 25
+ARM GAS  /tmp/ccPELOm8.s 			page 25
 
 
  313      065EC10A 
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  324      0305D2
  325 04cc F8D01B9F 		.ascii	"\370\320\033\237\032\024`\027\374\251\230t6\337\015"
  325      1A146017 
-ARM GAS  /tmp/ccE5qQqM.s 			page 26
+ARM GAS  /tmp/ccPELOm8.s 			page 26
 
 
  325      FCA99874 
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  336      D1
  337 05a7 E764E79A 		.ascii	"\347d\347\2323\014\201\317t\366\233\236c\370>\327`\312"
  337      330C81CF 
-ARM GAS  /tmp/ccE5qQqM.s 			page 27
+ARM GAS  /tmp/ccPELOm8.s 			page 27
 
 
  337      74F69B9E 
@@ -1602,7 +1602,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  345 0641 7FA65651 		.ascii	"\177\246VQ\342"
  345      E2
  346              		.text
- 347              		.section	.gnu.lto_rt_test_012_011_setup.4a22ffe115692bc,"e",%progbits
+ 347              		.section	.gnu.lto_rt_test_012_011_setup.a349e60a0c60c74a,"e",%progbits
  348 0000 789C5D4E 		.ascii	"x\234]N=KCA\020\334\271\215\372,,\254%`\233&/\261\264"
  348      3D4B4341 
  348      10DCB98D 
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  350      62153F1F 
  350      16
  351 0037 5629D4C2 		.ascii	"V)\324\302F\260P\320F\264Ie\221\270\357E\021\\n\271"
-ARM GAS  /tmp/ccE5qQqM.s 			page 28
+ARM GAS  /tmp/ccPELOm8.s 			page 28
 
 
  351      46B050D0 
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  363 0103 D0AB2AE3 		.ascii	"\320\253*\343/4Q,\034\266\345\254\350tJ\257\332\363"
  363      2F34512C 
  363      1CB6E5AC 
-ARM GAS  /tmp/ccE5qQqM.s 			page 29
+ARM GAS  /tmp/ccPELOm8.s 			page 29
 
 
  363      E8744AAF 
@@ -1696,7 +1696,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  366      03449874 
  366      E8
  367              		.text
- 368              		.section	.gnu.lto_bmk_thread7.4a22ffe115692bc,"e",%progbits
+ 368              		.section	.gnu.lto_bmk_thread7.a349e60a0c60c74a,"e",%progbits
  369 0000 789C6D52 		.ascii	"x\234mRML\023A\024\236ogw[j1\306\243\\\270\021.m\365"
  369      4D4C1341 
  369      149E6F67 
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  376      71
  377 0098 8EA9E62F 		.ascii	"\216\251\346/#Zi\037\341\204\035\337vt\211\214\340I"
  377      235A691F 
-ARM GAS  /tmp/ccE5qQqM.s 			page 30
+ARM GAS  /tmp/ccPELOm8.s 			page 30
 
 
  377      E1841DDF 
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  388      F6
  389 016a 3D056F11 		.ascii	"=\005o\021\242XrL\023.\273\227\347\204K\362\002&'\223"
  389      A258724C 
-ARM GAS  /tmp/ccE5qQqM.s 			page 31
+ARM GAS  /tmp/ccPELOm8.s 			page 31
 
 
  389      132EBB97 
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  400      ED960613 
  400      8C30E9
  401 0246 CD1F4BC8 		.ascii	"\315\037K\310b\030\226\244\222:L\343\327\376/\367\023"
-ARM GAS  /tmp/ccE5qQqM.s 			page 32
+ARM GAS  /tmp/ccPELOm8.s 			page 32
 
 
  401      621896A4 
@@ -1892,7 +1892,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  407 02b0 01F6174F 		.ascii	"\001\366\027O\311Ix"
  407      C94978
  408              		.text
- 409              		.section	.gnu.lto_rt_test_012_010_execute.4a22ffe115692bc,"e",%progbits
+ 409              		.section	.gnu.lto_rt_test_012_010_execute.a349e60a0c60c74a,"e",%progbits
  410 0000 789C8D56 		.ascii	"x\234\215VkPSG\024\336s7\217\233\310\243Z\225W[a:\374"
  410      6B505347 
  410      14DE7337 
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  414      20C23037 
  414      F7EE
  415 0062 7EE77CDF 		.ascii	"~\347|\3379g\367\354\212\004\310\343%\204|\006\204\330"
-ARM GAS  /tmp/ccE5qQqM.s 			page 33
+ARM GAS  /tmp/ccPELOm8.s 			page 33
 
 
  415      3967F7EC 
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  426      5F4B3FE5 
  426      3487DB4E 
  426      770A32CD 
-ARM GAS  /tmp/ccE5qQqM.s 			page 34
+ARM GAS  /tmp/ccPELOm8.s 			page 34
 
 
  427 0145 3D26D328 		.ascii	"=&\323(\340\374\3744\215\326\352\242\010\272\201\333"
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  438      6003B8CA 
  438      528033D7 
  438      EC
-ARM GAS  /tmp/ccE5qQqM.s 			page 35
+ARM GAS  /tmp/ccPELOm8.s 			page 35
 
 
  439 0220 279B3429 		.ascii	"'\2334)5l\361\305\273\250\026Z\020V\346\255\177+\244"
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  451      4F878CBB 
  451      67D1DCF7 
  451      4272F7FA 
-ARM GAS  /tmp/ccE5qQqM.s 			page 36
+ARM GAS  /tmp/ccPELOm8.s 			page 36
 
 
  451      B9
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  463      C016A71C 
  464 03ca 09E8A4CE 		.ascii	"\011\350\244\316<\307\351\246\345^\363\225\330I\321"
  464      3CC7E9A6 
-ARM GAS  /tmp/ccE5qQqM.s 			page 37
+ARM GAS  /tmp/ccPELOm8.s 			page 37
 
 
  464      E55EF395 
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  475      4202F708 
  475      396889A8 
  475      2A67
-ARM GAS  /tmp/ccE5qQqM.s 			page 38
+ARM GAS  /tmp/ccPELOm8.s 			page 38
 
 
  476 04a8 CB5965C2 		.ascii	"\313Ye\302A\331p%3,\270T4\254\366\031\242\302l\245\213"
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  487      B8D7E07B 
  487      5FE1F6C8 
  487      851B
-ARM GAS  /tmp/ccE5qQqM.s 			page 39
+ARM GAS  /tmp/ccPELOm8.s 			page 39
 
 
  488 0581 026B45C3 		.ascii	"\002kE\303\320R\371:\212\033.\006\367\273\212\335\337"
@@ -2338,10 +2338,10 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  499      6323F91F 
  499      1525512C 
  500              		.text
-ARM GAS  /tmp/ccE5qQqM.s 			page 40
+ARM GAS  /tmp/ccPELOm8.s 			page 40
 
 
- 501              		.section	.gnu.lto_rt_test_012_010_setup.4a22ffe115692bc,"e",%progbits
+ 501              		.section	.gnu.lto_rt_test_012_010_setup.a349e60a0c60c74a,"e",%progbits
  502 0000 789C5D8F 		.ascii	"x\234]\217\273JCA\020\206\347?\233\304\223\302\302:"
  502      BB4A4341 
  502      1086E73F 
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  513      8296AAC5 
  513      F707B32A 
  513      6C61
-ARM GAS  /tmp/ccE5qQqM.s 			page 41
+ARM GAS  /tmp/ccPELOm8.s 			page 41
 
 
  514 00d5 E03F6934 		.ascii	"\340?i4\365\004|yw\177u\215\026\232\260\205\300\031"
@@ -2434,7 +2434,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  520      8AD337C1 
  520      157B01
  521              		.text
- 522              		.section	.gnu.lto_rt_test_012_007_setup.4a22ffe115692bc,"e",%progbits
+ 522              		.section	.gnu.lto_rt_test_012_007_setup.a349e60a0c60c74a,"e",%progbits
  523 0000 789C5D8F 		.ascii	"x\234]\217=K\003A\020\206\347\275I\342YXX\007\301JH"
  523      3D4B0341 
  523      1086E7BD 
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  527 0051 49A00888 		.ascii	"I\240\010\210f\210hB\022L0\264\326\261\221\202i\000"
  527      66886842 
  527      124C30B4 
-ARM GAS  /tmp/ccE5qQqM.s 			page 42
+ARM GAS  /tmp/ccPELOm8.s 			page 42
 
 
  527      D6B19182 
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  539 0129 592BB392 		.ascii	"Y+\263\222K'\324O\031w\367xF\255\346T*\241\342\221\350"
  539      4B27D44F 
  539      1977F778 
-ARM GAS  /tmp/ccE5qQqM.s 			page 43
+ARM GAS  /tmp/ccPELOm8.s 			page 43
 
 
  539      46ADE654 
@@ -2526,7 +2526,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  540 013e 7438415F 		.ascii	"t8A_\200\337z\272"
  540      80DF7ABA 
  541              		.text
- 542              		.section	.gnu.lto_chSysUnlock.4a22ffe115692bc,"e",%progbits
+ 542              		.section	.gnu.lto_chSysUnlock.a349e60a0c60c74a,"e",%progbits
  543 0000 789C8D94 		.ascii	"x\234\215\224]l\024U\024\307\357\177\356\314\354\354"
  543      5D6C1455 
  543      14C7EF7F 
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  553 00b8 AEFCCA19 		.ascii	"\256\374\312\031v\244+\205\310\320\355]8\216uBP\352"
  553      76A42B85 
  553      C8D0ED5D 
-ARM GAS  /tmp/ccE5qQqM.s 			page 44
+ARM GAS  /tmp/ccPELOm8.s 			page 44
 
 
  553      388E7542 
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  565 0193 D7F14F06 		.ascii	"\327\361O\006Z\265B\014\370\236c\032W\342,j\210\262"
  565      5AB5420C 
  565      F89E631A 
-ARM GAS  /tmp/ccE5qQqM.s 			page 45
+ARM GAS  /tmp/ccPELOm8.s 			page 45
 
 
  565      57E22C6A 
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  576      8E0905
  577 0273 A416BEE2 		.ascii	"\244\026\276\342\235\265\336|Q-\332m\247\367\226\024"
  577      9DB5DE7C 
-ARM GAS  /tmp/ccE5qQqM.s 			page 46
+ARM GAS  /tmp/ccPELOm8.s 			page 46
 
 
  577      512DDA6D 
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  588      E92C779F 
  588      ABAE
  589 034b B6E9F756 		.ascii	"\266\351\367V4\331\030\335f\3276\304\266\306^\251\267"
-ARM GAS  /tmp/ccE5qQqM.s 			page 47
+ARM GAS  /tmp/ccPELOm8.s 			page 47
 
 
  589      34D918DD 
@@ -2789,7 +2789,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  594      4EF12F7B 
  594      0B0863
  595              		.text
- 596              		.section	.gnu.lto_rt_test_012_009_execute.4a22ffe115692bc,"e",%progbits
+ 596              		.section	.gnu.lto_rt_test_012_009_execute.a349e60a0c60c74a,"e",%progbits
  597 0000 789C8D56 		.ascii	"x\234\215VkL\024W\024\276g\356\276X\236\242H\205\252"
  597      6B4C1457 
  597      14BE67EE 
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  602      6667CE7C 
  602      E79CEF7C 
  602      E7DE7347 
-ARM GAS  /tmp/ccE5qQqM.s 			page 48
+ARM GAS  /tmp/ccPELOm8.s 			page 48
 
 
  602      4380F487 
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  614      EEEED3D2 
  614      AF78DE03 
  614      978F770A 
-ARM GAS  /tmp/ccE5qQqM.s 			page 49
+ARM GAS  /tmp/ccPELOm8.s 			page 49
 
 
  615 0146 72DE1B2D 		.ascii	"r\336\033-\264Z\316\253\200\323\223\347mu\324\024F\320"
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  626      E018E8EB 
  626      3F1EC6
  627 021e 2446C2C5 		.ascii	"$F\302\3059\317\356j\330\302\323p\211\235\225\027\307"
-ARM GAS  /tmp/ccE5qQqM.s 			page 50
+ARM GAS  /tmp/ccPELOm8.s 			page 50
 
 
  627      39CFEE6A 
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  638      51D73935 
  638      5AE01628 
  638      E0062B08 
-ARM GAS  /tmp/ccE5qQqM.s 			page 51
+ARM GAS  /tmp/ccPELOm8.s 			page 51
 
 
  639 02f6 7EE33BB8 		.ascii	"~\343;\270\262\271\365A\230\276A\366\216`\330\201CG"
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  651 03c2 F3242A3F 		.ascii	"\363$*?\011\312\271\337\307\371)\342\\4\226\347\256"
  651      09CAB9DF 
  651      C7F929E2 
-ARM GAS  /tmp/ccE5qQqM.s 			page 52
+ARM GAS  /tmp/ccPELOm8.s 			page 52
 
 
  651      5C3496E7 
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  663      6F8B2A70 
  663      60FD231D 
  663      6B4340FD 
-ARM GAS  /tmp/ccE5qQqM.s 			page 53
+ARM GAS  /tmp/ccPELOm8.s 			page 53
 
 
  664 04a5 601B6118 		.ascii	"`\033a\030\342\205\306\321\315j'\215U\262\260C|\032"
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  675      EC6C17
  676 0576 98D98904 		.ascii	"\230\331\211\004\351L\177)\324(\305\006A\222\342Um\343"
  676      E94C7F29 
-ARM GAS  /tmp/ccE5qQqM.s 			page 54
+ARM GAS  /tmp/ccPELOm8.s 			page 54
 
 
  676      D428C506 
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  687      A79B579A 
  687      97A718EC 
  687      269B
-ARM GAS  /tmp/ccE5qQqM.s 			page 55
+ARM GAS  /tmp/ccPELOm8.s 			page 55
 
 
  688 0653 DD60B51B 		.ascii	"\335`\265\033lYk\254F\223\3671\225\375\246\332L?\254"
@@ -3298,12 +3298,12 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  699      2D5C4BB4 
  699      3ACED666 
  700 0731 4821FF01 		.ascii	"H!\377\001\013\215w&"
-ARM GAS  /tmp/ccE5qQqM.s 			page 56
+ARM GAS  /tmp/ccPELOm8.s 			page 56
 
 
  700      0B8D7726 
  701              		.text
- 702              		.section	.gnu.lto_rt_test_012_008_execute.4a22ffe115692bc,"e",%progbits
+ 702              		.section	.gnu.lto_rt_test_012_008_execute.a349e60a0c60c74a,"e",%progbits
  703 0000 789C9D98 		.ascii	"x\234\235\230\373ST\327\035\300\357\367\234}\263\200"
  703      FB5354D7 
  703      1DC0EFF7 
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  714      50DCDB73 
  714      BCDB4522 
  714      830C1467 
-ARM GAS  /tmp/ccE5qQqM.s 			page 57
+ARM GAS  /tmp/ccPELOm8.s 			page 57
 
 
  714      D4
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  726 019a 40394088 		.ascii	"@9@\210\012\204+\227v5w9\363\216\322\356\031~\356\204"
  726      0A842B97 
  726      76357739 
-ARM GAS  /tmp/ccE5qQqM.s 			page 58
+ARM GAS  /tmp/ccPELOm8.s 			page 58
 
 
  726      F38ED2EE 
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  738 0276 021729F3 		.ascii	"\002\027)\363\001-\363\326=\025M6y\222\201\366l?\177"
  738      012DF3D6 
  738      3D154D36 
-ARM GAS  /tmp/ccE5qQqM.s 			page 59
+ARM GAS  /tmp/ccPELOm8.s 			page 59
 
 
  738      799281F6 
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  749      7583
  750 034c 54184705 		.ascii	"T\030G\005?\3771\025tl\273\317\031\335\251Kc\316wi\235"
  750      3FFF3115 
-ARM GAS  /tmp/ccE5qQqM.s 			page 60
+ARM GAS  /tmp/ccPELOm8.s 			page 60
 
 
  750      746CBBCF 
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  761      5BCEED6E 
  761      4BA4
  762 0429 265A066C 		.ascii	"&Z\006lqt?\321\323\375AeM\211]G\367Sr\372X~[\200\037"
-ARM GAS  /tmp/ccE5qQqM.s 			page 61
+ARM GAS  /tmp/ccPELOm8.s 			page 61
 
 
  762      71743FD1 
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  773      EF520C
  774 0500 69313CA7 		.ascii	"i1<\247\233\360\374~\230\347=,\016\317\177\327x\326"
  774      9BF0FC7E 
-ARM GAS  /tmp/ccE5qQqM.s 			page 62
+ARM GAS  /tmp/ccPELOm8.s 			page 62
 
 
  774      98E73D2C 
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  786      3B497C27 
  786      CBABEFCE 
  786      A0DBC085 
-ARM GAS  /tmp/ccE5qQqM.s 			page 63
+ARM GAS  /tmp/ccPELOm8.s 			page 63
 
 
  786      F1
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  798      B0E2
  799 06b2 5CE5B7F6 		.ascii	"\\\345\267\366\260!FXb\365\363L\350CC\301\356\005\301"
  799      B0214658 
-ARM GAS  /tmp/ccE5qQqM.s 			page 64
+ARM GAS  /tmp/ccPELOm8.s 			page 64
 
 
  799      62F5F34C 
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  811 0783 836A05AE 		.ascii	"\203j\005\256\342\243u\224\275\256\334\207\322@\360"
  811      E2A37594 
  811      BDAEDC87 
-ARM GAS  /tmp/ccE5qQqM.s 			page 65
+ARM GAS  /tmp/ccPELOm8.s 			page 65
 
 
  811      D240F0
@@ -3884,7 +3884,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  820      FEEBFD
  821 082a 6F       		.ascii	"o"
  822              		.text
- 823              		.section	.gnu.lto_bmk_thread8.4a22ffe115692bc,"e",%progbits
+ 823              		.section	.gnu.lto_bmk_thread8.a349e60a0c60c74a,"e",%progbits
  824 0000 789C7D53 		.ascii	"x\234}SKLSA\024\235\363\346\275\266\224\026\215q%.\330"
  824      4B4C5341 
  824      149DF3E6 
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  826 0027 2D6BA71F 		.ascii	"-k\247\037\004\005!1|JbS\222\332\210\013>&&\"\362y\202"
  826      04052131 
  826      7C4A6253 
-ARM GAS  /tmp/ccE5qQqM.s 			page 66
+ARM GAS  /tmp/ccPELOm8.s 			page 66
 
 
  826      92DA880B 
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  838      B5C2D87C 
  838      88D90B
  839 010b 59A03255 		.ascii	"Y\2402U\221C\006dm&\205\232\203\006\213S\016\214\325"
-ARM GAS  /tmp/ccE5qQqM.s 			page 67
+ARM GAS  /tmp/ccPELOm8.s 			page 67
 
 
  839      91430664 
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  850      1C2C99A6 
  850      92095982 
  850      B7
-ARM GAS  /tmp/ccE5qQqM.s 			page 68
+ARM GAS  /tmp/ccPELOm8.s 			page 68
 
 
  851 01e5 F27499E9 		.ascii	"\362t\231\351\336d\342\260\263\231\261\344~\026W\306"
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  862      3E97B7B2 
  862      BACAADEF 
  862      4F
-ARM GAS  /tmp/ccE5qQqM.s 			page 69
+ARM GAS  /tmp/ccPELOm8.s 			page 69
 
 
  863 02bf 4BE47F89 		.ascii	"K\344\177\211W\277Y\255W\270\365\222\2023g\363\335\014"
@@ -4095,7 +4095,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  865      DFC3FE01 
  865      33D07FC1 
  866              		.text
- 867              		.section	.gnu.lto_rt_test_012_007_execute.4a22ffe115692bc,"e",%progbits
+ 867              		.section	.gnu.lto_rt_test_012_007_execute.a349e60a0c60c74a,"e",%progbits
  868 0000 789C9D99 		.ascii	"x\234\235\231kTT\327\025\200\357>g\2368\003\250Ic%1"
  868      6B5454D7 
  868      1580EF3E 
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  876 0099 D92D3E97 		.ascii	"\331->\227C\255\275`U\342\373\0346\306\225\220]\011"
  876      43ADBD60 
  876      55E2FB1C 
-ARM GAS  /tmp/ccE5qQqM.s 			page 70
+ARM GAS  /tmp/ccPELOm8.s 			page 70
 
 
  876      36C69590 
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  888      3C003361 
  888      3FBA490E 
  888      CA95
-ARM GAS  /tmp/ccE5qQqM.s 			page 71
+ARM GAS  /tmp/ccPELOm8.s 			page 71
 
 
  889 017a BEA2A603 		.ascii	"\276\242\246\003\016\376\027\261\353;}7\312i\327\265"
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  900      AEF43B88 
  900      C038917C 
  900      7F4DE7
-ARM GAS  /tmp/ccE5qQqM.s 			page 72
+ARM GAS  /tmp/ccPELOm8.s 			page 72
 
 
  901 024e 98B310F2 		.ascii	"\230\263\020\362\363\0348S\315e.O\235i?\006\233\240"
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  912      AC56FA86 
  912      EC4F865E 
  912      8AFC
-ARM GAS  /tmp/ccE5qQqM.s 			page 73
+ARM GAS  /tmp/ccPELOm8.s 			page 73
 
 
  913 0323 4B1579D3 		.ascii	"K\025y\323\333+\033l2\373U{\346\006\370\0248#\362\017"
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  924      2AEB
  925 03f4 FDBD333D 		.ascii	"\375\2753=\242z\323\253\0250\206\352%\301\020\355t^"
  925      A27AD3AB 
-ARM GAS  /tmp/ccE5qQqM.s 			page 74
+ARM GAS  /tmp/ccPELOm8.s 			page 74
 
 
  925      153086EA 
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  936      5A2D6066 
  937 04cb 77C5E4B9 		.ascii	"w\305\344\271\220\231\362\\\304\"y.f!\236W0\214,iB<"
  937      9099F25C 
-ARM GAS  /tmp/ccE5qQqM.s 			page 75
+ARM GAS  /tmp/ccPELOm8.s 			page 75
 
 
  937      C422792E 
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  948      D5
  949 05a8 01FE4407 		.ascii	"\001\376D\007x\222tJ\177f9\200\301\246p\200]\321\001"
  949      7892744A 
-ARM GAS  /tmp/ccE5qQqM.s 			page 76
+ARM GAS  /tmp/ccPELOm8.s 			page 76
 
 
  949      7F663980 
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  960      CCE4FB
  961 0679 753FD3BF 		.ascii	"u?\323\277_\333X\232\261\363]\330\371\007\204\351R\316"
  961      5FDB589A 
-ARM GAS  /tmp/ccE5qQqM.s 			page 77
+ARM GAS  /tmp/ccPELOm8.s 			page 77
 
 
  961      B1F35DD8 
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  973      E332B983 
  973      17CA7AEC 
  973      61E97146 
-ARM GAS  /tmp/ccE5qQqM.s 			page 78
+ARM GAS  /tmp/ccPELOm8.s 			page 78
 
 
  973      A6A7
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  985      DD35F1E6 
  985      FBD2AC
  986 0827 F97AC79B 		.ascii	"\371z\307\233\357\214h>\375\275\321\205\357\215_\251"
-ARM GAS  /tmp/ccE5qQqM.s 			page 79
+ARM GAS  /tmp/ccPELOm8.s 			page 79
 
 
  986      EF8C683E 
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  998      9F24C595 
  998      074BAEDA 
  998      438AE861 
-ARM GAS  /tmp/ccE5qQqM.s 			page 80
+ARM GAS  /tmp/ccPELOm8.s 			page 80
 
 
  998      9E
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1010      94F0C69D 
  1010      E187C989 
  1010      51E8D8A2 
-ARM GAS  /tmp/ccE5qQqM.s 			page 81
+ARM GAS  /tmp/ccPELOm8.s 			page 81
 
 
  1010      7B96
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1022      BAFC15AF 
  1022      276349EE 
  1022      926C
-ARM GAS  /tmp/ccE5qQqM.s 			page 82
+ARM GAS  /tmp/ccPELOm8.s 			page 82
 
 
  1023 0ab1 EFE25772 		.ascii	"\357\342WrR\227h\263'$\237\343}\025e\347\307\222]\202"
@@ -4894,7 +4894,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1029      0FC33745 
  1029      EB
  1030              		.text
- 1031              		.section	.gnu.lto_rt_test_012_006_execute.4a22ffe115692bc,"e",%progbits
+ 1031              		.section	.gnu.lto_rt_test_012_006_execute.a349e60a0c60c74a,"e",%progbits
  1032 0000 789C8D56 		.ascii	"x\234\215VkPTe\030\376\336\363\355\331\033\273\"\242"
  1032      6B505465 
  1032      18FEDEF3 
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1036 0049 967843C9 		.ascii	"\226xC\311[@\001JJ\272\005\364\276\3379,\273\212\026"
  1036      5B40014A 
  1036      4ABA05F4 
-ARM GAS  /tmp/ccE5qQqM.s 			page 83
+ARM GAS  /tmp/ccPELOm8.s 			page 83
 
 
  1036      BEDF392C 
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1048 0123 43506FB7 		.ascii	"CPo\267\234\337\025\247S\307\312\370\227\273\024\245"
  1048      9CDF15A7 
  1048      53C7CAF8 
-ARM GAS  /tmp/ccE5qQqM.s 			page 84
+ARM GAS  /tmp/ccPELOm8.s 			page 84
 
 
  1048      97BB14A5 
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1060      4650428C 
  1060      05B824EE 
  1060      0BF1
-ARM GAS  /tmp/ccE5qQqM.s 			page 85
+ARM GAS  /tmp/ccPELOm8.s 			page 85
 
 
  1061 0211 BE1FBCFB 		.ascii	"\276\037\274\373\356\035o\356\372\232\307\244]\212\015"
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1072      161D1146 
  1072      C4743847 
  1072      DE790450 
-ARM GAS  /tmp/ccE5qQqM.s 			page 86
+ARM GAS  /tmp/ccPELOm8.s 			page 86
 
 
  1072      5DDDDF
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1084      9527C175 
  1084      0AFC9A1E 
  1084      F8867BA5 
-ARM GAS  /tmp/ccE5qQqM.s 			page 87
+ARM GAS  /tmp/ccPELOm8.s 			page 87
 
 
  1084      B7
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1095      F84EC4B2 
  1096 0491 B7A2BAAB 		.ascii	"\267\242\272\253\252\370\323/[gj\364\231\330]h\204\370"
  1096      AAF8D32F 
-ARM GAS  /tmp/ccE5qQqM.s 			page 88
+ARM GAS  /tmp/ccPELOm8.s 			page 88
 
 
  1096      5B676AF4 
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1107      C23F90
  1108 0566 262CC228 		.ascii	"&,\302(2\021\265\255\252\375\200\234\326\245\023\323"
  1108      3211B5AD 
-ARM GAS  /tmp/ccE5qQqM.s 			page 89
+ARM GAS  /tmp/ccPELOm8.s 			page 89
 
 
  1108      AAFD809C 
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1119      0F121093 
  1119      E00D
  1120 0648 D1F292CC 		.ascii	"\321\362\222\314\314,\374\375\320\341\312s\254\314z"
-ARM GAS  /tmp/ccE5qQqM.s 			page 90
+ARM GAS  /tmp/ccPELOm8.s 			page 90
 
 
  1120      CC2CFCFD 
@@ -5393,12 +5393,12 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1130      C0
  1131 070d 2D1CF6   		.ascii	"-\034\366"
  1132              		.text
- 1133              		.section	.gnu.lto_bmk_thread3.4a22ffe115692bc,"e",%progbits
+ 1133              		.section	.gnu.lto_bmk_thread3.a349e60a0c60c74a,"e",%progbits
  1134 0000 789C454F 		.ascii	"x\234EOMKBQ\020\235\363\306\257D\177\201\004\356\304"
  1134      4D4B4251 
  1134      109DF3C6 
  1134      AF447F81 
-ARM GAS  /tmp/ccE5qQqM.s 			page 91
+ARM GAS  /tmp/ccPELOm8.s 			page 91
 
 
  1134      04EEC4
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1146      876C311E 
  1146      2B33D97F 
  1146      76405944 
-ARM GAS  /tmp/ccE5qQqM.s 			page 92
+ARM GAS  /tmp/ccPELOm8.s 			page 92
 
 
  1146      7BAC4D40 
@@ -5490,7 +5490,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1152 0155 0F552677 		.ascii	"\017U&w\235"
  1152      9D
  1153              		.text
- 1154              		.section	.gnu.lto_rt_test_012_005_execute.4a22ffe115692bc,"e",%progbits
+ 1154              		.section	.gnu.lto_rt_test_012_005_execute.a349e60a0c60c74a,"e",%progbits
  1155 0000 789C8D56 		.ascii	"x\234\215VkPTe\030\376\336\363\355\331\033\254\250("
  1155      6B505465 
  1155      18FEDEF3 
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1160 0058 B2AB6831 		.ascii	"\262\253h1p8\347\373\236\347}\237\367\366\235cd\300"
  1160      7038E7FB 
  1160      9EE77D9F 
-ARM GAS  /tmp/ccE5qQqM.s 			page 93
+ARM GAS  /tmp/ccPELOm8.s 			page 93
 
 
  1160      F7F69D63 
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1172 0133 97EBE0C0 		.ascii	"\227\353\340\300\354\334Ie\303\2469\374-\301\375>\177"
  1172      ECDC4965 
  1172      C3A639FC 
-ARM GAS  /tmp/ccE5qQqM.s 			page 94
+ARM GAS  /tmp/ccPELOm8.s 			page 94
 
 
  1172      2DC1FD3E 
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1183      6BE0
  1184 0211 6A1C3FD5 		.ascii	"j\034?\325\334\261\225\207%]\012\017\250\202\363\320"
  1184      DCB19587 
-ARM GAS  /tmp/ccE5qQqM.s 			page 95
+ARM GAS  /tmp/ccPELOm8.s 			page 95
 
 
  1184      255D0A0F 
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1195      02A8C965 
  1195      D025E4
  1196 02f4 157C5354 		.ascii	"\025|ST\377Oc<\325\300\303\315\252\304\306\242\311&"
-ARM GAS  /tmp/ccE5qQqM.s 			page 96
+ARM GAS  /tmp/ccPELOm8.s 			page 96
 
 
  1196      FF4F633C 
@@ -5758,7 +5758,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1207      B8E3
  1208 03c5 E02AC60D 		.ascii	"\340*\306\015\311\342H\200\277`9\212-G\327\302\233t"
  1208      C9E24880 
-ARM GAS  /tmp/ccE5qQqM.s 			page 97
+ARM GAS  /tmp/ccPELOm8.s 			page 97
 
 
  1208      BF60398A 
@@ -5818,7 +5818,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1219      8F43AA4E 
  1219      50CBB8DE 
  1219      EBAF7E4D 
-ARM GAS  /tmp/ccE5qQqM.s 			page 98
+ARM GAS  /tmp/ccPELOm8.s 			page 98
 
 
  1220 04aa D15D7FF3 		.ascii	"\321]\177\363\257\023\317\323\021\256\366a\260I\360"
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1231 057c 53C8A357 		.ascii	"S\310\243W9L#\317\313\037\027!\326\3274t\204\177=D\316"
  1231      394C23CF 
  1231      CB1F1721 
-ARM GAS  /tmp/ccE5qQqM.s 			page 99
+ARM GAS  /tmp/ccPELOm8.s 			page 99
 
 
  1231      D6D73474 
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1242      37CF9E65 
  1242      0D3C66D0 
  1243 0668 0C87F5E3 		.ascii	"\014\207\365\343<kN\2265#\375\331\345\251YLv83\355N"
-ARM GAS  /tmp/ccE5qQqM.s 			page 100
+ARM GAS  /tmp/ccPELOm8.s 			page 100
 
 
  1243      3C6B4E96 
@@ -5983,7 +5983,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1251 0701 0262BC1F 		.ascii	"\002b\274\037L"
  1251      4C
  1252              		.text
- 1253              		.section	.gnu.lto_rt_test_012_004_execute.4a22ffe115692bc,"e",%progbits
+ 1253              		.section	.gnu.lto_rt_test_012_004_execute.a349e60a0c60c74a,"e",%progbits
  1254 0000 789C8D57 		.ascii	"x\234\215WmPT\347\025\276\347\276w?Xv\201j\203(\255"
  1254      6D5054E7 
  1254      15BEE7BE 
@@ -5998,7 +5998,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1256      9D08B4BB 
  1256      6B1A7F79 
  1256      F9B601
-ARM GAS  /tmp/ccE5qQqM.s 			page 101
+ARM GAS  /tmp/ccPELOm8.s 			page 101
 
 
  1257 003a 3F9A6284 		.ascii	"?\232b\2044\313n\244\240T\371\320\0026\030)J\224\250"
@@ -6058,7 +6058,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1268      1ECE3E70 
  1268      01122B64 
  1268      39476EFD 
-ARM GAS  /tmp/ccE5qQqM.s 			page 102
+ARM GAS  /tmp/ccPELOm8.s 			page 102
 
 
  1268      6C28EEC3 
@@ -6118,7 +6118,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1280      F1D4756B 
  1280      5AE5A9E9 
  1280      42A4E70F 
-ARM GAS  /tmp/ccE5qQqM.s 			page 103
+ARM GAS  /tmp/ccPELOm8.s 			page 103
 
 
  1280      FD0D
@@ -6178,7 +6178,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1292      C7BD88F5 
  1292      F5F21E1E 
  1292      42345CC1 
-ARM GAS  /tmp/ccE5qQqM.s 			page 104
+ARM GAS  /tmp/ccPELOm8.s 			page 104
 
 
  1292      10
@@ -6238,7 +6238,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1304 0397 40A318C0 		.ascii	"@\243\030\300-\036^\356\007\005u\217\352\254J\263\210"
  1304      2D1E5EEE 
  1304      0705758F 
-ARM GAS  /tmp/ccE5qQqM.s 			page 105
+ARM GAS  /tmp/ccPELOm8.s 			page 105
 
 
  1304      EAAC4AB3 
@@ -6298,7 +6298,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1316 046a C7331F51 		.ascii	"\3073\037Q\011\274\354\207\374\024z\251c\311\360\030"
  1316      09BCEC87 
  1316      FC147AA9 
-ARM GAS  /tmp/ccE5qQqM.s 			page 106
+ARM GAS  /tmp/ccPELOm8.s 			page 106
 
 
  1316      63C9F018 
@@ -6358,7 +6358,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1328 0544 A543123C 		.ascii	"\245C\022<L\023|\263\302K\036\024\212\274\215\206\037"
  1328      4C137CB3 
  1328      C24B1E14 
-ARM GAS  /tmp/ccE5qQqM.s 			page 107
+ARM GAS  /tmp/ccPELOm8.s 			page 107
 
 
  1328      8ABC8D86 
@@ -6418,7 +6418,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1340      17F1605D 
  1340      5DC86DE0 
  1340      ECE267CC 
-ARM GAS  /tmp/ccE5qQqM.s 			page 108
+ARM GAS  /tmp/ccPELOm8.s 			page 108
 
 
  1340      6E7181
@@ -6478,7 +6478,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1352      8D97FD04 
  1352      2A440BF7 
  1352      08
-ARM GAS  /tmp/ccE5qQqM.s 			page 109
+ARM GAS  /tmp/ccPELOm8.s 			page 109
 
 
  1353 06f4 FF40245A 		.ascii	"\377@$ZU\227w\264h,WU\340\263\004\334q\272\350\256\316"
@@ -6538,7 +6538,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1364 07c6 5E960C0D 		.ascii	"^\226\014\015\376\2625\252e\273"
  1364      FEB235AA 
  1364      65BB
-ARM GAS  /tmp/ccE5qQqM.s 			page 110
+ARM GAS  /tmp/ccPELOm8.s 			page 110
 
 
  1365 07d0 0339BE43 		.ascii	"\0039\276C\307@\375\251\210\3430\032g\261\226~\351\000"
@@ -6598,7 +6598,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1376      E1FC623E 
  1376      DBCD985A 
  1376      960B
-ARM GAS  /tmp/ccE5qQqM.s 			page 111
+ARM GAS  /tmp/ccPELOm8.s 			page 111
 
 
  1377 08a7 3F9CEEA4 		.ascii	"?\234\356\244L\307\026\004\3300\2264\267#\303\356D\334"
@@ -6624,7 +6624,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1381      FF03BF60 
  1381      BD98
  1382              		.text
- 1383              		.section	.gnu.lto_bmk_thread4.4a22ffe115692bc,"e",%progbits
+ 1383              		.section	.gnu.lto_bmk_thread4.a349e60a0c60c74a,"e",%progbits
  1384 0000 789C8D54 		.ascii	"x\234\215T\337O\034U\024\276\337\334\231\335e\013\364"
  1384      DF4F1C55 
  1384      14BEDFDC 
@@ -6658,7 +6658,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1390      C6FC60EC 
  1390      39C6187C 
  1390      0C9A1062 
-ARM GAS  /tmp/ccE5qQqM.s 			page 112
+ARM GAS  /tmp/ccPELOm8.s 			page 112
 
 
  1390      B7BF
@@ -6718,7 +6718,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1402      2AB90A8C 
  1402      F3C4D64F 
  1402      AD
-ARM GAS  /tmp/ccE5qQqM.s 			page 113
+ARM GAS  /tmp/ccPELOm8.s 			page 113
 
 
  1403 014f 5F13BC40 		.ascii	"_\023\274@\301s2\210\213\264\242\207<\277k\324p\305"
@@ -6778,7 +6778,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1414      588292F8 
  1414      C31FCF
  1415 0226 8A804E3E 		.ascii	"\212\200N>`\004eJ\317\205\346k\203~\212\340\012t|#E"
-ARM GAS  /tmp/ccE5qQqM.s 			page 114
+ARM GAS  /tmp/ccPELOm8.s 			page 114
 
 
  1415      6004654A 
@@ -6838,7 +6838,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1426      03F447
  1427 0302 4037D7EF 		.ascii	"@7\327\357\344\007Y6\355\207\315\033]\233\232\346\247"
  1427      E4075936 
-ARM GAS  /tmp/ccE5qQqM.s 			page 115
+ARM GAS  /tmp/ccPELOm8.s 			page 115
 
 
  1427      ED87CD1B 
@@ -6891,14 +6891,14 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1437      B669D6
  1438 03c3 1C       		.ascii	"\034"
  1439              		.text
- 1440              		.section	.gnu.lto_rt_test_sequence_012.4a22ffe115692bc,"e",%progbits
+ 1440              		.section	.gnu.lto_rt_test_sequence_012.a349e60a0c60c74a,"e",%progbits
  1441 0000 789CE360 		.ascii	"x\234\343``d(d``\360c\200\200\351\314\214\273\277\354"
  1441      60642864 
  1441      6060F063 
  1441      8080E9CC 
  1441      8CBBBFEC 
  1442 0014 7DC5D9C2 		.ascii	"}\305\331\302\330\3248\243\241\341A\367Ia\243\371\314"
-ARM GAS  /tmp/ccE5qQqM.s 			page 116
+ARM GAS  /tmp/ccPELOm8.s 			page 116
 
 
  1442      D8D438A3 
@@ -6945,7 +6945,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1450      004D7C42 
  1450      F9
  1451              		.text
- 1452              		.section	.gnu.lto_rt_test_sequence_012_array.4a22ffe115692bc,"e",%progbits
+ 1452              		.section	.gnu.lto_rt_test_sequence_012_array.a349e60a0c60c74a,"e",%progbits
  1453 0000 789CE360 		.ascii	"x\234\343``d\270\311\310\300\340\304\000\001\323\231"
  1453      6064B8C9 
  1453      C8C0E0C4 
@@ -6958,7 +6958,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1455      08E23232 
  1455      7202B9BB 
  1455      BFEC7DC5 
-ARM GAS  /tmp/ccE5qQqM.s 			page 117
+ARM GAS  /tmp/ccPELOm8.s 			page 117
 
 
  1456 002f D9C2D8D4 		.ascii	"\331\302\330\3248\243\241\341A\367\016a#\240\272\305"
@@ -7018,7 +7018,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1467      0D14D8C5 
  1467      28CDC078 
  1467      9AD192
-ARM GAS  /tmp/ccE5qQqM.s 			page 118
+ARM GAS  /tmp/ccPELOm8.s 			page 118
 
 
  1468 010a C1414F4F 		.ascii	"\301AOO\037\210\262S\213\362Rs\364\23532\2232\375\203"
@@ -7038,7 +7038,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1470      0000
  1471 0143 BDDBB8EA 		.ascii	"\275\333\270\352"
  1472              		.text
- 1473              		.section	.gnu.lto_rt_test_012_004.4a22ffe115692bc,"e",%progbits
+ 1473              		.section	.gnu.lto_rt_test_012_004.a349e60a0c60c74a,"e",%progbits
  1474 0000 789CE360 		.ascii	"x\234\343``d\350e``\210c\200\200\351\314\214sW\234\371"
  1474      6064E865 
  1474      60608863 
@@ -7078,7 +7078,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1481      3E464B06 
  1481      073D3D7D 
  1481      20CA4E2D 
-ARM GAS  /tmp/ccE5qQqM.s 			page 119
+ARM GAS  /tmp/ccPELOm8.s 			page 119
 
 
  1482 0095 D177CEC8 		.ascii	"\321w\316\310L\312\364\017\326/I-.\321/*\321/\316/-"
@@ -7097,7 +7097,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1484      416A515A 
  1484      7E516E22 
  1485              		.text
- 1486              		.section	.gnu.lto_rt_test_012_005.4a22ffe115692bc,"e",%progbits
+ 1486              		.section	.gnu.lto_rt_test_012_005.a349e60a0c60c74a,"e",%progbits
  1487 0000 789CE360 		.ascii	"x\234\343``d\350e``Hf\200\200\351\314\214sW\234\371"
  1487      6064E865 
  1487      60604866 
@@ -7138,7 +7138,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1495 008e 40949D5A 		.ascii	"@\224\235Z\224\227\232\243\357\234\221\231\224\351\037"
  1495      94979AA3 
  1495      EF9C9199 
-ARM GAS  /tmp/ccE5qQqM.s 			page 120
+ARM GAS  /tmp/ccPELOm8.s 			page 120
 
 
  1495      94E91F
@@ -7162,7 +7162,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1499      4E2A0300 
  1500 00e3 9A5212   		.ascii	"\232R\022"
  1501              		.text
- 1502              		.section	.gnu.lto_rt_test_012_006.4a22ffe115692bc,"e",%progbits
+ 1502              		.section	.gnu.lto_rt_test_012_006.a349e60a0c60c74a,"e",%progbits
  1503 0000 789CE360 		.ascii	"x\234\343``d\350c``\310d\200\200\351\314\214sW\234\371"
  1503      6064E863 
  1503      6060C864 
@@ -7198,7 +7198,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1510      DD8CD233 
  1510      802AC114 
  1510      33E32EA0 
-ARM GAS  /tmp/ccE5qQqM.s 			page 121
+ARM GAS  /tmp/ccPELOm8.s 			page 121
 
 
  1510      2803
@@ -7224,7 +7224,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1514      00
  1515 00e9 CA5255D0 		.ascii	"\312RU\320"
  1516              		.text
- 1517              		.section	.gnu.lto_rt_test_012_007.4a22ffe115692bc,"e",%progbits
+ 1517              		.section	.gnu.lto_rt_test_012_007.a349e60a0c60c74a,"e",%progbits
  1518 0000 789CE360 		.ascii	"x\234\343``dX\305\300\300\020\317\000\001\323\231\031"
  1518      606458C5 
  1518      C0C010CF 
@@ -7258,7 +7258,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1524      820687F9 
  1524      CCCC3380 
  1524      E6EF636C 
-ARM GAS  /tmp/ccE5qQqM.s 			page 122
+ARM GAS  /tmp/ccPELOm8.s 			page 122
 
 
  1524      619C
@@ -7289,7 +7289,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1530      0000AA53 
  1530      5C77
  1531              		.text
- 1532              		.section	.gnu.lto_rt_test_012_008.4a22ffe115692bc,"e",%progbits
+ 1532              		.section	.gnu.lto_rt_test_012_008.a349e60a0c60c74a,"e",%progbits
  1533 0000 789CE360 		.ascii	"x\234\343``d\350c``Ha\200\200\351\314\214sW\234\371"
  1533      6064E863 
  1533      60604861 
@@ -7318,7 +7318,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1538      F3B10F
  1539 0061 F7F92DB7 		.ascii	"\367\371-\2677t,hp\230\317\314<\003h\310^\306\026\306"
  1539      37742C68 
-ARM GAS  /tmp/ccE5qQqM.s 			page 123
+ARM GAS  /tmp/ccPELOm8.s 			page 123
 
 
  1539      7098CFCC 
@@ -7358,7 +7358,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1547 00e5 00326C54 		.ascii	"\0002lT\231"
  1547      99
  1548              		.text
- 1549              		.section	.gnu.lto_rt_test_012_009.4a22ffe115692bc,"e",%progbits
+ 1549              		.section	.gnu.lto_rt_test_012_009.a349e60a0c60c74a,"e",%progbits
  1550 0000 789CE360 		.ascii	"x\234\343``d\350c``\310`\200\200\351\314\214sW\234\371"
  1550      6064E863 
  1550      6060C860 
@@ -7378,7 +7378,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1553      6F98A130 
  1553      9F192CF2 
  1554 0046 66E3E655 		.ascii	"f\343\346U\334 \3153\032\032\026\274}\3128\237\231\211"
-ARM GAS  /tmp/ccE5qQqM.s 			page 124
+ARM GAS  /tmp/ccPELOm8.s 			page 124
 
 
  1554      DC20CD33 
@@ -7418,7 +7418,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1561 00e6 00128B55 		.ascii	"\000\022\213U)"
  1561      29
  1562              		.text
- 1563              		.section	.gnu.lto_rt_test_012_010.4a22ffe115692bc,"e",%progbits
+ 1563              		.section	.gnu.lto_rt_test_012_010.a349e60a0c60c74a,"e",%progbits
  1564 0000 789CE360 		.ascii	"x\234\343``dX\305\300\300\220\306\000\001\323\231\031"
  1564      606458C5 
  1564      C0C090C6 
@@ -7438,7 +7438,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1567      11AC9211 
  1567      ACF2CD
  1568 0041 FABBA799 		.ascii	"\372\273\247\231\024\235\3477\314P\230\317\014V\274"
-ARM GAS  /tmp/ccE5qQqM.s 			page 125
+ARM GAS  /tmp/ccPELOm8.s 			page 125
 
 
  1568      149DE737 
@@ -7486,7 +7486,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1577      92010052 
  1577      AB60BC
  1578              		.text
- 1579              		.section	.gnu.lto_rt_test_012_011.4a22ffe115692bc,"e",%progbits
+ 1579              		.section	.gnu.lto_rt_test_012_011.a349e60a0c60c74a,"e",%progbits
  1580 0000 789CE360 		.ascii	"x\234\343``dX\305\300\300\220\314\000\001\323\231\031"
  1580      606458C5 
  1580      C0C090CC 
@@ -7498,7 +7498,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1581      E141F7
  1582 0020 6F59C3F9 		.ascii	"oY\303\371\314\0143\231!r}\315\357\357q\3641\003E\030"
  1582      CC0C3399 
-ARM GAS  /tmp/ccE5qQqM.s 			page 126
+ARM GAS  /tmp/ccPELOm8.s 			page 126
 
 
  1582      21727DCD 
@@ -7555,10 +7555,10 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1593      CA180099 
  1593      CD5EAC
  1594              		.text
- 1595              		.section	.gnu.lto_rt_test_012_012.4a22ffe115692bc,"e",%progbits
+ 1595              		.section	.gnu.lto_rt_test_012_012.a349e60a0c60c74a,"e",%progbits
  1596 0000 789CE360 		.ascii	"x\234\343``d\350c``\010d\200\200\351\314\214sW\234\371"
  1596      6064E863 
-ARM GAS  /tmp/ccE5qQqM.s 			page 127
+ARM GAS  /tmp/ccPELOm8.s 			page 127
 
 
  1596      60600864 
@@ -7617,8 +7617,8 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1608 00d2 00CDA54C 		.ascii	"\000\315\245L\001"
  1608      01
  1609              		.text
- 1610              		.section	.gnu.lto_.symbol_nodes.4a22ffe115692bc,"e",%progbits
-ARM GAS  /tmp/ccE5qQqM.s 			page 128
+ 1610              		.section	.gnu.lto_.symbol_nodes.a349e60a0c60c74a,"e",%progbits
+ARM GAS  /tmp/ccPELOm8.s 			page 128
 
 
  1611 0000 789C7595 		.ascii	"x\234u\225Kw\024U\020\307\273\3777\323I\3174\035f\342"
@@ -7678,7 +7678,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1622      57606CF6 
  1622      1BA06DB5 
  1622      D3FB1993 
-ARM GAS  /tmp/ccE5qQqM.s 			page 129
+ARM GAS  /tmp/ccPELOm8.s 			page 129
 
 
  1623 00d8 653B2F80 		.ascii	"e;/\200\302\272\336\177\301T\231\363\032(\255k\371,"
@@ -7738,7 +7738,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1634      3B68BF
  1635 01a9 5FF903B4 		.ascii	"_\371\003\264\350W\376\004\035\360+\177\201\226\374"
  1635      E857FE04 
-ARM GAS  /tmp/ccE5qQqM.s 			page 130
+ARM GAS  /tmp/ccPELOm8.s 			page 130
 
 
  1635      1DF02B7F 
@@ -7798,7 +7798,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1646      0B87DC
  1647 0285 459A583C 		.ascii	"E\232X<\305U\265\213T\272H\245\213T\272h/\272Mo\257"
  1647      C555B58B 
-ARM GAS  /tmp/ccE5qQqM.s 			page 131
+ARM GAS  /tmp/ccPELOm8.s 			page 131
 
 
  1647      54BA48A5 
@@ -7858,7 +7858,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1658      45C6A4A4 
  1658      2D263B70 
  1658      BE99
-ARM GAS  /tmp/ccE5qQqM.s 			page 132
+ARM GAS  /tmp/ccPELOm8.s 			page 132
 
 
  1659 036a 7ED58050 		.ascii	"~\325\200P\2369\342\225\031\034\255\336\224\301r\011"
@@ -7872,7 +7872,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1660      94
  1661 038b C4C4     		.ascii	"\304\304"
  1662              		.text
- 1663              		.section	.gnu.lto_.refs.4a22ffe115692bc,"e",%progbits
+ 1663              		.section	.gnu.lto_.refs.a349e60a0c60c74a,"e",%progbits
  1664 0000 789C5D51 		.ascii	"x\234]Q\321r\3020\014\263D\2328-\264\220\244+\024Z("
  1664      D172C230 
  1664      0CB3449A 
@@ -7918,7 +7918,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1672      16F00E7E 
  1672      205BD0D8 
  1673 00ab BFBCB826 		.ascii	"\277\274\270&{\217\022$\251h\244\337\242\354$\265\242"
-ARM GAS  /tmp/ccE5qQqM.s 			page 133
+ARM GAS  /tmp/ccPELOm8.s 			page 133
 
 
  1673      7B8F1224 
@@ -7953,7 +7953,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1679      0B18C810 
  1679      AA
  1680              		.text
- 1681              		.section	.gnu.lto_.decls.4a22ffe115692bc,"e",%progbits
+ 1681              		.section	.gnu.lto_.decls.a349e60a0c60c74a,"e",%progbits
  1682 0000 789CC57C 		.ascii	"x\234\305|\011\\U\327\235?\367\235\267\260\223\250m"
  1682      095C55D7 
  1682      9D3FF79D 
@@ -7978,7 +7978,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1686      65130505 
  1686      0185FFEF 
  1686      9CDFB9BC 
-ARM GAS  /tmp/ccE5qQqM.s 			page 134
+ARM GAS  /tmp/ccPELOm8.s 			page 134
 
 
  1687 005d 7BDFA2B6 		.ascii	"{\337\242\2663\377\317\220\374|\367\334\367;\337\337"
@@ -8038,7 +8038,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1699      7B404B40 
  1699      2BD41605 
  1699      F803681D 
-ARM GAS  /tmp/ccE5qQqM.s 			page 135
+ARM GAS  /tmp/ccPELOm8.s 			page 135
 
 
  1699      8810
@@ -8098,7 +8098,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1711      BF009A81 
  1711      7EBB81
  1712 0200 7E09C74B 		.ascii	"~\011\307K\320g\004\250\024h\017\315\031\340\233\207"
-ARM GAS  /tmp/ccE5qQqM.s 			page 136
+ARM GAS  /tmp/ccPELOm8.s 			page 136
 
 
  1712      D06704A8 
@@ -8158,7 +8158,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1724 02cd 3A0F6825 		.ascii	":\017h%9\002\323\012\253\343\324\226\335\304\220+\321"
  1724      3902D30A 
  1724      ABE3D496 
-ARM GAS  /tmp/ccE5qQqM.s 			page 137
+ARM GAS  /tmp/ccPELOm8.s 			page 137
 
 
  1724      DDC4902B 
@@ -8218,7 +8218,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1736      63EB4D70 
  1736      CD21E6BC 
  1736      A5B8
-ARM GAS  /tmp/ccE5qQqM.s 			page 138
+ARM GAS  /tmp/ccPELOm8.s 			page 138
 
 
  1737 03a5 AACCC4D5 		.ascii	"\252\314\304\325\270v\375\001\316\277d\344[\352\323"
@@ -8278,7 +8278,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1748      713BCCD5 
  1748      F26FA811 
  1748      EF3F25B9 
-ARM GAS  /tmp/ccE5qQqM.s 			page 139
+ARM GAS  /tmp/ccPELOm8.s 			page 139
 
 
  1749 0474 F70CC131 		.ascii	"\367\014\3011d\017\237\216\334\036\332\367kF\266\275"
@@ -8338,7 +8338,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1760      77F80AF8 
  1761 054a ED33D0CC 		.ascii	"\3553\320\314O[H!D!\320\216\347\327c\317+\361+kh\216"
  1761      4F5B4821 
-ARM GAS  /tmp/ccE5qQqM.s 			page 140
+ARM GAS  /tmp/ccPELOm8.s 			page 140
 
 
  1761      4421D08E 
@@ -8398,7 +8398,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1772      373F7C78 
  1772      44295503 
  1773 0628 96A87109 		.ascii	"\226\250q\011d2\235\2015\247$&\327\216\354gV.\265\265"
-ARM GAS  /tmp/ccE5qQqM.s 			page 141
+ARM GAS  /tmp/ccPELOm8.s 			page 141
 
 
  1773      64329D81 
@@ -8458,7 +8458,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1784      3796BE91 
  1784      7CEF965E 
  1784      1FF5
-ARM GAS  /tmp/ccE5qQqM.s 			page 142
+ARM GAS  /tmp/ccPELOm8.s 			page 142
 
 
  1785 06ff 3C554EE8 		.ascii	"<UN\350\202>#2\225\267\323\177*\350!vXK\336\224\351"
@@ -8518,7 +8518,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1797 07d0 31289220 		.ascii	"1(\222 \016lM\324W\373\253Y\014',\2403vpFaxB\247\303"
  1797      0E6C4DD4 
  1797      57FBAB59 
-ARM GAS  /tmp/ccE5qQqM.s 			page 143
+ARM GAS  /tmp/ccPELOm8.s 			page 143
 
 
  1797      0C272CA0 
@@ -8578,7 +8578,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1809 08ad D42427CB 		.ascii	"\324$'\313\346\003\370Z\"x\031]\276\314\\^\322\236\020"
  1809      E603F85A 
  1809      2278195D 
-ARM GAS  /tmp/ccE5qQqM.s 			page 144
+ARM GAS  /tmp/ccPELOm8.s 			page 144
 
 
  1809      BECC5C5E 
@@ -8638,7 +8638,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1820      A02EC14C 
  1820      97
  1821 0986 FB35C91D 		.ascii	"\3735\311\035tI\243\306)\204\006\2477\256\361u<Ca>\243"
-ARM GAS  /tmp/ccE5qQqM.s 			page 145
+ARM GAS  /tmp/ccPELOm8.s 			page 145
 
 
  1821      7449A3C6 
@@ -8698,7 +8698,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1832      283B91C9 
  1832      4E1F1A39 
  1832      6F330A33 
-ARM GAS  /tmp/ccE5qQqM.s 			page 146
+ARM GAS  /tmp/ccPELOm8.s 			page 146
 
 
  1832      1BBBEA14 
@@ -8758,7 +8758,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1843      2155A24A 
  1844 0b3b B12A194C 		.ascii	"\261*\031L\225\221\274\312LGr\024U\231xP?\243\342Xc"
  1844      9591BCCA 
-ARM GAS  /tmp/ccE5qQqM.s 			page 147
+ARM GAS  /tmp/ccPELOm8.s 			page 147
 
 
  1844      4C477214 
@@ -8818,7 +8818,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1855      1BF16E97 
  1855      63154AB0 
  1855      0A8D
-ARM GAS  /tmp/ccE5qQqM.s 			page 148
+ARM GAS  /tmp/ccPELOm8.s 			page 148
 
 
  1856 0c1a B14E31AC 		.ascii	"\261N1\254K\263\367\302\235H6be\353\027\216j8V\255\021"
@@ -8878,7 +8878,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1867      AC9A9CC4 
  1867      C50DACCF 
  1867      6550D5
-ARM GAS  /tmp/ccE5qQqM.s 			page 149
+ARM GAS  /tmp/ccPELOm8.s 			page 149
 
 
  1868 0cfa 12A86A63 		.ascii	"\022\250jc\250\032\254\221K\221\337$~x7\245kx9HDZ\371"
@@ -8938,7 +8938,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1879      D991640D 
  1879      53F0E1D1 
  1879      F63E6B92 
-ARM GAS  /tmp/ccE5qQqM.s 			page 150
+ARM GAS  /tmp/ccPELOm8.s 			page 150
 
 
  1879      83
@@ -8998,7 +8998,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1891 0ea4 7462A37E 		.ascii	"tb\243~\242;Re\022\247k\0005\"\213Sw\360H\230\035\031"
  1891      A23B5265 
  1891      12A76B00 
-ARM GAS  /tmp/ccE5qQqM.s 			page 151
+ARM GAS  /tmp/ccPELOm8.s 			page 151
 
 
  1891      35228B53 
@@ -9058,7 +9058,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1903      25487860 
  1903      1066253A 
  1903      CD8A3ADD 
-ARM GAS  /tmp/ccE5qQqM.s 			page 152
+ARM GAS  /tmp/ccPELOm8.s 			page 152
 
 
  1903      653A55DF 
@@ -9118,7 +9118,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1916 105d 554E1D73 		.ascii	"UN\035s\036\235\220}\210\301y>\374I\250\340\313\020"
  1916      1E9D907D 
  1916      88C1793E 
-ARM GAS  /tmp/ccE5qQqM.s 			page 153
+ARM GAS  /tmp/ccPELOm8.s 			page 153
 
 
  1916      FC49A8E0 
@@ -9178,7 +9178,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1927      86
  1928 1131 50BE5253 		.ascii	"P\276RS\244!\367\021\241\322\2779\330\332\220\004\251"
  1928      A421F711 
-ARM GAS  /tmp/ccE5qQqM.s 			page 154
+ARM GAS  /tmp/ccPELOm8.s 			page 154
 
 
  1928      A1D2BF39 
@@ -9238,7 +9238,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1939      2B19AB38 
  1939      263389AD 
  1940 121c 908E90E2 		.ascii	"\220\216\220\342s\251\017L\237K}\200\305 ky\256\304"
-ARM GAS  /tmp/ccE5qQqM.s 			page 155
+ARM GAS  /tmp/ccPELOm8.s 			page 155
 
 
  1940      73A90F4C 
@@ -9298,7 +9298,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1951      CCA53736 
  1951      5601EDE3 
  1952 12ef 89D96463 		.ascii	"\211\331dcep\006\375|7|\370\236\343\306\322\340,\236"
-ARM GAS  /tmp/ccE5qQqM.s 			page 156
+ARM GAS  /tmp/ccPELOm8.s 			page 156
 
 
  1952      657006FD 
@@ -9358,7 +9358,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1963      460E9CB5 
  1963      B3E89326 
  1963      AAD44551 
-ARM GAS  /tmp/ccE5qQqM.s 			page 157
+ARM GAS  /tmp/ccPELOm8.s 			page 157
 
 
  1963      A9B18A
@@ -9418,7 +9418,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1975 14a7 933E5DF1 		.ascii	"\223>]\361\027\237\223\326\304AYM\274\312k\"\361[\275"
  1975      179F93D6 
  1975      C441594D 
-ARM GAS  /tmp/ccE5qQqM.s 			page 158
+ARM GAS  /tmp/ccPELOm8.s 			page 158
 
 
  1975      BCCA6B22 
@@ -9478,7 +9478,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1987 157b B941BE09 		.ascii	"\271A\276\011\035\323&\227\033\355\310\014\246YI\342"
  1987      1DD32697 
  1987      1BEDC80C 
-ARM GAS  /tmp/ccE5qQqM.s 			page 159
+ARM GAS  /tmp/ccPELOm8.s 			page 159
 
 
  1987      A65949E2 
@@ -9538,7 +9538,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  1999      4B04CDC3 
  1999      99
  2000 1658 BBE46BF4 		.ascii	"\273\344k\364\342\235Y<\031=\372P \011\010u-\354\336"
-ARM GAS  /tmp/ccE5qQqM.s 			page 160
+ARM GAS  /tmp/ccPELOm8.s 			page 160
 
 
  2000      E29D593C 
@@ -9598,7 +9598,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2011      A526CFCA 
  2011      0D652050 
  2011      B909BB
-ARM GAS  /tmp/ccE5qQqM.s 			page 161
+ARM GAS  /tmp/ccPELOm8.s 			page 161
 
 
  2012 1736 30319DF1 		.ascii	"01\235\361C\313\326\344\032\212\211\013\313\035\227"
@@ -9658,7 +9658,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2024      013D19FA 
  2024      A3078C26 
  2024      4E7AC3E1 
-ARM GAS  /tmp/ccE5qQqM.s 			page 162
+ARM GAS  /tmp/ccPELOm8.s 			page 162
 
 
  2024      6598
@@ -9718,7 +9718,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2036      1E8D9D6C 
  2036      AEB1E3EB 
  2036      53BACF
-ARM GAS  /tmp/ccE5qQqM.s 			page 163
+ARM GAS  /tmp/ccPELOm8.s 			page 163
 
 
  2037 18dc E940EFB5 		.ascii	"\351@\357\265\000\033\374>\207\355\234\344\233\3006"
@@ -9778,7 +9778,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2048      67999896 
  2049 19ad A40E1F3E 		.ascii	"\244\016\037>\303]\224^\211l\342W\"=\035\303G\011I@"
  2049      C35D945E 
-ARM GAS  /tmp/ccE5qQqM.s 			page 164
+ARM GAS  /tmp/ccPELOm8.s 			page 164
 
 
  2049      896CE257 
@@ -9838,7 +9838,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2060      63A12319 
  2060      C446C552 
  2061 1a8d C346EBF8 		.ascii	"\303F\353\370\372\274-\231\304FcZW\202\275\324\001#"
-ARM GAS  /tmp/ccE5qQqM.s 			page 165
+ARM GAS  /tmp/ccPELOm8.s 			page 165
 
 
  2061      FABC2D99 
@@ -9898,7 +9898,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2072      3FD055A0 
  2072      41A021A0 
  2072      818D
-ARM GAS  /tmp/ccE5qQqM.s 			page 166
+ARM GAS  /tmp/ccPELOm8.s 			page 166
 
 
  2073 1b63 6C9CABBF 		.ascii	"l\234\253\277\024\341@\3220P}+\207BlI\0166n\236\250"
@@ -9958,7 +9958,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2084      96DC956D 
  2084      E6B827AB 
  2084      62F745F5 
-ARM GAS  /tmp/ccE5qQqM.s 			page 167
+ARM GAS  /tmp/ccPELOm8.s 			page 167
 
 
  2084      2EAD5D49 
@@ -10018,7 +10018,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2095      12F1961A 
  2096 1d28 60B7FC02 		.ascii	"`\267\374\002U\217\273\345w!\211__\320'T\001*cv\331"
  2096      558FBBE5 
-ARM GAS  /tmp/ccE5qQqM.s 			page 168
+ARM GAS  /tmp/ccPELOm8.s 			page 168
 
 
  2096      7721895F 
@@ -10078,7 +10078,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2108 1dfb C3E38E41 		.ascii	"\303\343\216A\237xG\01355Ie\246\246\252\327bSN)\004"
  2108      9F78470B 
  2108      35354965 
-ARM GAS  /tmp/ccE5qQqM.s 			page 169
+ARM GAS  /tmp/ccPELOm8.s 			page 169
 
 
  2108      A6A6AAD7 
@@ -10138,7 +10138,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2120      864FF285 
  2120      1A4C7AEC 
  2120      2982
-ARM GAS  /tmp/ccE5qQqM.s 			page 170
+ARM GAS  /tmp/ccPELOm8.s 			page 170
 
 
  2121 1ee0 5CED71A3 		.ascii	"\\\355q\243+\320\266v\276\012\244\353\250\026\023+\233"
@@ -10198,7 +10198,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2133 1fb3 8A80CE02 		.ascii	"\212\200\316\002\235\002:\001t\024(\027\250\000(\017"
  2133      9D023A01 
  2133      74142817 
-ARM GAS  /tmp/ccE5qQqM.s 			page 171
+ARM GAS  /tmp/ccPELOm8.s 			page 171
 
 
  2133      A800280F 
@@ -10258,7 +10258,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2145      9693796B 
  2145      9B54E6
  2146 2095 F6146595 		.ascii	"\366\024e\225\204$\331\2203\330{\265\375\324\337\223"
-ARM GAS  /tmp/ccE5qQqM.s 			page 172
+ARM GAS  /tmp/ccPELOm8.s 			page 172
 
 
  2146      8424D990 
@@ -10318,7 +10318,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2157      36F00700 
  2157      FF2AC71F 
  2157      06FC21E9 
-ARM GAS  /tmp/ccE5qQqM.s 			page 173
+ARM GAS  /tmp/ccPELOm8.s 			page 173
 
 
  2158 2170 82667158 		.ascii	"\202fqXR\034\0079\247\245bJ\237\342\017\363II\\e_5\357"
@@ -10378,7 +10378,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2169      B9AD32FF 
  2169      D4
  2170 224e 4C26F828 		.ascii	"L&\370(\010\316\242\202\351}\224\333\\\360<\010\234"
-ARM GAS  /tmp/ccE5qQqM.s 			page 174
+ARM GAS  /tmp/ccPELOm8.s 			page 174
 
 
  2170      08CEA282 
@@ -10438,7 +10438,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2181      78A0A2CF 
  2181      E4F2AEB6 
  2181      C542B1
-ARM GAS  /tmp/ccE5qQqM.s 			page 175
+ARM GAS  /tmp/ccPELOm8.s 			page 175
 
 
  2182 2320 C7B4BEBA 		.ascii	"\307\264\276\272>{\235?\271\331BW5\027\222n8\340]\320"
@@ -10498,7 +10498,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2193      650FD526 
  2193      6BC74050 
  2193      40DEA92D 
-ARM GAS  /tmp/ccE5qQqM.s 			page 176
+ARM GAS  /tmp/ccPELOm8.s 			page 176
 
 
  2193      6C21C851 
@@ -10558,7 +10558,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2205      189C0894 
  2205      BB3CFE29 
  2205      5C6EA8C1 
-ARM GAS  /tmp/ccE5qQqM.s 			page 177
+ARM GAS  /tmp/ccPELOm8.s 			page 177
 
 
  2205      F1
@@ -10618,7 +10618,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2217      86847D09 
  2217      AF40070E 
  2218 25bc D76B38C8 		.ascii	"\327k8\310J8\331@9f\202rLD\311f(\347\313k\262\010IA"
-ARM GAS  /tmp/ccE5qQqM.s 			page 178
+ARM GAS  /tmp/ccPELOm8.s 			page 178
 
 
  2218      4A38D940 
@@ -10678,7 +10678,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2229      DD93BDCC 
  2229      AA04794B 
  2229      186F605A 
-ARM GAS  /tmp/ccE5qQqM.s 			page 179
+ARM GAS  /tmp/ccPELOm8.s 			page 179
 
 
  2229      71AC
@@ -10738,7 +10738,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2241      A34DC8B6 
  2241      7BD7236F 
  2241      3DE34D9D 
-ARM GAS  /tmp/ccE5qQqM.s 			page 180
+ARM GAS  /tmp/ccPELOm8.s 			page 180
 
 
  2241      AAAB93
@@ -10798,7 +10798,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2253      F7599485 
  2253      CF8F88AF 
  2253      D3A9
-ARM GAS  /tmp/ccE5qQqM.s 			page 181
+ARM GAS  /tmp/ccPELOm8.s 			page 181
 
 
  2254 285f 4BD0E4B7 		.ascii	"K\320\344\267p_*(\233\320)\261\276\323\330\372nf\375"
@@ -10858,7 +10858,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2265      525B97
  2266 292c ACA6BFD6 		.ascii	"\254\246\277\326\037Q\363\237\373W\237\251\357\027\337"
  2266      1F51F39F 
-ARM GAS  /tmp/ccE5qQqM.s 			page 182
+ARM GAS  /tmp/ccPELOm8.s 			page 182
 
 
  2266      FB579FA9 
@@ -10918,7 +10918,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2277      201DFAF4 
  2277      69A8
  2278 2a08 21B56E4B 		.ascii	"!\265nK\207~\320\372\330\011\361\215f\215\011\232\346"
-ARM GAS  /tmp/ccE5qQqM.s 			page 183
+ARM GAS  /tmp/ccPELOm8.s 			page 183
 
 
  2278      877ED0FA 
@@ -10978,7 +10978,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2289      5BE31DBA 
  2289      17A0B978 
  2289      BB7DC8
-ARM GAS  /tmp/ccE5qQqM.s 			page 184
+ARM GAS  /tmp/ccPELOm8.s 			page 184
 
 
  2290 2adf C962717B 		.ascii	"\311bq{\310\213\333\252\232U\267\353\307\232?\307\256"
@@ -11038,7 +11038,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2301      3DFDA06A 
  2301      5556ED0E 
  2301      CAF40E
-ARM GAS  /tmp/ccE5qQqM.s 			page 185
+ARM GAS  /tmp/ccPELOm8.s 			page 185
 
 
  2302 2bb8 41BD4398 		.ascii	"A\275C\230\336\203\035\207\017\331XT4\224+\372\010\363"
@@ -11098,7 +11098,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2313 2c82 E999887A 		.ascii	"\351\231\210z&2=C\317-\267\360\204e\253\315\222\302"
  2313      26323D43 
  2313      CF2DB7F0 
-ARM GAS  /tmp/ccE5qQqM.s 			page 186
+ARM GAS  /tmp/ccPELOm8.s 			page 186
 
 
  2313      8465ABCD 
@@ -11158,7 +11158,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2325      FFF357DF 
  2325      7AF34DAB 
  2325      675CF738 
-ARM GAS  /tmp/ccE5qQqM.s 			page 187
+ARM GAS  /tmp/ccPELOm8.s 			page 187
 
 
  2325      7FE2
@@ -11218,7 +11218,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2337      FFAA78FE 
  2337      0BC6
  2338 2e35 E7BDB5BA 		.ascii	"\347\275\265\272\375\373\214\270wX\340\336\201\334\362"
-ARM GAS  /tmp/ccE5qQqM.s 			page 188
+ARM GAS  /tmp/ccPELOm8.s 			page 188
 
 
  2338      FDFB8CB8 
@@ -11278,7 +11278,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2349      DA0FA03B 
  2349      DD767BB8 
  2350 2f0d B83BB163 		.ascii	"\270;\261c\271\300\317\275\337vq\177\312\012\240u\361"
-ARM GAS  /tmp/ccE5qQqM.s 			page 189
+ARM GAS  /tmp/ccPELOm8.s 			page 189
 
 
  2350      B9C0CFBD 
@@ -11338,7 +11338,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2362      B7DB7F82 
  2362      241B3AA8 
  2362      58376BFC 
-ARM GAS  /tmp/ccE5qQqM.s 			page 190
+ARM GAS  /tmp/ccPELOm8.s 			page 190
 
 
  2362      70D6
@@ -11398,7 +11398,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2375 30b6 BBDD6E77 		.ascii	"\273\335nw\317\017\371\031{\327\375^^Z\230\341\274u"
  2375      CF0FF919 
  2375      7BD7FD5E 
-ARM GAS  /tmp/ccE5qQqM.s 			page 191
+ARM GAS  /tmp/ccPELOm8.s 			page 191
 
 
  2375      5E5A98E1 
@@ -11458,7 +11458,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2386      ED237797 
  2386      DDD0
  2387 3198 DA0BFDA0 		.ascii	"\332\013\375\240\305rB\375\251\313\207\3405[o\335\307"
-ARM GAS  /tmp/ccE5qQqM.s 			page 192
+ARM GAS  /tmp/ccPELOm8.s 			page 192
 
 
  2387      C57242FD 
@@ -11518,7 +11518,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2398      817E2A69 
  2398      02D8
  2399 326d D12367CC 		.ascii	"\321#g\314\227\247\033\353\264\003[-\322\216:\015\365"
-ARM GAS  /tmp/ccE5qQqM.s 			page 193
+ARM GAS  /tmp/ccPELOm8.s 			page 193
 
 
  2399      97A71BEB 
@@ -11578,7 +11578,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2410      667E0DF1 
  2410      79C7
  2411 3345 FB1D8F5F 		.ascii	"\373\035\217_\271x\354\326\276\377t)Dc\012)\264\231"
-ARM GAS  /tmp/ccE5qQqM.s 			page 194
+ARM GAS  /tmp/ccPELOm8.s 			page 194
 
 
  2411      B978ECD6 
@@ -11624,7 +11624,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2420      7F74ADC5 
  2420      17
  2421              		.text
- 2422              		.section	.gnu.lto_.symtab.4a22ffe115692bc,"e",%progbits
+ 2422              		.section	.gnu.lto_.symtab.a349e60a0c60c74a,"e",%progbits
  2423 0000 72745F74 		.ascii	"rt_test_sequence_012\000"
  2423      6573745F 
  2423      73657175 
@@ -11638,7 +11638,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2428 0020 11030000 		.ascii	"\021\003\000\000"
  2429 0024 72745F74 		.ascii	"rt_test_sequence_012_array\000"
  2429      6573745F 
-ARM GAS  /tmp/ccE5qQqM.s 			page 195
+ARM GAS  /tmp/ccPELOm8.s 			page 195
 
 
  2429      73657175 
@@ -11698,7 +11698,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2468 00ca 00       		.ascii	"\000"
  2469 00cb 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
  2469      00000000 
-ARM GAS  /tmp/ccE5qQqM.s 			page 196
+ARM GAS  /tmp/ccPELOm8.s 			page 196
 
 
  2470 00d3 4E010000 		.ascii	"N\001\000\000"
@@ -11758,7 +11758,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2505 0170 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
  2505      00000000 
  2506 0178 6C010000 		.ascii	"l\001\000\000"
-ARM GAS  /tmp/ccE5qQqM.s 			page 197
+ARM GAS  /tmp/ccPELOm8.s 			page 197
 
 
  2507 017c 63685365 		.ascii	"chSemObjectInit\000"
@@ -11818,7 +11818,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2538 022a 00       		.ascii	"\000"
  2539 022b 02       		.ascii	"\002"
  2540 022c 00       		.ascii	"\000"
-ARM GAS  /tmp/ccE5qQqM.s 			page 198
+ARM GAS  /tmp/ccPELOm8.s 			page 198
 
 
  2541 022d 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
@@ -11878,7 +11878,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2571      00000000 
  2572 02e4 9B010000 		.ascii	"\233\001\000\000"
  2573 02e8 63685468 		.ascii	"chThdCreateStatic\000"
-ARM GAS  /tmp/ccE5qQqM.s 			page 199
+ARM GAS  /tmp/ccPELOm8.s 			page 199
 
 
  2573      64437265 
@@ -11938,7 +11938,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2606 0389 00       		.ascii	"\000"
  2607 038a 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
  2607      00000000 
-ARM GAS  /tmp/ccE5qQqM.s 			page 200
+ARM GAS  /tmp/ccPELOm8.s 			page 200
 
 
  2608 0392 C5010000 		.ascii	"\305\001\000\000"
@@ -11993,7 +11993,7 @@ ARM GAS  /tmp/ccE5qQqM.s 			page 1
  2629              		.comm	__gnu_lto_v1,1,1
  2630              		.comm	__gnu_lto_slim,1,1
  2631              		.ident	"GCC: (GNU Arm Embedded Toolchain 9-2020-q2-update) 9.3.1 20200408 (release)"
-ARM GAS  /tmp/ccE5qQqM.s 			page 201
+ARM GAS  /tmp/ccPELOm8.s 			page 201
 
 
 DEFINED SYMBOLS

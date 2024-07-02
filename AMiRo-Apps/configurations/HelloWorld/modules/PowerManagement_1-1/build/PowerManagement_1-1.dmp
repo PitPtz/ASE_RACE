@@ -1,16 +1,16 @@
 
-/home/pit/ASE/AMiRo-Apps/configurations/HelloWorld/modules/PowerManagement_1-1/build/PowerManagement_1-1.elf:     file format elf32-littlearm
-/home/pit/ASE/AMiRo-Apps/configurations/HelloWorld/modules/PowerManagement_1-1/build/PowerManagement_1-1.elf
+/home/pit/ASE_RACE/AMiRo-Apps/configurations/HelloWorld/modules/PowerManagement_1-1/build/PowerManagement_1-1.elf:     file format elf32-littlearm
+/home/pit/ASE_RACE/AMiRo-Apps/configurations/HelloWorld/modules/PowerManagement_1-1/build/PowerManagement_1-1.elf
 architecture: armv7e-m, flags 0x00000112:
 EXEC_P, HAS_SYMS, D_PAGED
 start address 0x0800831d
 
 Program Header:
-0x70000001 off    0x00036cdc vaddr 0x08036cdc paddr 0x08036cdc align 2**2
+0x70000001 off    0x00036d0c vaddr 0x08036d0c paddr 0x08036d0c align 2**2
          filesz 0x00000008 memsz 0x00000008 flags r--
     LOAD off    0x00000000 vaddr 0x08000000 paddr 0x08000000 align 2**16
-         filesz 0x00036ce4 memsz 0x00036ce4 flags r-x
-    LOAD off    0x00040800 vaddr 0x20000800 paddr 0x08036ce4 align 2**16
+         filesz 0x00036d14 memsz 0x00036d14 flags r-x
+    LOAD off    0x00040800 vaddr 0x20000800 paddr 0x08036d14 align 2**16
          filesz 0x00000e38 memsz 0x00003770 flags rw-
     LOAD off    0x00000000 vaddr 0x20000000 paddr 0x20000000 align 2**16
          filesz 0x00000000 memsz 0x00020000 flags rw-
@@ -26,13 +26,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   3 .text         00027254  08008200  08008200  00008200  2**6
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  4 .rodata       00007884  0802f458  0802f458  0002f458  2**3
+  4 .rodata       000078b4  0802f458  0802f458  0002f458  2**3
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  5 .ARM.exidx    00000008  08036cdc  08036cdc  00036cdc  2**2
+  5 .ARM.exidx    00000008  08036d0c  08036d0c  00036d0c  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  6 .data         00000e38  20000800  08036ce4  00040800  2**3
+  6 .data         00000e38  20000800  08036d14  00040800  2**3
                   CONTENTS, ALLOC, LOAD, DATA
-  7 .bss          00002938  20001638  08037b1c  00041638  2**3
+  7 .bss          00002938  20001638  08037b4c  00041638  2**3
                   ALLOC
   8 .ram0_init    00000000  20003f70  20003f70  00041638  2**2
                   CONTENTS
@@ -80,7 +80,7 @@ SYMBOL TABLE:
 08008000 l    d  .vectors	00000000 .vectors
 08008200 l    d  .text	00000000 .text
 0802f458 l    d  .rodata	00000000 .rodata
-08036cdc l    d  .ARM.exidx	00000000 .ARM.exidx
+08036d0c l    d  .ARM.exidx	00000000 .ARM.exidx
 20000800 l    d  .data	00000000 .data
 20001638 l    d  .bss	00000000 .bss
 20003f70 l    d  .ram0_init	00000000 .ram0_init
@@ -103,9 +103,9 @@ SYMBOL TABLE:
 00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
 00000000 l    d  .comment	00000000 .comment
 00000000 l    d  .debug_frame	00000000 .debug_frame
-00000000 l    df *ABS*	00000000 /home/pit/ASE/AMiRo-Apps/configurations/HelloWorld/modules/PowerManagement_1-1/build/obj/vectors.o
+00000000 l    df *ABS*	00000000 /home/pit/ASE_RACE/AMiRo-Apps/configurations/HelloWorld/modules/PowerManagement_1-1/build/obj/vectors.o
 08008322 l       .text	00000000 .stay
-00000000 l    df *ABS*	00000000 /home/pit/ASE/AMiRo-Apps/configurations/HelloWorld/modules/PowerManagement_1-1/build/obj/crt0_v7m.o
+00000000 l    df *ABS*	00000000 /home/pit/ASE_RACE/AMiRo-Apps/configurations/HelloWorld/modules/PowerManagement_1-1/build/obj/crt0_v7m.o
 08008274 l       .text	00000000 msloop
 08008282 l       .text	00000000 psloop
 08008292 l       .text	00000000 dloop
@@ -114,7 +114,7 @@ SYMBOL TABLE:
 080082c8 l       .text	00000000 endinitloop
 080082d0 l       .text	00000000 finiloop
 080082dc l       .text	00000000 endfiniloop
-00000000 l    df *ABS*	00000000 /home/pit/ASE/AMiRo-Apps/configurations/HelloWorld/modules/PowerManagement_1-1/build/obj/chcoreasm.o
+00000000 l    df *ABS*	00000000 /home/pit/ASE_RACE/AMiRo-Apps/configurations/HelloWorld/modules/PowerManagement_1-1/build/obj/chcoreasm.o
 08008354 l       .text	00000000 .zombies
 00000000 l    df *ABS*	00000000 lib_a-memcpy.o
 00000000 l    df *ABS*	00000000 lib_a-strcmp.o
@@ -258,44 +258,44 @@ SYMBOL TABLE:
 200009d8 l     O .data	0000000c moduleTestTps6211xIna219ShellCmd
 200009e4 l     O .data	0000000c moduleTestTps6211xShellCmd
 200009f0 l     O .data	0000000c moduleTestVcnl4020ShellCmd
-08030b0c l     O .rodata	0000000c __func__.7426.lto_priv.0
-08030b18 l     O .rodata	0000000c __func__.7426.lto_priv.1
-08030b24 l     O .rodata	0000000c __func__.7426.lto_priv.2
-08030b30 l     O .rodata	0000000c __func__.7426.lto_priv.3
-08030b3c l     O .rodata	0000000c __func__.7426.lto_priv.4
-08030b48 l     O .rodata	00000015 __func__.7840
-08030b60 l     O .rodata	00000017 __func__.7846
-08030b78 l     O .rodata	00000015 __func__.7867
-08030b90 l     O .rodata	00000012 __func__.7868
-08030ba4 l     O .rodata	0000000b __func__.7888
-08030bb0 l     O .rodata	00000010 __func__.7892
-08030bc0 l     O .rodata	0000000d __func__.9663.lto_priv.0
-08030bd0 l     O .rodata	0000000e __func__.9663.lto_priv.1
-08030be0 l     O .rodata	00000009 __func__.9665
-08030bec l     O .rodata	00000008 __func__.9669.lto_priv.0
-08030bf4 l     O .rodata	00000008 __func__.9669.lto_priv.1
-08030bfc l     O .rodata	00000008 __func__.9669.lto_priv.2
-08030c10 l     O .rodata	0000000f __func__.9681
-08030c20 l     O .rodata	00000014 __func__.9682
-08030c34 l     O .rodata	00000028 _channelvmt.lto_priv.0
-08030c5c l     O .rodata	00000028 _channelvmt.lto_priv.1
-08030c84 l     O .rodata	00000012 _helloworld_master_name
-08030c98 l     O .rodata	00000011 _helloworld_slave_name
-08030cac l     O .rodata	0000000d _shell_name
-08030cbc l     O .rodata	00000028 _streamvmt.lto_priv.0
-08030ce4 l     O .rodata	00000028 _streamvmt.lto_priv.1
-08030d0c l     O .rodata	00000008 _urt_frtrequest_vmt
-08030d14 l     O .rodata	0000000c _urt_frtsubscriber_vmt
-08030d20 l     O .rodata	00000008 _urt_hrtrequest_vmt
-08030d28 l     O .rodata	0000000c _urt_hrtsubscriber_vmt
-08030d34 l     O .rodata	00000008 _urt_nrtrequest_vmt
-08030d3c l     O .rodata	0000000c _urt_nrtsubscriber_vmt
-08030d48 l     O .rodata	00000008 _urt_srtrequest_vmt
-08030d50 l     O .rodata	0000000c _urt_srtsubscriber_vmt
-08030d5c l     O .rodata	00000014 ch_core0_cfg
-08030d70 l     O .rodata	0000002c ch_debug
-08030d9c l     O .rodata	00000008 moduleGpioSysPd
-08030dac l     O .rodata	00000008 moduleGpioSysUartDn
+08030b40 l     O .rodata	0000000c __func__.7426.lto_priv.0
+08030b4c l     O .rodata	0000000c __func__.7426.lto_priv.1
+08030b58 l     O .rodata	0000000c __func__.7426.lto_priv.2
+08030b64 l     O .rodata	0000000c __func__.7426.lto_priv.3
+08030b70 l     O .rodata	0000000c __func__.7426.lto_priv.4
+08030b7c l     O .rodata	00000015 __func__.7840
+08030b94 l     O .rodata	00000017 __func__.7846
+08030bac l     O .rodata	00000015 __func__.7867
+08030bc4 l     O .rodata	00000012 __func__.7868
+08030bd8 l     O .rodata	0000000b __func__.7888
+08030be4 l     O .rodata	00000010 __func__.7892
+08030bf4 l     O .rodata	0000000d __func__.9663.lto_priv.0
+08030c04 l     O .rodata	0000000e __func__.9663.lto_priv.1
+08030c14 l     O .rodata	00000009 __func__.9665
+08030c20 l     O .rodata	00000008 __func__.9669.lto_priv.0
+08030c28 l     O .rodata	00000008 __func__.9669.lto_priv.1
+08030c30 l     O .rodata	00000008 __func__.9669.lto_priv.2
+08030c44 l     O .rodata	0000000f __func__.9681
+08030c54 l     O .rodata	00000014 __func__.9682
+08030c68 l     O .rodata	00000028 _channelvmt.lto_priv.0
+08030c90 l     O .rodata	00000028 _channelvmt.lto_priv.1
+08030cb8 l     O .rodata	00000012 _helloworld_master_name
+08030ccc l     O .rodata	00000011 _helloworld_slave_name
+08030ce0 l     O .rodata	0000000d _shell_name
+08030cf0 l     O .rodata	00000028 _streamvmt.lto_priv.0
+08030d18 l     O .rodata	00000028 _streamvmt.lto_priv.1
+08030d40 l     O .rodata	00000008 _urt_frtrequest_vmt
+08030d48 l     O .rodata	0000000c _urt_frtsubscriber_vmt
+08030d54 l     O .rodata	00000008 _urt_hrtrequest_vmt
+08030d5c l     O .rodata	0000000c _urt_hrtsubscriber_vmt
+08030d68 l     O .rodata	00000008 _urt_nrtrequest_vmt
+08030d70 l     O .rodata	0000000c _urt_nrtsubscriber_vmt
+08030d7c l     O .rodata	00000008 _urt_srtrequest_vmt
+08030d84 l     O .rodata	0000000c _urt_srtsubscriber_vmt
+08030d90 l     O .rodata	00000014 ch_core0_cfg
+08030da4 l     O .rodata	0000002c ch_debug
+08030dd0 l     O .rodata	00000008 moduleGpioSysPd
+08030de0 l     O .rodata	00000008 moduleGpioSysUartDn
 00000000 l    df *ABS*	00000000 
 08011b80 l     F .text	00000038 _aosTestAdcAwdCallback
 08011eb4 l     F .text	00000070 aosTestFailedMsg
@@ -378,49 +378,49 @@ SYMBOL TABLE:
 20000bc0 l     O .data	0000000c moduleHalI2cSrPm18Pm33GaugeRearConfig
 20000bcc l     O .data	0000000c moduleHalI2cSrPm42Pm50PmVddEepromGaugeFrontConfig
 20000bd8 l     O .data	00000008 moduleLldBatteryChargerFront
-08032b50 l     O .rodata	00000008 moduleGpioChargeEn1
-08032b60 l     O .rodata	00000008 moduleGpioChargeStat1A
+08032b84 l     O .rodata	00000008 moduleGpioChargeEn1
+08032b94 l     O .rodata	00000008 moduleGpioChargeStat1A
 20000be0 l     O .data	00000008 moduleLldBatteryChargerRear
-08032b58 l     O .rodata	00000008 moduleGpioChargeEn2
-08032b68 l     O .rodata	00000008 moduleGpioChargeStat2A
+08032b8c l     O .rodata	00000008 moduleGpioChargeEn2
+08032b9c l     O .rodata	00000008 moduleGpioChargeStat2A
 20000bf0 l     O .data	0000000c moduleLldFuelGaugeFront
-08032b80 l     O .rodata	00000008 moduleGpioGaugeBatLow1
-08032b70 l     O .rodata	00000008 moduleGpioGaugeBatGd1
+08032bb4 l     O .rodata	00000008 moduleGpioGaugeBatLow1
+08032ba4 l     O .rodata	00000008 moduleGpioGaugeBatGd1
 20000bfc l     O .data	0000000c moduleLldFuelGaugeRear
-08032b88 l     O .rodata	00000008 moduleGpioGaugeBatLow2
-08032b78 l     O .rodata	00000008 moduleGpioGaugeBatGd2
+08032bbc l     O .rodata	00000008 moduleGpioGaugeBatLow2
+08032bac l     O .rodata	00000008 moduleGpioGaugeBatGd2
 20000c08 l     O .data	0000000c moduleLldPowerMonitorVdd
 20000c14 l     O .data	0000000c moduleLldPowerMonitorVio18
 20000c20 l     O .data	0000000c moduleLldPowerMonitorVio33
 20000c2c l     O .data	0000000c moduleLldPowerMonitorVio50
-08032ba0 l     O .rodata	00000008 moduleGpioLed
-08032bb0 l     O .rodata	00000008 moduleGpioPowerEn
-08032a38 l     O .rodata	0000000c __func__.7287
-08032a44 l     O .rodata	0000000c __func__.7369.lto_priv.10
-08032a50 l     O .rodata	0000000c __func__.7369.lto_priv.11
-08032a5c l     O .rodata	0000000c __func__.7369.lto_priv.12
-08032a68 l     O .rodata	0000000c __func__.7369.lto_priv.13
-08032a74 l     O .rodata	0000000c __func__.7369.lto_priv.14
-08032a98 l     O .rodata	0000000c __func__.7369.lto_priv.4
-08032aa4 l     O .rodata	0000000c __func__.7369.lto_priv.5
-08032ab0 l     O .rodata	0000000c __func__.7369.lto_priv.6
-08032abc l     O .rodata	0000000c __func__.7369.lto_priv.7
-08032ac8 l     O .rodata	0000000c __func__.7369.lto_priv.8
-08032ad4 l     O .rodata	0000000c __func__.7369.lto_priv.9
-08032ae0 l     O .rodata	00000009 __func__.9665.lto_priv.0
-08032aec l     O .rodata	00000009 __func__.9665.lto_priv.1
-08032af8 l     O .rodata	0000000e __func__.9674
-08032b08 l     O .rodata	00000008 __func__.9717
-08032b10 l     O .rodata	00000028 _vmt
-08032b38 l     O .rodata	00000018 accu_month_len
-08032b90 l     O .rodata	00000008 moduleGpioIrInt1
-08032b98 l     O .rodata	00000008 moduleGpioIrInt2
-08032ba8 l     O .rodata	00000008 moduleGpioPathDc
-08032bb8 l     O .rodata	00000008 moduleGpioSysSpiDir
-08032bc0 l     O .rodata	00000008 moduleGpioSysWarmrst
-08032bc8 l     O .rodata	00000008 moduleGpioTouchInt
-08032bd0 l     O .rodata	00000008 moduleHalCanConfig
-08032bd8 l     O .rodata	00000008 moduleHalSerialCanConfig
+08032bd4 l     O .rodata	00000008 moduleGpioLed
+08032be4 l     O .rodata	00000008 moduleGpioPowerEn
+08032a6c l     O .rodata	0000000c __func__.7287
+08032a78 l     O .rodata	0000000c __func__.7369.lto_priv.10
+08032a84 l     O .rodata	0000000c __func__.7369.lto_priv.11
+08032a90 l     O .rodata	0000000c __func__.7369.lto_priv.12
+08032a9c l     O .rodata	0000000c __func__.7369.lto_priv.13
+08032aa8 l     O .rodata	0000000c __func__.7369.lto_priv.14
+08032acc l     O .rodata	0000000c __func__.7369.lto_priv.4
+08032ad8 l     O .rodata	0000000c __func__.7369.lto_priv.5
+08032ae4 l     O .rodata	0000000c __func__.7369.lto_priv.6
+08032af0 l     O .rodata	0000000c __func__.7369.lto_priv.7
+08032afc l     O .rodata	0000000c __func__.7369.lto_priv.8
+08032b08 l     O .rodata	0000000c __func__.7369.lto_priv.9
+08032b14 l     O .rodata	00000009 __func__.9665.lto_priv.0
+08032b20 l     O .rodata	00000009 __func__.9665.lto_priv.1
+08032b2c l     O .rodata	0000000e __func__.9674
+08032b3c l     O .rodata	00000008 __func__.9717
+08032b44 l     O .rodata	00000028 _vmt
+08032b6c l     O .rodata	00000018 accu_month_len
+08032bc4 l     O .rodata	00000008 moduleGpioIrInt1
+08032bcc l     O .rodata	00000008 moduleGpioIrInt2
+08032bdc l     O .rodata	00000008 moduleGpioPathDc
+08032bec l     O .rodata	00000008 moduleGpioSysSpiDir
+08032bf4 l     O .rodata	00000008 moduleGpioSysWarmrst
+08032bfc l     O .rodata	00000008 moduleGpioTouchInt
+08032c04 l     O .rodata	00000008 moduleHalCanConfig
+08032c0c l     O .rodata	00000008 moduleHalSerialCanConfig
 00000000 l    df *ABS*	00000000 
 08018ffc l     F .text	00000030 _aosShellMapAscii2Custom
 0801902c l     F .text	00000048 _aosShellCharcmp
@@ -447,82 +447,82 @@ SYMBOL TABLE:
 0801dbe4 l     F .text	00000068 _aosShellStreamResumeSuspendedChannels
 0801dc4c l     F .text	0000006c _aosShellStreamSuspendAllChannelsBut
 200030f0 l     O .bss	00000004 _commands
-08034ae4 l     O .rodata	0000001c CSWTCH.112
-08034b00 l     O .rodata	0000001c CSWTCH.113
-08034b1c l     O .rodata	0000001c CSWTCH.114
-08034b38 l     O .rodata	0000001c CSWTCH.115
-08034b54 l     O .rodata	0000000b __func__.5552
-08034b78 l     O .rodata	0000000c __func__.7369.lto_priv.16
-08034b84 l     O .rodata	00000013 __func__.9693
-08034b98 l     O .rodata	00000010 oslib_test_001_001
-08034ba8 l     O .rodata	00000010 oslib_test_001_002
-08034bb8 l     O .rodata	00000010 oslib_test_001_003
-08034bc8 l     O .rodata	00000008 oslib_test_sequence_001
-08034bd0 l     O .rodata	00000010 oslib_test_sequence_001_array
-08034be0 l     O .rodata	00000008 oslib_test_suite
-08034be8 l     O .rodata	00000008 oslib_test_suite_array
-08034bf0 l     O .rodata	00000010 rt_test_001_001
-08034c00 l     O .rodata	00000010 rt_test_001_002
-08034c10 l     O .rodata	00000010 rt_test_001_003
-08034c20 l     O .rodata	00000010 rt_test_002_001
-08034c30 l     O .rodata	00000010 rt_test_002_002
-08034c40 l     O .rodata	00000010 rt_test_002_003
-08034c50 l     O .rodata	00000010 rt_test_003_001
-08034c60 l     O .rodata	00000010 rt_test_003_002
-08034c70 l     O .rodata	00000010 rt_test_005_001
-08034c80 l     O .rodata	00000010 rt_test_005_002
-08034c90 l     O .rodata	00000010 rt_test_005_003
-08034ca0 l     O .rodata	00000010 rt_test_005_004
-08034cb0 l     O .rodata	00000010 rt_test_005_005
-08034cc0 l     O .rodata	00000010 rt_test_006_001
-08034cd0 l     O .rodata	00000010 rt_test_007_001
-08034ce0 l     O .rodata	00000010 rt_test_007_002
-08034cf0 l     O .rodata	00000010 rt_test_007_003
-08034d00 l     O .rodata	00000010 rt_test_007_004
-08034d10 l     O .rodata	00000010 rt_test_007_005
-08034d20 l     O .rodata	00000010 rt_test_007_006
-08034d30 l     O .rodata	00000010 rt_test_008_001
-08034d40 l     O .rodata	00000010 rt_test_008_004
-08034d50 l     O .rodata	00000010 rt_test_008_005
-08034d60 l     O .rodata	00000010 rt_test_008_007
-08034d70 l     O .rodata	00000010 rt_test_008_008
-08034d80 l     O .rodata	00000010 rt_test_008_009
-08034d90 l     O .rodata	00000010 rt_test_010_001
-08034da0 l     O .rodata	00000010 rt_test_010_002
-08034db0 l     O .rodata	00000010 rt_test_010_003
-08034dc0 l     O .rodata	00000010 rt_test_010_004
-08034dd0 l     O .rodata	00000010 rt_test_010_005
-08034de0 l     O .rodata	00000010 rt_test_010_006
-08034df0 l     O .rodata	00000010 rt_test_010_007
-08034e00 l     O .rodata	00000010 rt_test_012_004
-08034e10 l     O .rodata	00000010 rt_test_012_005
-08034e20 l     O .rodata	00000010 rt_test_012_006
-08034e30 l     O .rodata	00000010 rt_test_012_007
-08034e40 l     O .rodata	00000010 rt_test_012_008
-08034e50 l     O .rodata	00000010 rt_test_012_009
-08034e60 l     O .rodata	00000010 rt_test_012_010
-08034e70 l     O .rodata	00000010 rt_test_012_011
-08034e80 l     O .rodata	00000010 rt_test_012_012
-08034e90 l     O .rodata	00000008 rt_test_sequence_001
-08034e98 l     O .rodata	00000010 rt_test_sequence_001_array
-08034ea8 l     O .rodata	00000008 rt_test_sequence_002
-08034eb0 l     O .rodata	00000010 rt_test_sequence_002_array
-08034ec0 l     O .rodata	00000008 rt_test_sequence_003
-08034ec8 l     O .rodata	0000000c rt_test_sequence_003_array
-08034ed4 l     O .rodata	00000008 rt_test_sequence_005
-08034edc l     O .rodata	00000018 rt_test_sequence_005_array
-08034ef4 l     O .rodata	00000008 rt_test_sequence_006
-08034efc l     O .rodata	00000008 rt_test_sequence_006_array
-08034f04 l     O .rodata	00000008 rt_test_sequence_007
-08034f0c l     O .rodata	0000001c rt_test_sequence_007_array
-08034f28 l     O .rodata	00000008 rt_test_sequence_008
-08034f30 l     O .rodata	0000001c rt_test_sequence_008_array
-08034f4c l     O .rodata	00000008 rt_test_sequence_010
-08034f54 l     O .rodata	00000020 rt_test_sequence_010_array
-08034f74 l     O .rodata	00000008 rt_test_sequence_012
-08034f7c l     O .rodata	00000028 rt_test_sequence_012_array
-08034fa4 l     O .rodata	00000008 rt_test_suite
-08034fac l     O .rodata	00000028 rt_test_suite_array
+08034b18 l     O .rodata	0000001c CSWTCH.112
+08034b34 l     O .rodata	0000001c CSWTCH.113
+08034b50 l     O .rodata	0000001c CSWTCH.114
+08034b6c l     O .rodata	0000001c CSWTCH.115
+08034b88 l     O .rodata	0000000b __func__.5552
+08034bac l     O .rodata	0000000c __func__.7369.lto_priv.16
+08034bb8 l     O .rodata	00000013 __func__.9693
+08034bcc l     O .rodata	00000010 oslib_test_001_001
+08034bdc l     O .rodata	00000010 oslib_test_001_002
+08034bec l     O .rodata	00000010 oslib_test_001_003
+08034bfc l     O .rodata	00000008 oslib_test_sequence_001
+08034c04 l     O .rodata	00000010 oslib_test_sequence_001_array
+08034c14 l     O .rodata	00000008 oslib_test_suite
+08034c1c l     O .rodata	00000008 oslib_test_suite_array
+08034c24 l     O .rodata	00000010 rt_test_001_001
+08034c34 l     O .rodata	00000010 rt_test_001_002
+08034c44 l     O .rodata	00000010 rt_test_001_003
+08034c54 l     O .rodata	00000010 rt_test_002_001
+08034c64 l     O .rodata	00000010 rt_test_002_002
+08034c74 l     O .rodata	00000010 rt_test_002_003
+08034c84 l     O .rodata	00000010 rt_test_003_001
+08034c94 l     O .rodata	00000010 rt_test_003_002
+08034ca4 l     O .rodata	00000010 rt_test_005_001
+08034cb4 l     O .rodata	00000010 rt_test_005_002
+08034cc4 l     O .rodata	00000010 rt_test_005_003
+08034cd4 l     O .rodata	00000010 rt_test_005_004
+08034ce4 l     O .rodata	00000010 rt_test_005_005
+08034cf4 l     O .rodata	00000010 rt_test_006_001
+08034d04 l     O .rodata	00000010 rt_test_007_001
+08034d14 l     O .rodata	00000010 rt_test_007_002
+08034d24 l     O .rodata	00000010 rt_test_007_003
+08034d34 l     O .rodata	00000010 rt_test_007_004
+08034d44 l     O .rodata	00000010 rt_test_007_005
+08034d54 l     O .rodata	00000010 rt_test_007_006
+08034d64 l     O .rodata	00000010 rt_test_008_001
+08034d74 l     O .rodata	00000010 rt_test_008_004
+08034d84 l     O .rodata	00000010 rt_test_008_005
+08034d94 l     O .rodata	00000010 rt_test_008_007
+08034da4 l     O .rodata	00000010 rt_test_008_008
+08034db4 l     O .rodata	00000010 rt_test_008_009
+08034dc4 l     O .rodata	00000010 rt_test_010_001
+08034dd4 l     O .rodata	00000010 rt_test_010_002
+08034de4 l     O .rodata	00000010 rt_test_010_003
+08034df4 l     O .rodata	00000010 rt_test_010_004
+08034e04 l     O .rodata	00000010 rt_test_010_005
+08034e14 l     O .rodata	00000010 rt_test_010_006
+08034e24 l     O .rodata	00000010 rt_test_010_007
+08034e34 l     O .rodata	00000010 rt_test_012_004
+08034e44 l     O .rodata	00000010 rt_test_012_005
+08034e54 l     O .rodata	00000010 rt_test_012_006
+08034e64 l     O .rodata	00000010 rt_test_012_007
+08034e74 l     O .rodata	00000010 rt_test_012_008
+08034e84 l     O .rodata	00000010 rt_test_012_009
+08034e94 l     O .rodata	00000010 rt_test_012_010
+08034ea4 l     O .rodata	00000010 rt_test_012_011
+08034eb4 l     O .rodata	00000010 rt_test_012_012
+08034ec4 l     O .rodata	00000008 rt_test_sequence_001
+08034ecc l     O .rodata	00000010 rt_test_sequence_001_array
+08034edc l     O .rodata	00000008 rt_test_sequence_002
+08034ee4 l     O .rodata	00000010 rt_test_sequence_002_array
+08034ef4 l     O .rodata	00000008 rt_test_sequence_003
+08034efc l     O .rodata	0000000c rt_test_sequence_003_array
+08034f08 l     O .rodata	00000008 rt_test_sequence_005
+08034f10 l     O .rodata	00000018 rt_test_sequence_005_array
+08034f28 l     O .rodata	00000008 rt_test_sequence_006
+08034f30 l     O .rodata	00000008 rt_test_sequence_006_array
+08034f38 l     O .rodata	00000008 rt_test_sequence_007
+08034f40 l     O .rodata	0000001c rt_test_sequence_007_array
+08034f5c l     O .rodata	00000008 rt_test_sequence_008
+08034f64 l     O .rodata	0000001c rt_test_sequence_008_array
+08034f80 l     O .rodata	00000008 rt_test_sequence_010
+08034f88 l     O .rodata	00000020 rt_test_sequence_010_array
+08034fa8 l     O .rodata	00000008 rt_test_sequence_012
+08034fb0 l     O .rodata	00000028 rt_test_sequence_012_array
+08034fd8 l     O .rodata	00000008 rt_test_suite
+08034fe0 l     O .rodata	00000028 rt_test_suite_array
 00000000 l    df *ABS*	00000000 
 080201a8 l     F .text	00000002 tmo
 080201b8 l     F .text	00000018 __test_assert
@@ -582,49 +582,49 @@ SYMBOL TABLE:
 20000c54 l     O .data	00000004 es2
 20000c58 l     O .data	00000010 m1
 20000c68 l     O .data	00000010 m2
-08036180 l     O .rodata	0000000d __func__.11789
-080361a0 l     O .rodata	0000000c __func__.7287.lto_priv.10
-080361ac l     O .rodata	0000000c __func__.7287.lto_priv.11
-080361b8 l     O .rodata	0000000c __func__.7287.lto_priv.12
-080361c4 l     O .rodata	0000000c __func__.7287.lto_priv.13
-080361d0 l     O .rodata	0000000c __func__.7287.lto_priv.14
-080361dc l     O .rodata	0000000c __func__.7287.lto_priv.15
-080361e8 l     O .rodata	0000000c __func__.7287.lto_priv.16
-080361f4 l     O .rodata	0000000c __func__.7287.lto_priv.17
-08036218 l     O .rodata	0000000c __func__.7287.lto_priv.8
-08036224 l     O .rodata	0000000c __func__.7287.lto_priv.9
-08036244 l     O .rodata	0000000c __func__.7573
-08036250 l     O .rodata	0000001c __func__.7838
-0803626c l     O .rodata	0000000b __func__.7842
-08036278 l     O .rodata	00000015 __func__.7843
-08036290 l     O .rodata	00000011 __func__.7850.lto_priv.0
-080362a4 l     O .rodata	00000010 __func__.7850.lto_priv.1
-080362b4 l     O .rodata	0000000b __func__.7857
-080362c0 l     O .rodata	0000000c __func__.7864
-080362cc l     O .rodata	0000000c __func__.7866
-080362d8 l     O .rodata	0000000c __func__.7873
-080362e4 l     O .rodata	00000016 __func__.7876
-080362fc l     O .rodata	0000000d __func__.7877.lto_priv.0
-0803630c l     O .rodata	0000000d __func__.7877.lto_priv.1
-0803631c l     O .rodata	0000000d __func__.7881
-0803632c l     O .rodata	00000011 __func__.7883
-08036340 l     O .rodata	0000000c __func__.7886
-0803634c l     O .rodata	00000015 __func__.7892
-08036364 l     O .rodata	0000000c __func__.7904
-08036370 l     O .rodata	0000000e __func__.7905
-08036380 l     O .rodata	0000000a __func__.7921
-0803638c l     O .rodata	00000011 __func__.7927
-080363a0 l     O .rodata	00000015 __func__.7971
-080363b8 l     O .rodata	0000000d __func__.7977
-080363c8 l     O .rodata	00000011 __func__.9680
-080363dc l     O .rodata	00000019 __func__.9684
-080363f8 l     O .rodata	00000018 __func__.9688
-08036410 l     O .rodata	00000018 __func__.9693
-08036428 l     O .rodata	00000006 __func__.9694
-08036430 l     O .rodata	00000007 __func__.9708
-08036438 l     O .rodata	0000000f __func__.9761
-08036508 l     O .rodata	0000000c evhndl
-08036514 l     O .rodata	00000080 ram_areas
+080361b4 l     O .rodata	0000000d __func__.11789
+080361d4 l     O .rodata	0000000c __func__.7287.lto_priv.10
+080361e0 l     O .rodata	0000000c __func__.7287.lto_priv.11
+080361ec l     O .rodata	0000000c __func__.7287.lto_priv.12
+080361f8 l     O .rodata	0000000c __func__.7287.lto_priv.13
+08036204 l     O .rodata	0000000c __func__.7287.lto_priv.14
+08036210 l     O .rodata	0000000c __func__.7287.lto_priv.15
+0803621c l     O .rodata	0000000c __func__.7287.lto_priv.16
+08036228 l     O .rodata	0000000c __func__.7287.lto_priv.17
+0803624c l     O .rodata	0000000c __func__.7287.lto_priv.8
+08036258 l     O .rodata	0000000c __func__.7287.lto_priv.9
+08036278 l     O .rodata	0000000c __func__.7573
+08036284 l     O .rodata	0000001c __func__.7838
+080362a0 l     O .rodata	0000000b __func__.7842
+080362ac l     O .rodata	00000015 __func__.7843
+080362c4 l     O .rodata	00000011 __func__.7850.lto_priv.0
+080362d8 l     O .rodata	00000010 __func__.7850.lto_priv.1
+080362e8 l     O .rodata	0000000b __func__.7857
+080362f4 l     O .rodata	0000000c __func__.7864
+08036300 l     O .rodata	0000000c __func__.7866
+0803630c l     O .rodata	0000000c __func__.7873
+08036318 l     O .rodata	00000016 __func__.7876
+08036330 l     O .rodata	0000000d __func__.7877.lto_priv.0
+08036340 l     O .rodata	0000000d __func__.7877.lto_priv.1
+08036350 l     O .rodata	0000000d __func__.7881
+08036360 l     O .rodata	00000011 __func__.7883
+08036374 l     O .rodata	0000000c __func__.7886
+08036380 l     O .rodata	00000015 __func__.7892
+08036398 l     O .rodata	0000000c __func__.7904
+080363a4 l     O .rodata	0000000e __func__.7905
+080363b4 l     O .rodata	0000000a __func__.7921
+080363c0 l     O .rodata	00000011 __func__.7927
+080363d4 l     O .rodata	00000015 __func__.7971
+080363ec l     O .rodata	0000000d __func__.7977
+080363fc l     O .rodata	00000011 __func__.9680
+08036410 l     O .rodata	00000019 __func__.9684
+0803642c l     O .rodata	00000018 __func__.9688
+08036444 l     O .rodata	00000018 __func__.9693
+0803645c l     O .rodata	00000006 __func__.9694
+08036464 l     O .rodata	00000007 __func__.9708
+0803646c l     O .rodata	0000000f __func__.9761
+0803653c l     O .rodata	0000000c evhndl
+08036548 l     O .rodata	00000080 ram_areas
 00000000 l    df *ABS*	00000000 
 080285e8 l     F .text	00000034 __sch_ready_ahead
 0802861c l     F .text	0000004c __sch_reschedule_ahead
@@ -642,31 +642,31 @@ SYMBOL TABLE:
 0802a4d8 l     F .text	0000000a _get
 20003ed8 l     O .bss	0000003c SPID1
 20000c78 l     O .data	00000010 _rtc_lld_vmt
-08036604 l     O .rodata	0000000c __func__.7573
-08036610 l     O .rodata	00000013 __func__.7834
-08036624 l     O .rodata	00000012 __func__.7838
-08036638 l     O .rodata	00000016 __func__.7862
-08036650 l     O .rodata	0000000b __func__.7865
-0803665c l     O .rodata	00000014 __func__.7866
-08036670 l     O .rodata	0000000c __func__.7867
-0803667c l     O .rodata	0000000e __func__.7874
-0803668c l     O .rodata	0000000d __func__.7878
-0803669c l     O .rodata	00000012 __func__.7884
-080366b0 l     O .rodata	0000000d __func__.7888
-080366c0 l     O .rodata	0000000c __func__.7892
-080366cc l     O .rodata	0000000d __func__.7896
-080366dc l     O .rodata	0000000b __func__.7915
-080366e8 l     O .rodata	0000000d __func__.7983
-080366f8 l     O .rodata	00000009 __func__.9665
-08036704 l     O .rodata	00000008 __func__.9669
-0803670c l     O .rodata	00000012 __func__.9680
-08036720 l     O .rodata	00000012 __func__.9686
-08036734 l     O .rodata	00000005 __func__.9698
-0803673c l     O .rodata	0000000e __func__.9759
-0803674c l     O .rodata	0000000e __func__.9799
-0803675c l     O .rodata	0000000f __func__.9850
-0803676c l     O .rodata	00000024 pow10
-08036790 l     O .rodata	00000028 vmt
+08036638 l     O .rodata	0000000c __func__.7573
+08036644 l     O .rodata	00000013 __func__.7834
+08036658 l     O .rodata	00000012 __func__.7838
+0803666c l     O .rodata	00000016 __func__.7862
+08036684 l     O .rodata	0000000b __func__.7865
+08036690 l     O .rodata	00000014 __func__.7866
+080366a4 l     O .rodata	0000000c __func__.7867
+080366b0 l     O .rodata	0000000e __func__.7874
+080366c0 l     O .rodata	0000000d __func__.7878
+080366d0 l     O .rodata	00000012 __func__.7884
+080366e4 l     O .rodata	0000000d __func__.7888
+080366f4 l     O .rodata	0000000c __func__.7892
+08036700 l     O .rodata	0000000d __func__.7896
+08036710 l     O .rodata	0000000b __func__.7915
+0803671c l     O .rodata	0000000d __func__.7983
+0803672c l     O .rodata	00000009 __func__.9665
+08036738 l     O .rodata	00000008 __func__.9669
+08036740 l     O .rodata	00000012 __func__.9680
+08036754 l     O .rodata	00000012 __func__.9686
+08036768 l     O .rodata	00000005 __func__.9698
+08036770 l     O .rodata	0000000e __func__.9759
+08036780 l     O .rodata	0000000e __func__.9799
+08036790 l     O .rodata	0000000f __func__.9850
+080367a0 l     O .rodata	00000024 pow10
+080367c4 l     O .rodata	00000028 vmt
 00000000 l    df *ABS*	00000000 sf_ceil.c
 00000000 l    df *ABS*	00000000 sf_round.c
 00000000 l    df *ABS*	00000000 atof.c
@@ -674,9 +674,9 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 errno.c
 00000000 l    df *ABS*	00000000 strtod.c
 0802a5e4 l     F .text	00000042 sulp
-080368cc l     O .rodata	00000014 fpi.7559
-080368e0 l     O .rodata	00000014 fpinan.7595
-080368f8 l     O .rodata	00000028 tinytens
+08036900 l     O .rodata	00000014 fpi.7559
+08036914 l     O .rodata	00000014 fpinan.7595
+08036928 l     O .rodata	00000028 tinytens
 00000000 l    df *ABS*	00000000 strtol.c
 0802b594 l     F .text	0000012c _strtol_l.isra.0
 00000000 l    df *ABS*	00000000 strtoull.c
@@ -687,7 +687,7 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 locale.c
 00000000 l    df *ABS*	00000000 mbtowc_r.c
 00000000 l    df *ABS*	00000000 mprec.c
-08036c40 l     O .rodata	0000000c p05.7485
+08036c70 l     O .rodata	0000000c p05.7485
 00000000 l    df *ABS*	00000000 s_nan.c
 00000000 l    df *ABS*	00000000 strncmp.c
 00000000 l    df *ABS*	00000000 wctomb_r.c
@@ -700,8 +700,8 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 vfprintf.c
 0802d220 l     F .text	00000076 __sprint_r.part.0
 0802dfe4 l     F .text	00000082 __sbprintf
-08036cbc l     O .rodata	00000010 blanks.8691
-08036ccc l     O .rodata	00000010 zeroes.8692
+08036cec l     O .rodata	00000010 blanks.8691
+08036cfc l     O .rodata	00000010 zeroes.8692
 00000000 l    df *ABS*	00000000 wsetup.c
 00000000 l    df *ABS*	00000000 abort.c
 00000000 l    df *ABS*	00000000 fflush.c
@@ -761,7 +761,7 @@ SYMBOL TABLE:
 08019088 g     F .text	00000022 .hidden _aosShellChannelReadt.lto_priv.0
 200024f0 g     O .bss	00000008 .hidden _uptime.lto_priv.1
 08100000 g       *ABS*	00000000 __flash0_end__
-08030db4 g     O .rodata	00000008 .hidden moduleGpioSysUartUp
+08030de8 g     O .rodata	00000008 .hidden moduleGpioSysUartUp
 08011e50 g     F .text	00000064 .hidden aosThdGetStackPeakUtilization
 080090ec g     F .text	0000007a .hidden __eqdf2
 0800831e  w    F .text	00000000 Vector1A0
@@ -779,7 +779,7 @@ SYMBOL TABLE:
 080198dc g     F .text	0000003c .hidden _aosShellRemoteHashString
 20003f48 g     O .bss	00000001 __lock___atexit_recursive_mutex
 0802f27c g     F .text	0000003c _wcrtomb_r
-08030ad0 g     O .rodata	0000000c .hidden __func__.7287.lto_priv.3
+08030b04 g     O .rodata	0000000c .hidden __func__.7287.lto_priv.3
 0800831e  w    F .text	00000000 Vector11C
 40024000 g       .ram5	00000000 __ram5_clear__
 00000000 g       .bss	00000000 __flash2_base__
@@ -787,7 +787,7 @@ SYMBOL TABLE:
 0802e330 g     F .text	00000054 __sinit
 0802f1cc g     F .text	000000b0 __swbuf_r
 0800831e  w    F .text	00000000 HardFault_Handler
-08032a8c g     O .rodata	0000000c .hidden __func__.7369.lto_priv.3
+08032ac0 g     O .rodata	0000000c .hidden __func__.7369.lto_priv.3
 0800831e  w    F .text	00000000 Vector1B8
 20000944 g     O .data	00000008 .hidden moduleLldI2cMultiplexer2
 08008324 g     F .text	00000000 __port_switch
@@ -812,12 +812,12 @@ SYMBOL TABLE:
 08023344 g     F .text	00000108 .hidden _aosSdcanWrite.lto_priv.0
 0800831e  w    F .text	00000000 NMI_Handler
 0802c0c8 g     F .text	0000004c _Balloc
-08030adc g     O .rodata	0000000c .hidden __func__.7287.lto_priv.4
+08030b10 g     O .rodata	0000000c .hidden __func__.7287.lto_priv.4
 08008000 g       .vectors	00000000 _vectors
-08036ce4 g       .ARM.exidx	00000000 __exidx_end
+08036d14 g       .ARM.exidx	00000000 __exidx_end
 0801374c g     F .text	0000001c .hidden _moduleTestMpr121ShellCmdCb.lto_priv.0
 08022724 g     F .text	00000074 .hidden i2c_lld_serve_rx_end_irq.lto_priv.0
-08034b6c g     O .rodata	0000000c .hidden __func__.7369.lto_priv.15
+08034ba0 g     O .rodata	0000000c .hidden __func__.7369.lto_priv.15
 080137d8 g     F .text	0000001c .hidden _moduleTestAt24c01bShellCmdCb.lto_priv.0
 08023c04 g     F .text	00000070 .hidden chEvtRegisterMaskWithFlags
 08023e3c g     F .text	00000074 .hidden chCondBroadcast
@@ -858,7 +858,7 @@ SYMBOL TABLE:
 200008fc g     O .data	00000008 .hidden c1.lto_priv.0
 08020260 g     F .text	0000001c .hidden test_stream_putchar.lto_priv.0
 080222c8 g     F .text	00000024 .hidden __stats_ctxswc
-08036190 g     O .rodata	00000010 .hidden __func__.5624.lto_priv.0
+080361c4 g     O .rodata	00000010 .hidden __func__.5624.lto_priv.0
 08012ec0 g     F .text	00000006 .hidden _moduleTestIna219ShellCmdCb.lto_priv.0
 080226bc g     F .text	00000034 VectorC8
 080096b8 g     F .text	00000160 .hidden __aeabi_fadd
@@ -872,7 +872,7 @@ SYMBOL TABLE:
 08028740 g     F .text	00000078 .hidden chSchWakeupS
 0801a9c4 g     F .text	0000005c .hidden _aosSsspTimerCallback.lto_priv.0
 080247a8 g     F .text	00000098 .hidden chRegFindThreadByWorkingArea
-08037b1c g       *ABS*	00000000 __ram3_init_text__
+08037b4c g       *ABS*	00000000 __ram3_init_text__
 0802149c g     F .text	000000c4 .hidden rt_test_001_002_execute.lto_priv.0
 08029b38 g     F .text	000000b0 .hidden chThdCreateStatic
 0802871c g     F .text	00000024 .hidden chSchRescheduleS
@@ -894,7 +894,7 @@ SYMBOL TABLE:
 08018db4 g     F .text	00000248 .hidden aosSysStop
 08021e08 g     F .text	00000070 VectorB4
 08019240 g     F .text	00000018 .hidden _aosIOChannelRead.lto_priv.0
-08030da4 g     O .rodata	00000008 .hidden moduleGpioSysSync
+08030dd8 g     O .rodata	00000008 .hidden moduleGpioSysSync
 0802e324 g     F .text	0000000c _cleanup_r
 08008be4 g     F .text	00000022 .hidden __floatsidf
 080191fc g     F .text	00000014 .hidden _aosIOChannelPutt.lto_priv.0
@@ -916,17 +916,17 @@ SYMBOL TABLE:
 0802a094 g     F .text	0000008c .hidden adcStopConversion
 0801b9f4 g     F .text	00000064 .hidden _aosShellStreamPut.lto_priv.0
 0802c984 g     F .text	0000005c __ratio
-08036cdc g       .rodata	00000000 __rodata_end__
+08036d0c g       .rodata	00000000 __rodata_end__
 08013784 g     F .text	0000001c .hidden _moduleTestTps6211xShellCmdCb.lto_priv.0
 0802a574 g     F .text	00000054 roundf
 08008200 g     F .text	00000000 _crt0_entry
 0802f040 g     F .text	00000056 _raise_r
-08030ab8 g     O .rodata	0000000c .hidden __func__.7287.lto_priv.1
+08030aec g     O .rodata	0000000c .hidden __func__.7287.lto_priv.1
 08009820 g     F .text	0000001c .hidden __aeabi_i2f
 0802cb30 g     F .text	0000003c __assert_func
 08021d00 g     F .text	00000038 Vector74
 20001660 g     O .bss	00000028 .hidden CAND1
-08036b78 g     O .rodata	000000c8 __mprec_tens
+08036ba8 g     O .rodata	000000c8 __mprec_tens
 0802163c g     F .text	00000004 .hidden oslib_test_001_001_execute.lto_priv.0
 08029588 g     F .text	00000494 .hidden halInit
 0800831e  w    F .text	00000000 Vector160
@@ -942,7 +942,7 @@ SYMBOL TABLE:
 08022d88 g     F .text	0000000c __stats_start_measure_crit_thd
 20003f44 g     O .bss	00000004 __malloc_top_pad
 0802f0d4 g     F .text	00000004 _getpid_r
-08030b00 g     O .rodata	0000000c .hidden __func__.7369.lto_priv.1
+08030b34 g     O .rodata	0000000c .hidden __func__.7369.lto_priv.1
 08011b78 g     F .text	00000006 .hidden _moduleTestVcnl4020ShellCmdCb.lto_priv.0
 00000000 g       .ram7	00000000 __flash4_free__
 080274ec g     F .text	00000058 .hidden pca9544a_lld_getcurrentchannel
@@ -992,27 +992,27 @@ SYMBOL TABLE:
 2001c000 g       *ABS*	00000000 __ram1_end__
 10010000 g       *ABS*	00000000 __ram4_end__
 0802c7fc g     F .text	000000c6 __b2d
-08036cdc g       .ARM.exidx	00000000 __exidx_start
+08036d0c g       .ARM.exidx	00000000 __exidx_start
 20003f50 g     O .bss	00000001 __lock___env_recursive_mutex
-08036ce4 g       *ABS*	00000000 __textdata_base__
+08036d14 g       *ABS*	00000000 __textdata_base__
 08008cb8 g     F .text	00000254 .hidden __aeabi_dmul
 08028c6c g     F .text	00000090 .hidden chThdExitS
 20003f54 g     O .bss	00000001 __lock___sinit_recursive_mutex
-08037b1c g       *ABS*	00000000 __ram0_init_text__
+08037b4c g       *ABS*	00000000 __ram0_init_text__
 0801b5ec g     F .text	00000188 .hidden _aosShellCommandHelpCallback.lto_priv.0
 0800ad84 g     F .text	00000060 .hidden aosTestInfoMsg.constprop.0
 0802ec60 g     F .text	000003e0 _realloc_r
-08037b1c g       *ABS*	00000000 __ram1_init_text__
+08037b4c g       *ABS*	00000000 __ram1_init_text__
 00000000 g       *ABS*	00000000 __flash5_end__
 080281cc g     F .text	000000cc .hidden apalControlGpioSet
 00000000 g       .ram7	00000000 __flash2_free__
-080369b8 g     O .rodata	00000100 __hexdig
+080369e8 g     O .rodata	00000100 __hexdig
 08027f78 g     F .text	00000068 .hidden bq27500_lld_std_command
 0801fee8 g     F .text	000002c0 .hidden aosFBCanTransmitTimeout
 080203c0 g     F .text	00000010 .hidden rt_test_007_005_setup.lto_priv.0
 0802e444 g     F .text	00000066 _fputwc_r
 08026300 g     F .text	00000004 .hidden rt_test_007_005_teardown.lto_priv.0
-08036b50 g     O .rodata	00000028 __mprec_bigtens
+08036b80 g     O .rodata	00000028 __mprec_bigtens
 0802c1d4 g     F .text	000000b4 __s2b
 0800831e  w    F .text	00000000 Vector148
 0802e138 g     F .text	0000000e abort
@@ -1030,7 +1030,7 @@ SYMBOL TABLE:
 08029ca4 g     F .text	000000c4 .hidden i2cStop
 08028d68 g     F .text	00000798 .hidden chvprintf
 00000000 g       *ABS*	00000000 __flash2_end__
-08037b1c g       *ABS*	00000000 __ram5_init_text__
+08037b4c g       *ABS*	00000000 __ram5_init_text__
 00000000 g       *ABS*	00000000 __flash4_size__
 080137f4 g     F .text	0000001c .hidden _moduleTestAdcShellCmdCb.lto_priv.0
 20000878 g     O .data	00000004 .hidden _gpioSysUartUp.lto_priv.0
@@ -1059,7 +1059,7 @@ SYMBOL TABLE:
 0802c288 g     F .text	00000040 __hi0bits
 0800831e  w    F .text	00000000 VectorCC
 080203ec g     F .text	00000058 .hidden _write.lto_priv.1
-08030ac4 g     O .rodata	0000000c .hidden __func__.7287.lto_priv.2
+08030af8 g     O .rodata	0000000c .hidden __func__.7287.lto_priv.2
 08013298 g     F .text	000004b4 .hidden _moduleTestAllShellCmdCb.lto_priv.0
 0800965c g     F .text	0000004e .hidden __fixdfsi
 0800831e  w    F .text	00000000 Vector54
@@ -1081,7 +1081,7 @@ SYMBOL TABLE:
 0800831e  w    F .text	00000000 VectorD8
 08019074 g     F .text	00000014 .hidden _aosShellChannelCtl.lto_priv.0
 00000000 g       *ABS*	00000000 __flash6_end__
-08037b1c g       *ABS*	00000000 __ram6_init_text__
+08037b4c g       *ABS*	00000000 __ram6_init_text__
 0800831e  w    F .text	00000000 Vector138
 0800894c g     F .text	00000276 .hidden __aeabi_dadd
 0800831e  w    F .text	00000000 Vector24
@@ -1109,7 +1109,7 @@ SYMBOL TABLE:
 0801c9e8 g     F .text	0000049c .hidden aosSsspProceed
 08028bcc g     F .text	0000001c .hidden __dbg_check_disable
 08022260 g     F .text	00000024 .hidden rt_test_008_009_setup.lto_priv.0
-08036448 g     O .rodata	000000c0 .hidden _stm32_dma_streams
+0803647c g     O .rodata	000000c0 .hidden _stm32_dma_streams
 0802ea90 g     F .text	00000002 __retarget_lock_release_recursive
 08021c24 g     F .text	00000038 Vector84
 2001c000 g       .ram2	00000000 __ram2_noinit__
@@ -1139,7 +1139,7 @@ SYMBOL TABLE:
 080091c4 g     F .text	00000012 .hidden __aeabi_dcmpge
 00000000 g       .ram7	00000000 __ram7_clear__
 08022248 g     F .text	0000000a .hidden chMtxObjectInit
-08037b1c g       .ram7	00000000 __flash0_init__
+08037b4c g       .ram7	00000000 __flash0_init__
 08008948 g     F .text	0000027a .hidden __aeabi_dsub
 0800831e  w    F .text	00000000 VectorD0
 0800a648 g     F .text	00000058 .hidden chCondSignal.constprop.0
@@ -1168,7 +1168,7 @@ SYMBOL TABLE:
 080226f0 g     F .text	00000034 VectorC0
 0802ca98 g     F .text	0000007a strncmp
 08021a34 g     F .text	00000038 Vector158
-08037b1c g       .ram7	00000000 __flash0_free__
+08037b4c g       .ram7	00000000 __flash0_free__
 08021adc g     F .text	00000034 Vector130
 00000000 g       .bss	00000000 __flash6_base__
 10000000 g       .ram4	00000000 __ram4_noinit__
@@ -1195,7 +1195,7 @@ SYMBOL TABLE:
 0801a338 g     F .text	00000538 .hidden _aosSysShellcmdConfigCallback.lto_priv.0
 08009e4c g     F .text	0000007c .hidden vt_insert_first.constprop.0
 00000000 g       *ABS*	00000000 __flash3_end__
-08030aac g     O .rodata	0000000c .hidden __func__.7287.lto_priv.0
+08030ae0 g     O .rodata	0000000c .hidden __func__.7287.lto_priv.0
 080216fc g     F .text	00000004 _close_r
 080204a8 g     F .text	0000000a .hidden _aosSdcanGet.lto_priv.0
 08008be4 g     F .text	00000022 .hidden __aeabi_i2d
@@ -1211,7 +1211,7 @@ SYMBOL TABLE:
 080250b8 g     F .text	0000009c .hidden rt_test_012_006_execute.lto_priv.0
 08022330 g     F .text	0000000c .hidden __stats_stop_measure_crit_isr
 0800983c g     F .text	0000008c .hidden __floatundisf
-08030af4 g     O .rodata	0000000c .hidden __func__.7369.lto_priv.0
+08030b28 g     O .rodata	0000000c .hidden __func__.7369.lto_priv.0
 0802e068 g     F .text	000000d0 __swsetup_r
 0800831e  w    F .text	00000000 Vector13C
 08009658  w    F .text	00000002 .hidden __aeabi_ldiv0
@@ -1240,7 +1240,7 @@ SYMBOL TABLE:
 080190f8 g     F .text	0000001a .hidden _aosShellChannelPutt.lto_priv.0
 0802cb6c g     F .text	0000005e _calloc_r
 20002408 g     O .bss	00000080 .hidden _pal_events
-0803620c g     O .rodata	0000000c .hidden __func__.7287.lto_priv.7
+08036240 g     O .rodata	0000000c .hidden __func__.7287.lto_priv.7
 080280f0 g     F .text	000000dc .hidden apalPWMSet
 00004000 g       *ABS*	00000000 __ram2_size__
 0802b890 g     F .text	00000018 strtoull
@@ -1263,7 +1263,7 @@ SYMBOL TABLE:
 08008356 g     F .text	00000000 __port_switch_from_isr
 080081e0 g       .vectors	00000000 __fini_array_base__
 0800831e  w    F .text	00000000 VectorA0
-08037b1c g       *ABS*	00000000 __ram2_init_text__
+08037b4c g       *ABS*	00000000 __ram2_init_text__
 00000000 g       *ABS*	00000000 __flash5_size__
 08021714 g     F .text	00000020 SVC_Handler
 0802f15c g     F .text	00000008 __sclose
@@ -1281,7 +1281,7 @@ SYMBOL TABLE:
 080228c0 g     F .text	00000020 VectorC4
 08021c94 g     F .text	00000034 Vector7C
 00000000 g       .ram7	00000000 __flash6_init__
-08037b1c g       *ABS*	00000000 __ram4_init_text__
+08037b4c g       *ABS*	00000000 __ram4_init_text__
 0800831e  w    F .text	00000000 Vector180
 20000000 g       .ram1	00000000 __ram1_noinit__
 080261f8 g     F .text	00000004 .hidden rt_test_007_006_teardown.lto_priv.0
@@ -1299,7 +1299,7 @@ SYMBOL TABLE:
 0802217c g     F .text	00000048 .hidden chEvtSignalI
 080084c8 g     F .text	000002dc strcmp
 0801aa20 g     F .text	00000032 .hidden _aosSsspSerializeBcbMessage
-08036ce4 g       .ARM.exidx	00000000 __exidx_end__
+08036d14 g       .ARM.exidx	00000000 __exidx_end__
 08027d30 g     F .text	00000068 .hidden ina219_lld_read_bus_voltage
 080239dc g     F .text	00000068 .hidden chEvtWaitOne
 08013990 g     F .text	00000078 .hidden aosSysGetUptimeX
@@ -1352,11 +1352,11 @@ SYMBOL TABLE:
 08023880 g     F .text	000000a4 .hidden chEvtWaitOneTimeout
 00000000 g       .ram3	00000000 __ram3_noinit__
 080287dc g     F .text	00000064 .hidden chThdCreateSuspendedI
-08034b60 g     O .rodata	0000000c .hidden __func__.7287.lto_priv.18
+08034b94 g     O .rodata	0000000c .hidden __func__.7287.lto_priv.18
 0802c09c g     F .text	0000002a __ascii_mbtowc
-08030ae8 g     O .rodata	0000000c .hidden __func__.7287.lto_priv.5
+08030b1c g     O .rodata	0000000c .hidden __func__.7287.lto_priv.5
 0802c7b8 g     F .text	00000044 __ulp
-08036ab8 g     O .rodata	0000000c _C_numeric_locale
+08036ae8 g     O .rodata	0000000c _C_numeric_locale
 20003f70 g       .ram0	00000000 __ram0_noinit__
 08020f80 g     F .text	00000130 .hidden rt_test_012_012_execute.lto_priv.0
 08027928 g     F .text	00000060 .hidden vcnl4020_lld_writeth
@@ -1418,14 +1418,14 @@ SYMBOL TABLE:
 200030f4 g     O .bss	00000084 .hidden dma.lto_priv.0
 0802f0fc g     F .text	0000003e __swrite
 20001634 g     O .data	00000004 __malloc_trim_threshold
-08036cdc g       .ARM.exidx	00000000 __exidx_base__
+08036d0c g       .ARM.exidx	00000000 __exidx_base__
 08027fe0 g     F .text	00000078 .hidden at24c01b_lld_write_page
 08028450 g     F .text	0000004c .hidden bq27500_lld_read_batgood
 0801b774 g     F .text	00000218 .hidden _aosShellCommandInfoCallback.lto_priv.0
 080198a8 g     F .text	00000034 .hidden aosShellcmdCheckHelp
 0802cbcc g     F .text	00000028 fiprintf
 0802d298 g     F .text	00000d4c _vfiprintf_r
-08030c04 g     O .rodata	0000000b .hidden __func__.9670.lto_priv.0
+08030c38 g     O .rodata	0000000b .hidden __func__.9670.lto_priv.0
 0800a0ec g     F .text	0000002c .hidden __test_assert_time_window.constprop.0
 000f8000 g       *ABS*	00000000 __flash0_size__
 20000400 g       .pstack	00000000 __main_thread_stack_base__
@@ -1438,7 +1438,7 @@ SYMBOL TABLE:
 080283b8 g     F .text	0000004c .hidden tps6211x_lld_get_power_en
 0800965c g     F .text	0000004e .hidden __aeabi_d2iz
 08009ff0 g     F .text	00000094 .hidden __thd_object_init.constprop.0
-08037b1c g       *ABS*	00000000 __ram7_init_text__
+08037b4c g       *ABS*	00000000 __ram7_init_text__
 00000000 g       .ram3_init	00000000 __ram3_init__
 080216bc g     F .text	0000000c _kill
 0800831e  w    F .text	00000000 Vector104
@@ -1454,7 +1454,7 @@ SYMBOL TABLE:
 20000000 g       .ram1_init	00000000 __ram1_init__
 0800a8fc g     F .text	00000058 .hidden mpr121_lld_read_register.constprop.0
 0802541c g     F .text	000000f4 .hidden chThdSetPriority
-080367b8 g     O .rodata	00000101 _ctype_
+080367ec g     O .rodata	00000101 _ctype_
 08009658  w    F .text	00000002 .hidden __aeabi_idiv0
 080267f8 g     F .text	0000078e .hidden rt_test_005_005_execute.lto_priv.0
 080091ec g     F .text	0000002c .hidden __unorddf2
@@ -1487,7 +1487,7 @@ SYMBOL TABLE:
 0800831e  w    F .text	00000000 Vector194
 08009178 g     F .text	00000010 .hidden __aeabi_cdcmpeq
 080090dc g     F .text	0000008a .hidden __gedf2
-08032a80 g     O .rodata	0000000c .hidden __func__.7369.lto_priv.2
+08032ab4 g     O .rodata	0000000c .hidden __func__.7369.lto_priv.2
 0800831e  w    F .text	00000000 Vector1DC
 08021a6c g     F .text	00000038 Vector154
 08024840 g     F .text	0000008c .hidden chThdYield
@@ -1511,7 +1511,7 @@ SYMBOL TABLE:
 080203dc g     F .text	00000010 .hidden rt_test_007_001_setup.lto_priv.0
 00000000 g       .ram7	00000000 __ram7_noinit__
 08011dec g     F .text	00000064 .hidden aosThdGetStackPeakUtilization2
-08036200 g     O .rodata	0000000c .hidden __func__.7287.lto_priv.6
+08036234 g     O .rodata	0000000c .hidden __func__.7287.lto_priv.6
 08024bac g     F .text	000000cc .hidden rt_test_005_001_execute.lto_priv.0
 080204b4 g     F .text	0000000c .hidden rt_test_007_001_teardown.lto_priv.0
 08008948 g     F .text	0000027a .hidden __subdf3
@@ -1533,7 +1533,7 @@ SYMBOL TABLE:
 0800831e  w    F .text	00000000 VectorA4
 200010bc g     O .data	0000016c __global_locale
 08027a70 g     F .text	00000068 .hidden vcnl4020_lld_readlth
-08036230 g     O .rodata	00000014 .hidden __func__.7538.lto_priv.0
+08036264 g     O .rodata	00000014 .hidden __func__.7538.lto_priv.0
 00000400 g       *ABS*	00000000 __process_stack_size__
 20003f68 g     O .bss	00000001 __lock___sfp_recursive_mutex
 00000000 g       .ram7	00000000 __flash1_init__

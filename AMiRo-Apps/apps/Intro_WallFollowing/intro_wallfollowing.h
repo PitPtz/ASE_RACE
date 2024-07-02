@@ -70,7 +70,8 @@ typedef enum intro_wl_state {
   WL_IDLE,
   WL_WALLFOLLOWING,
   WL_PRINTING,
-  WL_LINEFOLLOWING
+  WL_LINEFOLLOWING,
+  WL_OBSTACLE
 }intro_wl_state_t;
 
 /**
